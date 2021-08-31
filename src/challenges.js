@@ -15,9 +15,12 @@ function calcArea(base,height) {
 
 // Desafio 3
 function splitSentence(string) {
- 
+  let newPhrase = string.split(" ");
+  for(let index = 0; index < 0; index += 1){
+  newPhrase = newPhrase[index] + ",";
+  }
+  return newPhrase;
 }
-
 
 // Desafio 4
 function concatName() {
@@ -47,11 +50,24 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  var resultado = phrase.replace(/a/gi, 1);
+  var resultado1 = resultado.replace(/e/gi,2);
+  var resultado2 = resultado1.replace(/i/gi, 3);
+  var resultado3 = resultado2.replace(/o/gi,4);
+  var resultadoFinal = resultado3.replace(/u/gi, 5);
+
+  return resultadoFinal
 }
-function decode() {
-  // seu código aqui
+
+function decode(phrase) {
+  var resultado = phrase.replace(/1/gi, 'a');
+  var resultado1 = resultado.replace(/2/g,'e');
+  var resultado2 = resultado1.replace(/3/g, 'i');
+  var resultado3 = resultado2.replace(/4/g,'o');
+  var resultadoFinal = resultado3.replace(/5/g, 'u');
+
+  return resultadoFinal
 }
 
 module.exports = {
