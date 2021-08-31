@@ -1,11 +1,19 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+let resCompareTrue = false;
+function compareTrue(parm1, parm2) {
+  if ((parm1 === true) && (parm2 === true)) {
+    resCompareTrue = true;
+  } else {
+    resCompareTrue = false;
+  }
+  return resCompareTrue;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+let resCalcArea = 0;
+function calcArea(base, height) {
+  resCalcArea = (base * height) / 2;
+  return resCalcArea;
 }
 
 // Desafio 3
