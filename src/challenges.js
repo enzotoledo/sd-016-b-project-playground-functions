@@ -26,14 +26,23 @@ function splitSentence(frase) {
 // Desafio 4
 let resConcatName;
 function concatName(arrrayString) {
-  
-  resConcatName = `${arrrayString[arrrayString.length-1]}, ${arrrayString[0]}`;
+  resConcatName = `${arrrayString[arrrayString.length - 1]}, ${arrrayString[0]}`;
   return resConcatName;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+let resFootPoints = 0;
+function footballPoints(wins, ties) {
+  let winsPoints = 0;
+  let tiesPoints = 0;
+  for (let index = 1; index <= wins; index += 1) {
+    winsPoints += 3;
+  }
+  for (let index = 1; index <= ties; index += 1) {
+    tiesPoints += 1;
+  }
+  resFootPoints = winsPoints + tiesPoints;
+  return resFootPoints;
 }
 
 // Desafio 6
