@@ -29,8 +29,10 @@ function concatName(list) {
   /**
    * Retorna o primeiro e o último item de uma array separados por vírgula.
    * O último item corresponde ao valor do último índice da array que é o comprimento da array - 1, e o primeiro item corresponde ao valor do índice 0 da array.
+   * Usei o prefer-template ou tempĺate literals sugerido pelo Linter.
+   * Ref: https://eslint.org/docs/2.0.0/rules/prefer-template
   */
-  let lastAndFirst = list[list.length - 1] + ', ' + list[0];
+  let lastAndFirst = `${list[list.length - 1]}, ${list[0]}`;
   return lastAndFirst;
 }
 
