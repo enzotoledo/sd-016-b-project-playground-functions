@@ -51,9 +51,31 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+function fizzBuzz(arrayNub) {
+  let divTres;
+  let divCinco;
+  let result = [];
+  
+  for(let index = 0 ; index < arrayNub.length; index++){
+    
+    divTres = arrayNub[index] % 3;
+    divCinco = arrayNub[index] % 5;
+  
+    if(divTres === 0 && divCinco === 0 ){
+      result.push('fizzBuzz');
+    }else if(divTres === 0){
+      result.push('fizz');
+    }else if(divCinco === 0){
+      result.push('buzz');
+    }else{
+      result.push('bug!');
+    }
+    
+  }
+  arrayNub = result;
+  return arrayNub;
+  }
+  
 
 // Desafio 9
 function encode() {
