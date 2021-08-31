@@ -42,21 +42,21 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(1, 2));
 
 // Desafio 6
-function highestCount() {
- let maior = 0
- let repeat = 0
+function highestCount(repeatMax) {
+ let maior = -1;
+ let repeat = 0;
  for (let index = 0; index <= repeatMax.length; index += 1)
     if (maior < repeatMax[index]){
-        maior = repeatMax[index]
+        maior = repeatMax[index];
     }
   for(let index in repeatMax){
      if(maior === repeatMax[index]){
-        repeat += 1
+        repeat += 1;
         }
     } 
-    return repeat
+    return repeat;
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([-2, -2, -1]));
 
 
 // Desafio 7
