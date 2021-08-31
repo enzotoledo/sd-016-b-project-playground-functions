@@ -27,8 +27,12 @@ return array
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins,ties) {
+let pontos= 0;
+wins = wins * 3;
+ties = ties * 1;
+pontos = ties + wins;
+return pontos;
 }
 
 // Desafio 6
