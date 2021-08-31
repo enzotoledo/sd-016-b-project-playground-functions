@@ -111,9 +111,39 @@ return quantNumeroMaior;
  
  
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+  let resultado = '';
+  let distcat1 = '';
+  let distcat2 ='';
+  
+  if(cat1 >= mouse) {
+    distcat1 = cat1 - mouse;
+  } else{
+    distcat1 = mouse - cat1;
+  }
+
+  if(cat2 >= mouse) {
+    distcat2 = cat2 - mouse;
+  } else {
+    distcat2 = mouse - cat2;
+  }
+
+  if (distcat1 < distcat2) {
+    resultado = 'cat1';
+  } else if (distcat2 < distcat1) {
+    resultado = 'cat2';
+  } else {
+    resultado = 'os gatos trombam e o rato foge';
+  }
+
+return(resultado);
+
 }
+
+console.log(catAndMouse(5,2,7));
+console.log(catAndMouse(7,1,19));
+console.log(catAndMouse(5,1,9));
+
 
 // Desafio 8
 function fizzBuzz() {
