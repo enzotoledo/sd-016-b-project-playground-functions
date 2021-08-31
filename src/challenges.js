@@ -20,8 +20,11 @@ function splitSentence(myString) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(myString) {
   // seu código aqui
+  let finalWord = myString[myString.length - 1];
+  let firstWord = myString[0];
+  return `${finalWord}, ${firstWord}`;
 }
 
 // Desafio 5
