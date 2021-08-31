@@ -92,13 +92,58 @@ function fizzBuzz(array) {
   }
   return array;
 }
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+/*
+ * Consultei o pull request do projeto do Lucas Araujo Carvalho para resolver essa parte.
+ * Link: https://github.com/tryber/sd-016-b-project-playground-functions/pull/85
+ */
+function encode(string) {
+  let code = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  let codedString = '';
+  for (let letter of string) {
+    let control = 0;
+    for (let property in code) {
+      if (letter === property) {
+        codedString += code[property]
+        control = 1;
+        break;
+      }
+    }
+    if (control === 0) {
+      codedString += letter;
+    }
+  }
+  return codedString;
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let code = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  let decodedString = '';
+  for (let letter of string) {
+    let control = 0;
+    for (let property in code) {
+      if (letter === property) {
+        decodedString += code[property]
+        control = 1;
+        break;
+      }
+    }
+    if (control === 0) {
+      decodedString += letter;
+    }
+  }
+  return decodedString;
 }
 
 module.exports = {
