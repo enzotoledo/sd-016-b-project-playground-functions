@@ -66,8 +66,24 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  // nesse caso, cada chave será comparada com seus valores
+  const allChecks = {
+    [lineA]: [lineB, lineC],
+    [lineB]: [lineA, lineC],
+    [lineC]: [lineA, lineB],
+  }
+
+  for (let key in allChecks) {
+    const value = allChecks[key]
+    if (key > value[0] + value[1]) {
+      return false
+    } if (key < Math.abs(value[0] - value[1])) {
+      return false
+    }
+  }
+
+  return true
 }
 
 // Desafio 13
