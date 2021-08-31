@@ -1,39 +1,29 @@
-// Desafio 1
 function compareTrue(param1, param2) {
-  if((param1 === true) && (param2 === true)){
-    return true
-  }else{
-    return false
-  }
+  return param1 && param2;
 }
-//console.log(compareTrue());
 
-// Desafio 2
 function calcArea(base, height) {
-  return ( ( base * height) / 2 );
+  return base * height / 2 ;
 }
 
-// Desafio 3
 function splitSentence(paramText) {
   let frase = paramText.split(" ");
   return frase;
 }
 
-// Desafio 4
 function concatName(text) {
   let firstText = text[text.length - 1];
   let lastText =  text[0];
 
   let result = firstText+ ", " +lastText;
-  return result
+  return result;
 }
 
-// Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let result = wins * 3 + ties;
+  return result;
 }
 
-// Desafio 6
 function highestCount() {
   // seu código aqui
 }
