@@ -9,14 +9,19 @@ function compareTrue(value1,value2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+ let area = (base*height)/2;
+
+ return area;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let separa = frase.split(" ");
+  return separa;
 }
+
+console.log(splitSentence("go Trybe"));
 
 // Desafio 4
 function concatName() {
