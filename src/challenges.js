@@ -2,7 +2,7 @@
 function compareTrue(param1, param2) {
   if((param1 === true) && (param2 === true)) {
     return true;
-  } else { 
+  } else {
     return false;
   }
 }
@@ -13,8 +13,8 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  return frase.split (' ');
 }
 
 // Desafio 4
