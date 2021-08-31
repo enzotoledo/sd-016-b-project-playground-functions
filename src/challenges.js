@@ -81,12 +81,16 @@ function encode(string) {
   }
   let result = '';
   for(j of string){
+    let z = 0;
     for(k in logic){
-      if(j===k){
+      if(j==k){
         result += logic[k];
-      }else{
-        result += j;
+        z = 1;
+        break;
       }
+    }
+    if(z===0){
+      result += j;
     }
   }
   return result;
