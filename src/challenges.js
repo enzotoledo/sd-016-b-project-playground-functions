@@ -31,7 +31,7 @@ function footballPoints(wins, ties) {
   return wins * 3 + ties;
 }
 
-// Desafio 6//
+// Desafio 6// ??????????????????????????
 function highestCount(arraynumber) {
   let organizedNumber = arraynumber.sort();
   let quants = 0;
@@ -61,16 +61,76 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(fizzbuzzbug) {
+  let bugbugbug = [];
+  for (let i = 0; i < fizzbuzzbug.length; i += 1) {
+    if ((fizzbuzzbug[i] % 3 === 0) && (fizzbuzzbug[i] % 5 === 0)) {
+      bugbugbug.push('fizzBuzz');
+    } else if (fizzbuzzbug[i] % 3 === 0) {
+      bugbugbug.push('fizz');
+    } else if (fizzbuzzbug[i] % 5 === 0) {
+      bugbugbug.push('buzz');
+    } else {
+      bugbugbug.push('bug!');
+    }
+  }
+  return bugbugbug;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(textEncodes) {
+  let textEncode = textEncodes.split('');
+  for (let i = 0; i < textEncode.length; i += 1) {
+    switch (textEncode[i]) {
+      case 'a' :
+        textEncode[i] = '1';
+        break;
+
+      case 'e' :
+        textEncode[i] = '2';
+        break;
+
+      case 'i' :
+        textEncode[i] = '3';
+        break;
+
+      case 'o' :
+        textEncode[i] = '4';
+        break;
+
+      case 'u' :
+        textEncode[i] = '5';
+        break;
+    }
+  }
+  return textEncode.join('');
 }
-function decode() {
-  // seu código aqui
+function decode(textDecodes) {
+  let textDecode = textDecodes.split('');
+  for (let i = 0; i < textDecode.length; i += 1) {
+    switch (textDecode[i]) {
+      case '1' :
+        textDecode[i] = 'a';
+        break;
+
+      case '2' :
+        textDecode[i] = 'e';
+        break;
+
+      case '3' :
+        textDecode[i] = 'i';
+        break;
+
+      case '4' :
+        textDecode[i] = 'o';
+        break;
+
+      case '5' :
+        textDecode[i] = 'u';
+        break;
+    }
+  }
+  return textDecode.join('');
 }
 
 module.exports = {
