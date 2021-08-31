@@ -38,7 +38,7 @@ function highestCount(arr) {
 
   negativeControl ? arr : arr.sort();
 
-  for (i of arr) {
+  for (let i of arr) {
     if (i === arr[arr.length - 1]) {
       counter += 1;
     }
@@ -70,7 +70,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arr) {
   const strArray = [];
 
-  for (i of arr) {
+  for (let i of arr) {
     if (i % 3 === 0 && i % 5 === 0) {
       strArray.push('fizzBuzz');
     } else if (i % 3 === 0) {
@@ -88,8 +88,8 @@ function fizzBuzz(arr) {
 function encode(str) {
   let encodeMsg = str.split('');
 
-  for (letter in encodeMsg) {
-    for (key in code) {
+  for (let letter in encodeMsg) {
+    for (let key in code) {
       if (encodeMsg[letter] === key) {
         encodeMsg[letter] = code[key];
       }
@@ -100,8 +100,8 @@ function encode(str) {
 function decode(str) {
   let decodeMsg = str.split('');
 
-  for (letter in decodeMsg) {
-    for (key in code) {
+  for (let letter in decodeMsg) {
+    for (let key in code) {
       if (decodeMsg[letter] == code[key]) {
         decodeMsg[letter] = key;
       }
