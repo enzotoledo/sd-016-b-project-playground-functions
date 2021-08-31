@@ -28,13 +28,25 @@ function concatName(myString) {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  return (wins * 3) + (ties);
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbers) {
   // seu código aqui
+  // Pesquisada funcao sort para numeros no site https://www.w3schools.com/jsref/jsref_sort.asp
+  let ordenedNumbers = numbers.sort(function (a, b) { return a - b; });
+  let highest = ordenedNumbers[ordenedNumbers.length - 1];
+  let count = 0;
+
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (highest === numbers[i]) {
+      count += 1;
+    }
+  }
+  return count;
 }
 
 // Desafio 7
