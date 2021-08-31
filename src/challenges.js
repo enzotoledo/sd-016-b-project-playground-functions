@@ -116,15 +116,15 @@ function decode(string) {
     decodificado = string.split('');
 
     for (index = 0; index < string.length; index++) {
-        if (decodificado[index] == '1') {
+        if (decodificado[index] === '1') {
             decodificado[index] = "a";
-        } else if (decodificado[index] == '2') {
+        } else if (decodificado[index] === '2') {
             decodificado[index] = "e";
-        } else if (decodificado[index] == '3') {
+        } else if (decodificado[index] === '3') {
             decodificado[index] = "i";
-        } else if (decodificado[index] == '4') {
+        } else if (decodificado[index] === '4') {
             decodificado[index] = "o";
-        } else if (decodificado[index] == '5') {
+        } else if (decodificado[index] === '5') {
             decodificado[index] = "u";
         }
     }
