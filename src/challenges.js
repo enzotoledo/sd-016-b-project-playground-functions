@@ -40,13 +40,14 @@ function highestCount(numberArray) {
   let repeatCount = 0;
   let numberCount = 0;
 
-  for(let index in numberArray){
+  for (let index in numberArray) {
     let verify = 0;
-    if(highestNumber <= numberArray[index]){
+
+    if (highestNumber <= numberArray[index]) {
       highestNumber = numberArray[index];
       verify = highestNumber;
-      for(let index2 in numberArray){
-        if(verify === numberArray[index2]){
+      for (let index2 in numberArray) {
+        if (verify === numberArray[index2]) {
           numberCount += 1;
         }
       }
@@ -58,8 +59,19 @@ function highestCount(numberArray) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+  let distCat1Rat = Math.abs(mouse - cat1);
+  let distCat2Rat = Math.abs(mouse - cat2);
+
+  if (distCat1Rat < distCat2Rat) {
+    return `cat1`;
+  }
+  else if (distCat1Rat > distCat2Rat) {
+    return `cat2`;
+  }
+  else {
+    return `os gatos trombam e o rato foge`;
+  }
 }
 
 // Desafio 8
