@@ -18,9 +18,12 @@ function calcArea(base, altura) {
 console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
+  let array = string.split(" ");
+  return array; 
 }
+console.log(splitSentence("foguete"));
 
 // Desafio 4
 function concatName() {
