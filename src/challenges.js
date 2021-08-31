@@ -50,19 +50,30 @@ function catAndMouse(mouse, cat1, cat2) {
   let catClose = '';
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     catClose = 'cat1';
-  } 
-  else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
+  } else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
     catClose = 'cat2';
-  }
-  else {
+  } else {
     catClose = 'os gatos trombam e o rato foge';
   }
   return catClose;
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayOfNumbers) {
+  let newArrayStr = [];
+  for (let i3 = 0; i3 < arrayOfNumbers.length; i3 += 1) {
+    let actualNumber = arrayOfNumbers[i3];
+    if (actualNumber % 3 === 0 && actualNumber % 5 !== 0) {
+      newArrayStr.push('fizz');
+    } else if (actualNumber % 5 === 0 && actualNumber % 3 !== 0) {
+      newArrayStr.push('buzz');
+    } else if (actualNumber % 3 === 0 && actualNumber % 5 === 0) {
+      newArrayStr.push('fizzBuzz');
+    } else {
+      newArrayStr.push('bug!');
+    }
+  }
+  return newArrayStr;
 }
 
 // Desafio 9
