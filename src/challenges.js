@@ -17,10 +17,11 @@ function splitSentence(str) {
   let space = ' ';
   return str.split(space);
 }
+splitSentence('go Trybe');
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayOfStrings) {
+  return `${arrayOfStrings[arrayOfStrings.length - 1]}, ${arrayOfStrings[0]}`;
 }
 
 // Desafio 5
