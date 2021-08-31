@@ -6,35 +6,39 @@ function techList(techArray, name) {
 }
 
 // Desafio 11
+function areOutOfBounds(numbersArray) {
+  return numbersArray.some((number) => number < 0 || number > 9);
+}
 
-function areValidNumbers(numbersArray) {
-  if (numbersArray.length !== 11) {
-    return {
-      isValid: false,
-      msg: 'Array com tamanho incorreto.',
-    };
+function hasTooManyRepeats(numbersArray) {
+  return numbersArray.some((number) => numbersArray.filter((n) => n === number).length >= 3);
+}
+
+function hasInvalidValues(numbersArray) {
+  return hasTooManyRepeats(numbersArray) || areOutOfBounds(numbersArray);
+}
+
+function hasWrongSize(numbersArray) {
+  return numbersArray.length !== 11;
+}
+
+function validateResponse(isValid, msg) {
+  return { isValid, msg };
+}
+
+function validateNumberArray(numbersArray) {
+  if (hasWrongSize(numbersArray)) return validateResponse(false, 'Array com tamanho incorreto.');
+  if (hasInvalidValues(numbersArray)) {
+    return validateResponse(false, 'não é possível gerar um número de telefone com esses valores');
   }
-  if (numbersArray.some(function (number) {
-    return numbersArray.filter((value) => value === number).length >= 3 || number < 0 || number > 9;
-  })) {
-    return {
-      isValid: false,
-      msg: 'não é possível gerar um número de telefone com esses valores',
-    };
-  }
-  return { isValid: true, msg: '' };
+  return validateResponse(true, '');
 }
 function generatePhoneNumber(numbersArray) {
-  let isValidArray = areValidNumbers(numbersArray);
-  if (!isValidArray.isValid) return isValidArray.msg;
-  let formattedPhoneNumber = [];
-  for (let index = 0; index < numbersArray.length; index += 1) {
-    if (index === 0) formattedPhoneNumber.push('(');
-    formattedPhoneNumber.push(numbersArray[index]);
-    if (index === 1) formattedPhoneNumber.push(') ');
-    if (index === 6) formattedPhoneNumber.push('-');
-  }
-  return formattedPhoneNumber.join('');
+  let validatedArray = validateNumberArray(numbersArray);
+  if (!validatedArray.isValid) return validatedArray.msg;
+  let regExp = RegExp('(\\d{2})(\\d{5})(\\d{4})');
+  let formattedPhoneNumber = numbersArray.join('').replace(regExp, '($1) $2-$3');
+  return formattedPhoneNumber;
 }
 
 // Desafio 12
