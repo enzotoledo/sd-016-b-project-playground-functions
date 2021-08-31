@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 1
 function compareTrue(a, b) {
   // seu código aqui
@@ -39,8 +40,17 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
   // seu código aqui
+  let high = Math.max.apply({}, array);
+  // Código do high inspirado no site: https://stackoverflow.com/questions/54623431/find-the-biggest-number-in-an-array-by-using-javascript-loops
+  let count = 0;
+  for (let i = 0; i < array.length; i += 1) {
+    if (high === array[i]) {
+      count += 1;
+    }
+  }
+  return count;
 }
 
 // Desafio 7
