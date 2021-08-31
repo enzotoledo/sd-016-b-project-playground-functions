@@ -81,55 +81,46 @@ function fizzBuzz(arr) {
 }
 
 // Desafio 9
-function encode(string) {
-  let result = '';
-  let switch1 = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  }
-  for(let i of string){
-    let z = 0;
-    for(let y in switch1){
-      if(i==y){
-        result += switch1[y];
-        z = 1;
-        break;
-      }
-    }
-    if(z===0){
-      result += i;
+function encode(frase) {
+  let array = frase.split('');
+  let codificado = [];
+  for (let i = 0; i < array.length; i += 1){
+    if (array[i] == "a"){
+      codificado.push(1);
+    } else if (array[i] == "e"){
+      codificado.push(2);
+    } else if (array[i] == "i"){
+      codificado.push(3);
+    } else if (array[i] == "o"){
+      codificado.push(4);
+    } else if (array[i] == "u"){
+      codificado.push(5);
+    } else {
+      codificado.push(array[i]);
     }
   }
-  return result;
+  return(codificado.join(''));
 }
 
-function decode(string) {
-  let result = '';
-  let switch1 = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  }
-  
-  for(let i of string){
-    let z = 0;
-    for(let y in switch1){
-      if(i==switch1[y]){
-        result += y;
-        z = 1;
-        break;
-      }
-    }
-    if(z===0){
-      result += i;
+function decode(frase){
+  let array = frase.split('');
+  let decodificado = [];
+  for (let i = 0; i < array.length; i += 1){
+    if (array[i] == 1){
+      decodificado.push("a");
+    } else if (array[i] == 2){
+      decodificado.push("e");
+    } else if (array[i] == 3){
+      decodificado.push("i");
+    } else if (array[i] == 4){
+      decodificado.push("o");
+    } else if (array[i] == 5){
+      decodificado.push("u");
+    } else {
+      decodificado.push(array[i]);
     }
   }
-  return result;
+  return(decodificado.join(''));
 }
 
 module.exports = {
