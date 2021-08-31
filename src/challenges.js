@@ -24,8 +24,11 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+let resConcatName;
+function concatName(arrrayString) {
+  
+  resConcatName = `${arrrayString[arrrayString.length-1]}, ${arrrayString[0]}`;
+  return resConcatName;
 }
 
 // Desafio 5
