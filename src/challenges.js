@@ -26,7 +26,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(arr) {
   let counter = 0;
-  let negativeControl = arr[0] < 0;
+  const negativeControl = arr[0] < 0;
 
   negativeControl ? arr : arr.sort();
 
@@ -39,8 +39,23 @@ function highestCount(arr) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Space = 0;
+  let cat2Space = 0;
+  const cat1Win = mouse - cat1 < 0;
+  const cat2Win = mouse - cat2 < 0;
+
+  cat1Win ? cat1Space = (mouse - cat1) * -1 : cat1Space = (mouse - cat1);
+  cat2Win ? cat2Space = (mouse - cat2) * -1 : cat2Space = (mouse - cat2);
+
+  console.log(cat1Space, cat2Space);
+  if (cat1Space < cat2Space) {
+    return "cat1";
+  } else if (cat2Space < cat1Space) {
+    return "cat2";
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 
 // Desafio 8
