@@ -19,11 +19,11 @@ function splitSentence(string) {
   let splitedString = string.split(' ');
   return splitedString;
 }
-console.log(splitSentence("foguete"));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(stringArray) {
+  let concatenated = stringArray[stringArray.length - 1] + ',' + stringArray[0];
+  return concatenated;
 }
 
 // Desafio 5
