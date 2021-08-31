@@ -58,8 +58,25 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(listOfNumber) {
+  let line = "";
+
+  for(let index = 0; index < listOfNumber.length; index += 1){
+    if(listOfNumber[index] % 3 == 0 && listOfNumber[index] % 5 !== 0){
+      line = line + "fizz ";
+    }else if(listOfNumber[index] % 5 == 0 && listOfNumber[index] % 3 !== 0){
+      line = line + "buzz ";
+    }else if(listOfNumber[index] % 5 == 0 && listOfNumber[index] % 3 == 0){
+      line = line + "fizzBuzz ";
+    }else{
+      line = line + "bug! ";
+    }
+  }
+  
+  let newLine = line.split(' ').filter(p => p != '')
+
+  return newLine;
+  
 }
 
 // Desafio 9
