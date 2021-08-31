@@ -8,8 +8,9 @@ function compareTrue(numberOne, numberTwo) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  areaTriangle = (base*height) / 2;
+  return areaTriangle;
 }
 
 // Desafio 3
