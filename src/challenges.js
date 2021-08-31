@@ -73,8 +73,23 @@ function catAndMouse(mouse,cat1,cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numbresFB) {
   // seu código aqui
+  let resultado = [];
+
+  for (let i =0; i < numbresFB.length; i+=1){
+
+    if (numbresFB[i]% 3 ==0 && numbresFB[i]% 5==0){
+      resultado.push("fizzBuzz");
+    }else if (numbresFB[i]% 3 == 0){
+      resultado.push("fizz");
+    } else if (numbresFB[i]% 5 ==0){
+      resultado.push("buzz");
+    }else{
+      resultado.push("bug");
+    }
+  }
+  return resultado
 }
 
 // Desafio 9
