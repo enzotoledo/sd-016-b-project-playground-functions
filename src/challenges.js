@@ -56,14 +56,20 @@ function concatName(array) {
 // --------------------------------------------------------------------------------------------------
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
     // seu código aqui
+    return (wins * 3) + ties;
+
 }
+// testando a função
+// console.log(footballPoints(14, 8));
+// console.log(footballPoints(1, 2));
+// console.log(footballPoints(0, 0));
 
 // --------------------------------------------------------------------------------------------------
 
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
     // seu código aqui
 }
 
