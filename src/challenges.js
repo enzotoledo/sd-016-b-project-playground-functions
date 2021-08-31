@@ -90,11 +90,46 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let array = frase.split('');
+  let codificado = [];
+  for (let i = 0; i < array.length; i += 1){
+    if (array[i] == "a"){
+      codificado.push(1);
+    } else if (array[i] == "e"){
+      codificado.push(2);
+    } else if (array[i] == "i"){
+      codificado.push(3);
+    } else if (array[i] == "o"){
+      codificado.push(4);
+    } else if (array[i] == "u"){
+      codificado.push(5);
+    } else {
+      codificado.push(array[i]);
+    }
+  }
+  return(codificado.join(''));
 }
-function decode() {
-  // seu código aqui
+
+function decode(frase){
+  let array = frase.split('');
+  let decodificado = [];
+  for (let i = 0; i < array.length; i += 1){
+    if (array[i] == 1){
+      decodificado.push("a");
+    } else if (array[i] == 2){
+      decodificado.push("e");
+    } else if (array[i] == 3){
+      decodificado.push("i");
+    } else if (array[i] == 4){
+      decodificado.push("o");
+    } else if (array[i] == 5){
+      decodificado.push("u");
+    } else {
+      decodificado.push(array[i]);
+    }
+  }
+  return(decodificado.join(''));
 }
 
 module.exports = {
