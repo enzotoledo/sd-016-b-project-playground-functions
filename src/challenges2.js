@@ -42,21 +42,20 @@ function generatePhoneNumber(arr) {
   }
 
   if (arr.length !== 11) {
-    finalString = 'Array com tamanho incorreto.'
+    finalString = 'Array com tamanho incorreto.';
   } else {
     arr.forEach((number) => {
-     if (number < 0 || number > 9) {
-      finalString = 'não é possível gerar um número de telefone com esses valores';
+      if (number < 0 || number > 9) {
+        finalString = 'não é possível gerar um número de telefone com esses valores';
       }
     });
-  
     arr.forEach((number) => {
       for (let key in phoneObj) {
         if (number.toString() === key) {
           phoneObj[key] += 1;
         }
       }
-    })
+    });
   }
 
   for (let key in phoneObj) {
@@ -71,9 +70,8 @@ function generatePhoneNumber(arr) {
 function triangleCheck(lineA, lineB, lineC) {
   const sizeCheck1 = lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC);
   const sizeCheck2 = lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC);
-  const sizeCheck3 = lineC < (lineB + lineA) && lineC > Math.abs(lineB - lineA);
 
-  return sizeCheck1 && sizeCheck2 && sizeCheck3;
+  return sizeCheck1 && sizeCheck2;
 }
 
 // Desafio 13
