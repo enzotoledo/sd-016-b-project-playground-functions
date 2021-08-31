@@ -1,130 +1,121 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  return param1 === true && param2 === true
+  return param1 === true && param2 === true;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(" ")
+  return string.split(' ');
 }
 
 // Desafio 4
 function concatName(array) {
-  return array[array.length - 1] + ", " + array[0]
+  return `${array[array.length - 1]}, ${array[0]}`;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3) + ties
+  return (wins * 3) + ties;
 }
 
 // Desafio 6
 function highestCount(array) {
-  let maior
-  const repeticoes = {}
+  let maior;
+  const repeticoes = {};
 
   for (let numero of array) {
     if (!maior || (numero > maior)) {
-      maior = numero
+      maior = numero;
     }
-    repeticoes[numero] = (repeticoes[numero] || 0) + 1
+    repeticoes[numero] = (repeticoes[numero] || 0) + 1;
   }
 
-  return repeticoes[maior]
+  return repeticoes[maior];
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distanciaCat1 = mouse - cat1
-  let distanciaCat2 = mouse - cat2
+  let distanciaCat1 = Math.abs(mouse - cat1);
+  let distanciaCat2 = Math.abs(mouse - cat2);
 
-  if (distanciaCat1 < 0)
-    distanciaCat1 = -distanciaCat1
-
-  if (distanciaCat2 < 0)
-    distanciaCat2 = -distanciaCat2
-
-  if (distanciaCat1 == distanciaCat2) {
-    return "os gatos trombam e o rato foge"
-
-  } else if (distanciaCat1 < distanciaCat2) {
-    return "cat1"
-
-  } else if (distanciaCat2 < distanciaCat1) {
-    return "cat2"
-
+  if (distanciaCat1 === distanciaCat2) {
+    return 'os gatos trombam e o rato foge';
   }
+
+  if (distanciaCat1 < distanciaCat2) {
+    return 'cat1';
+  }
+
+  return 'cat2';
 }
 
 // Desafio 8
-
 function isDivisible(valor, numero) {
-  return valor % numero == 0
+  return valor % numero === 0;
 }
 
 function fizzBuzz(array) {
-  const result = []
+  const result = [];
 
   for (let key in array) {
-    const divisivelPor3 = isDivisible(array[key], 3)
-    const divisivelPor5 = isDivisible(array[key], 5)
-
-    if (divisivelPor3 && divisivelPor5) {
-      result[key] = "fizzBuzz"
-    } else if (divisivelPor3) {
-      result[key] = "fizz"
-    } else if (divisivelPor5) {
-      result[key] = "buzz"
-    } else {
-      result[key] = "bug!"
+    if ({}.hasOwnProperty.call(array, key)) {
+      if (isDivisible(array[key], 3) && isDivisible(array[key], 5)) {
+        result[key] = 'fizzBuzz';
+      } else if (isDivisible(array[key], 3)) {
+        result[key] = 'fizz';
+      } else if (isDivisible(array[key], 5)) {
+        result[key] = 'buzz';
+      } else {
+        result[key] = 'bug!';
+      }
     }
   }
 
-  return result
+  return result;
 }
 
 // Desafio 9
 function encode(string) {
   const object = {
-    a: "1",
-    e: "2",
-    i: "3",
-    o: "4",
-    u: "5",
-  }
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+  };
 
-  let result = ""
-  const array = string.split("")
+  let result = '';
+  const array = string.split('');
 
   for (let value of array) {
-    result += (object[value] || value)
+    result += (object[value] || value);
   }
 
-  return result
+  return result;
 }
 
 function decode(string) {
   const object = {
-    1: "a",
-    2: "e",
-    3: "i",
-    4: "o",
-    5: "u",
-  }
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
 
-  let result = ""
-  const array = string.split("")
+  let result = '';
+  const array = string.split('');
 
   for (let value of array) {
-    result += (object[value] || value)
+    result += (object[value] || value);
   }
 
-  return result
+  return result;
 }
 
 module.exports = {

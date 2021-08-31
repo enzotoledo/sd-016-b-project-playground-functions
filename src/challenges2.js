@@ -1,89 +1,74 @@
 // Desafio 10
 function techList(array, name) {
-  const result = []
+  const result = [];
 
-  if (array.length == 0)
-    return "Vazio!"
-
-  array.sort()
-
-  for (let value of array) {
-    result.push({ tech: value, name: name })
+  if (array.length === 0) {
+    return 'Vazio!';
   }
 
-  return result
+  array.sort();
+
+  for (let value of array) {
+    result.push({ tech: value, name });
+  }
+
+  return result;
 }
 
 // Desafio 11
 function isValidNumber(repeatObject, number) {
-  if (number < 0) return false
-  if (number > 9) return false
+  if (number < 0) return false;
+  if (number > 9) return false;
 
-  if (!repeatObject[number])
-    repeatObject[number] = 0
+  if (!repeatObject[number]) {
+    repeatObject[number] = 0;
+  }
 
-  repeatObject[number] += 1
+  repeatObject[number] += 1;
 
-  if (repeatObject[number] >= 3) return false
+  if (repeatObject[number] >= 3) {
+    return false;
+  }
 
-  return true
+  return true;
 }
 
 function generatePhoneNumber(array) {
-  if (array.length != 11)
-    return "Array com tamanho incorreto."
-
-  const repeated = {}
-
-  let result = "("
-
-  for (let key = 0; key < 2; key++) {
-    if (!isValidNumber(repeated, array[key])) {
-      return "não é possível gerar um número de telefone com esses valores"
-    }
-    result += array[key]
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
   }
 
-  result += ") "
+  const repeated = {};
 
-  for (let key = 2; key <= 6; key++) {
-    if (!isValidNumber(repeated, array[key])) {
-      return "não é possível gerar um número de telefone com esses valores"
+  for (let number of array) {
+    if (!isValidNumber(repeated, number)) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
-    result += array[key]
   }
 
-  result += "-"
+  array.splice(0, 0, '(');
+  array.splice(3, 0, ')');
+  array.splice(4, 0, ' ');
+  array.splice(10, 0, '-');
 
-  for (let key = 7; key < 11; key++) {
-    if (!isValidNumber(repeated, array[key])) {
-      return "não é possível gerar um número de telefone com esses valores"
-    }
-    result += array[key]
-  }
-
-  return result
+  return array.join('');
 }
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  // nesse caso, cada chave será comparada com seus valores
-  const allChecks = {
-    [lineA]: [lineB, lineC],
-    [lineB]: [lineA, lineC],
-    [lineC]: [lineA, lineB],
+  if (((lineA + lineB) > lineC) && (lineC < Math.abs(lineA - lineB))) {
+    return false;
   }
 
-  for (let key in allChecks) {
-    const value = allChecks[key]
-    if (key > value[0] + value[1]) {
-      return false
-    } if (key < Math.abs(value[0] - value[1])) {
-      return false
-    }
+  if (((lineA + lineC) > lineB) && (lineB < Math.abs(lineA - lineC))) {
+    return false;
   }
 
-  return true
+  if (((lineB + lineC) > lineA) && (lineA < Math.abs(lineB - lineC))) {
+    return false;
+  }
+
+  return true;
 }
 
 // Desafio 13
@@ -91,10 +76,10 @@ function hydrate(string) {
   let total = 0;
 
   for (let number of string.match(/\d/g)) {
-    total += Number(number)
+    total += Number(number);
   }
 
-  return total > 1 ? total + " copos de água" : total + " copo de água"
+  return `${total} ${total > 1 ? 'copos' : 'copo'} de água`;
 }
 
 module.exports = {
