@@ -7,6 +7,7 @@ if((a==true) && (b==true)){
   return false;
   }
 }
+
 // Desafio 2
 function calcArea(base,height) {
 let resultado = [];
@@ -14,13 +15,15 @@ resultado = (base * height)/2;
 return resultado;
 }
 // Desafio 3
-function splitSentence() {
-
+function splitSentence(string) {
+  string = string.split(" ")
+  return string
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+array = array[array.length-1] + "," + array[0];
+return array
 }
 
 // Desafio 5
