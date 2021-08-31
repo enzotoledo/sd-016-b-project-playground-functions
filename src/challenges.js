@@ -9,20 +9,20 @@ function compareTrue(firstValue, secondValue) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let result = (base * height) / 2
-  return result; 
+  let result = (base * height) / 2;
+  return result;
 }
 console.log(calcArea(5, 2));
 
 // Desafio 3
 function splitSentence(word) {
- return word.split(' ');
+  return word.split(' ');
 }
 
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(listOfNames) {
+  let result = listOfNames[listOfNames.length - 1] + ', ' + listOfNames[0];
+  return result;
 }
 
 // Desafio 5
