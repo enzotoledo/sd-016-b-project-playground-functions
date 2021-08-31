@@ -52,8 +52,29 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Distance = 0;
+  let cat2Distance = 0;
+  // Check the distance between the cats and the mouse.
+  if ((mouse > cat1) && (mouse > cat2)) {
+    cat1Distance = mouse - cat1;
+    cat2Distance = mouse - cat2;
+  } else if ((mouse > cat1) && (mouse < cat2)) {
+    cat1Distance = mouse - cat1;
+    cat2Distance = cat2 - mouse;
+  } else if ((mouse < cat1) && (mouse < cat2)) {
+    cat1Distance = cat1 - mouse;
+    cat2Distance = cat2 - mouse;
+  } else if ((mouse < cat1) && (mouse > cat2)) {
+    cat1Distance = cat1 - mouse;
+    cat2Distance = mouse - cat2;
+  }
+  // returns wich one is closest or if both are in the same distance.
+  if (cat1Distance > cat2Distance) {
+    return 'cat2';
+  } else if (cat1Distance < cat2Distance) {
+    return 'cat1';
+  } else return 'os gatos trombam e o rato foge'
 }
 
 // Desafio 8
