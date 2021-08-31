@@ -53,20 +53,20 @@ function highestCount(array) {
   if(maior < 0){
     return 1
   }
-  for (let y = 0; y < array.length; y++) {
+  for (let y = 0; y < array.length; y++){
       if(array[y] == maior){
           repeticoes++
-      }  
+      }
   }
   return repeticoes
 }
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
-  if(mouse + cat1 > mouse + cat2){
-      return 'cat1'
-  }else if(mouse + cat2 > mouse + cat1){
+  if(Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)){
       return 'cat2'
+  }else if(Math.abs(cat2 - mouse) > Math.abs(cat1 - mouse)){
+      return 'cat1'
   }else{
       return 'os gatos trombam e o rato foge'
   }
