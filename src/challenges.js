@@ -82,23 +82,48 @@ function fizzBuzz(array) {
   return arrayFinal;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 // Desafio 9
 function encode(string) {
+  let letter = string.split('');
   let coded = '';
-  let vogais = ['a', 'b', 'c', 'd', 'e'];
-  for (let i = 0; i < vogais.length; i += 1) {
-    coded += string.replace(vogais[i], i + 1);
+  for (let i = 0; i < letter.length; i += 1) {
+    if (letter[i] === 'a') {
+      letter[i] = '1';
+    } else if (letter[i] === 'e') {
+      letter[i] = '2';
+    } else if (letter[i] === 'i') {
+      letter[i] = '3';
+    } else if (letter[i] === 'o') {
+      letter[i] = '4';
+    } else if (letter[i] === 'u') {
+      letter[i] = '5';
+    }
   }
+  coded = letter.join('');
   return coded;
 }
-// console.log(encode('hi, there!'));
 
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let letter = string.split('');
+  let decoded = '';
+  for (let i = 0; i < letter.length; i += 1) {
+    if (letter[i] === '1') {
+      letter[i] = 'a';
+    } else if (letter[i] === '2') {
+      letter[i] = 'e';
+    } else if (letter[i] === '3') {
+      letter[i] = 'i';
+    } else if (letter[i] === '4') {
+      letter[i] = 'o';
+    } else if (letter[i] === '5') {
+      letter[i] = 'u';
+    }
+  }
+  decoded = letter.join('');
+  return decoded;
 }
 
+console.log(decode('h2ll4'));
 module.exports = {
   calcArea,
   catAndMouse,
