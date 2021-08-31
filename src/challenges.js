@@ -56,8 +56,24 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaCat1 = 0;
+  let distanciaCat2 = 0;
+  let posicaoMouse = mouse;
+  if ((cat1 !== posicaoMouse)) { /*  calcula distancia do gato 1 */
+    distanciaCat1 = posicaoMouse - cat1;
+  }
+  if ((cat2 !== posicaoMouse)) { /*  calcula distancia do gato 2 */
+    distanciaCat2 = posicaoMouse - cat2;
+  }
+  let valorGato1ABS = Math.abs(distanciaCat1);
+  let valorGato2ABS = Math.abs(distanciaCat2);
+  if (valorGato1ABS === valorGato2ABS) { /*  verifica qual esta mais distante e retorna o resultado  */
+    return 'os gatos trombam e o rato foge';
+  } if (valorGato1ABS < valorGato2ABS) {
+    return 'cat1';
+  }
+  return 'cat2';
 }
 
 // Desafio 8
