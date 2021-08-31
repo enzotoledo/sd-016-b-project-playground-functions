@@ -1,3 +1,11 @@
+const code = {
+  a: 1,
+  e: 2,
+  i: 3,
+  o: 4,
+  u: 5
+}
+
 // Desafio 1
 function compareTrue(arg1, arg2) {
   return arg1 === true && arg2 === true;
@@ -77,11 +85,29 @@ function fizzBuzz(arr) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let encodeMsg = str.split("");
+
+  for (letter in encodeMsg) {
+    for (key in code) {
+      if (encodeMsg[letter] === key) {
+        encodeMsg[letter] = code[key];
+      }
+    }
+  }
+  return encodeMsg.join("");
 }
-function decode() {
-  // seu código aqui
+function decode(str) {
+  let decodeMsg = str.split("");
+
+  for (letter in decodeMsg) {
+    for (key in code) {
+      if (decodeMsg[letter] == code[key]) {
+        decodeMsg[letter] = key;
+      }
+    }
+  }
+  return decodeMsg.join("");
 }
 
 module.exports = {
