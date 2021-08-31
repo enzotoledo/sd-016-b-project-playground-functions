@@ -2,14 +2,35 @@
 // Playground Functions
 
 // Desafio 1
-function compareTrue() {
+console.log('Desafio 1')
+
+function compareTrue(num1, num2, num3) {
     // seu código aqui
+    if (num1 > num2 && num1 > num3) {
+        return true;
+    } else {
+        return false
+    }
 }
+// testando a função
+console.log(compareTrue(1, 2, 3));
+console.log(compareTrue(3, 2, 1));
+console.log(compareTrue(4, 5, 6));
+console.log(compareTrue(6, 5, 4));
+console.log(compareTrue(7, 8, 9));
+console.log(compareTrue(9, 8, 7));
+console.log(compareTrue(-1, 0, 1));
+console.log(compareTrue(1, 0, -1));
 
 // Desafio 2
+console.log('Desafio 2')
+
 function calcArea() {
-    // seu código aqui
+
+
 }
+// testando a função
+console.log((a));
 
 // Desafio 3
 function splitSentence() {
