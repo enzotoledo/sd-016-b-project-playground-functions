@@ -8,8 +8,9 @@ function compareTrue(value1,value2) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu c
+function calcArea(base,height) {
+  let triangulo = (base * height)/2
+  return triangulo
 }
 
 // Desafio 3
