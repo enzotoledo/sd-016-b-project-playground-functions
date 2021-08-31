@@ -1,6 +1,5 @@
 // Desafio 10
 function techList() {
-  // seu código aqui
 }
 
 // Desafio 11
@@ -15,11 +14,22 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return false;
 }
-console.log(triangleCheck(25,14,8))
+console.log(triangleCheck(25, 14, 8));
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  let numeros = drinks.match(/\d+/g).map(Number);
+  let sum = 0;
+  for (let index in numeros) {
+    sum += numeros[index];
+  }
+  let sumtotal = sum;
+  if (sumtotal > 1) {
+    return `${sumtotal} copos de água`;
+  }
+
+  return `${sumtotal} copo de água`;
 }
+console.log(hydrate('1 cerveja 2'));
 
 module.exports = {
   generatePhoneNumber,
