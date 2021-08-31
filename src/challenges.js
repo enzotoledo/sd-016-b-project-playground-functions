@@ -18,8 +18,18 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(strings) {
+  let vetor = [];
+  for(let i = 0 ; i < strings.length ; i++){
+    if(i == 0){
+      vetor.push(strings[0]);
+    }else if(i == strings.length-1){
+      vetor.push(strings[strings.length-1]);
+    }
+  }
+
+  return vetor[1] + ", " + vetor[0];
+  
 }
 
 // Desafio 5
