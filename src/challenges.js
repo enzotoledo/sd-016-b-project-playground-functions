@@ -28,11 +28,11 @@ function concatName(arr) {
     return firstLast
   }
 }
+
 // Desafio 5
 function footballPoints (wins,ties) {
-var ties = ties
-
-return (wins * 3) + ties;
+let winsTies = (wins * 3) + ties;
+return winsTies
 }
 
 // Desafio 6
