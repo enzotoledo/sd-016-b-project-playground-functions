@@ -4,8 +4,6 @@ function compareTrue(param1, param2) {
   return false;
 }
 
-console.log(compareTrue(true, false));
-
 // Desafio 2
 function calcArea() {
   // seu código aqui
