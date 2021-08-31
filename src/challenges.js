@@ -2,13 +2,14 @@
 function compareTrue(value1, value2) {
   /**
    * Se o value1 e value2 forem boolean true, retorne boolean true. Caso contrário, retorne boolean false.
-   * O operador AND compara dois valores e só resulta em verdadeiro se todos os operandos forem verdadeiros, ou seja, true ou truthy. Ele retorna o valor de um dos operandos especificados, e por isso posso usar o prefer-single-boolean-return sugerido pelo Linter.
+   * O operador AND compara dois valores e só resulta em verdadeiro se todos os operandos forem verdadeiros, ou seja, true ou truthy. Ele retorna o valor de um dos operandos especificados, e por isso posso usar o prefer-single-boolean-return sugerido pelo Linter, já que a entrada dos dois parâmetros do desafio são boleanos.
    * Usei o comparador de igualdade estrita para comparar valor e tipo.
    * ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND
    * Consultei o repositório de Stas Vilchik e usei a Compliant Solution.
    * Link: https://github.com/SonarSource/eslint-plugin-sonarjs/blob/master/docs/rules/prefer-single-boolean-return.md
    */
-  return ((value1 === true) && (value2 === true));
+  let trueOrFalse = ((value1 === true) && (value2 === true));
+  return trueOrFalse;
 }
 
 // Desafio 2
@@ -24,8 +25,13 @@ function splitSentence() {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(list) {
+  /**
+   * Retorna o primeiro e o último item de uma array separados por vírgula.
+   * O último item corresponde ao valor do último índice da array que é o comprimento da array - 1, e o primeiro item corresponde ao valor do índice 0 da array.
+  */
+  let lastAndFirst = list[list.length - 1] + ', ' + list[0];
+  return lastAndFirst;
 }
 
 // Desafio 5
