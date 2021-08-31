@@ -56,7 +56,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
   let distanceC1 = Math.abs(cat1 - mouse);
   let distanceC2 = Math.abs(cat2 - mouse);
-  
+
   if (distanceC1 < distanceC2) {
     return "cat1"
   } else if (distanceC2 < distanceC1) { 
@@ -67,8 +67,22 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(bigArray) {
+
+  let arrayFizzBuzz = [];
+
+  for(let index = 0; index < bigArray.length; index += 1) {
+    if (bigArray[index] % 3 === 0 && bigArray[index] % 5 === 0) { 
+      arrayFizzBuzz.push("fizzBuzz");
+    } else if (bigArray[index] % 3 === 0) {
+      arrayFizzBuzz.push("fizz"); 
+    } else if (bigArray[index] % 5 === 0) {
+      arrayFizzBuzz.push("buzz");
+    } else if (bigArray[index] % 3 !== 0 && bigArray[index] % 5 !== 0) {
+      arrayFizzBuzz.push("bug!");
+    }
+  }
+  return arrayFizzBuzz;
 }
 
 // Desafio 9
