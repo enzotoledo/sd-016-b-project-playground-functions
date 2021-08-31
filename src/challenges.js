@@ -1,55 +1,79 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if ((param1 === true) && (param2 === true)){
-    return true
+  let valueBolean = false;
+  if ((param1 === true) && (param2 === true)) {
+    valueBolean = true;
   } else {
-    return false
+    valueBolean = false;
   }
+  return valueBolean;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base*height) / 2;
-  return area
+  let area = (base * height) / 2;
+
+  return area;
 }
 
 // Desafio 3
 function splitSentence(string) {
-  let array = string.split(" ");
-  return array
+  let array = string.split(' ');
+
+  return array;
 }
 
 // Desafio 4
 function concatName(arrayDes4) {
-  return arrayDes4[arrayDes4.length - 1] + ", " + arrayDes4[0]
+  let phrase = arrayDes4[arrayDes4.length - 1] + ', ' + arrayDes4[0];
+
+  return phrase;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = (wins * 3) + ties
-  return points
+  let points = (wins * 3) + ties;
+
+  return points;
 }
 
 // Desafio 6
 function highestCount(valuesArray) {
-  let bigger = -Infinity;
+  let bigger = Math.max.apply(null, valuesArray);
+
   let countBigger = 0;
-  for (let index = 0; index < valuesArray.length; index += 1){
-    if (valuesArray[index] >= bigger) {
-      bigger = valuesArray[index]
-    }
-  }
+
+  // for (let index = 0; index < valuesArray.length; index += 1) {
+  //  if (valuesArray[index] > bigger) {
+  //    bigger = valuesArray[index];
+  //  }
+  // }
+
   for (let index = 0; index < valuesArray.length; index += 1) {
-    if (valuesArray[index] == bigger) {
-      countBigger += 1; 
+    if (valuesArray[index] === bigger) {
+      countBigger += 1;
     }
   }
-  return countBigger
+
+  return countBigger;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(positionMouse, positionCat1, positionCat2) {
+  let distCat1 = Math.abs(positionMouse - positionCat1);
+
+  let distCat2 = Math.abs(positionMouse - positionCat2);
+
+  let catPull = '';
+
+  if (distCat1 < distCat2) {
+    catPull = 'cat1';
+  } else if (distCat1 === distCat2) {
+    catPull = 'os gatos trombam e o rato foge';
+  } else {
+    catPull = 'cat2';
+  }
+  return catPull;
 }
 
 // Desafio 8
