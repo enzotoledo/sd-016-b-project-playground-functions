@@ -33,7 +33,7 @@ function generatePhoneNumber(arr) {
     } else if (arr[i] > 9) {
       return erroB;
     }
-    for (let j = i; j < arr.length; j += 1) {
+    for (let j = 0; j < arr.length; j += 1) {
       if (arr[i] === arr[j]) {
         count += 1;
       }
