@@ -12,8 +12,9 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(text) {
+let array = text.split(' '); // Usado comando split com o separador " ", retirado informação do site : https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
+return array
 }
 
 // Desafio 4
