@@ -16,13 +16,13 @@ return resultado;
 }
 // Desafio 3
 function splitSentence(string) {
-  string = string.split(" ")
+  string = string.split(" ");
   return string
 }
 
 // Desafio 4
 function concatName(array) {
-array = array[array.length-1] + "," + array[0];
+array = array[array.length-1] + ", " + array[0];
 return array
 }
 
@@ -87,13 +87,51 @@ for (let index = 0; index < a.length; index+=1){
   return resultado;
 }
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(a) {
+a = a.split("");
+for (let index=0 ; index<a.length ; index+=1){
+  if(a[index]==="a"){
+    a[index]= "1";
+  }
+  else if (a[index]==="e"){
+    a[index]= "2";
+  }
+  else if(a[index]==="i"){
+    a[index]= "3";
+  }
+  else if (a[index]==="o"){
+    a[index]= "4";
+  }
+  else if (a[index]==="u"){
+    a[index]="5";
+  }
 }
-function decode() {
-  // seu código aqui
+  a = a.join("");
+  return a;
 }
 
+function decode(a) {
+  a = a.split("");
+  for(let index=0 ; index<a.length ; index+=1){
+    if(a[index]==="1"){
+      a[index]="a";
+    }
+    else if(a[index]==="2"){
+      a[index]="e";
+    }
+    else if(a[index]==="3"){
+      a[index]="i";
+    }
+    else if(a[index]==="4"){
+      a[index]="o";
+    }
+    else if(a[index]==="5"){
+      a[index]="u";
+    }
+  }
+  a = a.join("");
+  return a;
+}
 module.exports = {
   calcArea,
   catAndMouse,
