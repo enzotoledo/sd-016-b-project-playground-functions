@@ -30,26 +30,91 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(array) {
+      for (let index = 0; index < array.length; index++) {
+          contador=0;
+          let maior = 0;
+              if (maior < array[index] ) {
+                maior = array[index];              
+              }else{}
+      for (let index2 = 0 ; index2 < array.length; index2++) {
+              if(array[index2] == maior ) {
+                contador +=1;
+                }
+            }       
+      }
+      return contador;
+     }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse, cat1, cat2) {
+    if ((mouse) - (cat1) > (mouse) - (cat2)) {
+      return "cat2"
+    }else if ((mouse) - (cat1) < (mouse) - (cat2)) {
+      return "cat1"
+    }else {
+      return "os gatos trombam e o rato foge"
+    }
+    }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let fizzBuzzArray = []
+    for (let index = 0; index < array.length; index++) {
+      if (array[index] % 3 == 0 && array[index] % 5 !== 0 ) {
+        fizzBuzzArray.push("fizz")
+      } else if (array[index] % 3 !== 0 && array[index] % 5 == 0 ) {
+        fizzBuzzArray.push("buzz")
+      } else if (array[index] % 3 == 0 && array[index] % 5 == 0 ) {
+        fizzBuzzArray.push("fizzBuzz")
+      } else {
+        fizzBuzzArray.push("bug!")
+      }
+    }
+    return fizzBuzzArray
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  encoded = []
+  arrayString = string.split('')
+  for (let index = 0; index < arrayString.length; index++) {
+    if(arrayString[index] == "a" ) {
+      encoded.push("1")
+    }else if(arrayString[index] == "e" ) {
+      encoded.push("2")
+    }else if(arrayString[index] == "i" ) {
+      encoded.push("3")
+    }else if(arrayString[index] == "o" ) {
+      encoded.push("4")
+    }else if(arrayString[index] == "u" ) {
+      encoded.push("5")
+    }else {
+      encoded.push(arrayString[index])
+    }
+  }
+  return encoded.join('')
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  decoded = []
+  arrayString = string.split('')
+  for (let index = 0; index < arrayString.length; index++) {
+    if(arrayString[index] == "1" ) {
+      decoded.push("a")
+    }else if(arrayString[index] == "2" ) {
+      decoded.push("e")
+    }else if(arrayString[index] == "3" ) {
+      decoded.push("i")
+    }else if(arrayString[index] == "4" ) {
+      decoded.push("o")
+    }else if(arrayString[index] == "5" ) {
+      decoded.push("u")
+    }else {
+      decoded.push(arrayString[index])
+    }
+  }
+    return decoded.join('')
 }
 
 module.exports = {
