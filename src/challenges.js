@@ -66,7 +66,7 @@ function highestCount(array) {
       }
     }
         return contador;
-      } console.log(highestCount([-2, -2, -1]));
+      }
 
 // Desafio 7
 function catAndMouse() {
