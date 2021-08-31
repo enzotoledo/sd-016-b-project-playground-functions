@@ -1,7 +1,14 @@
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
-  
+function compareTrue(value1, value2) {
+  // Se o value1 e value2 forem boolean true, retorne boolean true. Caso contrário, retorne boolean false.
+  // O operador AND compara dois valores e só resulta em verdadeiro se todos os operandos forem verdadeiros, ou seja, true ou truthy. Ele retorna o valor de um dos operandos especificados.
+  // Consultei o site:
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND
+  if ((value1 === true) && (value2 === true)) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 2
@@ -43,6 +50,7 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
 function decode() {
   // seu código aqui
 }
