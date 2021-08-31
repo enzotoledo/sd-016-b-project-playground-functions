@@ -13,12 +13,13 @@ function calcArea(base, height) {
   return triangleArea;
 }
 
-console.log(calcArea(10, 50));
-
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(splitStringInSpaces) {
+  let newString = splitStringInSpaces.split(" ");
+  return newString;
 }
+
+console.log(splitSentence("go Trybe"))
 
 // Desafio 4
 function concatName() {
