@@ -1,6 +1,7 @@
 // Desafio 10
-function techList(array, name) {  
-  let objectArray = [""];
+function techList(array, name) {
+  if(array.length !== 0){
+    let objectArray = [""];
   for(i=0; i < array.length; i++){
     let myObject = {
       tech: "NomeTech",
@@ -11,6 +12,10 @@ function techList(array, name) {
     objectArray.push(myObject)
   }
   return objectArray;
+}
+else{
+  return "Vazio!"
+}
 }
 
 // Desafio 11
@@ -42,11 +47,14 @@ digits[6] = digits[6] + "-"
 return digits.join("");
 }
 
-console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]))
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if(lineA < (lineA+lineC) && lineB < (lineC+lineA) && lineC < (lineA+lineB) && lineA > Math.abs(lineB-lineC) && lineB > Math.abs(lineA-lineC) && lineC > Math.abs(lineB-lineA)){
+    return true;
+  }
+  else{
+    return false;
+  }
 }
 
 // Desafio 13
