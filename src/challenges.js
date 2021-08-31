@@ -39,13 +39,53 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciaCat1 = mouse - cat1
+  let distanciaCat2 = mouse - cat2
+
+  if (distanciaCat1 < 0)
+    distanciaCat1 = -distanciaCat1
+
+  if (distanciaCat2 < 0)
+    distanciaCat2 = -distanciaCat2
+
+  if (distanciaCat1 == distanciaCat2) {
+    return "os gatos trombam e o rato foge"
+
+  } else if (distanciaCat1 < distanciaCat2) {
+    return "cat1"
+
+  } else if (distanciaCat2 < distanciaCat1) {
+    return "cat2"
+
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+
+function isDivisible(valor, numero) {
+  return valor % numero == 0
+}
+
+function fizzBuzz(array) {
+  const result = []
+
+  for (let key in array) {
+    const divisivelPor3 = isDivisible(array[key], 3)
+    const divisivelPor5 = isDivisible(array[key], 5)
+
+    if (divisivelPor3 && divisivelPor5) {
+      result[key] = "fizzBuzz"
+    } else if (divisivelPor3) {
+      result[key] = "fizz"
+    } else if (divisivelPor5) {
+      result[key] = "buzz"
+    } else {
+      result[key] = "bug!"
+    }
+  }
+
+  return result
 }
 
 // Desafio 9
