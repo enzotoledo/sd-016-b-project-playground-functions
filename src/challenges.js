@@ -23,8 +23,9 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(name) {
+  var result = name[name.length -1] + ", " + name[0];
+  return result
 }
 
 // Desafio 5
@@ -35,8 +36,20 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(listOfNumber) {
+  let high = -99999999;
+  let count = 0;
+
+  for(let index = 0; index < listOfNumber.length; index += 1){
+    if(listOfNumber[index] > high){
+      high = listOfNumber[index]
+      count = 0;
+      count += 1;
+      }else if(listOfNumber[index] == high){
+        count += 1
+      }
+    }
+  return count;  
 }
 
 // Desafio 7
@@ -69,6 +82,8 @@ function decode(phrase) {
 
   return resultadoFinal
 }
+
+//desafio 10
 
 module.exports = {
   calcArea,
