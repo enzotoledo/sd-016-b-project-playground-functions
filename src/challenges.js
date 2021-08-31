@@ -32,8 +32,15 @@ function footballPoints(win, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNumbers) {
+  let highNumber = Math.max.apply(null, arrayNumbers);// Retirado a informação para fazer a linha do código no site https://pt.stackoverflow.com/questions/35202/como-saber-o-maior-valor-de-um-array
+  let count = 0;
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
+    if (arrayNumbers[i] === highNumber) {
+      count += 1;
+    }
+  }
+  return count;
 }
 
 // Desafio 7
