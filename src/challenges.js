@@ -47,8 +47,17 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  
+function catAndMouse(mouse, cat1, cat2) {
+  let intervaloCat1 = cat1 - mouse;
+  let intervaloCat2 = cat2 - mouse;
+
+  if (Math.abs(intervaloCat1) === Math.abs(intervaloCat2)) {
+    return 'os gatos trombam e o rato foge';
+  }
+  if (Math.abs(intervaloCat1) < Math.abs(intervaloCat2)) {
+    return 'cat1';
+  }
+  return 'cat2';
 }
 
 // Desafio 8
@@ -67,8 +76,6 @@ function fizzBuzz(array) {
   }
   return arrayFinal;
 }
-
-console.log(fizzBuzz([7, 9]));
 
 // Desafio 9
 function encode() {
