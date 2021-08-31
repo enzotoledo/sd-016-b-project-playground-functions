@@ -27,9 +27,13 @@ function splitSentence(office) {
 console.log(splitSentence("go Trybe"));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  const nameList = [ ]
+  let names = nameList.push(array[array.length -1], array[0]);
+  let nameConcat = nameList.join(", ");
+  return nameConcat
 }
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 
 // Desafio 5
 function footballPoints() {
