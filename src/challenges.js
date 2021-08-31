@@ -36,20 +36,56 @@ return pontos;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+let numeroMaior = 0;
+let quantidade = 0;
+for(let index=0 ;index<array.length ; index+=1){
+  if(numeroMaior<array[index]){
+    numeroMaior = array[index];
+}
+}
+  for(let indice=0 ; indice<array.length; indice+=1){
+    if(numeroMaior === array[indice]){
+      quantidade +=1;
+    }
+  }
+  return quantidade;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+  let resposta = [];
+  if(Math.abs(mouse-cat1)<Math.abs(mouse-cat2)){
+    resposta='cat1';
+  }
+  else if (Math.abs(mouse-cat2)<Math.abs(mouse-cat1)){
+    resposta='cat2';
+  }
+  else{
+    resposta='os gatos trombam e o rato foge';
+  }
+  return resposta;
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(a) {
+let resultado = [];
+for (let index = 0; index < a.length; index+=1){
+  if((a[index]%3===0) && (a[index]%5===0)){
+    resultado.push("fizzBuzz");
+  }
+  else if(a[index]%3===0){
+  resultado.push("fizz");
+  }
+  else if(a[index]%5===0){
+    resultado.push("buzz");
+  }
+  else {
+    resultado.push("bug!");
+  }
 }
-
+  return resultado;
+}
 // Desafio 9
 function encode() {
   // seu código aqui
