@@ -125,7 +125,7 @@ function decode(frase) {
   for (let i = 0; i < frase.length; i += 1) {
     let letraAtual = frase[i];
     for (let key in letrasTrocadas) {
-      if (letrasTrocadas[key] === letraAtual) {
+      if (letrasTrocadas[key] == letraAtual) {
         let novaLetra = key;
         letraAtual = novaLetra;
         break;
