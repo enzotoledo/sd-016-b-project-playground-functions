@@ -27,7 +27,6 @@ function concatName(stringArray) {
   let concatenated = `${last}, ${first}`;
   return concatenated;
 }
-console.log(concatName(['Lucas','Cassiano','Ferraz','Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -36,8 +35,26 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numberArray) {
+  let highestNumber = 0;
+  let repeatCount = 0;
+  let numberCount = 0;
+
+  for(let index in numberArray){
+    let verify = 0;
+    if(highestNumber <= numberArray[index]){
+      highestNumber = numberArray[index];
+      verify = highestNumber;
+      for(let index2 in numberArray){
+        if(verify === numberArray[index2]){
+          numberCount += 1;
+        }
+      }
+      repeatCount = numberCount;
+      numberCount = 0;
+    }
+  }
+  return repeatCount;
 }
 
 // Desafio 7
