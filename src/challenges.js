@@ -52,13 +52,6 @@ concatName(['captain', 'my', 'captain']);
 console.log (concatName)
  
 // Desafio 5
-/* Escreva uma função com o nome footballPoints que receba o número de vitórias (esse parâmetro deverá se chamar wins) e o número de empates (esse parâmetro deverá se chamar ties) e retorne a quantidade de pontos que o time marcou em um campeonato.
-Para tanto, considere que cada vitória vale 3 pontos e cada empate vale 1 ponto.
-O que será verificado:
-Retorne 50 pontos quando o time tenha 14 vitórias e 8 empates
-Retorne 5 pontos quando o time tenha 1 vitória e 2 empates
-Retorne 0 pontos quando o time tenha 0 vitórias e 0 empates */
-
 function footballPoints(wins, ties) {
   points = ((wins*3) + (ties*1));
   return points
@@ -67,11 +60,35 @@ footballPoints(14,8);
 footballPoints(1,2);
 footballPoints(0,0);
 
-
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+
+function highestCount(numeros) {
+
+  //let numeros = [9, 1, 2, 3, 9, 5, 7];
+  let repeticoes = 0;
+  let maiorNumero = 0;
+  
+  for (let index in numeros) {
+      if (numeros[maiorNumero] < numeros[index]) {
+          maiorNumero = index;
+        }  
+      }
+  //console.log ('maior numero: '+numeros[maiorNumero]);
+  
+  for (let index in numeros) {
+      if (numeros[maiorNumero] == numeros[index]) {
+          repeticoes += 1;
+        }
+      } 
+  //console.log ('repeticoes: '+repeticoes);
+  return repeticoes;
+  }
+  
+  highestCount([9, 1, 2, 3, 9, 5, 7]);
+  highestCount([0, 4, 4, 4, 9, 2, 1]);
+  highestCount([-2,-2,-1]);
+  highestCount([0, 0, 0]);
+
 
 // Desafio 7
 function catAndMouse() {
