@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 // Desafio 1
 function compareTrue(a, b) {
   if (a === true && b === true) {
@@ -53,12 +54,31 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse() {
-  // seu código aqui
+  // seu código aqu
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+// eslint-disable-next-line sonarjs/cognitive-complexity
+function fizzBuzz(array) {
+  let array2 = [];
+  for (let i = 0; i < array.length; i += 1) {
+    switch (array[i] % 3 === 0) {
+    case true:
+      if (array[i] % 5 === 0) {
+        array2.push('fizzBuzz');
+      } else {
+        array2.push('fizz');
+      }
+      break;
+    default:
+      if (array[i] % 5 === 0) {
+        array2.push('buzz');
+      } else {
+        array2.push('bug!');
+      }
+    }
+  }
+  return array2;
 }
 
 // Desafio 9
