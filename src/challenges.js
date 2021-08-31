@@ -51,9 +51,17 @@ function highestCount(numeros) {
   return highestNumberRepet;
 }
 
-// Desafio 7
-function catAndMouse() {
-  // seu código aqui
+// Desafio 7 // Consultei a documentação do MDN para encontrar Ma
+function catAndMouse(mouse, cat1, cat2) {
+  let distanciCat1 = mouse - cat1;
+  let distanciCat2 = mouse - cat2;
+  if (Math.abs(distanciCat1) == Math.abs(distanciCat2)) {
+    return "os gatos trombam e o rato foge";
+  } else if (distanciCat1 > distanciCat2) {
+    return "cat1";
+  } else if (distanciCat1 < distanciCat2) {
+    return "cat2";
+  }
 }
 
 // Desafio 8
