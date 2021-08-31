@@ -65,14 +65,17 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Distance = Math.abs(mouse - cat1);
   let cat2Distance = Math.abs(mouse - cat2);
+  let result = '';
 
   if (cat1Distance < cat2Distance) {
-    return 'cat1';
+    result = 'cat1';
   } else if (cat2Distance < cat1Distance) {
-    return 'cat2';
+    result = 'cat2';
   } else {
-    return 'os gatos trombam e o rato foge'
+    result = 'os gatos trombam e o rato foge';
   }
+
+  return result;
 }
 
 // Desafio 8
@@ -85,9 +88,9 @@ function fizzBuzz(array) {
     } else if (array[number] % 3 === 0) {
       finalArray.push('fizz');
     } else if (array[number] % 5 === 0) {
-      finalArray.push('buzz')
+      finalArray.push('buzz');
     } else {
-      finalArray.push('bug!')
+      finalArray.push('bug!');
     }
   }
 
@@ -95,11 +98,59 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let vogals = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  };
+  let newString = '';
+
+  for (let index = 0; index < string.length; index += 1) {
+    let check = 0;
+    for (let vogal in vogals) {
+      if (string[index] === vogal) {
+        newString += vogals[vogal];
+        check += 1;
+      }
+    }
+
+    if (check === 0) {
+      newString += string[index];
+    }
+  }
+
+  return newString;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let vogals = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+
+  let newString = '';
+
+  for (let index = 0; index < string.length; index += 1) {
+    let check = 0;
+
+    for (let vogal in vogals) {
+      if (string[index] === vogal) {
+        newString += vogals[vogal];
+        check += 1;
+      }
+    }
+
+    if (check === 0) {
+      newString += string[index];
+    }
+  }
+  return newString;
 }
 
 module.exports = {
