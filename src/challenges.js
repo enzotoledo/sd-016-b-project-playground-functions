@@ -24,13 +24,15 @@ function splitSentence(phrase) {
 // Desafio 4
 function concatName(vetorstring) {
   // seu código aqui
-  let phrase = vetorstring[vetorstring.length -1] + ", " + vetorstring[0];
+  let phrase = vetorstring[vetorstring.length-1] + ', '  + vetorstring[0];
   return phrase;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let campeonato = (wins*3) + (ties)
+  return campeonato
 }
 
 // Desafio 6
