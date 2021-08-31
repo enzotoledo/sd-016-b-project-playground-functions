@@ -36,7 +36,11 @@ function highestCount(arr) {
   let counter = 0;
   const negativeControl = arr[0] < 0;
 
-  negativeControl ? arr.sort().reverse() : arr.sort();
+  if (negativeControl) {
+    arr.sort().reverse();
+  } else {
+    arr.sort();
+  }
 
   for (let i of arr) {
     if (i === arr[arr.length - 1]) {
@@ -48,19 +52,16 @@ function highestCount(arr) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let cat1Space = 0;
-  let cat2Space = 0;
+  let cat1Space = cat1 - mouse;
+  let cat2Space = cat2 - mouse;
   let returnStr = '';
-  const cat1Win = mouse - cat1 < 0;
-  const cat2Win = mouse - cat2 < 0;
 
-  cat1Win ? cat1Space = (mouse - cat1) * -1 : cat1Space = (mouse - cat1);
-  cat2Win ? cat2Space = (mouse - cat2) * -1 : cat2Space = (mouse - cat2);
-
-  console.log(cat1Space, cat2Space);
+  if (cat1Space < 0) {
+    cat1Space *= -1;
+  }
   if (cat1Space < cat2Space) {
     returnStr = 'cat1';
-  } else if (cat2Space < cat1Space) {
+  } else if (cat1Space > cat2Space) {
     returnStr = 'cat2';
   } else {
     returnStr = 'os gatos trombam e o rato foge';
