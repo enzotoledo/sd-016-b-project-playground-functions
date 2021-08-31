@@ -105,12 +105,69 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let codeVowel = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
+  }  
+  let splitString = string.split("");
+  let stringAux = '';
+  let encodedString ='';
+    
+  for (let index = 0; index < splitString.length; index++) {
+    stringAux = splitString[index];
+    for (let index1 in codeVowel) {      
+      if(stringAux === index1){
+        encodedString = encodedString + (codeVowel[index1]);
+        stringAux = '';       
+      }              
+    }
+    if (stringAux !== ''){
+      encodedString = encodedString + (stringAux)
+    }
+  }
+    
+  return encodedString
 }
+console.log(encode('hoje ta muito frio'));
+
 function decode() {
-  // seu código aqui
+  let codeVowel = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
+  }  
+  let splitString = string.split("");
+  let stringAux = '';
+  let encodedString ='';
+    
+  for (let index = 0; index < splitString.length; index++) {
+    stringAux = splitString[index];
+    for (let index1 in codeVowel) {      
+      if(stringAux === codeVowel[index1]){
+        encodedString = encodedString + (codeVowel[index1]);
+        stringAux = '';       
+      }              
+    }
+    if (stringAux !== ''){
+      encodedString = encodedString + (stringAux)
+    }
+  }  
 }
+let codeVowel = {
+  a: 1,
+  e: 2,
+  i: 3,
+  o: 4,
+  u: 5
+}  
+console.log(codeVowel.key(a));
+
 
 module.exports = {
   calcArea,
