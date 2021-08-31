@@ -10,19 +10,13 @@ function compareTrue(param1, param2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let base = 10;
-  let height = 50;
-  let sum = {};
-
-  let sum = (base * height) / 2;
-  return sum
-} 
-  
-console.log(sum);
+  return ( ( base * height) / 2 );
+}
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(paramText) {
+  let frase = paramText.split(" ");
+  return frase
 }
 
 // Desafio 4
