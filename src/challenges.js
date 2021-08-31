@@ -6,8 +6,9 @@ function compareTrue(value01, value02) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu 
+function calcArea(base,height) {
+  let triAng =  (base * height)/2;
+  return triAng;
 }
 
 // Desafio 3
