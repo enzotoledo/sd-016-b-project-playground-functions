@@ -83,11 +83,45 @@ function fizzBuzz(numeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let arrayOfString = string.split("");
+  let arrayEncode = [];
+  for (let runner in string) {
+    if ("a" == string[runner]){
+      arrayEncode.push("1");
+    } else if ("e" == string[runner]) {
+      arrayEncode.push("2");
+    } else if ("i" == string[runner]) {
+      arrayEncode.push("3");
+    } else if ("o" == string[runner]) {
+      arrayEncode.push("4");
+    } else if ("u" == string[runner]) {
+      arrayEncode.push("5");
+    } else {
+      arrayEncode.push(string[runner]);
+    }
+  }
+  return arrayEncode.join("");
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+  let arrayOfString = string.split("");
+  let arrayDecode = [];
+  for (let runner in string) {
+    if ("1" == string[runner]){
+      arrayDecode.push("a");
+    } else if ("2" == string[runner]) {
+      arrayDecode.push("e");
+    } else if ("3" == string[runner]) {
+      arrayDecode.push("i");
+    } else if ("4" == string[runner]) {
+      arrayDecode.push("o");
+    } else if ("5" == string[runner]) {
+      arrayDecode.push("u");
+    } else {
+      arrayDecode.push(string[runner]);
+    }
+  }
+  return arrayDecode.join("");
 }
 
 module.exports = {
