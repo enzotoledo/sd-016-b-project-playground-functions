@@ -51,9 +51,9 @@ function highestCount(arr) {
 // https://stackoverflow.com/questions/52999505/how-do-i-find-the-largest-negative-integer-in-an-array Referencia a -Infinity encontrado neste link;
 
 // Desafio 7
-function catAndMouse(cat1, cat2, mouse) {
-  let distA = Math.abs(mouse - cat1);
-  let distB = Math.abs(mouse - cat2);
+function catAndMouse(mouse, cat1, cat2) {
+  let distA = Math.abs(cat1 - mouse);
+  let distB = Math.abs(cat2 - mouse);
   if (distA < distB) {
     return "cat1";
   } else if (distA > distB) {
