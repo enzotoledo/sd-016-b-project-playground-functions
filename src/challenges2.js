@@ -107,8 +107,8 @@ function hydrate(str) {
   let sum = 0;
 
   for (let i of cupsArray) {
-    if (Number.parseInt(i)) {
-      numberArray.push(Number.parseInt(i));
+    if (Number.parseInt(i, 16)) {
+      numberArray.push(Number.parseInt(i, 16));
     }
   }
 
