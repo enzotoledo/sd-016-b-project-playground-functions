@@ -16,9 +16,12 @@ function splitSentence(param) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let reversedArray = array.reverse();
+
+  return (`${reversedArray[0]}, ${reversedArray[reversedArray.length - 1]}`);
 }
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
