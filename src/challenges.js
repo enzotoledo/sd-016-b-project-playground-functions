@@ -13,11 +13,11 @@ function compareTrue(x, y) {
 function calcArea(base, heigth) {
   return (base * heigth)/ 2;
 }
-console.log(calcArea(5, 2));
+// console.log(calcArea(5, 2));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  return []
 }
 
 // Desafio 4
@@ -26,9 +26,12 @@ function concatName() {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  wins = wins*3;
+  ties = ties;
+  return wins + ties;
 }
+console.log(footballPoints(1, 2));
 
 // Desafio 6
 function highestCount() {
