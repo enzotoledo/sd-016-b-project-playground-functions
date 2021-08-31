@@ -18,8 +18,9 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(string) {
+  let names = [string[0], string.reverse()[0]];
+  return names.reverse().join(', ');
 }
 
 // Desafio 5
