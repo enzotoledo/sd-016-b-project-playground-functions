@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/cognitive-complexity */
+/* eslint-disable max-lines-per-function */
 /* eslint-disable complexity */
 /* eslint-disable no-mixed-operators */
 // Desafio 1
@@ -11,7 +13,7 @@ console.log(compareTrue(false, true));
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = base * height / 2;
+  let area = base * (height / 2);
   return area;
 }
 
@@ -68,12 +70,49 @@ function fizzBuzz(array) {
   return newArray;
 }
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(code) {
+  let code1 = [];
+  for (let index in code) {
+    if (code[index] === 'a') {
+      code1.push('1');
+    } else if (code[index] === 'e') {
+      code1.push('2');
+    } else if (code[index] === 'i') {
+      code1.push('3');
+    } else if (code[index] === 'o') {
+      code1.push('4');
+    } else if (code[index] === 'u') {
+      code1.push('5');
+    } else {
+      code1.push(code[index]);
+    }
+  }
+  let readycode = code1.join('');
+  return readycode;
 }
-function decode() {
-  // seu código aqui
+console.log(encode('hello there'));
+
+function decode(code2) {
+  let code1 = [];
+  for (let index in code2) {
+    if (code2[index] === '1') {
+      code1.push('a');
+    } else if (code2[index] === '2') {
+      code1.push('e');
+    } else if (code2[index] === '3') {
+      code1.push('i');
+    } else if (code2[index] === '4') {
+      code1.push('o');
+    } else if (code2[index] === '5') {
+      code1.push('u');
+    } else {
+      code1.push(code2[index]);
+    }
+  }
+  let readycode = code1.join('');
+  return readycode;
 }
+console.log(decode('h2ll4 th2r2'));
 
 module.exports = {
   calcArea,
