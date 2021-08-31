@@ -5,38 +5,47 @@ function compareTrue(param1, param2) {
   } else {
     return (false);
   }
-};
+}
 
 // Desafio 2
 function calcArea(base, height) {
   return ((base * height) / 2);
-};
+}
 
 // Desafio 3
 function splitSentence(string) {
   return (array = string.split (" "));
-};
+}
 
 // Desafio 4
 function concatName(name) {
   let first = name [0];
   let last = name [name.length-1];
   return (last + ", " + first);
-};
+}
 
 // Desafio 5
 function footballPoints(wins, ties) {
   return ((wins * 3)+ ties);
-};
+}
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbers) {
   // seu código aqui
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let positionCat1 = Math.abs(mouse - cat1)
+  let positionCat2 = Math.abs(mouse - cat2)
+
+  if (positionCat1 === positionCat2) {
+    return ("os gatos trombam e o rato foge");
+  } else if (positionCat1 < positionCat2) {
+    return ("cat1");
+  } else {
+    return ("cat2");
+  };
 }
 
 // Desafio 8
