@@ -3,6 +3,15 @@ function techList(array,name) {
   // seu código aqui
 }
 
+let tech = ["HTML", "Javascript", "CSS", "Phyton", "React"]
+   let resultado = [];
+
+ for (let i=0; i < tech.length; i+=1){
+   
+}
+
+console.log (resultado)
+
 // Desafio 11
 function generatePhoneNumber() {
   // seu código aqui
