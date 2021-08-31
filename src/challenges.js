@@ -1,19 +1,26 @@
-//proj do brunao
-
 // Desafio 1
-function compareTrue() {
-  // seu código aqui
+function compareTrue(a, b) {
+  if ((a === true) && (b === true)) {
+    return true;
+  } else {
+    return false;
+  }
 }
-
+console.log(compareTrue(true, false));
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  let calculo = 0;
+  calculo = (base * height) / 2;
+  return calculo;
 }
+console.log(calcArea(1, 51));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(str) {
+  let strArray = str.split(' ');
+  return strArray;
 }
+console.log(splitSentence('go trybe'));
 
 // Desafio 4
 function concatName() {
