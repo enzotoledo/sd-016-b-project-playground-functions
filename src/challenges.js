@@ -21,8 +21,11 @@ function splitSentence(paramText) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(paramArray) {
   // seu código aqui
+  let firstIndex = paramArray.shift();
+  let lastIndex = paramArray.pop();
+  return `${lastIndex}, ${firstIndex}`;
 }
 
 // Desafio 5
