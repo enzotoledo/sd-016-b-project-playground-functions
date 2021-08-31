@@ -2,7 +2,7 @@
 function compareTrue(valorA, valorB) {
   if ((valorA && valorB)) {
     return true;
-  }
+  } return false;
 }
 
 // Desafio 2
