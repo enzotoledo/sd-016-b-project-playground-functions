@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(booleano1, booleano2) {
-  if ((booleano1 == true) && (booleano2 == true)) {
+  if ((booleano1 === true) && (booleano2 === true)) {
     return true;
   } else {
     return false;
@@ -10,18 +10,21 @@ function compareTrue(booleano1, booleano2) {
 // Desafio 2
 function calcArea(base, height) {
   let areaTriangulo = 0;
-  areaTriangulo = (base * height)/2
+  areaTriangulo = (base * height) / 2;
   return areaTriangulo;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let array = string.split(" ");
+  return array;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let arrayReverse = array.reverse();
+  let string = arrayReverse[0] + ", " + arrayReverse[arrayReverse.length-1];
+  return string;
 }
 
 // Desafio 5
