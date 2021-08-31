@@ -51,7 +51,8 @@ function highestCount(numeros) {
   return highestNumberRepet;
 }
 
-// Desafio 7 // Consultei a documentação do MDN para encontrar Ma
+// Desafio 7 // Consultei a documentação do MDN para encontrar Math.abs() 
+// link: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function catAndMouse(mouse, cat1, cat2) {
   let distanciCat1 = mouse - cat1;
   let distanciCat2 = mouse - cat2;
@@ -65,8 +66,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numeros) {
+  let result = [];
+  for (let number in numeros) {
+    if ((numeros[number] % 3 == 0) && (numeros[number] % 5 == 0)) {
+      result.push("fizzBuzz");
+    } else if (numeros[number] % 3 == 0) {
+      result.push("fizz");
+    } else if (numeros[number] % 5 == 0) {
+      result.push("buzz");
+    } else {
+      result.push("bug!");
+    }
+  }
+  return result;
 }
 
 // Desafio 9
