@@ -9,9 +9,16 @@ function compareTrue(param1, param2) {
 //console.log(compareTrue());
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
-}
+function calcArea(base, height) {
+  let base = 10;
+  let height = 50;
+  let sum = {};
+
+  let sum = (base * height) / 2;
+  return sum
+} 
+  
+console.log(sum);
 
 // Desafio 3
 function splitSentence() {
