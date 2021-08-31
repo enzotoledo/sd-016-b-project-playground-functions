@@ -21,12 +21,19 @@ function splitSentence(frase) {
   return separa;
 }
 
-console.log(splitSentence("go Trybe"));
+//console.log(splitSentence("go Trybe"));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(vetor) {
+  let primeiroItem = vetor[0];
+  let ultimoItem = vetor[vetor.length -1];
+
+  let resultadoConcat = (ultimoItem+", "+primeiroItem);
+  
+  return resultadoConcat;
 }
+
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints() {
