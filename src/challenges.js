@@ -52,9 +52,33 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
+// Divisível por 3
+function divisivelPor3(n) {
+  if ((n % 3) === 0) return true;
+  return false;
+}
+
+// Divisível por 5
+function divisivelPor5(n) {
+  if ((n % 5) === 0) return true;
+  return false;
+}
+
+// Define o resultado fizzBuzz
+function fizzOuBuzz(v) {
+  if (divisivelPor3(v) && divisivelPor5(v)) return 'fizzBuzz';
+  if (divisivelPor3(v)) return 'fizz';
+  if (divisivelPor5(v)) return 'buzz';
+  return 'bug!';
+}
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arr) {
+  let a = [];
+  for (let i of arr) {
+    a.push(fizzOuBuzz(i));
+  }
+  return a;
 }
 
 // Desafio 9
