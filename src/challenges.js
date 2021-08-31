@@ -4,15 +4,17 @@ function compareTrue(a, b) {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, height) {
+  return (base*height/2);
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+/* Funcionalidade do split pega na seguinte url:
+https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split */
+function splitSentence(stringToSplit) {
+  return stringToSplit.split(' ');
 }
-
+console.log(splitSentence('ola alou oi bonjur'));
 // Desafio 4
 function concatName() {
   // seu código aqui
