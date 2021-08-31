@@ -11,18 +11,18 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(string) {
   let arrayOfWords = [];
-  let words = ""
+  let words = '';
 
   for (let index = 0; index < string.length; index += 1) {
-    if (string[index] != " ") {
+    if (string[index] !== ' ') {
       words += string[index];
     } else {
       arrayOfWords.push(words);
-      words = "";
+      words = '';
     }
   }
 
-  arrayOfWords.push(words)
+  arrayOfWords.push(words);
 
   return arrayOfWords;
 }
