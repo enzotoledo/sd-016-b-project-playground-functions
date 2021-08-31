@@ -39,8 +39,6 @@ let cont = 0;;
 return (cont)
 }
 
-
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let positionCat1 = Math.abs(mouse - cat1)
