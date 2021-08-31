@@ -1,53 +1,58 @@
 // Desafio 1
 function compareTrue(firstValue, secondValue) {
-  let value = firstValue === true && secondValue === true ? true : false
-  return value
+  let value;
+  if (firstValue && secondValue) {
+    value = true;
+  } else {
+    value = false;
+  }
+  return value;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  let value = (base * height) / 2
-  return value
+  let value = (base * height) / 2;
+  return value;
 }
 
 // Desafio 3
 function splitSentence(string) {
-  let value = string.split(' ')
-  return value
+  let value = string.split(' ');
+  return value;
 }
 
 // Desafio 4
 function concatName(array) {
-  let string = ""
-  let first = array[0]
-  let last = array[array.length - 1]
-  string += last
-  string += ", "
-  string += first
-  return string
+  let string = '';
+  let first = array[0];
+  let last = array[array.length - 1];
+  string += last;
+  string += ', ';
+  string += first;
+  return string;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let score = (wins * 3) + ties
-  return score
+  let score = (wins * 3) + ties;
+  return score;
 }
 
 // Desafio 6
 function highestCount(array) {
-  let maxNumber = array[0]
-  let count = 0
-  for (number of array) {
+  let maxNumber = array[0];
+  let count = 0;
+  for (let number of array) {
     if (number > maxNumber) {
-      maxNumber = number
+      maxNumber = number;
     }
   }
-  for (number of array) {
-    if (number == maxNumber) {
-      count += 1
+  for (let number of array) {
+    if (number === maxNumber) {
+      count += 1;
     }
   }
-  return count
+  return count;
 }
 
 // Desafio 7
