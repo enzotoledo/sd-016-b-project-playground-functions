@@ -8,13 +8,15 @@ function compareTrue(value1, value2) {
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(a, b) {
   // seu código aqui
+  return (a * b) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(myString) {
   // seu código aqui
+  return myString.split(' ');
 }
 
 // Desafio 4
