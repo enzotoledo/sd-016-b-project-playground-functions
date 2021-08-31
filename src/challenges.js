@@ -126,12 +126,47 @@ function fizzBuzz(array) {
 } console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
-}
-function decode() {
+  let novaPalavra = '';
+  for(let index in string){
+    if(string[index] === 'a'){
+      novaPalavra += '1';
+    } else if(string[index] === 'e'){
+      novaPalavra += '2';
+    } else if(string[index] === 'i'){
+      novaPalavra += '3';
+    } else if (string[index] === 'o'){
+      novaPalavra += '4';
+    } else if (string[index] === 'u'){
+      novaPalavra += '5';
+    } else{
+      novaPalavra += string[index];
+    }
+  }
+  return novaPalavra;
+} 
+
+function decode(string) {
   // seu código aqui
-}
+  let novaPalavra = '';
+  for(let index in string){
+    if(string[index] === '1'){
+      novaPalavra += 'a';
+    } else if(string[index] === '2'){
+      novaPalavra += 'e';
+    } else if(string[index] === '3'){
+      novaPalavra += 'i';
+    } else if (string[index] === '4'){
+      novaPalavra += 'o';
+    } else if (string[index] === '5'){
+      novaPalavra += 'u';
+    } else{
+      novaPalavra += string[index];
+    }
+  }
+  return novaPalavra;
+} console.log(decode('h3 th2r5!'));
 
 module.exports = {
   calcArea,
