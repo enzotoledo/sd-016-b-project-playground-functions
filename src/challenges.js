@@ -3,7 +3,7 @@ const code = {
   e: 2,
   i: 3,
   o: 4,
-  u: 5
+  u: 5,
 }
 
 // Desafio 1
@@ -18,7 +18,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(str) {
-  return str.split(" ");
+  return str.split(' ');
 }
 
 // Desafio 4
@@ -58,11 +58,11 @@ function catAndMouse(mouse, cat1, cat2) {
 
   console.log(cat1Space, cat2Space);
   if (cat1Space < cat2Space) {
-    return "cat1";
+    return 'cat1';
   } else if (cat2Space < cat1Space) {
-    return "cat2";
+    return 'cat2';
   } else {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
 }
 
@@ -72,13 +72,13 @@ function fizzBuzz(arr) {
 
   for (i of arr) {
     if (i % 3 === 0 && i % 5 === 0) {
-      strArray.push("fizzBuzz");
+      strArray.push('fizzBuzz');
     } else if (i % 3 === 0) {
-      strArray.push("fizz");
+      strArray.push('fizz');
     } else if (i % 5 === 0) {
-      strArray.push("buzz");
+      strArray.push('buzz');
     } else {
-      strArray.push("bug!");
+      strArray.push('bug!');
     }
   }
   return strArray;
@@ -86,7 +86,7 @@ function fizzBuzz(arr) {
 
 // Desafio 9
 function encode(str) {
-  let encodeMsg = str.split("");
+  let encodeMsg = str.split('');
 
   for (letter in encodeMsg) {
     for (key in code) {
@@ -95,10 +95,10 @@ function encode(str) {
       }
     }
   }
-  return encodeMsg.join("");
+  return encodeMsg.join('');
 }
 function decode(str) {
-  let decodeMsg = str.split("");
+  let decodeMsg = str.split('');
 
   for (letter in decodeMsg) {
     for (key in code) {
@@ -107,7 +107,7 @@ function decode(str) {
       }
     }
   }
-  return decodeMsg.join("");
+  return decodeMsg.join('');
 }
 
 module.exports = {
