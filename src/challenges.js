@@ -15,29 +15,45 @@ function calcArea(base,height) {
 // Desafio 3
 function splitSentence(string) {
   return string.split(" ");
-}
+};
 
 // Desafio 4
 function concatName(arrayString) {
   return (arrayString[arrayString.length - 1] + ", " + arrayString[0]);  
-}
+};
 
 // Desafio 5
 function footballPoints(wins , ties) {
-  let points = wins*3 + ties*1;
+  let points = wins*3 + ties;
   return points;
-}
+};
 
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
-}
+function highestCount(numbersArray) {
+  let max = - Infinity;
+  let repeat = 0;
+  for (let index of numbersArray){
+    if(index>max){
+      max = index;
+      repeat = 1;
+    } else if (index === max){
+      repeat += 1;
+    }
+  }
+  return repeat;
+};
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
-}
+function catAndMouse(mouse ,cat1 , cat2) {
+  if((cat1 - mouse) < (cat2 - mouse)){
+    return "cat1"
+  } else if((cat1 - mouse) > (cat2 - mouse)){
+    return "cat2"
+  } else {
+  return "os gatos trombam e o rato foge"
+  }
+};
 
 // Desafio 8
 function fizzBuzz() {
