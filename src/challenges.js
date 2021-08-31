@@ -93,9 +93,22 @@ function highestCount(array) {
 // --------------------------------------------------------------------------------------------------
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
     // seu código aqui
+    positionCat1 = Math.abs(cat1 - mouse);
+    positioncat2 = Math.abs(cat2 - mouse);
+    if (positionCat1 < positioncat2) {
+        return "cat1";
+    } else if (positionCat1 > positioncat2) {
+        return "cat2";
+    } else {
+        return "os gatos trombam e o rato foge"
+    }
 }
+// testando a função
+// console.log(catAndMouse(0, 3, 2));
+// console.log(catAndMouse(0, 6, 12));
+// console.log(catAndMouse(1, 0, 2));
 
 // --------------------------------------------------------------------------------------------------
 
