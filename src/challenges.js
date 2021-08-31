@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(ValorA,ValorB) {
   if(ValorA && ValorB) {
-    return true;
+    return true
   }else{
-    return false;
+    return false
   }
 }
 
@@ -14,12 +14,15 @@ function calcArea(base,height) {
 
 // Desafio 3
 function splitSentence(texto) {
-  return arraytexto = texto.split(" ");;
+  return arraytexto = texto.split(" ")
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(recebearray) {
+  let lastname = recebearray[recebearray.length-1];
+  let firstname = recebearray[0];
+  
+  return lastname + ", " + firstname
 }
 
 // Desafio 5
