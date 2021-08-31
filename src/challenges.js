@@ -71,7 +71,7 @@ function catAndMouse(mouse,cat1,cat2) {
   }
 
 }
-console.log(catAndMouse(6,3,5))
+//atualizaçao feita a partir da duvida do colega Leandro Boralli, e ajuda dos colegas gabriel rodrigues leite e Guilerme Rosa.
 
 // Desafio 8
 function fizzBuzz(numbresFB) {
