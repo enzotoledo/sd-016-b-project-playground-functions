@@ -7,10 +7,9 @@ function techList(arr, nm) {
     finalArray.push({ tech: techArray[i], name: nm });
   }
 
-  if (arr.length <= 0) {
-    return 'Vazio!';
-  }
-  return finalArray;
+  return (arr.length <= 0)  // usei o exemplo da condicional ternaria do Israel, challenges2.js linha 3 até 6. ref: https://github.com/tryber/sd-016-b-project-playground-functions/pull/12/files
+    ? 'Vazio!'
+    : finalArray;
 }
 
 // Desafio 11
