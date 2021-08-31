@@ -113,22 +113,45 @@ function catAndMouse(mouse, cat1, cat2) {
 // --------------------------------------------------------------------------------------------------
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
     // seu código aqui
+    let newArray = [];
+    for (i = 0; i < array.length; i++) {
+        if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+            newArray.push('fizzBuzz');
+        } else if (array[i] % 3 === 0) {
+            newArray.push('fizz');
+        } else if (array[i] % 5 === 0) {
+            newArray.push('buzz');
+        } else {
+            newArray.push('bug!');
+        }
+    }
+    return newArray;
 }
+// testando a função
+// console.log(fizzBuzz([2, 15, 7, 9, 45]));
+// console.log(fizzBuzz([7, 9]));
+// console.log(fizzBuzz([9, 25]));
 
 // --------------------------------------------------------------------------------------------------
 
 // Desafio 9
 function encode() {
     // seu código aqui
+
 }
+// testando a função
+// console.log(encode());
 
 // --------------------------------------------------------------------------------------------------
 
 function decode() {
     // seu código aqui
+
 }
+// testando a função
+// console.log(decode());
 
 // --------------------------------------------------------------------------------------------------
 
