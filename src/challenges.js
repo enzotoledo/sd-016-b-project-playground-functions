@@ -36,7 +36,7 @@ function highestCount(arr) {
   let counter = 0;
   const negativeControl = arr[0] < 0;
 
-  negativeControl ? arr : arr.sort();
+  negativeControl ? arr.sort().reverse() : arr.sort();
 
   for (let i of arr) {
     if (i === arr[arr.length - 1]) {
