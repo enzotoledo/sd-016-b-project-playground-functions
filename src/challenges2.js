@@ -23,21 +23,21 @@ function generatePhoneNumber(arr) {
   }
 
   for (let n in arr) {
-    switch(n) {
-      case '0':
-        finalString += '(' + arr[n];
-        break;
-      case '1':
-        finalString += arr[n] + ')';
-        break;
-      case '2':
-        finalString += ' ' + arr[n];
-        break;
-      case '6':
-        finalString += arr[n] + '-';
-        break;
-      default:
-        finalString += arr[n];
+    switch (n) {
+    case '0':
+      finalString += '(' + arr[n];
+      break;
+    case '1':
+      finalString += arr[n] + ')';
+      break;
+    case '2':
+      finalString += ' ' + arr[n];
+      break;
+    case '6':
+      finalString += arr[n] + '-';
+      break;
+    default:
+      finalString += arr[n];
     }
   }
 
