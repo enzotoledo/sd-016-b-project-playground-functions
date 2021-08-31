@@ -23,14 +23,20 @@ function splitSentence(str) {
 console.log(splitSentence('go trybe'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(concaArray) {
+  let lista = concaArray;
+  let ultimoNome = lista[lista.length - 1];
+  console.log(ultimoNome, concaArray[0]);
 }
+concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let calculo = 0;
+  calculo = ((wins * 3) + (ties * 1));
+  return calculo;
 }
+console.log(footballPoints(1, 2));
 
 // Desafio 6
 function highestCount() {
