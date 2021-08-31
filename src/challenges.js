@@ -19,11 +19,10 @@ function splitSentence(splitStringInSpaces) {
   return newString;
 }
 
-console.log(splitSentence("go Trybe"))
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(FirstAndLast) {
+  let stringTwo = FirstAndLast[FirstAndLast.length -1] + ", " + FirstAndLast[0];
+  return stringTwo;
 }
 
 // Desafio 5
