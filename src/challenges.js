@@ -33,7 +33,7 @@ function concatName(frase) {
     ultimoIndice = frase.length-1 
     ultimo = frase[ultimoIndice]
   }
-  return ultimo +", "+primeiro
+  return ultimo +","+primeiro
 }
 
 // Desafio 5
