@@ -1,10 +1,12 @@
 // Desafio 1
-function compareTrue (ValorA, ValorB) {
-  if(ValorA && ValorB) {
-    return true;
+function compareTrue (ValorA, ValorB){
+  let compare = false;
+  if (ValorA && ValorB) {
+    compare = true;
   }else {
-    return false;
+    compare = false;
   }
+  return compare;
 }
 
 // Desafio 2
@@ -31,7 +33,7 @@ function footballPoints(wins, ties) {
   return wins * 3 + ties;
 }
 
-// Desafio 6// ??????????????????????????
+// Desafio 6//
 function highestCount(arraynumber) {
   let organizedNumber = arraynumber.sort();
   let quants = 0;
