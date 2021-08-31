@@ -36,9 +36,18 @@ function generatePhoneNumber(arrayNumber) {
 // Desafio 12
 /* lint acusa uma complexidade maior que 5, requesita uma refatoracao da funcao */
 function triangleCheck(lineA, lineB, lineC) {
-  /* linha com tamanho superior a 100 */
-  if (((lineA + lineB > lineC) && (Math.abs(lineA - lineB) < lineC)) || ((lineC + lineB > lineA) && (Math.abs(lineC - lineB) < lineA)) || ((lineA + lineC > lineB) && (Math.abs(lineA - lineC) < lineB))) {
-    return true;
+  let array = [lineA, lineB, lineC];
+  let a = 0;
+  let b = 1;
+  let c = 2;
+  for (let i = 0; i < array.length; i += 1) {
+    if ((array[a] < array[b] + array[c]) && (Math.abs(array[b] - array[c]) < array[a])) {
+      return true;
+    }
+    let aux = a;
+    a = b;
+    b = c;
+    c = aux;
   }
   return false;
 }
