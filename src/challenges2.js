@@ -34,8 +34,11 @@ function triangleCheck(a, b, c) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(s) {
+  let a = 0;
+  for (let i of s.split(' ')) if (i > 0) a += i * 1;
+  if (a === 1) return `${a} copo de água`;
+  return `${a} copos de água`;
 }
 
 module.exports = {
