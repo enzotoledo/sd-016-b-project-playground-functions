@@ -44,8 +44,18 @@ function highestCount(arrayNumbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let distanceCat1 = Math.abs(mouse - cat1); // Math.abs usado para usar o valor absoluto do número retirado do site https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs;
+  let distanceCat2 = Math.abs(mouse - cat2);
+  let answer = '';
+  if (distanceCat1 < distanceCat2) {
+    answer = 'cat1';
+  } else if (distanceCat1 > distanceCat2) {
+    answer = 'cat2';
+  } else {
+    answer = 'os gatos trombam e o rato foge';
+  }
+  return answer;
 }
 
 // Desafio 8
