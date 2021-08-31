@@ -47,16 +47,18 @@ function highestCount(arrayN) {
 }
 
 // Desafio 7
+// Esse exercicio foi resolvido com a ajuda da galera no slack - 
+// Gabriel Rodrigues Leite, Victor S. Kamagushi e Guilherme Rosa
 function catAndMouse(mouse, cat1, cat2) {
-  if ((cat1 - mouse) < (cat2 - mouse)) {
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
-  } else if ((cat1 - mouse) > (cat2 - mouse)) {
-  return 'cat2';
+  } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
+    return 'cat2';
   } else {
     return "os gatos trombam e o rato foge";
   }
 }
-// console.log(catAndMouse(5,12,12))
+
 
 // Desafio 8
 function fizzBuzz(arrayN) {
