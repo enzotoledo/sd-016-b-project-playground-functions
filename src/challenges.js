@@ -49,11 +49,11 @@ function highestCount(arrayN) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if ((cat1 - mouse) < (cat2 - mouse)) {
-    return 'cat1'
+    return 'cat1';
   } else if ((cat1 - mouse) > (cat2 - mouse)) {
-  return 'cat2'
+  return 'cat2';
   } else {
-    return "os gatos trombam e o rato foge"
+    return "os gatos trombam e o rato foge";
   }
 }
 // console.log(catAndMouse(5,12,12))
@@ -74,15 +74,46 @@ function fizzBuzz(arrayN) {
   }
   return palavras
 }
-console.log(fizzBuzz([9,25]))
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(param1) {
+  let code = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5
+  };
+  let fraseArray = param1.split('')
+  for (let i in fraseArray){
+    for (let keys in code) {
+      if (keys === fraseArray[i]) {
+        fraseArray[i] = code[keys]
+      }
+    }
+  }
+  return fraseArray.join('')
 }
-function decode() {
-  // seu código aqui
+
+
+function decode(param1) {
+  let code = {
+    1: "a",
+    2: "e",
+    3: "i",
+    4: "o",
+    5: "u"
+  };
+  let fraseArray = param1.split('')
+  for (let i in fraseArray){
+    for (let keys in code) {
+      if (keys === fraseArray[i]) {
+        fraseArray[i] = code[keys]
+      }
+    }
+  }
+  return fraseArray.join('')
 }
 
 module.exports = {
