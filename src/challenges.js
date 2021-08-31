@@ -24,9 +24,16 @@ function splitSentence(string) {
 console.log(splitSentence('foguete'));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let concatFirstLast = `${array.slice(-1)}, ${array[0]}`;
+  return concatFirstLast;
 }
+
+let names = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+// let rocket = ['foguete', 'não', 'tem', 'ré'];
+// let boat = ['captain', 'my', 'captain'];
+
+console.log(concatName(names));
 
 // Desafio 5
 function footballPoints() {
