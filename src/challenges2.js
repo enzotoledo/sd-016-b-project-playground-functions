@@ -7,63 +7,90 @@ function techList(arr, nm) {
     finalArray.push({ tech: techArray[i], name: nm });
   }
 
-  return (arr.length <= 0)  // usei o exemplo da condicional ternaria do Israel, challenges2.js linha 3 até 6. ref: https://github.com/tryber/sd-016-b-project-playground-functions/pull/12/files
+  return (arr.length <= 0) // usei o exemplo da condicional ternaria do Israel, challenges2.js linha 3 até 6. ref: https://github.com/tryber/sd-016-b-project-playground-functions/pull/12/files
     ? 'Vazio!'
     : finalArray;
 }
 
 // Desafio 11
-function generatePhoneNumber(arr) {
-  const phoneObj = {};
-  let finalString = '';
+function validSize(arr) {
+  return arr.length !== 11;
+}
 
+function validNumberValues(arr) {
+  let invalid = false;
+  arr.forEach((number) => {
+    if (number < 0 || number > 9) {
+      invalid = true;
+    }
+  });
+  return invalid;
+}
+
+function keyPair(arr) {
+  let phoneObj = {};
   for (let i of arr) {
     phoneObj[i] = 0;
   }
 
+  return phoneObj;
+}
+
+function objCompareBuilding(arr, obj) {
+  arr.forEach((number) => {
+    for (let key in obj) {
+      if (number.toString() === key) {
+        obj[key] += 1;
+      }
+    }
+  });
+  return obj;
+}
+
+function phoneBuilder(arr) {
+  let rightString = '';
   for (let n in arr) {
     switch (n) {
     case '0':
-      finalString += '(' + arr[n];
+      rightString += '(' + arr[n];
       break;
     case '1':
-      finalString += arr[n] + ')';
+      rightString += arr[n] + ')';
       break;
     case '2':
-      finalString += ' ' + arr[n];
+      rightString += ' ' + arr[n];
       break;
     case '6':
-      finalString += arr[n] + '-';
+      rightString += arr[n] + '-';
       break;
     default:
-      finalString += arr[n];
+      rightString += arr[n];
     }
   }
+  return rightString;
+}
 
-  if (arr.length !== 11) {
-    finalString = 'Array com tamanho incorreto.';
-  } else {
-    arr.forEach((number) => {
-      if (number < 0 || number > 9) {
-        finalString = 'não é possível gerar um número de telefone com esses valores';
-      }
-    });
-    arr.forEach((number) => {
-      for (let key in phoneObj) {
-        if (number.toString() === key) {
-          phoneObj[key] += 1;
-        }
-      }
-    });
-  }
+function generatePhoneNumber(arr) {
+  let finalString = '';
+  finalString = phoneBuilder(arr);
+  let isRightSize = validSize(arr);
+  let isValidNumber = validNumberValues(arr);
+  let phoneObj = keyPair(arr);
+  let compareObj = objCompareBuilding(arr, phoneObj);
 
-  for (let key in phoneObj) {
-    if (phoneObj[key] >= 3) {
+  for (let key in compareObj) {
+    if (compareObj[key] >= 3 || isValidNumber) {
       finalString = 'não é possível gerar um número de telefone com esses valores';
     }
   }
+
+  if (isRightSize) {
+    finalString = 'Array com tamanho incorreto.';
+  }
+
   return finalString;
 }
+console.log(generatePhoneNumber([0, 1, 6]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
