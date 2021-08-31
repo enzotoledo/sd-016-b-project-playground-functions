@@ -55,7 +55,17 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(string) {
-  
+  var match = string.match(/\d+/g);
+  var map = match.map(Number);
+  let sum = 0;
+  for(i of map){
+    sum += i;
+  }
+  if(sum === 1){
+    return (sum+' copo de água');
+  }else{
+    return (sum+' copos de água');
+  }
 }
 
 module.exports = {
