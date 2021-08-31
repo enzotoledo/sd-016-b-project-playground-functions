@@ -34,9 +34,13 @@ const array = ['Diego', 'Araújo', 'Santos', 'Mendes'];
 concatName(array);
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let resultado = ((wins * 3) + ties);
+  return resultado;
 }
+console.log(footballPoints(14, 8));
+console.log(footballPoints(1, 2));
+console.log(footballPoints(0, 0));
 
 // Desafio 6
 function highestCount() {
