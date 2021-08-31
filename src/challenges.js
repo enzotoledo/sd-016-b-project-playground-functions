@@ -32,11 +32,14 @@ function concatName(array) {
 }
 console.log(concatName(['captain', 'my', 'captain']))
 
-
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let vitoria = wins * 3;
+  let empate = ties * 1;
+  let somaPoints = vitoria + empate;
+  return somaPoints;
 }
+console.log(footballPoints(1, 2));
 
 // Desafio 6
 function highestCount() {
