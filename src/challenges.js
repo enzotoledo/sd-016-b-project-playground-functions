@@ -50,8 +50,33 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let contGato1 = 0;
+  let contGato2 = 0;
+  for (let casas1 = cat1; casas1 !== mouse;) {
+    if (casas1 > mouse) {
+      casas1 -= 1;
+      contGato1 += 1;
+    } else {
+      casas1 += 1;
+      contGato1 += 1;
+    }
+  }
+  for (let casas2 = cat2; casas2 !== mouse;) {
+    if (casas2 > mouse) {
+      casas2 -= 1;
+      contGato2 += 1;
+    } else {
+      casas2 += 1;
+      contGato2 += 1;
+    }
+  }
+  if (contGato1 < contGato2) {
+    return 'cat1';
+  } if (contGato2 < contGato1) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
