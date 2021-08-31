@@ -29,7 +29,7 @@ function concatName(ArrString) {
   return lastNum;
 }
 
-// concatName['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+// console.log(concatName('Lucas', 'Cassiano', 'Ferraz', 'Paolillo'))
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -39,13 +39,30 @@ function footballPoints(wins, ties) {
 }
 // console.log(footballPoints(1, 2));
 
+
 // Desafio 6
 function highestCount(numeros) {
-  numeros = [];
-  for(let index = 0; index < numeros.length; index +=1) {
+  let numeroRepetido = 0;
+  let maiorNumero = numeros[0];
 
+  for (let index = 0; index < numeros.length; index += 1) {
+    if (numeros > numeros[index]) {
+      maiorNumero = index;
+    }
+    
   }
+// pega a repetição do maior numero
+  for (let index = 0; index < numeros.length; index += 1) {
+    if (maiorNumero === numeros[index]) {
+      numeroRepetido += 1;
+    }
 }
+
+return numeroRepetido;
+  }
+
+  console.log(highestCount([9, 1, 2, 3, 9, 5, 7, 9,]));
+
 
 // Desafio 7
 function catAndMouse() {
