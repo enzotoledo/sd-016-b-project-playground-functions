@@ -31,15 +31,20 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  let maior = array[0];
+  function retornaMaior(arr) {
+    let maior = arr[0];
+    for (let i = 0; i < arr.length; i += 1) {
+      if (arr[i] > maior) {
+        maior = arr[i];
+      }
+    }
+    return maior;
+  }
+
+  let maior = retornaMaior(array);
   let contadorMaior = 0;
   for (let i = 0; i < array.length; i += 1) {
-    if (array[i] > maior) {
-      maior = array[i];
-    }
-  }
-  for (let c = 0; c < array.length; c += 1) {
-    if (array[c] === maior) {
+    if (array[i] === maior) {
       contadorMaior += 1;
     }
   }
@@ -65,7 +70,7 @@ function fizzBuzz(array) {
   let arrayFinal = [];
   for (let number of array) {
     if ((number % 3 === 0) && (number % 5 === 0)) {
-      arrayFinal.push('fizzbuzz');
+      arrayFinal.push('fizzBuzz');
     } else if (number % 3 === 0) {
       arrayFinal.push('fizz');
     } else if (number % 5 === 0) {
@@ -77,10 +82,18 @@ function fizzBuzz(array) {
   return arrayFinal;
 }
 
-// Desafio 9
-function encode() {
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
+// Desafio 9
+function encode(string) {
+  let coded = '';
+  let vogais = ['a', 'b', 'c', 'd', 'e'];
+  for (let i = 0; i < vogais.length; i += 1) {
+    coded += string.replace(vogais[i], i + 1);
+  }
+  return coded;
 }
+// console.log(encode('hi, there!'));
 
 function decode() {
   // seu código aqui
