@@ -9,16 +9,17 @@ console.log(compareTrue(true, false));
 
 // Desafio 2
 function calcArea(base, height) {
-  let areaTriangulo = (base * height) / 2
-  return areaTriangulo
+  let areaTriangulo = (base * height) / 2;
+  return areaTriangulo;
 }
 console.log(calcArea(10, 50));
 console.log(calcArea(5, 2));
 console.log(calcArea(51, 1));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(Bola) {
+  let desafio = Bola.split(' ');
+  return desafio;
 }
 
 // Desafio 4
