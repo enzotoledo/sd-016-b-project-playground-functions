@@ -28,13 +28,17 @@ function concatName(meuArray) {
   let primeiroItem;
   ultimoItem = meuArray[meuArray.length - 1];
   primeiroItem = meuArray.shift();
-  resulltado = ultimoItem + ", " + primeiroItem;
+  resulltado = ultimoItem + ', ' + primeiroItem;
   return resulltado;
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pontuacao;
+  let pontuacaoVitorias = wins * 3;
+  let pontuacaoEmpates = ties;
+  pontuacao = pontuacaoVitorias + pontuacaoEmpates;
+  return pontuacao;
 }
 
 // Desafio 6
