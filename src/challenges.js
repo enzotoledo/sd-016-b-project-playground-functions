@@ -18,27 +18,41 @@ function calcArea(base, height) {
 function splitSentence(phrase) {
   // seu código aqui
   let arraysentence = phrase.split(' ');
-  return arraysentence; 
+  return arraysentence;
 }
 
 // Desafio 4
 function concatName(vetorstring) {
   // seu código aqui
-  let phrase = vetorstring[vetorstring.length-1] + ', '  + vetorstring[0];
+  let phrase = vetorstring[vetorstring.length -1] + ', '  + vetorstring[0];
   return phrase;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
-  let campeonato = (wins*3) + (ties)
-  return campeonato
+  let campeonato = (wins * 3) + (ties);
+  return campeonato;
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbers) {
   // seu código aqui
+  let maior = -1;
+  for (i = 0; i < numbers.length; i += 1) {
+     if (numbers[i] > maior) {
+      maior = numbers[i];
+       }
+  }
+  let count = 0;
+  for (i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] === maior) {
+     count = count + 1; 
+    }
+  }
+  return count;
 }
+console.log(highestCount([ 1, 2, 3, 0, 7, 2, 1 ]));
 
 // Desafio 7
 function catAndMouse() {
