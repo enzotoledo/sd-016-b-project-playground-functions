@@ -1,10 +1,10 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 === true && value2 === true){
-    return true;
-    }
-    else{
-    return false;
+if (value1 === true && value2 === true){
+  return true;
+  }
+  else{
+  return false;
   } 
 }
 console.log(compareTrue(false, true));
@@ -18,14 +18,20 @@ console.log(calcArea(51,1));
 
 // Desafio 3
 function splitSentence(word) {
-  let wordSpace = word.split(" ");
-  return wordSpace;  
+  const wordSpace = word.split(' ');
+  return wordSpace; 
 }
-console.log(splitSentence("go Trybe"));
+console.log(splitSentence('foguete'));
+
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  const nameList = [ ]
+  let names = nameList.push(array[array.length -1], array[0])
+  let nameConcat = nameList.join(", ")
+  return nameConcat
 }
+console.log(concatName(['captain', 'my', 'captain']))
+
 
 // Desafio 5
 function footballPoints() {
