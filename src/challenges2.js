@@ -54,8 +54,19 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+/* Conteudo adicional para resolucao deste problema adquirido na pagina:
+https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994 */
+function hydrate(string) {
+  var numbers = string.match(/\d+/g).map(Number);
+  let sum = 0;
+  for(i of numbers){
+    sum += i;
+  }
+  if(sum === 1){
+    return (sum+' copo de água');
+  }else{
+    return (sum+' copos de água');
+  }
 }
 
 module.exports = {
