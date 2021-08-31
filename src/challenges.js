@@ -1,9 +1,9 @@
 // Lucas Camargo
 // Playground Functions
 
+// --------------------------------------------------------------------------------------------------
+
 // Desafio 1
-
-
 function compareTrue(par1, par2) {
     // seu código aqui
     return par1 && par2;
@@ -14,9 +14,9 @@ function compareTrue(par1, par2) {
 // console.log(compareTrue(false, true));
 // console.log(compareTrue(true, true));
 
+// --------------------------------------------------------------------------------------------------
+
 // Desafio 2
-
-
 function calcArea(base, height) {
     // seu código aqui
     return (base * height) / 2
@@ -25,6 +25,8 @@ function calcArea(base, height) {
 // console.log(calcArea(10, 50));
 // console.log(calcArea(5, 2));
 // console.log(calcArea(51, 1));
+
+// --------------------------------------------------------------------------------------------------
 
 // Desafio 3
 function splitSentence(string) {
@@ -36,39 +38,63 @@ function splitSentence(string) {
 // console.log(splitSentence('vamo que vamo'));
 // console.log(splitSentence('foguete'));
 
+// --------------------------------------------------------------------------------------------------
+
 // Desafio 4
-function concatName() {
+function concatName(array) {
     // seu código aqui
+    let firstElement = array.shift();
+    let lastElement = array.pop();
+    let concatElements = lastElement.concat(', ', firstElement);
+    return concatElements;
 }
+// testando a função
+// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+// console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+// console.log(concatName(['captain', 'my', 'captain']));
+
+// --------------------------------------------------------------------------------------------------
 
 // Desafio 5
 function footballPoints() {
     // seu código aqui
 }
 
+// --------------------------------------------------------------------------------------------------
+
 // Desafio 6
 function highestCount() {
     // seu código aqui
 }
+
+// --------------------------------------------------------------------------------------------------
 
 // Desafio 7
 function catAndMouse() {
     // seu código aqui
 }
 
+// --------------------------------------------------------------------------------------------------
+
 // Desafio 8
 function fizzBuzz() {
     // seu código aqui
 }
+
+// --------------------------------------------------------------------------------------------------
 
 // Desafio 9
 function encode() {
     // seu código aqui
 }
 
+// --------------------------------------------------------------------------------------------------
+
 function decode() {
     // seu código aqui
 }
+
+// --------------------------------------------------------------------------------------------------
 
 module.exports = {
     calcArea,
