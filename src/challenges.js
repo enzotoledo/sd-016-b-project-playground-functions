@@ -9,12 +9,11 @@ function compareTrue(a, b) {
   }
 }
 
-console.log(compareTrue(true, true))
-
-
 // Desafio 2
-function calcArea() {
+function calcArea(base,height) {
   // seu código aqui
+  let resultado = (base*height)/2
+  return resultado
 }
 
 // Desafio 3
