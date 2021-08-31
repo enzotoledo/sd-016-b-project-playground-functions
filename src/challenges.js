@@ -72,8 +72,8 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arr) {
   const strArray = [];
 
-  arr.forEach(n => {
-    if(n % 3 === 0 && n % 5 === 0) {
+  arr.forEach((n) => {
+    if (n % 3 === 0 && n % 5 === 0) {
       strArray.push('fizzBuzz');
     } else if (n % 3 === 0) {
       strArray.push('fizz');
@@ -86,30 +86,32 @@ function fizzBuzz(arr) {
 
   return strArray;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
 // Desafio 9
 function encode(str) {
   let encodeMsg = str.split('');
 
-  for (let letter in encodeMsg) {
+  encodeMsg.forEach((letter) => {
     for (let key in code) {
-      if (encodeMsg[letter] === key) {
-        encodeMsg[letter] = code[key];
+      if (letter === key) {
+        encodeMsg[encodeMsg.indexOf(letter)] = code[key];
       }
     }
-  }
+  });
+
   return encodeMsg.join('');
 }
 function decode(str) {
   let decodeMsg = str.split('');
 
-  for (let letter in decodeMsg) {
+  decodeMsg.forEach((letter) => {
     for (let key in code) {
-      if (decodeMsg[letter] == code[key]) {
-        decodeMsg[letter] = key;
+      if (letter === code[key].toString()) {
+        decodeMsg[decodeMsg.indexOf(letter)] = key;
       }
     }
-  }
+  });
+
   return decodeMsg.join('');
 }
 
