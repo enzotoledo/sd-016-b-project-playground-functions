@@ -22,10 +22,12 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(stringArray) {
-  let concatenated = stringArray[stringArray.length - 1] + `,` + stringArray[0];
+  let last = stringArray[stringArray.length - 1];
+  let first = stringArray[0];
+  let concatenated = `${last}, ${first}`;
   return concatenated;
 }
-//console.log(concatName(['Lucas','Cassiano','Ferraz','Paolillo']));
+console.log(concatName(['Lucas','Cassiano','Ferraz','Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
