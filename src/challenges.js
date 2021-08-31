@@ -20,10 +20,10 @@ console.log(calcArea(51, 1));
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
-  let array = string.split(" ");
+  let array = string.split(' ');
   return array; 
 }
-console.log(splitSentence("foguete"));
+console.log(splitSentence('foguete'));
 
 // Desafio 4
 function concatName(array) {
@@ -45,9 +45,25 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(0, 0));
 
 // Desafio 6
-function highestCount() {
+function highestCount(numeros) {
   // seu código aqui
+  let maiorNumero = numeros[0];
+  let vezesQueAparece = 0;
+
+  for (let index = 0; index < numeros.length; index += 1) {
+    if (numeros[index] > maiorNumero) {
+      maiorNumero = numeros[index];
+    }
+  }
+ 
+  for (let index2 = 0; index2 < numeros.length; index2 += 1) {
+    if (numeros[index2] === maiorNumero) {
+      vezesQueAparece += 1;
+    }
+  }
+  return vezesQueAparece;
 }
+console.log(highestCount([-2, -2, -1]));
 
 // Desafio 7
 function catAndMouse() {
