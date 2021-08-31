@@ -25,8 +25,9 @@ function concatName(nomesArray) {
 }
 
 // Desafio 5
-function footballPoints(wins,ties) {
-  
+function footballPoints(wins, ties) {
+  let vitorias = wins * 3;
+  return vitorias + ties;
 }
 
 // Desafio 6
