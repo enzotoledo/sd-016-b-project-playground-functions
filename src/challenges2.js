@@ -1,13 +1,20 @@
 // Desafio 10
-function techList(arr, nome) {
-  let object = {};
-  for (let i = 0; i < arr.length; i += 1) {
-    for (let j = 0; j < arr.length; j += 1) {
-      object.tech = arr[j];
-      object.name = nome;
-    }
+function techList(arr, name) {
+  let lista = [];
+  errorMsg = "Vazio!";
+  if (arr.length === 0) {
+    return errorMsg;
   }
-  return object;
+
+  arr.sort();
+
+  for (let i = 0; i < arr.length; i += 1) {
+    let object = {};
+    object.tech = arr[i];
+    object.name = name;
+    lista.push(object);
+  }
+  return lista;
 }
 
 // Desafio 11
