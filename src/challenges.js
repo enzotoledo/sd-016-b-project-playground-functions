@@ -65,11 +65,24 @@ function fizzBuzz(numbersArray) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+const letterNumbers = {
+  a: 1,
+  e: 2,
+  i: 3,
+  o: 4,
+  u: 5,
+  1: 'a',
+  2: 'e',
+  3: 'i',
+  4: 'o',
+  5: 'u',
+};
+
+function encode(str) {
+  return str.split('').map((l) => letterNumbers[l] || l).join('');
 }
-function decode() {
-  // seu código aqui
+function decode(str) {
+  return encode(str);
 }
 
 module.exports = {
