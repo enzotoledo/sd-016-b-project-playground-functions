@@ -23,8 +23,9 @@ return conjunto[conjunto.length -1] + ", " + conjunto[0];
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let calcula = wins * 3 + ties
+  return calcula
 }
 
 // Desafio 6
