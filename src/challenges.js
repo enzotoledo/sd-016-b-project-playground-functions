@@ -22,13 +22,6 @@ calcArea (5,2);
 calcArea (51,1);
 
 // Desafio 3
-/* Escreva uma função com o nome splitSentence, a qual receberá uma string e retornará uma array de strings separadas por cada espaço na string original.
-Exemplo: se a função receber a string "go Trybe", o retorno deverá ser ['go', 'Trybe'].
-O que será verificado:
-Retorne o valor ['go', 'Trybe'] se a função receber a string 'go Trybe'
-Retorne o valor ['vamo', 'que', 'vamo']. se a função receber a string 'vamo que vamo'
-Retorne o valor ['foguete'] se a função receber a string 'foguete' */
-
 function splitSentence(str) {
   // seu código aqui
   let splitString = str.split(' ');
@@ -39,12 +32,25 @@ splitSentence('go Trybe');
 splitSentence('vamo que vamo');
 splitSentence('foguete');
 
-
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+/* Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.
+Isso quer dizer que, caso o parâmetro passado para concatName seja a Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar Paolillo, Lucas.
+ */
 
+function concatName(names) {
+  for (let index in names) {
+    let primeiroItem = names[0];
+    let ultimoItem = names[names.length-1];
+    let concatd = ultimoItem + ', ' + primeiroItem;
+    return concatd
+  } 
+}
+concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
+concatName(['foguete', 'não', 'tem', 'ré']);
+concatName(['captain', 'my', 'captain']);
+
+console.log (concatName)
+ 
 // Desafio 5
 function footballPoints() {
   // seu código aqui
