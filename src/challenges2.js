@@ -88,8 +88,22 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let numbersOfString = string.match(/\d+/g);
+  let sum = 0;
+  let result = '';
+
+  for (let number of numbersOfString) {
+    sum += parseInt(number, 10);
+  }
+
+  if (sum === 1) {
+    result = `${sum} copo de água`;
+  } else {
+    result = `${sum} copos de água`;
+  }
+
+  return result;
 }
 
 module.exports = {
