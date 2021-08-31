@@ -53,13 +53,21 @@ function highestCount(arrayDeNumeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)){
+  return 'cat1'
+} else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
+  return 'cat2'
+} else {
+  return 'os gatos trombam e o rato foge'
+ }
 }
 
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  
 }
 
 // Desafio 9
@@ -69,6 +77,8 @@ function encode() {
 function decode() {
   // seu código aqui
 }
+
+
 
 module.exports = {
   calcArea,
