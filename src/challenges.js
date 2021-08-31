@@ -18,6 +18,7 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(frase) {
   let separa = frase.split(" ");
+ 
   return separa;
 }
 
@@ -37,28 +38,43 @@ function concatName(vetor) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pointWin = 3;//
-  let pointTie = 1;// as duas variáveis poderiam sair
-  let total;
-
-  total = wins*pointWin + ties*pointTie;
-
+  let total = (wins*3) + (ties*1);
   return total;
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(vetorNumber) {
+  let ordenar = vetorNumber.sort(); // ordena o vetor em ordem crescente
+  let maiorNumero = ordenar[vetorNumber.length -1];
+  let qtdRepete = 0;
+
+  for(let cont = 0; cont < vetorNumber.length; cont+=1) {
+    if (vetorNumber[cont] === maiorNumero) {
+      qtdRepete+=1;
+    }
+  }
+  return qtdRepete;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+  let distanciaCat1 = Math.abs(mouse - cat1); // abs deixa o número absoluto
+  let distanciaCat2 = Math.abs(mouse - cat2);
+  let resultado;
+
+  if(distanciaCat1 > distanciaCat2) {
+    resultado = 'cat2';
+  } else if(distanciaCat1 < distanciaCat2) {
+    resultado ='cat1';
+  }else {
+    resultado = 'os gatos trombam e o rato foge';
+  }
+  return resultado;
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arryNumber) {
+  
 }
 
 // Desafio 9
