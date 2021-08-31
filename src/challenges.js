@@ -24,13 +24,23 @@ function footballPoints(wins, ties) {
   return (wins * 3) + ties;
 }
 
+// O maior da array
+function oMaiorDaArray(a) {
+  let vencedor = a[0];
+  for (let i of a) if (i > vencedor) vencedor = i;
+  return vencedor;
+}
+
+// Quantidade de um valor numa array
+function quantasVezesAparece(v, a) {
+  let quantidade = 0;
+  for (let j of a) if (j === v) quantidade += 1;
+  return quantidade;
+}
+
 // Desafio 6
 function highestCount(a) {
-  let vencedor = a[0];
-  let quantidade = 0;
-  for (let i of a) if (i > vencedor) vencedor = i;
-  for (let j of a) if (j === vencedor) quantidade += 1;
-  return quantidade;
+  return quantasVezesAparece(oMaiorDaArray(a), a);
 }
 
 // Desafio 7
