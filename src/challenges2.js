@@ -58,16 +58,32 @@ if (array.length === 11) {
 }
 return numero;
 }
-console.log(generatePhoneNumber([2, 2, 2, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  if(lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)){
+    return true;
+  } else{
+    return false;
+  }
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
   // seu código aqui
+  let code = /\d+/g;
+  let valorFinal = 0;
+  let copos = string.match(code);
+  for(let index in copos){
+    valorFinal += parseInt(copos[index]);
+  }
+  if(valorFinal > 1){
+    return valorFinal + ' copos de água';
+  } else{
+    return valorFinal + ' copo de água'
+  }
+  
 }
 
 module.exports = {
