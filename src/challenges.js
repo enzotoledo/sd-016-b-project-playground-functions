@@ -23,8 +23,9 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let retorno = console.log(`${array[0]}, ${array[(array.length - 1)]}`);
-  return retorno;
+  let nomeFinal = array[array.length - 1];
+  let nomeInicial = array[0];
+  return `${nomeFinal}, ${nomeInicial}`;
 }
 
 // Desafio 5
@@ -47,7 +48,7 @@ function catAndMouse(mouse, cat1, cat2) {
   } if (distCat1 < distCat2) {
     return 'cat1';
   }
-  return 'Os gatos trombam e o rato foge';
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
