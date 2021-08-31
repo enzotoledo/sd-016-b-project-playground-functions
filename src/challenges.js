@@ -14,12 +14,12 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(sentence, separator) {
- return sentence.split(" ");
+ return (sentence.split(" "));
 }
 
 // Desafio 4
 function concatName(names) {
-  return [names.length] + (names[0]);
+  return (names[names.length-1] +', ' + (names[0]));
 }
 
 // Desafio 5
@@ -37,6 +37,7 @@ let higthNumber = Math.max(numbers);
      counter +=1;
    }
   return counter;
+ }
 }
 
 // Desafio 7
