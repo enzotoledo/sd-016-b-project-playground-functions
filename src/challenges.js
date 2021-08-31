@@ -22,8 +22,10 @@ function splitSentence(phrase) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(vetorstring) {
   // seu código aqui
+  let phrase = vetorstring[vetorstring.length -1] + ", " + vetorstring[0];
+  return phrase;
 }
 
 // Desafio 5
