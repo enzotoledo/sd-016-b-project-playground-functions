@@ -12,13 +12,22 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(string) {
+  let array = [''];
+  for (let i = 0; i < string.length; i += 1) {
+    if (string[i] === ' ') {
+      array.push('');
+    } else {
+      array[array.length - 1] += string[i];
+    }
+  }
+  return array;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let string = `${array[array.length - 1]}, ${array[0]}`;
+  return string;
 }
 
 // Desafio 5
