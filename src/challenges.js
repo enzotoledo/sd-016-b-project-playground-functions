@@ -49,7 +49,7 @@ concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
 concatName(['foguete', 'não', 'tem', 'ré']);
 concatName(['captain', 'my', 'captain']);
 
-console.log (concatName)
+//console.log (concatName)
  
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -91,9 +91,26 @@ function highestCount(numeros) {
 
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+
+/* Retorne a string 'cat2' caso a função catAndMouse receba os parâmetros onde gato cat2 esteja a 2 unidades de distância do rato e cat1 esteja a 3 unidades de distância do rato
+Retorne a string 'cat1' caso a função catAndMouse receba os parâmetros onde gato cat1 esteja a 6 unidades de distância do rato e cat2 esteja a 12 unidades de distância do rato
+Retorne a string 'os gatos trombam e o rato foge' caso a função catAndMouse receba os parâmetros onde os gatos estejam na mesma distância do rato */
+
+function catAndMouse(mouse, cat1, cat2) {
+	let end ='';
+	if (Math.abs(cat1 - mouse) > (cat2 - mouse)) {
+		end = 'cat2';
+	} else if (Math.abs(cat1 - mouse) < (cat2 - mouse)) {
+		end = 'cat1';
+	} else {
+		end =  "os gatos trombam e o rato foge"; 
+	}
+	console.log (end)
+	return end;
 }
+catAndMouse(0,3,2);
+catAndMouse(0,6,12);
+catAndMouse(2,2);
 
 // Desafio 8
 function fizzBuzz() {
