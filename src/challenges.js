@@ -5,17 +5,18 @@ function compareTrue(a, b) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return base * height / 2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(s) {
-  return s.split(" ");
+  return s.split(' ');
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(a) {
+  // return a[a.length - 1] + ', ' + a[0]; //Lint reclamou
+  return `${a[a.length - 1]}, ${a[0]}`; //  https://developer.school/javascript-es6-string-concatenation-with-template-literals/
 }
 
 // Desafio 5
