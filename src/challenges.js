@@ -28,30 +28,35 @@ function footballPoints(wins, ties) {
   return (wins * 3) + (ties * 1);
 }
 
-// Desafio 6
-function highestCount(param) {
-  let maiorValor = 0;
-  let numRepeticoes = 0;
-  for (let i = 0; i < param.length; i += 1) {
-    if (maiorValor < param[i]) {
-      maiorValor = param[i];
-    }
-  }
-  for (let j = 0; j < param.length; j += 1) {
-    if (maiorValor === param[j]) {
-      numRepeticoes += 1;
-    }
-  }
+// Desafio 6 (Feito com a ajuda do pessoal da mentoria  ; ))
+function highestCount(arrayDeNumeros) {
+  let maiorNumero = arrayDeNumeros[0];
+  let contadorNumero = 0;
 
-  return numRepeticoes
+  for (let index = 0; index < arrayDeNumeros.length; index += 1) {
+    if (arrayDeNumeros[index] > maiorNumero) {
+      maiorNumero = arrayDeNumeros[index];
+    }
+  }
+  for (let index = 0; index < arrayDeNumeros.leght; index += 1) {
+    if (arrayDeNumeros[index] === maiorNumero) {
+      contadorNumero += 1;
+    }
+  }
+  return
 }
 
 
-// Desafio 7
-function catAndMouse() {
-  // seu código aqui
+// Desafio 7 (Math.abs recomendado pelo pessoal no slack <3)
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+    return 'cat1';
+  } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
+    return 'cat2';
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
-
 // Desafio 8
 function fizzBuzz() {
   // seu código aqui
