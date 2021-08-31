@@ -94,11 +94,46 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let novaSting = '';
+  let letrasTrocadas = { a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5 };
+  for (let i = 0; i < frase.length; i += 1) {
+    let letraAtual = frase[i];
+    for (let key in letrasTrocadas) {
+      if (key === letraAtual) {
+        let novoNumero = letrasTrocadas[key];
+        letraAtual = novoNumero;
+        break;
+      }
+    }
+    novaSting += letraAtual;
+  }
+  return novaSting;
 }
-function decode() {
-  // seu código aqui
+
+function decode(frase) {
+  let novaSting = '';
+  let letrasTrocadas = { a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5 };
+  for (let i = 0; i < frase.length; i += 1) {
+    let letraAtual = frase[i];
+    for (let key in letrasTrocadas) {
+      if (letrasTrocadas[key] === letraAtual) {
+        let novaLetra = key;
+        letraAtual = novaLetra;
+        break;
+      }
+    }
+    novaSting += letraAtual;
+  }
+  return novaSting;
 }
 
 module.exports = {
