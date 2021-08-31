@@ -21,10 +21,11 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  array = array[array.length -1] + ", " +array[0]
+  return array;
 }
-
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 // Desafio 5
 function footballPoints() {
   // seu código aqui
