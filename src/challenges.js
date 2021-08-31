@@ -1,38 +1,35 @@
 // Desafio 1
 function compareTrue(valorA, valorB) {
-  if((valorA && valorB) == true){
+  if ((valorA && valorB)) {
     return true;
-  }
-  else{
-    return false;
   }
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  calculoArea = (base * height) / 2;
+  let calculoArea = (base * height) / 2;
   return calculoArea;
 }
 
 // Desafio 3
 function splitSentence(frase) {
-  fraseDividida = frase.split(' ')
-  return fraseDividida
+  let fraseDividida = frase.split(' ');
+  return fraseDividida;
 }
 
 // Desafio 4
 function concatName(array) {
-  let fraseConcatenada = array[array.length -1] + ", " +array[0]
+  let fraseConcatenada = array[array.length - 1] + ', ' + array[0];
   return fraseConcatenada;
 }
 // Desafio 5
 function footballPoints(wins, ties) {
-  let pontos = 0
-  for (let i = 0; i < wins; i += 1){
-    pontos += 3
+  let pontos = 0;
+  for (let i = 0; i < wins; i += 1) {
+    pontos += 3;
   }
-  for (let i = 0; i < ties; i += 1){
-    pontos += 1
+  for (let i = 0; i < ties; i += 1) {
+    pontos += 1;
   }
 
   return pontos;
