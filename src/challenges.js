@@ -25,8 +25,8 @@ function splitSentence(frase) {
 
 // Desafio 4
 let resConcatName;
-function concatName(arrrayString) {
-  resConcatName = `${arrrayString[arrrayString.length - 1]}, ${arrrayString[0]}`;
+function concatName(arrayString) {
+  resConcatName = `${arrayString[arrayString.length - 1]}, ${arrayString[0]}`;
   return resConcatName;
 }
 
@@ -46,13 +46,33 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+let resCount = 0;
+function highestCount(arrayNumbers) {
+  let contador = 0;
+  let arrayArgm = arrayNumbers;
+  for (let index = 0; index < arrayNumbers.length; index += 1) {
+    let numberArray = arrayNumbers[index];
+    if (numberArray === Math.max(...arrayArgm)) {
+      contador += 1;
+    }
+  }
+  resCount = contador;
+  return resCount;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+let resCatWin = '';
+function catAndMouse(mouse, cat1, cat2) {
+  let localCat1 = Math.abs(cat1 - mouse);
+  let localCat2 = Math.abs(cat2 - mouse);
+  if (localCat1 < localCat2) {
+    resCatWin = 'cat1';
+  } else if (localCat2 < localCat1) {
+    resCatWin = 'cat2';
+  } else {
+    resCatWin = 'os gatos trombam e o rato foge';
+  }
+  return resCatWin;
 }
 
 // Desafio 8
