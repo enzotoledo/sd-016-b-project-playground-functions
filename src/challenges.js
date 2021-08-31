@@ -26,9 +26,13 @@ function splitSentence(string) {
 console.log(splitSentence("foguete"));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  let novoArray = array.reverse();
+  let primeiroElemento = novoArray[0];
+  let ultimoElemento = novoArray[novoArray.length - 1];
+  return (primeiroElemento + ', ' + ultimoElemento);
 }
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
 function footballPoints() {
