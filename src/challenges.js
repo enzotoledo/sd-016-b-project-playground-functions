@@ -18,7 +18,7 @@ function splitSentence(stringToSplit) {
 // Desafio 4
 function concatName(arrayString) {
   let result = '';
-  result = arrayString[arrayString.length - 1] + ', ' + arrayString[0];
+  result = `${arrayString[arrayString.length - 1]}, ${arrayString[0]}`;
   return result;
 }
 
@@ -56,14 +56,15 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+/* lint acusa uma complexidade maior que 5, requesita uma refatoracao da funcao */
 function fizzBuzz(arrayNumbers) {
   let result = [];
-  for (let i of arrayNumbers) {
-    if ((i % 3 === 0) && (i % 5 === 0)) {
+  for (let i = 0; i < arrayNumbers.length; i += 1) {
+    if (arrayNumbers[i] % 15 === 0) {
       result.push('fizzBuzz');
-    } else if (i % 3 === 0) {
+    } else if (arrayNumbers[i] % 3 === 0) {
       result.push('fizz');
-    } else if (i % 5 === 0) {
+    } else if (arrayNumbers[i] % 5 === 0) {
       result.push('buzz');
     } else {
       result.push('bug!');
@@ -75,11 +76,7 @@ function fizzBuzz(arrayNumbers) {
 // Desafio 9
 function encode(string) {
   let logic = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
+    a: 1, e: 2, i: 3, o: 4, u: 5,
   };
   let result = '';
   for (let j of string) {
@@ -98,19 +95,16 @@ function encode(string) {
   return result;
 }
 
+/* lint acusa que devo usar '===' ao inves de '==' mas eu quero fazer a verificacao sem verificar se o tipo e igual */
 function decode(string) {
   let logic = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
+    a: '1', e: '2', i: '3', o: '4', u: '5',
   };
   let result = '';
   for (let j of string) {
     let z = 0;
     for (let k in logic) {
-      if (j == logic[k]) {
+      if (j === logic[k]) {
         result += k;
         z = 1;
         break;
