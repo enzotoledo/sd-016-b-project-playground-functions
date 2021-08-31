@@ -110,7 +110,7 @@ function decode(string) {
   for (let j of string) {
     let z = 0;
     for (let k in logic) {
-      if (j === logic[k]) {
+      if (j == logic[k]) {
         result += k;
         z = 1;
         break;
