@@ -4,7 +4,7 @@ const code = {
   i: 3,
   o: 4,
   u: 5,
-}
+};
 
 // Desafio 1
 function compareTrue(arg1, arg2) {
@@ -50,6 +50,7 @@ function highestCount(arr) {
 function catAndMouse(mouse, cat1, cat2) {
   let cat1Space = 0;
   let cat2Space = 0;
+  let returnStr = '';
   const cat1Win = mouse - cat1 < 0;
   const cat2Win = mouse - cat2 < 0;
 
@@ -58,12 +59,13 @@ function catAndMouse(mouse, cat1, cat2) {
 
   console.log(cat1Space, cat2Space);
   if (cat1Space < cat2Space) {
-    return 'cat1';
+    returnStr = 'cat1';
   } else if (cat2Space < cat1Space) {
-    return 'cat2';
+    returnStr = 'cat2';
   } else {
-    return 'os gatos trombam e o rato foge';
+    returnStr = 'os gatos trombam e o rato foge';
   }
+  return returnStr;
 }
 
 // Desafio 8
