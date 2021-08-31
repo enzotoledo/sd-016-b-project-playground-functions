@@ -33,11 +33,17 @@ function concatName(vetor) {
   return resultadoConcat;
 }
 
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+//console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pointWin = 3;//
+  let pointTie = 1;// as duas variáveis poderiam sair
+  let total;
+
+  total = wins*pointWin + ties*pointTie;
+
+  return total;
 }
 
 // Desafio 6
