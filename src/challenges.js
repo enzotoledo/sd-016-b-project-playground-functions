@@ -30,17 +30,17 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(array) {
-  function retornaMaior(arr) {
-    let maior = arr[0];
-    for (let i = 0; i < arr.length; i += 1) {
-      if (arr[i] > maior) {
-        maior = arr[i];
-      }
+function retornaMaior(arr) {
+  let maior = arr[0];
+  for (let i = 0; i < arr.length; i += 1) {
+    if (arr[i] > maior) {
+      maior = arr[i];
     }
-    return maior;
   }
+  return maior;
+}
 
+function highestCount(array) {
   let maior = retornaMaior(array);
   let contadorMaior = 0;
   for (let i = 0; i < array.length; i += 1) {
@@ -123,7 +123,9 @@ function decode(string) {
   return decoded;
 }
 
-console.log(decode('h2ll4'));
+function ordenedObjects(array, name) {
+  // array = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+}
 module.exports = {
   calcArea,
   catAndMouse,
