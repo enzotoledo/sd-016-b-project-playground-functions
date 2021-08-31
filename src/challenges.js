@@ -4,19 +4,21 @@ function compareTrue(v1, v2) {
   if ((v1 && v2) === true) {
     return true;
   }
-    return false;
+  return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  let area = (base * height)/2
+  let area = (base * height) / 2;
   return area;
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(phrase) {
   // seu código aqui
+  let arraysentence = phrase.split(' ');
+  return arraysentence; 
 }
 
 // Desafio 4
