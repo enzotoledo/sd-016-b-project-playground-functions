@@ -9,12 +9,12 @@ function compareTrue(param1, param2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return base * height / 2
+  return base * height / 2;
 }
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split('')
+  return string.split('');
 }
 
 // Desafio 4
@@ -28,24 +28,10 @@ function footballPoints(wins, ties) {
   return (wins * 3) + (ties * 1);
 }
 
-// Desafio 6 (Feito com a ajuda do pessoal da mentoria  ; ))
-function highestCount(arrayDeNumeros) {
-  let maiorNumero = arrayDeNumeros[0];
-  let contadorNumero = 0;
-
-  for (let index = 0; index < arrayDeNumeros.length; index += 1) {
-    if (arrayDeNumeros[index] > maiorNumero) {
-      maiorNumero = arrayDeNumeros[index];
-    }
-  }
-  for (let index = 0; index < arrayDeNumeros.leght; index += 1) {
-    if (arrayDeNumeros[index] === maiorNumero) {
-      contadorNumero += 1;
-    }
-  }
-  return
+// Desafio 6
+function highestCount(arrayOfNumbers) {
+  return arrayOfNumbers.filter(function (x) { return x == Math.max(...arrayOfNumbers) }).length
 }
-
 
 // Desafio 7 (Math.abs recomendado pelo pessoal no slack <3)
 function catAndMouse(mouse, cat1, cat2) {
