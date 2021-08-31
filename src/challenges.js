@@ -1,13 +1,13 @@
 // Desafio 1
 function compareTrue(x, y) {
-  if (x === true && y === true) {
+  if ((x === true) && (y === true)) {
     return true;
   } else {
     return false;
   }
 }
 
-// console.log(compareTrue(true, true));
+// console.log(compareTrue(false, false));
 
 // Desafio 2
 function calcArea(base, heigth) {
@@ -17,8 +17,11 @@ function calcArea(base, heigth) {
 
 // Desafio 3
 function splitSentence(string) {
-  return []
-}
+  const array = string.split(" ")
+  return array;
+  }
+  
+console.log(splitSentence("vamo que vamo"));
 
 // Desafio 4
 function concatName() {
@@ -31,11 +34,14 @@ function footballPoints(wins, ties) {
   ties = ties;
   return wins + ties;
 }
-console.log(footballPoints(1, 2));
+// console.log(footballPoints(1, 2));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeros) {
+  numeros = [];
+  for(let index = 0; index < numeros.length; index +=1) {
+
+  }
 }
 
 // Desafio 7
