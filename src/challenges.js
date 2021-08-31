@@ -3,9 +3,9 @@ function compareTrue(a, b) {
   // seu código aqui
   if ((a === true) && (b === true)) {
     return true;
-  } else {
-    return false;
   }
+  return false;
+  //  Troquei o else desnecessário por conta da sugestão do Lint
 }
 
 // Desafio 2
