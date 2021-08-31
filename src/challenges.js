@@ -11,14 +11,13 @@ function compareTrue(valorA, valorB) {
 // Desafio 2
 function calcArea(base, height) {
   calculoArea = (base * height) / 2;
-  return calculoArea
+  return calculoArea;
 }
 
-console.log(calcArea(10, 50))
-
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  fraseDividida = frase.split(' ')
+  return fraseDividida
 }
 
 // Desafio 4
