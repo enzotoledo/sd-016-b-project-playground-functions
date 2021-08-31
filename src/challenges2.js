@@ -1,35 +1,21 @@
 // Desafio 10
 function techList(array, name) {
-if ( array[0] === undefined){
+  if ( array[0] === undefined) {
   return 'Vazio!';
-} else {
+  } else {
   let arraySort = array.sort();
-  let answer = [
-    {
-      tech: arraySort[0],
+  let answer = [];
+  let obj = {};
+  for (let i = 0; i < arraySort.length; i +=1) {
+    obj = {
+      tech: arraySort[i],
       name: name
-    },
-    {
-      tech: arraySort[1],
-      name: name
-    },
-    {
-      tech: arraySort[2],
-      name: name
-    },
-    {
-      tech: arraySort[3],
-      name: name
-    },
-    {
-      tech: arraySort[4],
-      name: name
-    },
-  ];
-return answer;   
+    }
+    answer.push(obj);
+  }
+return answer;
 }
 }
-
 
 // Desafio 11
 function generatePhoneNumber() {
