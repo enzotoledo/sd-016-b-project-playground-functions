@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(numberOne, numberTwo) {
-  if(numberOne == true && numberTwo == true){
+  if (numberOne == true && numberTwo == true){
     return true;
   }else {
     return false;
@@ -19,8 +19,11 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(array) {
+  ultimoItem = array[array.length - 1];
+  primeiroItem = array[0];
+  let resultado =  ultimoItem + ', ' + primeiroItem;
+  return resultado;
 }
 
 // Desafio 5
