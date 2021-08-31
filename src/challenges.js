@@ -64,7 +64,6 @@ function fizzBuzz(numbersArray) {
   return fizzBuzzArray;
 }
 
-console.log(fizzBuzz([7, 9]));
 // Desafio 9
 function encode() {
   // seu código aqui
