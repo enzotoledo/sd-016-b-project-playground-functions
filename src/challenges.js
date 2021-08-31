@@ -81,11 +81,55 @@ function fizzBuzz(arr) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let result = '';
+  let switch1 = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  }
+  for(let i of string){
+    let z = 0;
+    for(let y in switch1){
+      if(i==y){
+        result += switch1[y];
+        z = 1;
+        break;
+      }
+    }
+    if(z===0){
+      result += i;
+    }
+  }
+  return result;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let result = '';
+  let switch1 = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  }
+  
+  for(let i of string){
+    let z = 0;
+    for(let y in switch1){
+      if(i==switch1[y]){
+        result += y;
+        z = 1;
+        break;
+      }
+    }
+    if(z===0){
+      result += i;
+    }
+  }
+  return result;
 }
 
 module.exports = {
