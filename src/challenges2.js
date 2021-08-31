@@ -3,13 +3,33 @@ function techList(array, name) {
 if ( array[0] === undefined){
   return 'Vazio!';
 } else {
-  let objects = {}
-  for (i in array){
-    objects.object1.tech = array[i];
-    objects.object1.name = name;
-  }
+  let arraySort = array.sort();
+  let answer = [
+    {
+      tech: arraySort[0],
+      name: name
+    },
+    {
+      tech: arraySort[1],
+      name: name
+    },
+    {
+      tech: arraySort[2],
+      name: name
+    },
+    {
+      tech: arraySort[3],
+      name: name
+    },
+    {
+      tech: arraySort[4],
+      name: name
+    },
+  ];
+return answer;   
 }
 }
+
 
 // Desafio 11
 function generatePhoneNumber() {
