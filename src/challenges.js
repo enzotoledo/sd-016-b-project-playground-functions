@@ -108,7 +108,7 @@ function decode(str) {
   for (let i = 0; i < str.length; i += 1) {
     let actLett = str[i];
     for (let key in objectRef) {
-      if (objectRef[key] == actLett) {
+      if (objectRef[key].toString() === actLett) {
         let newLett = key;
         actLett = newLett;
         break;
