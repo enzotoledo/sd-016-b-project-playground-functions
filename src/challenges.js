@@ -45,23 +45,22 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+
+function isDivisibleBy3(number) { return number % 3 === 0; }
+
+function isDivisibleBy5(number) { return number % 5 === 0; }
+
+function isDivisibleBy3And5(number) {
+  return isDivisibleBy3(number) && isDivisibleBy5(number);
+}
+
 function fizzBuzz(numbersArray) {
-  let fizzBuzzArray = [];
-  for (const index in numbersArray) {
-    if (Object.hasOwnProperty.call(numbersArray, index)) {
-      if (numbersArray[index] % 3 === 0) {
-        fizzBuzzArray[index] = 'fizz';
-        if (numbersArray[index] % 5 === 0) {
-          fizzBuzzArray[index] += 'Buzz';
-        }
-      } else if (numbersArray[index] % 5 === 0) {
-        fizzBuzzArray[index] = 'buzz';
-      } else {
-        fizzBuzzArray[index] = 'bug!';
-      }
-    }
-  }
-  return fizzBuzzArray;
+  return numbersArray.map((number) => {
+    if (isDivisibleBy3And5(number)) return 'fizzBuzz';
+    if (isDivisibleBy3(number)) return 'fizz';
+    if (isDivisibleBy5(number)) return 'buzz';
+    return 'bug!';
+  });
 }
 
 // Desafio 9
