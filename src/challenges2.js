@@ -47,13 +47,30 @@ function generatePhoneNumber(arr) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (Math.abs(lineA) > (Math.abs(lineB) + Math.abs(lineC))) {
+    return false;
+  } else if (Math.abs(lineA) < (Math.abs(lineB) - Math.abs(lineC))) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+  let numberArray = str.match(/\d+/g);
+  let bebidas = 0;
+  for (let i = 0; i < numberArray.length; i += 1) {
+    bebidas += parseInt(numberArray[i]);
+  }
+  if (bebidas === 1) {
+    let mensagemSing = `${bebidas} copo de água`;
+    return mensagemSing;
+  } else if (bebidas > 1) {
+    let mensagemPlu = `${bebidas} copos de água`;
+    return mensagemPlu;
+  }
 }
 
 module.exports = {
