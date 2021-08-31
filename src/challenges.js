@@ -18,9 +18,10 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+function concatName(paLavras) {
+  return (paLavras.pop() +', '+ paLavras.shift());
+} 
+  
 
 // Desafio 5
 function footballPoints() {
