@@ -1,27 +1,30 @@
 // Desafio 1
 function compareTrue(a, b) {
-  if (a == true && b == true) {
+  if (a === true && b === true) {
     return true;
   }
-  else {
-    return false;
-  }
+  return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  calc = base * height / 2
-  return calc
+  let calc = (base * height) / 2;
+  return calc;
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(frase) {
+  let fraseSep = frase.split(' ');
+  return fraseSep;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(nomes) {
+  let lastPos = nomes.length - 1;
+  let last = nomes[lastPos];
+  let first = nomes[0];
+  let junto = '';
+  return junto.concat(last, ', ', first);
 }
 
 // Desafio 5
