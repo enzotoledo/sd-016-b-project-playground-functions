@@ -1,6 +1,8 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techArray, name) {
+  return (techArray.length === 0)
+    ? 'Vazio!'
+    : techArray.sort().map(function (tech) { return { tech, name }; });
 }
 
 // Desafio 11
