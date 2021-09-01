@@ -73,8 +73,32 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function divisibleBy3(currentNum) {
+  if (currentNum % 3 === 0) {
+    return true;
+  }
+}
+
+function divisibleBy5(currentNum) {
+  if (currentNum % 5 === 0) {
+    return true;
+  }
+}
+
+function divisibleBy3And5(currentNum) {
+  if (divisibleBy3(currentNum) && divisibleBy5(currentNum) === true) {
+    return true;
+  }
+}
+
+function fizzBuzz(numberArray) {
+  let results = numberArray.map((currentNum) => {
+    if (divisibleBy3And5(currentNum) === true) return 'fizzBuzz';
+    if (divisibleBy3(currentNum) === true) return 'fizz';
+    if (divisibleBy5(currentNum) === true) return 'buzz';
+    return 'bug!';
+  });
+  return results;
 }
 
 // Desafio 9
