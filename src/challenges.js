@@ -79,7 +79,7 @@ function encode(string) {
     u: 5,
   }
   let result = string.split('');
- for (let index = 0; index < result.length; i += 1){
+ for (let index = 0; index < result.length; index += 1){
    for (let key in code){
      if( result[index] == key){
        result[index] = code[key];
@@ -98,7 +98,7 @@ function decode(string) {
     u: 5,
   }
   let result = string.split('');
- for (let index = 0; index < result.length; i += 1){
+ for (let index = 0; index < result.length; index += 1){
    for (let key in code){
      if( result[index] == code[key]){
        result[index] = key;
