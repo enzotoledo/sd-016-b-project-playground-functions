@@ -55,7 +55,6 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat1Space = Math.abs(cat1 - mouse);
   let cat2Space = Math.abs(cat2 - mouse);
   let returnStr = '';
-  
   if (cat1Space < cat2Space) {
     returnStr = 'cat1';
   } else if (cat1Space > cat2Space) {
