@@ -86,12 +86,33 @@ function fizzBuzz(bigArray) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
-}
-function decode() {
-  // seu código aqui
-}
+function encode(findVowelsInString) {
+  
+  let encodedString = "";
+
+  for(let index = 0; index < findVowelsInString.length; index += 1) {
+    if (!'aeiou'.includes(findVowelsInString[index])) {
+      encodedString += findVowelsInString[index];
+    } else if ('aeiou'.includes(findVowelsInString[index])) {
+      encodedString += findVowelsInString[index].replace("a", 1).replace("e", 2).replace("i", 3).replace("o", 4).replace("u", 5);
+      }
+  }
+  return encodedString;
+} 
+    
+function decode(findNumbersInString) {
+
+  let decodedString = "";
+
+  for(let index = 0; index < findNumbersInString.length; index += 1) {
+    if (!'12345'.includes(findNumbersInString[index])) {
+      decodedString += findNumbersInString[index];
+    } else if ('12345'.includes(findNumbersInString[index])) {
+      decodedString += findNumbersInString[index].replace(1, "a").replace(2, "e").replace(3, "i").replace(4, "o").replace(5, "u");
+      }
+  }
+  return decodedString;
+} 
 
 module.exports = {
   calcArea,
