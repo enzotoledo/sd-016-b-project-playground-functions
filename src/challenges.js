@@ -66,14 +66,36 @@ function highestCount(numeros) {
 console.log(highestCount([-2, -2, -1]));
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+//   // seu código aqui
+  if (Math.abs(cat1 - mouse) > (cat2 - mouse)) {
+    return 'cat2';
+  } else if (Math.abs (cat1 - mouse) < (cat2 - mouse)) {
+    return 'cat1';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
+console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(numeros) {
   // seu código aqui
+  // let frase = '';
+  // for (let index = 0; index <= numeros.length; index += 1) {
+  //   if (numeros[index] % 3 === 0) {
+  //     frase = 'fizz';
+  //   } else if (numeros[index] % 5 === 0) {
+  //     frase = 'buzz';
+  //   } else if ((numeros[index] % 3 === 0) && (numeros[index] % 5 === 0)) {
+  //     frase = 'fizzBuzz';
+  //   } else {
+  //     frase = 'bug!';
+  //   }
+  // }
+  // return frase;
 }
+console.log(fizzBuzz(3));
 
 // Desafio 9
 function encode() {
