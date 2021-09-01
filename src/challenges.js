@@ -44,7 +44,7 @@ function highestCount(numbers) {
   }
   return biggerCount;
 }
-
+console.log(highestCount([2, 15, 7, 9, 45]));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distancia1 = Math.sqrt((cat1 - mouse) ** 2);
@@ -63,8 +63,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(alarm) {
+  let alarmText = [];
+  for (let index in alarm) {
+    if ((alarm[index] % 5 === 0) && (alarm[index] % 3 === 0)) {
+      alarmText.push('fizzBuzz');
+    } else if (alarm[index] % 5 === 0) {
+      alarmText.push('buzz');
+    } else if (alarm[index] % 3 === 0) {
+      alarmText.push('fizz');
+    } else {
+      alarmText.push('bug!');
+    }
+  }
+  return alarmText;
 }
 
 // Desafio 9
