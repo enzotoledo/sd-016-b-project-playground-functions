@@ -58,8 +58,26 @@ function triangleCheck() {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+    let strTam = str.length-1;
+    let strNumber = [1,2,3,4,5,6,7,8,9];
+    let taNumber = strNumber.length;
+    let qtd = 0;
+    
+      for(let i = 0; i < strTam; i++){
+        for(let ii = 0; ii < taNumber; ii++ ){
+            if(str[i] == strNumber[ii]){
+                let n = strNumber[ii];
+                qtd +=  n;
+            }
+        }  
+        
+      }if(qtd == 1){
+        return qtd+" copo de água";
+      }else{
+        return qtd+" copos de água";
+      }
+     
 }
 
 module.exports = {
