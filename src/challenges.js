@@ -52,11 +52,19 @@ function highestCount(numbers) {
   }
   return count;
 }
-console.log(highestCount([ 1, 2, 3, 0, 7, 2, 1 ]));
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
+  let conta1 = Math.abs(mouse - cat1);
+  let conta2 = Math.abs(mouse - cat2);
+  if (conta1 === conta2) {
+    return "os gatos trombam e o rato foge" ;
+  }   else if (conta1 < conta2) {
+    return "cat1" ;
+  } else {
+    return "cat2" ;
+  }
 }
 
 // Desafio 8
