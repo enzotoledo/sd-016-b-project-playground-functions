@@ -1,38 +1,38 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 === true && value2 === true){
-    return true
-  }else{
-    return false
+  if (value1 === true && value2 === true) {
+    return true;
+  } else {
+    return false;
   }
 }
 
 // Desafio 2
-function calcArea(base,height) {
-  let triangulo = (base * height)/2
-  return triangulo
+function calcArea(base, height) {
+  let triangulo = (base * height) / 2;
+  return triangulo;
 }
 
 // Desafio 3
 function splitSentence(string) {
-  let newPhrase = string.split(" ");
-  for(let index = 0; index < 0; index += 1){
-  newPhrase = newPhrase[index] + ",";
+  let newPhrase = string.split(' ');
+  for (let index = 0; index < 0; index += 1) {
+    newPhrase = `${newPhrase[index]}  ,`;
   }
   return newPhrase;
 }
 
 // Desafio 4
 function concatName(name) {
-  var result = name[name.length -1] + ", " + name[0];
-  return result
+  let result = name[name.length - 1] + ', ' + name[0];
+  return result;
 }
 
 // Desafio 5
-function footballPoints(wins,ties) {
+function footballPoints(wins, ties) {
   let points;
   points = wins * 3 + ties;
-  return points; 
+  return points;
 }
 
 // Desafio 6
@@ -40,16 +40,16 @@ function highestCount(listOfNumber) {
   let high = -99999999;
   let count = 0;
 
-  for(let index = 0; index < listOfNumber.length; index += 1){
-    if(listOfNumber[index] > high){
-      high = listOfNumber[index]
+  for (let index = 0; index < listOfNumber.length; index += 1) {
+    if (listOfNumber[index] > high) {
+      high = listOfNumber[index];
       count = 0;
       count += 1;
-      }else if(listOfNumber[index] == high){
-        count += 1
-      }
+    } else if (listOfNumber[index] === high) {
+      count += 1;
     }
-  return count;  
+  }
+  return count;
 }
 
 // Desafio 7
@@ -57,11 +57,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let firstCatPosition = Math.abs(cat1 - mouse);
   let SecondCatPosition = Math.abs(cat2 - mouse);
 
-  if(firstCatPosition < SecondCatPosition){
-    return "cat1"
-  }else if(SecondCatPosition < firstCatPosition){
-    return "cat2"
-  }else{
+  if (firstCatPosition < SecondCatPosition) {
+    return 'cat1';
+  } else if (SecondCatPosition < firstCatPosition){
+    return "cat2";
+  } else {
     return "os gatos trombam e o rato foge";
   }
 
