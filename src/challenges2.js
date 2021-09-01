@@ -1,6 +1,26 @@
 // Desafio 10
 function techList(arrayT,name) {
-  // seu código aqui
+  let arrayobjeto= [];
+   let mensagem = 'Vazio!'
+   if(arrayT.length == 0){
+      return mensagem;
+   }
+      arrayT.sort();
+      
+      for (let index = 0; index < arrayT.length; index += 1) {
+
+      /*   usei essa forma de empurrar os valores do objeto dentro do array com base na forma que o Orlando Dantas usou https://github.com/tryber/sd-016-b-project-playground-functions/pull/83/commits/f16c46076b377cb88a7c1b27dad39cefb9690436  */
+        
+        arrayobjeto.push(
+           {
+             tech: arrayT[index],
+             name: name,
+           },
+         );
+       }
+      
+     
+       return arrayobjeto
 }
 
 // Desafio 11
