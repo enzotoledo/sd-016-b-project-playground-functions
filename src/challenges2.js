@@ -44,10 +44,40 @@ function generatePhoneNumber(arrayNumeros) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function eMenor (a, b, c) { /* Para a resolucao desse exercicio utilizei a ajuda do aluno : victor shin kamiguchi */
+let exp = [
+  (a + b) > c,
+  ((b + c) > a),
+  ((a + c) > b)
+];
+  if (exp[0] === true && exp[1] === true && exp[2] === true){
+    return true;
+  }
+  return false;
 }
 
+function eMaior (a, b, c) {
+  let exp = [
+    (Math.abs(a - b) < c),
+    (Math.abs(b - c) < a),
+    (Math.abs(a - c) < b),
+  ];
+  if (exp[0] === true && exp[1] === true && exp[2] === true){
+    return true;
+  }
+  return false;
+}
+
+function triangleCheck(lineA, lineB, lineC) {
+  let a = lineA;
+  let b = lineB;
+  let c = lineC;
+
+  if (eMenor(a, b, c) === false || eMaior(a, b, c) === false){
+    return false;
+  }
+  return true;
+}
 // Desafio 13
 function hydrate() {
   // seu código aqui
