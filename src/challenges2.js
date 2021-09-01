@@ -1,7 +1,8 @@
 // Desafio 10
 function techList(array, name) {
+  array.sort();
   if(array.length !== 0){
-    let objectArray = [""];
+    let objectArray = [];
   for(i=0; i < array.length; i++){
     let myObject = {
       tech: "NomeTech",
@@ -17,7 +18,7 @@ else{
   return "Vazio!"
 }
 }
-
+console.log((techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas")))
 // Desafio 11
 function generatePhoneNumber(digits) {
   if(digits.length != 11){
@@ -26,24 +27,22 @@ function generatePhoneNumber(digits) {
   else if(digits.length == 11){
     for(i=0; i<digits.length; i++){
     let counter = 0;
-    if (digits[i]< 0){
+    if (digits[i]< 0 || digits[i]>9){
       return "não é possível gerar um número de telefone com esses valores";
     }
-    else{
       for(j=0; j<digits.length; j++){
       if(digits[i] == digits[j]){
         counter++
         if(counter > 2){
           return "não é possível gerar um número de telefone com esses valores";
-            }
           }
         }
       }
     }
   }
 digits[0] = "(" + digits[0];
-digits[1] = digits[1] +") "
-digits[6] = digits[6] + "-"
+digits[1] = digits[1] +") ";
+digits[6] = digits[6] + "-";
 return digits.join("");
 }
 
@@ -58,8 +57,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+  let drinksArray = str.split(" ");
+  let sumOfDrinks = 0;
+  for (i=0; i<drinksArray.length; i++){  
+    drinksArray[i] = parseInt(drinksArray[i]) || 0;
+    sumOfDrinks = sumOfDrinks + drinksArray[i];
+    // esse foi um quebra cabeças, mas graças a deus o usuario "user113716" no stackOverflow respondeu essa pergunta do usuário "Tamás Pap" no stack overflow. link: https://stackoverflow.com/questions/7540397/convert-nan-to-0-in-javascript?newreg=a9cf235ec55240dcbaa6e5b9de7bc553
+  }
+  if(sumOfDrinks > 1){
+    return sumOfDrinks + " copos de água"
+  }
+  if (sumOfDrinks === 1){
+    return sumOfDrinks + " copo de água"
+  }
 }
 
 module.exports = {
