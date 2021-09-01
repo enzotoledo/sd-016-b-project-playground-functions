@@ -63,21 +63,33 @@ function catAndMouse(mouse, cat1, cat2) {
   return catClose;
 }
 
+function divide3 (z) {
+  if (z % 3 === 0) { return true; }
+  else {
+  return false;
+}
+}
+
+function divide5 (z) {
+  if (z % 5 === 0) { return true; }
+  else {
+  return false;
+}
+}
+
+function div3and5(num) {
+  if (divide3(num) === true && divide5(num) === true) {return 'fizzBuzz'; }
+  else if (divide3(num) === true) {return 'fizz';}
+  else if (divide5(num) === true) {return 'buzz';}
+  return 'bug!';
+}
+
 // Desafio 8
 function fizzBuzz(arrayOfNumbers) {
   let newArrayStr = [];
   for (let i3 = 0; i3 < arrayOfNumbers.length; i3 += 1) {
     let actualNumber = arrayOfNumbers[i3];
-    if (actualNumber % 3 === 0 && actualNumber % 5 !== 0) {
-      newArrayStr.push('fizz');
-    } else if (actualNumber % 5 === 0 && actualNumber % 3 !== 0) {
-      newArrayStr.push('buzz');
-    } else if (actualNumber % 3 === 0 && actualNumber % 5 === 0) {
-      newArrayStr.push('fizzBuzz');
-    } else {
-      newArrayStr.push('bug!');
-    }
-  }
+    newArrayStr.push(div3and5(actualNumber));}
   return newArrayStr;
 }
 
