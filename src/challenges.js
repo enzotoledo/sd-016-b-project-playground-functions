@@ -46,23 +46,21 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arrayInt) {
-  let result = 0;
   let bigger = arrayInt[0];
-  for(let index = 1; index < arrayInt.length; index += 1) {
+  for (let index = 1; index < arrayInt.length; index += 1) {
     if (bigger < arrayInt[index]) {
       bigger = arrayInt[index];
-      result = index;
     }
   }
   let amount = 0;
-  for(let index = 0; index < arrayInt.length; index += 1) {
-    if (bigger == arrayInt[index]) {
-      amount = amount += 1;
+  for (let index = 0; index < arrayInt.length; index += 1) {
+    if (bigger === arrayInt[index]) {
+      amount += 1;
     }
   }
-    return amount;
+  return amount;
 }
-  console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
@@ -85,7 +83,7 @@ for(let index = 0; index < array.length; index += 1) {
 }
   return result;
 }
-  console.log(fizzBuzz( [2, 15, 7, 9, 45]));
+  console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
