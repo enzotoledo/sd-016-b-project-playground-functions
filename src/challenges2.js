@@ -33,20 +33,14 @@ function generatePhoneNumber(numero) {
   }
 
   // respostas
-  if ((erro > 0) || (contagem > 2)) {
-    return("não é possível gerar um número de telefone com esses valores");
-  } else if ((11 < numero.length) || (11 > numero.length)) {
+  if ((11 < numero.length) || (11 > numero.length)) {
     return("Array com tamanho incorreto.");
+  } else if ((erro > 0) || (contagem > 2)) {
+    return("não é possível gerar um número de telefone com esses valores");
   } else {
     return("(" + inicial[0] + inicial[1] + ") " + inicial[2] + inicial[3] + inicial[4] + inicial[5] +  inicial[6] + "-" + inicial[7] + inicial[8] + inicial[9] + inicial[10]);
   }
 }
-
-
-generatePhoneNumber([1,1,9,5,4,6,0,4,3,5,0]);
-
-
-{
 
 // Desafio 12
 function triangleCheck() {
