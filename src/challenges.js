@@ -53,19 +53,23 @@ function catAndMouse(mouse, cat1, cat2) {
   return retorno;
 }
 
+function verificaDivisao(number, meuArray) {
+  if ((number % 3 === 0) && (number % 5 === 0)) {
+    meuArray.push('fizzBuzz');
+  } else if (number % 3 === 0) {
+    meuArray.push('fizz');
+  } else if (number % 5 === 0) {
+    meuArray.push('buzz');
+  } else {
+    meuArray.push('bug!');
+  }
+}
+
 // Desafio 8
 function fizzBuzz(numbers) {
   let meuArray = [];
   for (const number of numbers) {
-    if ((number % 3 === 0) && (number % 5 === 0)) {
-      meuArray.push('fizzBuzz');
-    } else if (number % 3 === 0) {
-      meuArray.push('fizz');
-    } else if (number % 5 === 0) {
-      meuArray.push('buzz');
-    } else {
-      meuArray.push('bug!');
-    }
+    verificaDivisao(number, meuArray);
   }
   return meuArray;
 }
