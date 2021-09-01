@@ -61,33 +61,39 @@ function impressaoRetornoTrue(retorno) {
   return textAjust;
 }
 
-function impressaoRetornoFalse(param) {
+function impressaoRetornoFalse(count) {
   let aux = '';
 
-  if (param === 1) aux = 'Array com tamanho incorreto.';
-  else if (param === 2 || param === 3) {
+  if (count === 1) aux = 'Array com tamanho incorreto.';
+  else if (count === 2 || count === 3) {
     aux = 'não é possível gerar um número de telefone com esses valores';
   }
   return aux;
 }
 
 function generatePhoneNumber(numbers) {
-  let contFuncao = 0;
+  let countFuncao = 0;
+  let aux;
 
   if (validaTamanho(numbers) !== true) {
-    contFuncao = 1;
-    console.log(impressaoRetornoFalse(contFuncao));
+    countFuncao = 1;
+    aux = impressaoRetornoFalse(countFuncao);
   } else if (validaNumero(numbers) !== true) {
-    contFuncao = 2;
-    console.log(impressaoRetornoFalse(contFuncao));
+    countFuncao = 2;
+    aux = impressaoRetornoFalse(countFuncao);
   } else if (validaRepeticao(numbers) !== true) {
-    contFuncao = 3;
-    console.log(impressaoRetornoFalse(contFuncao));
+    countFuncao = 3;
+    aux = impressaoRetornoFalse(countFuncao);
   } else {
-    console.log(impressaoRetornoTrue(numbers));
+    return impressaoRetornoTrue(numbers);
   }
+  return aux;
 }
-generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]);
+
+// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
+// console.log(generatePhoneNumber([8, 4, 9, 8, 7, 4, 3, 9, 0, 1, 5]));
+// console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 0, 1, 2, 10]));
+// console.log(generatePhoneNumber([0, 1, 6]));
 
 // Desafio 12
 function triangleCheck() {
