@@ -44,7 +44,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(repeatMax) {
-  let maior = 0
+  let maior = -1
   let repeat = 0
   for (let index = 0; index <= repeatMax.length; index += 1)
     if (maior < repeatMax[index]){
@@ -53,13 +53,13 @@ function highestCount(repeatMax) {
     
     for(let index in repeatMax){
       if(maior === repeatMax[index]){
-        repeat += 1
+        repeat += 1;
       }
     } 
    
     return repeat
 }
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([0, 0, 0]));         //([9, 1, 2, 3, 9, 5, 7]));
 
 //[9, 1, 2, 3, 9, 5, 7]
 
@@ -75,14 +75,45 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+
+// codigo baseado na pagina 
+/* 
+https://ichi.pro/pt/algoritmo-javascript-gatos-e-um-rato-278592971346362
+*/
+
+function catAndMouse(mouse, cat1, cat2) {
+  let catAPos = Math.abs(mouse - cat1);
+  let catBPos = Math.abs(mouse - cat2);
+
+   if (catAPos < catBPos) {
+      return 'cat1';
+   } else if (catAPos > catBPos) {
+       return 'cat2'; 
+   } else {
+        return 'os gatos trombam e o rato foge';
+   } 
+
 }
+console.log(catAndMouse(1, 0, 2));
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let arrayList = [];
+  for (index = 0; index < array.length; index +=1){
+      if (array[index] % 3 === 0 && array[index] % 5 === 0 ) {
+        arrayList.push('fizzBuzz');  
+      }else if(array[index] % 5 == 0 ) {
+            arrayList.push('buzz');
+     
+      }else if(array[index] % 3 == 0) {
+            arrayList.push('fizz');  
+      }else{
+            arrayList.push('bug!');
+      }
+    } 
+    return arrayList   
 }
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
