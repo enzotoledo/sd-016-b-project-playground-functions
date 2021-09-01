@@ -26,10 +26,11 @@ function splitSentence(Bola) {
 function concatName(array) {
   let lastName = array[array.length - 1];
   let firstName = array[0];
-  let result = lastName + ", " + firstName;
+  let result = lastName + ', ' + firstName;
   console.log(result);
   return result;
 }
+
 const array = ['Diego', 'Araújo', 'Santos', 'Mendes'];
 concatName(array);
 
@@ -43,9 +44,22 @@ console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  let maiorNumero = -Infinity;
+  let repete = 0;
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] > maiorNumero) {
+      maiorNumero = array[index];
+    }
+  }
+  for (let index2 = 0; index2 < array.length; index2 +=1){
+    if (maiorNumero === array[index2]) {
+    repete += 1;
+    }
+  }
+  return repete;
 }
+console.log(highestCount([1, 2, 9, 3, 6, 7, 9]));
 
 // Desafio 7
 function catAndMouse() {
