@@ -57,21 +57,15 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 
 function divide3(number) {
-  if (number % 3 === 0) {
-    return true;
-  }
+  return (number % 3 === 0);
 }
 
 function divide5(number) {
-  if (number % 5 === 0) {
-    return true;
-  }
+  return (number % 5 === 0);
 }
 
 function divide3e5(number) {
-  if (number % 3 === 0 && number % 5 === 0) {
-    return true;
-  }
+  return (number % 3 === 0 && number % 5 === 0);
 }
 
 function fizzBuzz(array) {
