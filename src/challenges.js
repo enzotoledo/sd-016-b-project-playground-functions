@@ -1,12 +1,12 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if ((param1 === true) && (param2 === true)) return true;
+  if (param1 === true && param2 === true) return true;
   return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return ((base * height) / 2);
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -19,7 +19,7 @@ function splitSentence(param) {
 function concatName(array) {
   let reversedArray = array.reverse();
 
-  return (`${reversedArray[0]}, ${reversedArray[reversedArray.length - 1]}`);
+  return `${reversedArray[0]}, ${reversedArray[reversedArray.length - 1]}`;
 }
 
 // Desafio 5
@@ -37,7 +37,8 @@ function highestCount(array) {
 
   for (const key in array) {
     if (array[indexBigger] < array[key]) indexBigger = key;
-  } for (const key in array) {
+  }
+  for (const key in array) {
     if (array[indexBigger] === array[key]) sum += 1;
   }
   return sum;
@@ -68,7 +69,7 @@ function divide5(number) {
 }
 
 function divide3e5(number) {
-  if ((number % 3 === 0) && (number % 5 === 0)) {
+  if (number % 3 === 0 && number % 5 === 0) {
     return true;
   }
 }
@@ -86,11 +87,84 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-function encode(text) {
-
+function letterA(text) {
+  for (const key in text) {
+    if (text[key] === 'a') {
+      text[key] = 1;
+    } else if (text[key] === '1') {
+      text[key] = 'a';
+    }
+  }
+  return text;
 }
-function decode() {
-  // seu código aqui
+
+function letterE(text) {
+  for (const key in text) {
+    if (text[key] === 'e') {
+      text[key] = 2;
+    } else if (text[key] === '2') {
+      text[key] = 'e';
+    }
+  }
+  return text;
+}
+
+function letterI(text) {
+  for (const key in text) {
+    if (text[key] === 'i') {
+      text[key] = 3;
+    } else if (text[key] === '3') {
+      text[key] = 'i';
+    }
+  }
+  return text;
+}
+
+function letterO(text) {
+  for (const key in text) {
+    if (text[key] === 'o') {
+      text[key] = 4;
+    } else if (text[key] === '4') {
+      text[key] = 'o';
+    }
+  }
+  return text;
+}
+
+function letterU(text) {
+  for (const key in text) {
+    if (text[key] === 'u') {
+      text[key] = 5;
+    } else if (text[key] === '5') {
+      text[key] = 'u';
+    }
+  }
+  return text;
+}
+
+function encode(text) {
+  let aux = text.split('');
+
+  letterA(aux);
+  letterE(aux);
+  letterI(aux);
+  letterO(aux);
+  letterU(aux);
+
+  return aux.join('');
+}
+console.log(encode('hello'));
+
+function decode(text1) {
+  let aux = text1.split('');
+
+  letterA(aux);
+  letterE(aux);
+  letterI(aux);
+  letterO(aux);
+  letterU(aux);
+
+  return aux.join('');
 }
 
 module.exports = {
