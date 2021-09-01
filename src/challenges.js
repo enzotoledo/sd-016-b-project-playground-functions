@@ -75,7 +75,7 @@ function fizzBuzz(vetornumbers) {
       vetorfizzBuzz.push("fizz");
     } else if (((vetornumbers[i] % 5) === 0) && ((vetornumbers[i] % 3) !== 0)) {
       vetorfizzBuzz.push("buzz");
-    } else if (((vetornumbers[i] % 5) === 0) && ((vetornumbers[i] %3 ) === 0)) {
+    } else if (((vetornumbers[i] % 5) === 0) && ((vetornumbers[i] % 3 ) === 0)) {
       vetorfizzBuzz.push("fizzBuzz");
     } else {
       vetorfizzBuzz.push("bug!");
@@ -85,11 +85,46 @@ function fizzBuzz(vetornumbers) {
 }
 
 // Desafio 9
-function encode() {
+function encode(normalPhrase) {
   // seu código aqui
+  let codePhrase = "";
+  for (let i = 0; i < normalPhrase.length; i += 1) {
+    if (normalPhrase[i] === "a") {
+      codePhrase = codePhrase + "1";
+    } else if (normalPhrase[i] === "e") {
+      codePhrase = codePhrase + "2";
+    } else if (normalPhrase[i] === "i") {
+      codePhrase = codePhrase + "3";
+    } else if (normalPhrase[i] === "o") {
+      codePhrase = codePhrase + "4";
+    } else if (normalPhrase[i] === "u") {
+      codePhrase = codePhrase + "5";
+    } else {
+    codePhrase = codePhrase + normalPhrase[i]; 
+    }
+  }
+return codePhrase;
 }
-function decode() {
+
+function decode(codePhrase) {
   // seu código aqui
+  let normalPhrase = "";
+  for (let i = 0; i < codePhrase.length; i += 1) {
+    if (codePhrase[i] === "1") {
+      normalPhrase = normalPhrase + "a";
+    } else if (codePhrase[i] === "2") {
+      normalPhrase = normalPhrase + "e";
+    } else if (codePhrase[i] === "3") {
+      normalPhrase = normalPhrase + "i";
+    } else if (codePhrase[i] === "4") {
+      normalPhrase = normalPhrase + "o";
+    } else if (codePhrase[i] === "5") {
+      normalPhrase = normalPhrase + "u";
+    } else {
+    normalPhrase = normalPhrase + codePhrase[i]; 
+    }
+  }
+return normalPhrase;
 }
 
 module.exports = {
