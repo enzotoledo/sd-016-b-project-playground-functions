@@ -29,7 +29,7 @@ function concatName(meuArray) {
   let primeiroItem;
   ultimoItem = meuArray[meuArray.length - 1];
   primeiroItem = meuArray.shift();
-  resulltado = ultimoItem + ', ' + primeiroItem;
+  resulltado = `${ultimoItem}, ${primeiroItem}`;
   return resulltado;
 }
 
@@ -72,8 +72,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   if (distanciaGato1 < distanciaGato2) {
     resulltado = 'cat1';
-  }
-  else if (distanciaGato1 > distanciaGato2) {
+  } else if (distanciaGato1 > distanciaGato2) {
     resulltado = 'cat2';
   } else if (distanciaGato1 === distanciaGato2) {
     resulltado = 'os gatos trombam e o rato foge';
