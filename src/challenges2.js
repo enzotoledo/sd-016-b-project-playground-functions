@@ -62,8 +62,21 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  // https://stackoverflow.com/a/1623227
+  let drinkQty = string.match(/\d+/g);
+  for (let i = 0; i < drinkQty.length; i += 1) {
+    drinkQty[i] = parseInt(drinkQty[i], 10);
+  }
+  let waterQty = 0;
+  for (let i = 0; i < drinkQty.length; i += 1) {
+    waterQty += parseInt(drinkQty[i], 10);
+  }
+  if (waterQty === 1) {
+    return '1 copo de água';
+  }
+  waterQty += ' copos de água';
+  return waterQty;
 }
 
 module.exports = {
