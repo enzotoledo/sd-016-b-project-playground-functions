@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(number1, number2) {
   if ((number1 == true) && (number2 == true)){
-    return true
+    return true;
   }
-   else { return false
+   else { return false;
   }
 
 }
@@ -14,13 +14,21 @@ function calcArea(base, heignt) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(phrase) {
+  var result = [] ;
+  for (var i = 0; i < phrase.lenght; i++) {
+    result[i] = result(i ,);
+  }
+  return result;
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(words) {
+  var end = words[words.length-1];
+  var start = words[0];
+  var junction = (end + ', ' + start);
+  return junction;
+
 }
 
 // Desafio 5
