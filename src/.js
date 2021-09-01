@@ -1,35 +1,20 @@
-function fizzBuzz(numeros) {
-    //let numeros = [2, 15, 7, 9, 45];
-    //let strings = ''; 
-      //let results = '';
-      let newArray = [];
-
-    for (let index in numeros) {
-        if ((numeros[index]%3===0) && (numeros[index]%3===0)) {
-            string = 'fizzBuzz'
-          } else if (numeros[index]%3===0)  {
-            string = 'fizz'
-          } else if (numeros[index]%5===0) {
-            string = 'buzz';
-          } else {
-            string = 'bug';
-          }
-          newArray.push(string);
-          //console.log (newArray);
-          //console.log (newArray.push(string));
-        } 
-   return newArray;
-}
-    
-    fizzBuzz([2, 15, 7, 9, 45]); 
-
-/*     let numeros = [2, 15, 7, 9, 45];
-    let string = 'bug'
-    numeros.push(string)
-    console.log (numeros) 
-    
-    let numbers = [];
-    numbers.push (randomNumber(60));
-
-    */
- 
+let str = 'h3 th2r2!'
+let newArray = [];
+let splitString = str.split(""); 
+  for (let index in splitString) {
+      if (splitString[index]===1) {
+          splitString[index]='a';
+      } else if (splitString[index]===2){
+          splitString[index]='e';
+      } else if (splitString[index]===3) {
+          splitString[index]='i';
+      } else if (splitString[index]===4) {
+          splitString[index]='o';
+      } else if (splitString[index]===5) {
+          splitString[index]='u';
+      } else {
+      }
+  newArray.push(splitString[index]);
+  }  
+  let joinArray = newArray.join(""); 
+  console.log (joinArray);

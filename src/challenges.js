@@ -109,22 +109,6 @@ catAndMouse(0,6,12);
 catAndMouse(2,2);
 
 // Desafio 8
-/* Crie uma função chamada fizzBuzz que receba uma array de números e retorne uma array da seguinte forma:
-Para cada número do Array que seja divisível apenas por 3, apresente uma string "fizz";
-Para cada número do Array que seja divisível apenas por 5, apresente uma string "buzz";
-Caso o número seja divisível por 3 e 5, retorne a string "fizzBuzz";
-Caso o número não possa ser dividido por 3 nem por 5, retorne a string "bug!";
-Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"].
-O que será verificado:
-Retorne as strings ['bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz'] quando é passado os parâmetros [2, 15, 7, 9, 45] para a função fizzBuzz
-Retorne as strings ['bug!', 'fizz'] quando é passado os parâmetros [7, 9] para a função fizzBuzz
-Retorne as strings ['fizz', 'buzz'] quando é passado os parâmetros [9, 25] para a função fizzBuzz */
-
-/* for (let index in numeros) {
-	if (numeros[maiorNumero] < numeros[index]) {
-			maiorNumero = index;
-		}  
-	} */
 function fizzBuzz(numeros) {
     let newArray = [];
     for (let index in numeros) {
@@ -149,12 +133,59 @@ fizzBuzz([9, 25]);
 
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+/* Crie duas funções: a primeira deverá se chamar encode e, ao receber uma string como parâmetro, deverá trocar todas as vogais minúsculas por números, de acordo com o formato a seguir:
+a -> 1
+e -> 2
+i -> 3
+o -> 4
+u -> 5
+Ou seja, caso o parâmetro de encode seja "hi there!", o retorno deverá ser "h3 th2r2!".
+*/
+function encode(str) {
+  let newArray = [];
+  let splitString = str.split(""); 
+    for (let index in splitString) {
+        if (splitString[index]==='a') {
+            splitString[index]=1;
+        } else if (splitString[index]==='e'){
+            splitString[index]=2;
+        } else if (splitString[index]==='i') {
+            splitString[index]=3;
+        } else if (splitString[index]==='o') {
+            splitString[index]=4;
+        } else if (splitString[index]==='u') {
+            splitString[index]=5;
+        } else {
+        }
+    newArray.push(splitString[index]);
+    }  
+    let joinArray = newArray.join(""); 
+    return joinArray;
 }
-function decode() {
-  // seu código aqui
+encode ("hi there!")
+
+function decode(str) {
+  let newArray = [];
+  let splitString = str.split(""); 
+    for (let index in splitString) {
+        if (splitString[index]==='1') {
+            splitString[index]='a';
+        } else if (splitString[index]==='2'){
+            splitString[index]='e';
+        } else if (splitString[index]==='3') {
+            splitString[index]='i';
+        } else if (splitString[index]==='4') {
+            splitString[index]='o';
+        } else if (splitString[index]==='5') {
+            splitString[index]='u';
+        } else {
+        }
+    newArray.push(splitString[index]);
+    }  
+    let joinArray = newArray.join(""); 
+    return joinArray;
 }
+decode ('h3 th2r2!')
 
 module.exports = {
   calcArea,
