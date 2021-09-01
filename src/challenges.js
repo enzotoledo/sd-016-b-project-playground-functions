@@ -28,17 +28,24 @@ return arrayDeString;
 
 // Desafio 4
 function concatName(string) {
-let stringDeArray = string[0] + " , " + string[3];
-return stringDeArray
+let stringDeArray = string[3] + ", " + string[0];
+let strinfDeArray2 = string[0] + ", " + string[2];
+return stringDeArray;
+
     }
     concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
+   
     
 
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
-}
+function footballPoints(wins, ties) {
+  if (wins === 0 && ties === 0) {
+    let result = 0;
+  }
+return 0; }
+  
+footballPoints (0, 0);
 
 // Desafio 6
 function highestCount() {
