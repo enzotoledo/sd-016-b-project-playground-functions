@@ -14,7 +14,6 @@ function splitSentence(paramText) {
 function concatName(text) {
   let firstText = text[text.length - 1];
   let lastText =  text[0];
-
   let result = firstText+ ", " +lastText;
   return result;
 }
@@ -27,9 +26,9 @@ function footballPoints(wins, ties) {
 function highestCount(table) {
   let max = Math.max.apply({}, table);
   let result = 0;
-  for( i = 0; i < table.length; i += 1){
-    if(max === table[i]){
-      result += 1;
+  for( i = 0; i < table.length; i++){
+    if( max === table[i] ) {
+      result++;
     };
   };
   return result;
@@ -38,17 +37,18 @@ function highestCount(table) {
 function catAndMouse(mouse, cat1, cat2) {
   cat1 = Math.abs(cat1 - mouse);
   cat2 = Math.abs(cat2 - mouse);
+
   if(cat1 < cat2){
-    return 'cat1'
+    return 'cat1';
   }else if(cat1 > cat2){
-      return 'cat2'
+      return 'cat2';
   }else{
-    return 'os gatos trombam e o rato foge'
+    return 'os gatos trombam e o rato foge';
   };
-}
+};
 
 function fizzBuzz(array) {
-  for(i = 0; i < array.length; i += 1){
+  for(i = 0; i < array.length; i++){
     if(array[i] % 15 == 0 ){
       array[i] = "fizzBuzz";
     }else if(array[i] % 3 == 0){
@@ -63,43 +63,43 @@ function fizzBuzz(array) {
 }
 
 function encode(string) {
-  let result = '';
-  for(i = 0; i < string.length; i += 1){
+  let encode1 = '';
+  for(i = 0; i < string.length; i++){
     if(string[i] === 'a'){
-      result += '1';
+      encode1 += '1';
     }else if (string[i] === 'e'){
-      result += '2';
+      encode1 += '2';
     }else if (string[i] === 'i'){
-      result += '3';
+      encode1 += '3';
     }else if (string[i] === 'o'){
-      result += '4';
+      encode1 += '4';
     }else if (string[i] === 'u'){
-      result += '5';
+      encode1 += '5';
     }else {
-      result += string[i];
+      encode1 += string[i];
     }
   }
-  return result;
+  return encode1;
 }
 
 function decode(string) {
-  let result = '';
-  for(i = 0; i < string.length; i += 1){
+  let decode1 = '';
+  for(i = 0; i < string.length; i++){
     if(string[i] === '1'){
-      result += 'a';
+      decode1 += 'a';
     }else if (string[i] === '2'){
-      result += 'e';
+      decode1 += 'e';
     }else if (string[i] === '3'){
-      result += 'i';
+      decode1 += 'i';
     }else if (string[i] === '4'){
-      result += 'o';
+      decode1 += 'o';
     }else if (string[i] === '5'){
-      result += 'u';
+      decode1 += 'u';
     }else {
-      result += string[i];
+      decode1 += string[i];
     }
   }
-  return result;
+  return decode1;
 }
 
 module.exports = {
