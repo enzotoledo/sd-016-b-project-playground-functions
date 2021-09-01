@@ -48,23 +48,8 @@ function objCompareBuilding(arr, obj) {
 }
 
 function phoneBuilder(arr) {
-  let rightString = '(';
-  for (let n = 0; n < arr.length; n += 1) {
-    switch (n) {
-    case 1:
-      rightString += `${arr[n]})`;
-      break;
-    case 2:
-      rightString += ` ${arr[n]}`;
-      break;
-    case 6:
-      rightString += `${arr[n]}-`;
-      break;
-    default:
-      rightString += arr[n];
-    }
-  }
-  return rightString;
+  // // usei o exemplo do regex do Natã, challenges2.js linha 48. ref: https://github.com/tryber/sd-016-b-project-playground-functions/pull/51/files
+  return `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
 }
 
 function generatePhoneNumber(arr) {
