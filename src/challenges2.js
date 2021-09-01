@@ -48,19 +48,16 @@ function objCompareBuilding(arr, obj) {
 }
 
 function phoneBuilder(arr) {
-  let rightString = '';
-  for (let n in arr) {
+  let rightString = '(';
+  for (let n = 0; n < arr.length; n += 1) {
     switch (n) {
-    case '0':
-      rightString += `(${arr[n]}`;
-      break;
-    case '1':
+    case 1:
       rightString += `${arr[n]})`;
       break;
-    case '2':
+    case 2:
       rightString += ` ${arr[n]}`;
       break;
-    case '6':
+    case 6:
       rightString += `${arr[n]}-`;
       break;
     default:
@@ -90,7 +87,7 @@ function generatePhoneNumber(arr) {
 
   return finalString;
 }
-console.log(generatePhoneNumber([0, 1, 6]));
+console.log(generatePhoneNumber([0, 1, 2, 3, 4, 5, 6, 7, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
