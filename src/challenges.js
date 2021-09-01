@@ -62,25 +62,93 @@ function highestCount(string) {
 return numb  
 }
 
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]))
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  cat1 = Math.abs(cat1 - mouse)
+  cat2 = Math.abs(cat2 - mouse)
+  if (cat1 < cat2) {
+    return "cat1"
+  } else if (cat2 < cat1) {
+    return "cat2"
+  } else {
+    return "os gatos trombam e o rato foge"
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arr) {
+  let array = []
+  let as = 0
+  for (let index = 0; index < arr.length; index += 1) {
+    as = arr[index]
+    if (as % 15 == 0) {
+      as = "fizzBuzz"
+      array.push(as)
+    } else if (as % 5 == 0) {
+      as = "buzz"
+      array.push(as)
+    } else if (as % 3 == 0) {
+      as = "fizz"
+      array.push(as)
+    } else {
+      as = "bug!"
+      array.push(as)
+    }
+  }return array
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let string = []
+  for (let index = 0; index < str.length; index += 1) {
+    let as = str[index]
+    if (as == "a") {
+      as = 1
+      string.push(as)
+    } else if (as == "e") {
+      as = 2
+      string.push(as)
+    } else if (as == "i") {
+      as = 3
+      string.push(as)
+    } else if (as == "o") {
+      as = 4
+      string.push(as)
+    } else if (as == "u") {
+      as = 5
+      string.push(as)
+    } else {
+      string.push(as)
+    }
+  } stringEncoded = string.join('')
+  return stringEncoded
 }
-function decode() {
-  // seu código aqui
+function decode(str) {
+  let string = []
+  for (let index = 0; index < str.length; index += 1) {
+    let as = str[index]
+    if (as == "1") {
+      as = "a"
+      string.push(as)
+    } else if (as == "2") {
+      as = "e"
+      string.push(as)
+    } else if (as == "3") {
+      as = "i"
+      string.push(as)
+    } else if (as == "4") {
+      as = "o"
+      string.push(as)
+    } else if (as == "5") {
+      as = "u"
+      string.push(as)
+    } else {
+      string.push(as)
+    }
+  } stringEncoded = string.join('')
+  return stringEncoded
 }
+
 
 module.exports = {
   calcArea,
