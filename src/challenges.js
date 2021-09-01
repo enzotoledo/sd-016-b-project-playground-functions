@@ -49,28 +49,26 @@ function highestCount(numeros) {
   return contBigger;
 }
 
+// Função de cálculo da distância entre o gato e o rato
+// Suporte Desafio 7
+function casasCat(mouse, cat) {
+  let casasGato = 0;
+  for (let casasMiau = cat; casasMiau !== mouse;) {
+    if (cat < mouse) {
+      casasMiau += 1;
+      casasGato += 1;
+    } else if (cat > mouse) {
+      casasMiau -= 1;
+      casasGato += 1;
+    }
+  }
+  return casasGato;
+}
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let contGato1 = 0;
-  let contGato2 = 0;
-  for (let casas1 = cat1; casas1 !== mouse;) {
-    if (casas1 > mouse) {
-      casas1 -= 1;
-      contGato1 += 1;
-    } else {
-      casas1 += 1;
-      contGato1 += 1;
-    }
-  }
-  for (let casas2 = cat2; casas2 !== mouse;) {
-    if (casas2 > mouse) {
-      casas2 -= 1;
-      contGato2 += 1;
-    } else {
-      casas2 += 1;
-      contGato2 += 1;
-    }
-  }
+  let contGato1 = casasCat(mouse, cat1);
+  let contGato2 = casasCat(mouse, cat2);
   if (contGato1 < contGato2) {
     return 'cat1';
   } if (contGato2 < contGato1) {
@@ -79,9 +77,27 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
+// Função de atribuição de palavra a depender do número
+// Suporte Desafio 8
+function oneOrAnother(elemento) {
+  if (elemento % 3 === 0 && elemento % 5 === 0) {
+    return ('fizzBuzz');
+  } if (elemento % 3 === 0) {
+    return ('fizz');
+  } if (elemento % 5 === 0) {
+    return ('buzz');
+  }
+  return ('bug!');
+}
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(array) {
+  let resultado = [];
+  for (let index = 0; index < array.length; index += 1) {
+    let palavra = oneOrAnother(array[index]);
+    resultado.push(palavra);
+  }
+  return resultado;
 }
 
 // Desafio 9
