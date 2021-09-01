@@ -24,7 +24,7 @@ function splitSentence(phrase) {
 // Desafio 4
 function concatName(vetorstring) {
   // seu código aqui
-  let phrase = vetorstring[vetorstring.length -1] + ', '  + vetorstring[0];
+  let phrase = vetorstring[vetorstring.length - 1] +', '+ vetorstring[0];
   return phrase;
 }
 
@@ -39,15 +39,15 @@ function footballPoints(wins, ties) {
 function highestCount(numbers) {
   // seu código aqui
   let maior = -1;
-  for (i = 0; i < numbers.length; i += 1) {
-     if (numbers[i] > maior) {
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] > maior) {
       maior = numbers[i];
-       }
+    }
   }
   let count = 0;
-  for (i = 0; i < numbers.length; i += 1) {
+  for (let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] === maior) {
-     count = count + 1; 
+      count = count + 1; 
     }
   }
   return count;
@@ -59,17 +59,29 @@ function catAndMouse(mouse, cat1, cat2) {
   let conta1 = Math.abs(mouse - cat1);
   let conta2 = Math.abs(mouse - cat2);
   if (conta1 === conta2) {
-    return "os gatos trombam e o rato foge" ;
+    return "os gatos trombam e o rato foge";
   }   else if (conta1 < conta2) {
-    return "cat1" ;
-  } else {
-    return "cat2" ;
-  }
+    return "cat1";
+  } 
+  return "cat2"; 
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(vetornumbers) {
   // seu código aqui
+  let vetorfizzBuzz = [];
+  for (let i = 0; i < vetornumbers.length; i += 1) {
+    if (((vetornumbers[i] % 3) === 0) && ((vetornumbers[i] % 5) !== 0)) {
+      vetorfizzBuzz.push("fizz");
+    } else if (((vetornumbers[i] % 5) === 0) && ((vetornumbers[i] % 3) !== 0)) {
+      vetorfizzBuzz.push("buzz");
+    } else if (((vetornumbers[i] % 5) === 0) && ((vetornumbers[i] %3 ) === 0)) {
+      vetorfizzBuzz.push("fizzBuzz");
+    } else {
+      vetorfizzBuzz.push("bug!");
+    }
+  }
+  return vetorfizzBuzz;
 }
 
 // Desafio 9
