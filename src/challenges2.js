@@ -52,16 +52,16 @@ function phoneBuilder(arr) {
   for (let n in arr) {
     switch (n) {
     case '0':
-      rightString += '(' + arr[n];
+      rightString += `(${arr[n]}`;
       break;
     case '1':
-      rightString += arr[n] + ')';
+      rightString += `${arr[n]})`;
       break;
     case '2':
-      rightString += ' ' + arr[n];
+      rightString += ` ${arr[n]}`;
       break;
     case '6':
-      rightString += arr[n] + '-';
+      rightString += `${arr[n]}-`;
       break;
     default:
       rightString += arr[n];
