@@ -1,6 +1,7 @@
 // Desafio 1
 function compareTrue(param1, param2) {
   if ((param1 === true) && (param2 === true)) return true;
+  return false;
 }
 
 // Desafio 2
@@ -52,19 +53,41 @@ function catAndMouse(mouse, cat1, cat2) {
   let cat1Mouse = Math.abs(cat1 - mouse);
   let cat2Mouse = Math.abs(cat2 - mouse);
 
-  if (cat1Mouse < cat2Mouse) {
-    return 'cat1';
-  } if (cat1Mouse > cat2Mouse) {
-    return 'cat2';
-  }
+  if (cat1Mouse < cat2Mouse) return 'cat1';
+  if (cat1Mouse > cat2Mouse) return 'cat2';
   return 'os gatos trombam e o rato foge';
 }
 
-console.log(catAndMouse(10, 4, 22));
-
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+
+function divide3(number) {
+  if (number % 3 === 0) {
+    return true;
+  }
+}
+
+function divide5(number) {
+  if (number % 5 === 0) {
+    return true;
+  }
+}
+
+function divide3e5(number) {
+  if ((number % 3 === 0) && (number % 5 === 0)) {
+    return true;
+  }
+}
+
+function fizzBuzz(array) {
+  let novoArray = [];
+
+  for (let key in array) {
+    if (divide3e5(array[key]) === true) novoArray.push('fizzBuzz');
+    else if (divide3(array[key]) === true) novoArray.push('fizz');
+    else if (divide5(array[key]) === true) novoArray.push('buzz');
+    else novoArray.push('bug!');
+  }
+  return novoArray;
 }
 
 // Desafio 9
