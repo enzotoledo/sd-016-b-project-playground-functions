@@ -21,7 +21,7 @@ function splitSentence(splitStringInSpaces) {
 
 // Desafio 4
 function concatName(FirstAndLast) {
-  let stringTwo = FirstAndLast[FirstAndLast.length -1] + ", " + FirstAndLast[0];
+  let stringTwo = `${FirstAndLast[FirstAndLast.length -1]}, ${FirstAndLast[0]}`;
   return stringTwo;
 }
 
@@ -36,7 +36,7 @@ function highestCount(arrayOfNumbers) {
   let largestNumber = null;
   let countingTimes = 0;
 
-  for (let index = 0; index < arrayOfNumbers.length; index += 1) {
+  for (index = 0; index < arrayOfNumbers.length; index += 1) {
     let iterationNumber = arrayOfNumbers[index];
     if (largestNumber === null) {
       largestNumber = iterationNumber;
@@ -58,9 +58,9 @@ function catAndMouse(mouse, cat1, cat2) {
   let distanceC2 = Math.abs(cat2 - mouse);
 
   if (distanceC1 < distanceC2) {
-    return "cat1"
+    return "cat1";
   } else if (distanceC2 < distanceC1) { 
-    return "cat2"
+    return "cat2";
   } else {
     return "os gatos trombam e o rato foge";
   }
@@ -72,7 +72,7 @@ function fizzBuzz(bigArray) {
   let arrayFizzBuzz = [];
 
   for(let index = 0; index < bigArray.length; index += 1) {
-    if (bigArray[index] % 3 === 0 && bigArray[index] % 5 === 0) { 
+    if (bigArray[index] % 3 === 0 && bigArray[index] % 5 === 0) {
       arrayFizzBuzz.push("fizzBuzz");
     } else if (bigArray[index] % 3 === 0) {
       arrayFizzBuzz.push("fizz"); 
@@ -87,7 +87,6 @@ function fizzBuzz(bigArray) {
 
 // Desafio 9
 function encode(findVowelsInString) {
-  
   let encodedString = "";
 
   for(let index = 0; index < findVowelsInString.length; index += 1) {
@@ -98,8 +97,8 @@ function encode(findVowelsInString) {
       }
   }
   return encodedString;
-} 
-    
+}
+
 function decode(findNumbersInString) {
 
   let decodedString = "";
@@ -112,7 +111,7 @@ function decode(findNumbersInString) {
       }
   }
   return decodedString;
-} 
+}
 
 module.exports = {
   calcArea,
