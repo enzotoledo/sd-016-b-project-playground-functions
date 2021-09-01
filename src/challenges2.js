@@ -45,7 +45,8 @@ function verificaRepeticao(numbers) {
 }
 
 function mascaraTelefone(numbers) {
-  let phone = `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
+  let phone = `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}`;
+  phone += `${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
 
   return phone;
 }
@@ -66,15 +67,18 @@ function generatePhoneNumber(numbers) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
+  let retorno = '';
   if ((lineA < (lineB + lineC)) && (lineA > (Math.abs(lineB - lineC)))) {
-    return true;
+    retorno = true;
   } else if ((lineB < (lineA + lineC)) && (lineB > (Math.abs(lineA - lineC)))) {
-    return true;
+    retorno = true;
   } else if ((lineC < (lineB + lineA)) && (lineC > (Math.abs(lineB - lineA)))) {
-    return true;
+    retorno = true;
   } else {
-    return false;
+    retorno = false;
   }
+
+  return retorno;
 }
 
 // Desafio 13
