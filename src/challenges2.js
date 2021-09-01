@@ -49,7 +49,7 @@ function objCompareBuilding(arr, obj) {
 
 function phoneBuilder(arr) {
   // // usei o exemplo do regex do Natã, challenges2.js linha 48. ref: https://github.com/tryber/sd-016-b-project-playground-functions/pull/51/files
-  return `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
+  return `(${arr[0]}${arr[1]}) ${arr[2]}${arr[3]}${arr[4]}${arr[5]}${arr[6]}-${arr[7]}${arr[8]}${arr[9]}${arr[10]}`;
 }
 
 function generatePhoneNumber(arr) {
