@@ -14,7 +14,7 @@ function techList(tech, name) {
     };
     array.push(novoObjeto);
   }
-return array;
+  return array;
 }
 
 // Desafio 11
@@ -35,29 +35,50 @@ function verificador(seRepete) {
   return valorFinal;
 }
 
-function generatePhoneNumber(array) {
+function validarArray(arr) {
+  if (arr.length !== 11) {
+    return true;
+  }
+}
+
+function numberPhone(phone) {
   let numero = '';
-  let valorFinal = verificador(array);
-  if (array.length === 11) {
-    for (let index in array) {
-      if (array[index] < 0 || array[index] > 9 || valorFinal >= 3) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
-      if (index === '0') {
-        numero = '(' + array[index];
-      } else if (index === '1') {
-        numero += '' + array[index] + ') ';
-      } else if (index > '1' && index < '7') {
-        numero += '' + array[index];
-      } else if (index === '7') {
-        numero += '-' + array[index];
-      } else if (index > '7') {
-        numero += '' + array[index];
-      }
+  for (let index in phone) {
+    if (index === '0') {
+      numero = '(' + phone[index];
+    } else if (index === '1') {
+      numero += '' + phone[index] + ') ';
+    } else if (index > '1' && index < '7') {
+      numero += '' + phone[index];
+    } else if (index === '7') {
+      numero += '-' + phone[index];
+    } else if (index > '7') {
+      numero += '' + phone[index];
     }
-  } else {
+  }
+  return numero;
+}
+
+function validNumbers(n){
+  let valorFinal = verificador(n);
+  for (let index in n) {
+    if (n[index] < 0 || n[index] > 9 || valorFinal >= 3) {
+      return true;
+    }
+  }
+}
+
+function generatePhoneNumber(array) {
+  let validarNumero = validNumbers(array);
+  let validar = validarArray(array);
+  let numero = numberPhone(array);
+
+  if (validar === true) {
     return 'Array com tamanho incorreto.';
   }
+  if(validarNumero === true){
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
   return numero;
 }
 
