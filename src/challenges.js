@@ -81,21 +81,21 @@ console.log(catAndMouse(1, 0, 2));
 // Desafio 8
 function fizzBuzz(numeros) {
   // seu código aqui
-  // let frase = '';
-  // for (let index = 0; index <= numeros.length; index += 1) {
-  //   if (numeros[index] % 3 === 0) {
-  //     frase = 'fizz';
-  //   } else if (numeros[index] % 5 === 0) {
-  //     frase = 'buzz';
-  //   } else if ((numeros[index] % 3 === 0) && (numeros[index] % 5 === 0)) {
-  //     frase = 'fizzBuzz';
-  //   } else {
-  //     frase = 'bug!';
-  //   }
-  // }
-  // return frase;
+  let frase = [];
+  for (let index = 0; index < numeros.length; index += 1) {
+    if (numeros[index] % 3 === 0 && numeros[index] % 5 === 0) {
+      frase.push('fizzBuzz');
+    } else if (numeros[index] % 5 === 0) {
+      frase.push('buzz');
+    } else if (numeros[index] % 3 === 0) {
+      frase.push('fizz');
+    } else {
+      frase.push('bug!');
+    }
+  }
+  return frase;
 }
-console.log(fizzBuzz(3));
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
