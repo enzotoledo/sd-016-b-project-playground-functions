@@ -92,6 +92,7 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(string) {
   // seu código aqui
+  // Este exercício foi resolvido com a explicação provida no site: https://www.tutorialrepublic.com/faq/how-to-replace-character-inside-a-string-in-javascript.php, uma vez que a função .renameAll não está funcionando em nossa versão do node.
   let stringEncodada = string
     .replace(/a/g, '1')
     .replace(/e/g, '2')
