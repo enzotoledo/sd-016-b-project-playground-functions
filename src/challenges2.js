@@ -20,6 +20,7 @@ function techList(list, name) {
   return result;
 }
 
+// Faz parte do Desafio 11
 function verificaMaxMin(numbers) {
   for (let number of numbers) {
     if ((number < 0) || (number > 9)) {
@@ -29,21 +30,23 @@ function verificaMaxMin(numbers) {
   return false;
 }
 
+// Faz parte do Desafio 11
 function verificaRepeticao(numbers) {
   for (let index = 0; index < numbers.length; index += 1) {
     let count = 0;
-    for (let segundoIndex = index; segundoIndex < numbers.length; segundoIndex += 1) {
-      if (numbers[index] === numbers[segundoIndex]) {
-        count += 1;
-      }
-    }
+    count = numbers.filter((x) => x === numbers[index]).length;
     if (count >= 3) {
       return true;
     }
   }
   return false;
+
+  // Essa função estava usando dois for's por esse motivo o lint estava acusando complexidade, para corrigir o erro do lint precisei, usar a função com filter do array, que tirei do stackoverflow do Gabriel em 26-11-2020.
+  // Link: https://pt.stackoverflow.com/questions/484146/como-contar-ocorr%C3%AAncias-de-um-valor-dentro-de-um-array
+  // O seguinte link também me ajudou a entender mais sobre como o filter trabalha: https://blog.betrybe.com/javascript/javascript-filter/
 }
 
+// Faz parte do Desafio 11
 function mascaraTelefone(numbers) {
   let phone = `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}`;
   phone += `${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;

@@ -59,6 +59,7 @@ function catAndMouse(mouse, cat1, cat2) {
   // link na thread: https://trybecourse.slack.com/archives/C02B4PPBERE/p1630439370383100?thread_ts=1630436206.374200&cid=C02B4PPBERE
 }
 
+// Faz parte do Desafio 8
 function verificaDivisao(number, meuArray) {
   if ((number % 3 === 0) && (number % 5 === 0)) {
     meuArray.push('fizzBuzz');
