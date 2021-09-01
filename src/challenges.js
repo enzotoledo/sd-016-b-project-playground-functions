@@ -65,24 +65,35 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-// eslint-disable-next-line complexity
+function division(array, number) {
+  if (array[number] % 5 === 0 && array[number] % 3 === 0) {
+    return 'fizzBuzz';
+  } if (array[number] % 5 === 0) {
+    return 'buzz';
+  } if (array[number] % 3 === 0) {
+    return 'fizz';
+  }
+  return 'bug!';
+}
+
 function fizzBuzz(array) {
   let newArray = [];
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 5 === 0 && array[index] % 3 === 0) {
-      newArray.push('fizzBuzz');
-    } else if (array[index] % 5 === 0) {
-      newArray.push('buzz');
-    } else if (array[index] % 3 === 0) {
-      newArray.push('fizz');
-    } else {
-      newArray.push('bug!');
-    }
+    newArray.push(division(array, index));
   }
   return newArray;
 }
 
 // Desafio 9
+function analysisEnconde(array, object, index) {
+  for (let key in object) {
+    if (key === array[index]) {
+      array[index] = object[key];
+    }
+  }
+  return array[index];
+}
+
 function encode(str) {
   let strValues = {
     a: 1,
@@ -93,11 +104,7 @@ function encode(str) {
   };
   let splitStr = str.split('');
   for (let index = 0; index < splitStr.length; index += 1) {
-    for (let key in strValues) {
-      if (key === splitStr[index]) {
-        splitStr[index] = strValues[key];
-      }
-    }
+    analysisEnconde(splitStr, strValues, index);
   }
   let joinStr = splitStr.join('');
   return joinStr;
@@ -114,11 +121,7 @@ function decode(str) {
   let splitStr = str.split('');
   console.log(splitStr);
   for (let index = 0; index < splitStr.length; index += 1) {
-    for (let key in strValues) {
-      if (key === splitStr[index]) {
-        splitStr[index] = strValues[key];
-      }
-    }
+    analysisEnconde(splitStr, strValues, index);
   }
   let joinStr = splitStr.join('');
   return joinStr;

@@ -17,6 +17,7 @@ function techList(array, name) {
 }
 
 // Desafio 11
+// reference: https://www.alura.com.br/artigos/javascript-replace-manipulando-strings-e-regex?gclid=Cj0KCQjwpreJBhDvARIsAF1_BU0rI4vAleR89opVNbPQKNGAIfYsNu5A8OQVjhbCOvBZIp1SwEuWZZYaAhQQEALw_wcB 
 function generatePhoneNumber(array) {
   let str = array.toString().replace(/,/g, '');
   let strTelephone = str.replace(/(\d{2})?(\d{5})?(\d{4})?/, '($1) $2-$3');
