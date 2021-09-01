@@ -97,6 +97,7 @@ function fizzBuzz(arr) {
   }return array
 }
 
+// Vi a explicação de como utilizar o .join em https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join
 // Desafio 9
 function encode(str) {
   let string = []
