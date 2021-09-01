@@ -1,8 +1,8 @@
 // Desafio 1
 function compareTrue(numberOne, numberTwo) {
-  if (numberOne === true && numberTwo === true) { 
+  if(numberOne === true && numberTwo === true) { 
     return true;
-  }else {
+  } else {
     return false;
   }  
 }
@@ -38,12 +38,12 @@ function highestCount(array) {
   let maior = array[0];
   let contaMaior = 0;
   for (let index in array) {
-    if (array[index] > maior) {
+    if(array[index] > maior) {
       maior = array[index];
     }
   }
   for (let index in array) {
-    if (array[index] === maior) {
+    if(array[index] === maior) {
       contaMaior += 1;
     }
   }  
@@ -54,7 +54,7 @@ function highestCount(array) {
 function catAndMouse(mouse, cat1, cat2) {
   let distGatoUm = mouse + cat1;
   let distGatoDois = mouse + cat2;
-  if (distGatoUm < distGatoDois) { 
+  if(distGatoUm < distGatoDois) { 
     return 'cat1';
   } else if (distGatoDois < distGatoUm) {
     return 'cat2';
@@ -86,16 +86,16 @@ function fizzBuzz(array) {
 // Desafio 9
 function encode(palavras) {
   let word = palavras.split('');
-  for (let index in word){
-    if (word[index] === 'a'){
+  for (let index in word) { 
+    if (word[index] === 'a') {
       word[index] = 1;
-    } else if (word[index] === 'e'){
+    } else if (word[index] === 'e') {
       word[index] = 2;
-    } else if (word[index] === 'i'){
+    } else if (word[index] === 'i') {
       word[index] = 3;
-    } else if (word[index] === 'o'){
+    } else if (word[index] === 'o') {
       word[index] = 4;
-    } else if (word[index] === 'u'){
+    } else if (word[index] === 'u') {
       word[index] = 5;
     }
   }
@@ -104,16 +104,16 @@ function encode(palavras) {
 
 function decode(palavrasTwo) {
   let wordTwo = palavrasTwo.split('');
-  for (let index in wordTwo){
-    if (wordTwo[index] === '1'){
+  for (let index in wordTwo) {
+    if (wordTwo[index] === '1') {
       wordTwo[index] = 'a';
-    } else if (wordTwo[index] === '2'){
+    } else if (wordTwo[index] === '2') {
       wordTwo[index] = 'e';
-    } else if (wordTwo[index] === '3'){
+    } else if (wordTwo[index] === '3') {
       wordTwo[index] = 'i';
-    } else if (wordTwo[index] === '4'){
+    } else if (wordTwo[index] === '4') {
       wordTwo[index] = 'o';
-    } else if (wordTwo[index] === '5'){
+    } else if (wordTwo[index] === '5') {
       wordTwo[index] = 'u';
     }
   }
