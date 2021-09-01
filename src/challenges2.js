@@ -4,10 +4,10 @@ function techList(array, name) {
   let result = 0;
 
   if (array.length > 0) {
-    for (let tech in array) {
-      array[tech] = {
-        tech: array[tech],
-        name: name,
+    for (let index = 0; index < array.length; index += 1) {
+      array[index] = {
+        tech: array[index],
+        name,
       };
     }
     result = array;
@@ -19,9 +19,18 @@ function techList(array, name) {
 }
 
 // Desafio 11
+function validNumber(numbers) {
+  let validNum = true;
+  for (let number in numbers) {
+    if (numbers[number] >= 3) {
+      validNum = false;
+    }
+  }
+  return validNum;
+}
+
 function checkRepeatedNumbers(array) {
   let numbers = {};
-  let validNumber = true;
 
   for (let index = 0; index < array.length; index += 1) {
     let number = array[index];
@@ -31,24 +40,39 @@ function checkRepeatedNumbers(array) {
       numbers[number] += 1;
     }
   }
-
-  for (let number in numbers) {
-    if (numbers[number] >= 3) {
-      validNumber = false;
-    }
-  }
-  return validNumber;
+  numbers = validNumber(numbers);
+  return numbers;
 }
+
 function arrayValues(array) {
-  let validNumber = true;
+  let validNum = true;
 
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] < 0 || array[index] > 9) {
-      validNumber = false;
+      validNum = false;
     }
   }
 
-  return validNumber;
+  return validNum;
+}
+
+function phoneNumber(array) {
+  let DDD = '';
+  let part1 = '';
+  let part2 = '';
+  let fullNumber = '';
+  for (let index = 0; index < 2; index += 1) {
+    DDD += array[index];
+  }
+  for (let index = 2; index < 7; index += 1) {
+    part1 += array[index];
+  }
+  for (let index = 7; index < array.length; index += 1) {
+    part2 += array[index];
+  }
+  fullNumber = `(${DDD}) ${part1}-${part2}`;
+
+  return fullNumber;
 }
 
 function generatePhoneNumber(array) {
@@ -59,19 +83,7 @@ function generatePhoneNumber(array) {
   } else if (checkRepeatedNumbers(array) === false || arrayValues(array) === false) {
     result = 'não é possível gerar um número de telefone com esses valores';
   } else {
-    let DDD = '';
-    let part1 = '';
-    let part2 = '';
-    for (let index = 0; index < 2; index += 1) {
-      DDD += array[index];
-    }
-    for (let index = 2; index < 7; index += 1) {
-      part1 += array[index];
-    }
-    for (let index = 7; index < array.length; index += 1) {
-      part2 += array[index];
-    }
-    result = `(${DDD}) ${part1}-${part2}`;
+    result = phoneNumber(array);
   }
 
   return result;
