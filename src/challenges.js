@@ -28,8 +28,23 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+// "mind blowing" do array.sort https://ricardo-reis.medium.com/o-m%C3%A9todo-sort-do-array-javascript-482576734e0a
+  let x = array.sort((a, b) => a - b);
+  let count = 0;
+  for (let y of array) {
+    if (x[x.length - 1] === y) count += 1;
+  }
+  return count;
+// let max = array[0];
+// let count = 0;
+// for (let i = 0; i < array.length; i += 1) {
+//   if (array[i] > max) max = array[i];
+// }
+// for (let x of array) {
+//   if (max === x) count += 1;
+// }
+// return count;
 }
 
 // Desafio 7
