@@ -26,7 +26,7 @@ console.log(splitSentence('vamo que vamo'));
 
 // Desafio 4
 function concatName(array) {
-  let concat = array[array.length - 1] + ', ' + array[0];
+  let concat = `${array[array.length - 1]}, ${array[0]}`;
   return concat;
 }
 
@@ -41,9 +41,22 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(14, 8));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let highest = [];
+  let bigger = numbers[0];
+  for (let index = 1; index < numbers.length; index += 1) {
+    if (numbers[index] >= bigger) {
+      bigger = numbers[index];
+    }
+  }
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (numbers[index] === bigger) {
+      highest.push(numbers[index]);
+    }
+  }
+  return highest.length;
 }
+console.log(highestCount([3, 1, 2, 3, 9, 5, 7]));
 
 // Desafio 7
 function catAndMouse() {
