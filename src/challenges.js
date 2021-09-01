@@ -47,8 +47,8 @@ function highestCount(numeros) {
   let maiorNumero = numeros[0];
 // pega o maior valor do array
   for (let index = 0; index < numeros.length; index += 1) {
-    if (maiorNumero === numeros[index]) {
-      maiorNumero = index;
+    if (numeros[index] > maiorNumero) {
+      maiorNumero = numeros[index];
     }
 
   }
@@ -62,7 +62,7 @@ function highestCount(numeros) {
 return numeroRepetido;
 }
 
-console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 
 
 // Desafio 7
@@ -78,13 +78,29 @@ function catAndMouse(mouse, cat1, cat2) {
   
 }
 
-console.log(catAndMouse(1, 3, 2));
+// console.log(catAndMouse(1, 3, 2));
 
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrNumber) {
   // seu código aqui
+  let resultado = [];
+  for (let index = 0; index < arrNumber.length; index += 1) {
+    if(arrNumber[index] % 3 === 0 && arrNumber[index] % 5 ===0) {
+      resultado.push("fizzBuzz");
+    } else if(arrNumber[index] % 5 === 0) {
+      resultado.push("buzz");
+    } else if(arrNumber[index] % 3 === 0) {
+      resultado.push("fizz");
+    } else {
+      resultado.push("bug!");
+    }
+  }
+  
+  return resultado;
 }
+
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode() {
