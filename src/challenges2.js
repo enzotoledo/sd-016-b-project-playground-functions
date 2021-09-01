@@ -68,11 +68,14 @@ function generatePhoneNumber(numbers) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let retorno = '';
-  if ((lineA < (lineB + lineC)) && (lineA > (Math.abs(lineB - lineC)))) {
-    retorno = true;
-  } else if ((lineB < (lineA + lineC)) && (lineB > (Math.abs(lineA - lineC)))) {
-    retorno = true;
-  } else if ((lineC < (lineB + lineA)) && (lineC > (Math.abs(lineB - lineA)))) {
+  let sortArray = [];
+  sortArray.push(lineA);
+  sortArray.push(lineB);
+  sortArray.push(lineC);
+  sortArray.sort();
+
+  if ((sortArray[0] < (sortArray[1] + sortArray[2]))
+    && (sortArray[0] > Math.abs(sortArray[1] - sortArray[2]))) {
     retorno = true;
   } else {
     retorno = false;
@@ -99,7 +102,7 @@ function hydrate(value) {
   }
   return resultado;
 
-  /* O código acima contem uma parte de um código que foi retirado do stackoverflow, feito pelo usuário bobo da corte 11-05-2015;
+  /* O código acima contem parte de um código que foi retirado do stackoverflow, feito pelo usuário bobo da corte em 11-05-2015;
   link: https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994 */
 }
 
