@@ -36,8 +36,20 @@ return winsTies
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+  let highestNumber = -Infinity;
+  let counter = 0;
+    for (i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] > highestNumber) {
+      highestNumber = numbers[i];  
+   }
+}
+  for (j=0; j<numbers.length; j+= 1){
+    if(numbers[j] === highestNumber){
+      counter++
+    }
+  }
+  return counter;
 }
 
 // Desafio 7
