@@ -11,10 +11,9 @@ function criarObjeto(arrayTechs, nome) {
 
 function techList(arrayTechs, name) {
   if (arrayTechs.length > 0) {
-    console.log(criarObjeto(arrayTechs, name));
-  } else {
-    return 'Vazio!';
+    return criarObjeto(arrayTechs, name);
   }
+  return 'Vazio!';
 }
 
 // Desafio 11
