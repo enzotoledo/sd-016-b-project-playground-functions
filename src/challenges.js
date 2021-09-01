@@ -1,15 +1,11 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if ((param1 == true) && (param2 == true))
-    return true
-  else {
-    return false
-  }
+  return param1 && param2;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return base * height / 2;
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -30,8 +26,8 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(arrayOfNumbers) {
-  return arrayOfNumbers.filter(function (x) { return x == Math.max(...arrayOfNumbers) }).length
-}
+  return arrayOfNumbers.filter(function (x) { return x === Math.max(...arrayOfNumbers) }).length;
+};
 
 // Desafio 7 (Math.abs recomendado pelo pessoal no slack <3)
 function catAndMouse(mouse, cat1, cat2) {
@@ -43,11 +39,23 @@ function catAndMouse(mouse, cat1, cat2) {
     return "os gatos trombam e o rato foge";
   }
 }
-// Desafio 8
-function fizzBuzz() {
-  // seu código aqui
-}
+// Desafio 8 feito com a ajuda de pessoas estudantes do grupo de estudos :whale:
+function fizzBuzz(arr) {
+  const starArray = [];
+  arr.forEach(n => {
+    if (n % 3 === 0 && n % 5 == 0) {
+      starArray.push("fizzBuzz");
+    } else if (n % 3 === 0) {
+      starArray.push("fizz");
+    } else if (n % 5 === 0) {
+      starArray.push("buzz");
+    } else {
+      starArray.push("bug!");
+    }
+  });
+  return starArray
 
+}
 // Desafio 9
 function encode() {
   // seu código aqui
