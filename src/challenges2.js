@@ -70,9 +70,11 @@ function hydrate(string) {
     if (separado[index] > 0) {
       waterCup += parseInt(separado[index]);
     }
-    return waterCup + ' ' + 'copo de água';
   }
 
+  if (waterCup <= 1)
+    return waterCup + ' ' + 'copo de água';
+  else return waterCup + ' ' + 'copos de água';
 }
 
 module.exports = {
