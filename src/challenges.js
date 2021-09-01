@@ -70,15 +70,25 @@ function fizzBuzz(numberArray) {
 }
 
 // Desafio 9
-function encode(codeFrase) {
+function encode(string) {
   let code = {
-    a : 1,
-    e : 2,
-    i : 3,
-    o : 4,
-    u : 5
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
   }
-  
+  let result = string.split('');
+  for (let index of result){
+    for (let key in code){
+      if (index == key){
+        result.push(code[key]);
+      } else {
+        result.push(result[index]);
+      }
+    }
+  }
+  return result.join('')
 }
 
 function decode(decodeFrase) {
