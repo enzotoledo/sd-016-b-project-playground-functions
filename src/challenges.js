@@ -36,14 +36,9 @@ function highestCount(array) {
   let indexBigger = 0;
 
   for (const key in array) {
-    if (array[indexBigger] < array[key]) {
-      indexBigger = key;
-    }
-  }
-  for (const key in array) {
-    if (array[indexBigger] === array[key]) {
-      sum += 1;
-    }
+    if (array[indexBigger] < array[key]) indexBigger = key;
+  } for (const key in array) {
+    if (array[indexBigger] === array[key]) sum += 1;
   }
   return sum;
 }
@@ -92,7 +87,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(text) {
-  // seu código aqui
+
 }
 function decode() {
   // seu código aqui
