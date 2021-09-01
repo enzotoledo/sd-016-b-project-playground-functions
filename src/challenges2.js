@@ -1,29 +1,32 @@
 // Desafio 10
 function techList(arrey, name) {
-  let a = arrey;
   let object = {};
   let list = [];
-  for (let tech of a.sort()) {
+  for (let tech of arrey.sort()) {
     object.tech = tech;
     object.name = name;
     list.push(object);
   }
-  if (list === []) {
-    console.log('Vazio!');
+  if (list.length === 0) {
+    return 'Vazio!';
   } else {
-    console.log(list);
+    return list;
   }
 }
 
-techList([], 'Rafael');
+techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Rafael');
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if ((lineA + lineB > lineC) && (lineB + lineC > lineA) && (lineA + lineC > lineB) && (lineA > Math.abs(lineB) - Math.abs(lineC)) && (lineB > Math.abs(lineA) - Math.abs(lineC)) && (lineC > Math.abs(lineB) - Math.abs(lineA))) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // Desafio 13
