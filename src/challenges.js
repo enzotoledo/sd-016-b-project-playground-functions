@@ -92,10 +92,6 @@ function highestCount(numeros) {
 
 // Desafio 7
 
-/* Retorne a string 'cat2' caso a função catAndMouse receba os parâmetros onde gato cat2 esteja a 2 unidades de distância do rato e cat1 esteja a 3 unidades de distância do rato
-Retorne a string 'cat1' caso a função catAndMouse receba os parâmetros onde gato cat1 esteja a 6 unidades de distância do rato e cat2 esteja a 12 unidades de distância do rato
-Retorne a string 'os gatos trombam e o rato foge' caso a função catAndMouse receba os parâmetros onde os gatos estejam na mesma distância do rato */
-
 function catAndMouse(mouse, cat1, cat2) {
 	let end ='';
 	if (Math.abs(cat1 - mouse) > (cat2 - mouse)) {
@@ -105,7 +101,7 @@ function catAndMouse(mouse, cat1, cat2) {
 	} else {
 		end =  "os gatos trombam e o rato foge"; 
 	}
-	console.log (end)
+	//console.log (end)
 	return end;
 }
 catAndMouse(0,3,2);
@@ -113,9 +109,44 @@ catAndMouse(0,6,12);
 catAndMouse(2,2);
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+/* Crie uma função chamada fizzBuzz que receba uma array de números e retorne uma array da seguinte forma:
+Para cada número do Array que seja divisível apenas por 3, apresente uma string "fizz";
+Para cada número do Array que seja divisível apenas por 5, apresente uma string "buzz";
+Caso o número seja divisível por 3 e 5, retorne a string "fizzBuzz";
+Caso o número não possa ser dividido por 3 nem por 5, retorne a string "bug!";
+Exemplo: caso o parâmetro seja [2, 15, 7, 9, 45], sua função deverá retornar ["bug!", "fizzBuzz", "bug!", "fizz", "fizzBuzz"].
+O que será verificado:
+Retorne as strings ['bug!', 'fizzBuzz', 'bug!', 'fizz', 'fizzBuzz'] quando é passado os parâmetros [2, 15, 7, 9, 45] para a função fizzBuzz
+Retorne as strings ['bug!', 'fizz'] quando é passado os parâmetros [7, 9] para a função fizzBuzz
+Retorne as strings ['fizz', 'buzz'] quando é passado os parâmetros [9, 25] para a função fizzBuzz */
+
+/* for (let index in numeros) {
+	if (numeros[maiorNumero] < numeros[index]) {
+			maiorNumero = index;
+		}  
+	} */
+function fizzBuzz(numeros) {
+    let newArray = [];
+    for (let index in numeros) {
+        if ((numeros[index]%3===0) && (numeros[index]%5===0)) {
+            string = 'fizzBuzz'
+          } else if (numeros[index]%3===0)  {
+            string = 'fizz'
+          } else if (numeros[index]%5===0) {
+            string = 'buzz';
+          } else {
+            string = 'bug!';
+          }
+          newArray.push(string);
+          //console.log (newArray);
+          //console.log (newArray.push(string));
+        } 
+   return newArray;
 }
+fizzBuzz([2, 15, 7, 9, 45]); 
+fizzBuzz([7, 9]); 
+fizzBuzz([9, 25]); 
+
 
 // Desafio 9
 function encode() {
