@@ -56,12 +56,20 @@ function fizzBuzz(arr) {
   return starArray
 
 }
-// Desafio 9
-function encode() {
-  // seu código aqui
+// Desafio 9 feito com base no https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+function encode(arg) {
+  let code = ['a', 'e', 'i', 'o', 'u'];
+  for (let i = 1; i <= code.length; i += 1) {
+    arg = arg.replace(RegExp(code[i - 1], 'g'), i);
+  }
+  return arg;
 }
-function decode() {
-  // seu código aqui
+function decode(arg) {
+  let code = ['a', 'e', 'i', 'o', 'u'];
+  for (let i = 1; i <= code.length; i += 1) {
+    arg = arg.replace(RegExp(i.toString(), 'g'), code[i - 1]);
+  }
+  return arg;
 }
 
 module.exports = {
