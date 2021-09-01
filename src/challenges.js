@@ -7,9 +7,6 @@ function compareTrue(valorA, valorB) {
 function calcArea(base, height) {
   return (base * height) / 2;
 }
-calcArea(10, 50);
-calcArea(5, 2);
-calcArea(51, 1);
 
 // Desafio 3
 function splitSentence(arrString) {
