@@ -2,8 +2,7 @@
 function compareTrue(number1, number2) {
   if ((number1 == true) && (number2 == true)){
     return true;
-  }
-   else { return false;
+  } else { return false;
   }
 
 }
@@ -15,11 +14,7 @@ function calcArea(base, heignt) {
 
 // Desafio 3
 function splitSentence(phrase) {
-  var result = [] ;
-  for (var i = 0; i < phrase.lenght; i++) {
-    result[i] = result(i ,);
-  }
-  return result;
+  return phrase
 }
 
 // Desafio 4
@@ -32,8 +27,8 @@ function concatName(words) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  return ((wins * 3) + ties);
 }
 
 // Desafio 6
