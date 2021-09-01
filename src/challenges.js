@@ -38,12 +38,12 @@ function highestCount(array) {
   let maior = array[0];
   let contaMaior = 0;
   for (let index in array) {
-    if(array[index] > maior) {
+    if (array[index] > maior) {
       maior = array[index];
     }
   }
   for (let index in array) {
-    if(array[index] === maior) {
+    if (array[index] === maior) {
       contaMaior += 1;
     }
   }  
@@ -52,13 +52,11 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let distGatoUm = mouse + cat1;
-  let distGatoDois = mouse + cat2;
-  if(distGatoUm < distGatoDois) { 
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) { 
     return 'cat1';
-  } else if (distGatoDois < distGatoUm) {
+  } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
     return 'cat2';
-  } else if (distGatoUm === distGatoDois){
+  } else {
     return 'os gatos trombam e o rato foge';
   }
 }
