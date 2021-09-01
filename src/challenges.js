@@ -10,11 +10,11 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(" ");
+  return string.split(' ');
 }
 // Desafio 4
 function concatName(arr) {
-  return arr[arr.length -1] + ", " + arr[0];
+  return arr[arr.length - 1] + ', ' + arr[0];
 }
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -23,18 +23,41 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(num) {
+  let organizedNums = num.sort();
+  let highestNums = organizedNums[num.length - 1];
+  let totalHighestNums = 0;
+  let negativeNums
+  for (let index in num){
+    if(Math.abs(num[index]) === highestNums){
+      totalHighestNums ++;
+    }
+  }
+  return totalHighestNums;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2){
+  let gato1ganha = 'cat1'
+  let gato2ganha = 'cat2'
+  let gatosTrombam = 'os gatos trombam e o rato foge'
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)){
+    return gato1ganha;
+  } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)){
+    return gato2ganha;
+  } else {
+    return gatosTrombam;
+  }
 }
+// Esse requisito só foi feito graças a thread do Leandro Boralli no Slack. 
+// Referência: https://trybecourse.slack.com/archives/C02B4PPBERE/p1630436206374200
+
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrOfNums) {
+  for (let index = 1; index < arrOfNums.length; index++) {
+    
+  }
 }
 
 // Desafio 9
