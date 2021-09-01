@@ -64,11 +64,28 @@ function catAndMouse(mouse, cat1, cat2) {
  }
 }
 
+//obs: desafio feito verificando dúvidas tiradas pelo Slack.
 
 // Desafio 8
 function fizzBuzz(array) {
-  
-}
+  let retorno = []
+
+  for (let contador = 0; contador < array.length; contador += 1) {
+    if(contador % 3 === 0) {
+      retorno.push('fizz')
+    } else if (contador % 5 === 0) {
+     retorno.push('buzz')
+    } else if (contador % 3 === 0 && contador % 5 === 0) {
+      retorno.push('fizzBuzz')
+    } else {
+      retorno.push('!bug')
+    }
+    }
+    return retorno
+  }
+
+  console.log(fizzBuzz[2, 15, 7, 9, 45])
+
 
 // Desafio 9
 function encode() {
