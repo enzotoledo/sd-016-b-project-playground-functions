@@ -42,9 +42,19 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
+function repeatCount(array, biggestNumber) {
+  let repeat = 0;
+
+  for (let number in array) {
+    if (array[number] === biggestNumber) {
+      repeat += 1;
+    }
+  }
+  return repeat;
+}
+
 function highestCount(array) {
   let biggestNumber = array[0];
-  let repeatCount = 0;
 
   for (let number in array) {
     if (array[number] > biggestNumber) {
@@ -52,13 +62,8 @@ function highestCount(array) {
     }
   }
 
-  for (let number in array) {
-    if (array[number] === biggestNumber) {
-      repeatCount += 1;
-    }
-  }
-
-  return repeatCount;
+  let result = repeatCount(array, biggestNumber);
+  return result;
 }
 
 // Desafio 7
@@ -79,78 +84,82 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function addFizzBuzz(array, finalArray, index) {
+  if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+    finalArray.push('fizzBuzz');
+  } else if (array[index] % 3 === 0) {
+    finalArray.push('fizz');
+  } else if (array[index] % 5 === 0) {
+    finalArray.push('buzz');
+  } else {
+    finalArray.push('bug!');
+  }
+}
+
 function fizzBuzz(array) {
   let finalArray = [];
 
-  for (let number in array) {
-    if (array[number] % 3 === 0 && array[number] % 5 === 0) {
-      finalArray.push('fizzBuzz');
-    } else if (array[number] % 3 === 0) {
-      finalArray.push('fizz');
-    } else if (array[number] % 5 === 0) {
-      finalArray.push('buzz');
-    } else {
-      finalArray.push('bug!');
-    }
+  for (let index = 0; index < array.length; index += 1) {
+    addFizzBuzz(array, finalArray, index);
   }
 
   return finalArray;
 }
 
 // Desafio 9
+
+function addLetters(string, index) {
+  let vogals = { a: 1, e: 2, i: 3, o: 4, u: 5 };
+  let check = 0;
+  let letter = '';
+  for (let vogal in vogals) {
+    if (string[index] === vogal) {
+      letter += vogals[vogal];
+      check += 1;
+    }
+  }
+  if (check === 0) {
+    letter += string[index];
+  }
+  return letter;
+}
+
 function encode(string) {
-  let vogals = {
-    a: 1,
-    e: 2,
-    i: 3,
-    o: 4,
-    u: 5,
-  };
-  let newString = '';
+  let finalString = '';
 
   for (let index = 0; index < string.length; index += 1) {
-    let check = 0;
-    for (let vogal in vogals) {
-      if (string[index] === vogal) {
-        newString += vogals[vogal];
-        check += 1;
-      }
-    }
+    finalString += addLetters(string, index);
+  }
 
-    if (check === 0) {
-      newString += string[index];
+  return finalString;
+}
+
+function changeLetters(string, index) {
+  let vogals = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+  let check = 0;
+  let letter = '';
+
+  for (let vogal in vogals) {
+    if (string[index] === vogal) {
+      letter += vogals[vogal];
+      check += 1;
     }
   }
 
-  return newString;
+  if (check === 0) {
+    letter += string[index];
+  }
+  return letter;
 }
 
 function decode(string) {
-  let vogals = {
-    1: 'a',
-    2: 'e',
-    3: 'i',
-    4: 'o',
-    5: 'u',
-  };
-
-  let newString = '';
+  let finalString = '';
 
   for (let index = 0; index < string.length; index += 1) {
-    let check = 0;
-
-    for (let vogal in vogals) {
-      if (string[index] === vogal) {
-        newString += vogals[vogal];
-        check += 1;
-      }
-    }
-
-    if (check === 0) {
-      newString += string[index];
-    }
+    finalString += changeLetters(string, index);
   }
-  return newString;
+
+  return finalString;
 }
 
 module.exports = {
