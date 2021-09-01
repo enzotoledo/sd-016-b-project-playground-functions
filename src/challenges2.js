@@ -64,9 +64,26 @@ function triangleCheck(lineA, lineB, lineC) {
  }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(frase) {
+  let ordem = frase.split('').filter(Number);
+  let soma = 0;
+  for (let i = 0; ordem.length > i; i += 1) {
+    calculo = parseInt(ordem[i], 10)
+    soma += calculo;
+  }
+
+  if (soma > 1) {
+    return (soma + ' copos de água');
+  } else {
+    return (soma + ' copo de água');
+  }
+  // usei esse site para aprender a converter a string para int
+  // https://pt.stackoverflow.com/questions/134453/como-converter-uma-string-para-int-em-javascript
+
+  // Usei esse site para tirar a base de como separar os numeros
+  // https://pt.stackoverflow.com/questions/3719/como-obter-apenas-os-n%C3%BAmeros-de-uma-string-em-javascript
 }
+
 
 module.exports = {
   generatePhoneNumber,
