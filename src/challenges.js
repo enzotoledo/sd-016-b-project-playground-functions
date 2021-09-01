@@ -88,11 +88,28 @@ function encode(string) {
       }
     }
   }
-  return result.join('')
+  return result.join('');
 }
 
-function decode(decodeFrase) {
-  // seu código aqui
+function decode(string) {
+  let code = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  }
+  let result = string.split('');
+  for (let index of result){
+    for (let key in code){
+      if (index == code[key]){
+        result.push(key);
+      } else {
+        result.push(result[index]);
+      }
+    }
+  }
+  return result.join('');
 }
 
 module.exports = {
