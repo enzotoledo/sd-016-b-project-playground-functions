@@ -1,12 +1,12 @@
 // Desafio 10
 function techList(array, name) {
-  var ordened = array.sort();
-  var newList = [];
+  array.sort();
+  let newList = [];
   if (array.length > 0) {
     for (let key in array) {
-      newList.push({ tech: array[key], name: name })
+      newList.push({ tech: array[key], name: name });
     }
-  } else return 'Vazio!'
+  } else return 'Vazio!';
 
   return newList;
 }
@@ -19,14 +19,14 @@ function generatePhoneNumber(array) {
   let second = '';
 
   if (array.length !== 11) {
-    return 'Array com tamanho incorreto.'
+    return 'Array com tamanho incorreto.';
   }
 
-  for (index = 0; index < array.length; index++) {
+  for (let index = 0; index < array.length; index += 1) {
     let contador = 0;
-    for (b = 0; b < array.length; b++) {
+    for (let b = 0; b < array.length; b += 1) {
       if (array[index] === array[b]) {
-        contador++;
+        contador += 1;
       }
     }
     if (array[index] < 0 || array[index] > 9 || contador >= 3) {
@@ -35,15 +35,15 @@ function generatePhoneNumber(array) {
     } else phoneNumber += array[index];
   }
 
-  for (index = 0; index < 2; index++) {
+  for (let index = 0; index < 2; index += 1) {
     ddd += phoneNumber[index];
   }
 
-  for (index = 2; index < 7; index++) {
+  for (let index = 2; index < 7; index += 1) {
     first += phoneNumber[index];
   }
 
-  for (index = 7; index < 11; index++) {
+  for (let index = 7; index < 11; index += 1) {
     second += phoneNumber[index];
   }
 
@@ -72,9 +72,9 @@ function hydrate(string) {
     }
   }
 
-  if (waterCup <= 1)
+  if (waterCup <= 1) {
     return waterCup + ' ' + 'copo de água';
-  else return waterCup + ' ' + 'copos de água';
+  } else return waterCup + ' ' + 'copos de água';
 }
 
 module.exports = {

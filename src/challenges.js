@@ -40,14 +40,14 @@ function highestCount(array) {
   let guardaMaior = -Infinity;
   let quantVezes = 0;
 
-  for (index = 0; index < array.length; index++) {
+  for (let index = 0; index < array.length; index += 1) {
     if (array[index] > guardaMaior) {
       guardaMaior = array[index];
     }
   }
 
-  for (index = 0; index < array.length; index++) {
-    if (guardaMaior == array[index]) {
+  for (let index = 0; index < array.length; index += 1) {
+    if (guardaMaior === array[index]) {
       quantVezes += 1;
     }
   }
@@ -64,9 +64,13 @@ function catAndMouse(mouse, cat1, cat2) {
 
   if (distanceCat1 < distanceCat2) {
     return 'cat1';
-  } else if (distanceCat2 < distanceCat1) {
+  }
+
+  if (distanceCat2 < distanceCat1) {
     return 'cat2';
-  } else if (distanceCat1 == distanceCat2) {
+  }
+
+  if (distanceCat1 === distanceCat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
@@ -74,57 +78,57 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let concat = [];
-  for (index = 0; index < array.length; index++) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0)
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       concat.push('fizzBuzz')
-    else if (array[index] % 3 === 0)
+    } else if (array[index] % 3 === 0) {
       concat.push('fizz')
-    else if (array[index] % 5 === 0)
+    } else if (array[index] % 5 === 0) {
       concat.push('buzz')
-    else concat.push('bug!')
+    } else concat.push('bug!')
   }
   return concat;
 }
 
 // Desafio 9
 function encode(string) {
-  var trocado = [];
-  trocado = string.split('');
+  let changed = [];
+  changed = string.split('');
 
-  for (index = 0; index < string.length; index++) {
-    if (trocado[index] == 'a') {
-      trocado[index] = "1";
-    } else if (trocado[index] == 'e') {
-      trocado[index] = "2";
-    } else if (trocado[index] == 'i') {
-      trocado[index] = "3";
-    } else if (trocado[index] == 'o') {
-      trocado[index] = "4";
-    } else if (trocado[index] == 'u') {
-      trocado[index] = "5";
+  for (let index = 0; index < string.length; index += 1) {
+    if (changed[index] === 'a') {
+      changed[index] = '1';
+    } else if (changed[index] === 'e') {
+      changed[index] = '2';
+    } else if (changed[index] === 'i') {
+      changed[index] = '3';
+    } else if (changed[index] === 'o') {
+      changed[index] = '4';
+    } else if (changed[index] === 'u') {
+      changed[index] = '5';
     }
   }
 
-  trocado = trocado.join('');
+  changed = changed.join('');
 
-  return trocado;
+  return changed;
 }
 
 function decode(string) {
-  var decodificado = [];
+  let decodificado = [];
   decodificado = string.split('');
 
-  for (index = 0; index < string.length; index++) {
+  for (let index = 0; index < string.length; index += 1) {
     if (decodificado[index] === '1') {
-      decodificado[index] = "a";
+      decodificado[index] = 'a';
     } else if (decodificado[index] === '2') {
-      decodificado[index] = "e";
+      decodificado[index] = 'e';
     } else if (decodificado[index] === '3') {
-      decodificado[index] = "i";
+      decodificado[index] = 'i';
     } else if (decodificado[index] === '4') {
-      decodificado[index] = "o";
+      decodificado[index] = 'o';
     } else if (decodificado[index] === '5') {
-      decodificado[index] = "u";
+      decodificado[index] = 'u';
     }
   }
 
