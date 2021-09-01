@@ -13,7 +13,7 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split('');
+  return string.split(' ');
 }
 
 // Desafio 4
@@ -70,10 +70,18 @@ function fizzBuzz(numberArray) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(codeFrase) {
+  let code = {
+    a : 1,
+    e : 2,
+    i : 3,
+    o : 4,
+    u : 5
+  }
+  
 }
-function decode() {
+
+function decode(decodeFrase) {
   // seu código aqui
 }
 
