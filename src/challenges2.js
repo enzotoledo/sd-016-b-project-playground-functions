@@ -1,6 +1,15 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(techs, name) {
+  let objects = [];
+  for (let tech of techs.sort()) {
+    objects.push({
+      tech, name
+    });
+  }
+  if (objects.length === 0) {
+    return 'Vazio!';
+  }
+  return objects;
 }
 
 // Desafio 11
@@ -11,13 +20,9 @@ function generatePhoneNumber() {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let isTriangle = false;
-  if ((lineB + lineC) > lineA && lineA > Math.abs(lineB - lineC)) {
-    isTriangle = true;
-  }
-  if ((lineA + lineC) > lineB && lineB > Math.abs(lineA - lineC)) {
-    isTriangle = true;
-  }
-  if ((lineA + lineB) > lineC && lineC > Math.abs(lineA - lineB)) {
+  if (((lineB + lineC) > lineA && lineA > Math.abs(lineB - lineC))
+    || ((lineA + lineC) > lineB && lineB > Math.abs(lineA - lineC))
+    || ((lineA + lineB) > lineC && lineC > Math.abs(lineA - lineB))) {
     isTriangle = true;
   }
   return isTriangle;
