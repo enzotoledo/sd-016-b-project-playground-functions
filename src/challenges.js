@@ -3,7 +3,7 @@ function compareTrue(param1, param2) {
 }
 
 function calcArea(base, height) {
-  return base * height / 2;
+  return (base * height) / 2;
 }
 
 function splitSentence(paramText) {
@@ -62,36 +62,43 @@ function fizzBuzz(array) {
   return array;
 }
 
-// Desafio 9
 function encode(string) {
-  let vogal = {
-    a:'1',
-    e:'2',
-    i:'3',
-    o:'4',
-    u:'5',
-  };
   let result = '';
-  const array = string.split(' ');
-  for(let key of array){
-    result += (vogal[key] || key);
-  };
+  for(i = 0; i < string.length; i += 1){
+    if(string[i] === 'a'){
+      result += '1';
+    }else if (string[i] === 'e'){
+      result += '2';
+    }else if (string[i] === 'i'){
+      result += '3';
+    }else if (string[i] === 'o'){
+      result += '4';
+    }else if (string[i] === 'u'){
+      result += '5';
+    }else {
+      result += string[i];
+    }
+  }
   return result;
 }
 
 function decode(string) {
-  let vogal = {
-    1:'a',
-    2:'e',
-    3:'i',
-    4:'o',
-    5:'u',
-  };
   let result = '';
-  const array = string.split(' ');
-  for(let key of array){
-    result += (vogal[key] || key);
-  };
+  for(i = 0; i < string.length; i += 1){
+    if(string[i] === '1'){
+      result += 'a';
+    }else if (string[i] === '2'){
+      result += 'e';
+    }else if (string[i] === '3'){
+      result += 'i';
+    }else if (string[i] === '4'){
+      result += 'o';
+    }else if (string[i] === '5'){
+      result += 'u';
+    }else {
+      result += string[i];
+    }
+  }
   return result;
 }
 
