@@ -36,11 +36,8 @@ function hydrate(string) {
   for (let key of drinks) {
     sum = sum + parseInt(key);
   }
-  if (sum > 1) {
-    return sum + ' copos de água';
-  } else {
-    return sum + ' copo de água';
-  }
+  let response = sum > 1 ? sum + ' copos de água' : sum + ' copo de água';
+  return response;
 }
 
 module.exports = {
