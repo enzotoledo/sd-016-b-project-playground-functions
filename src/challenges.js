@@ -41,16 +41,22 @@ function highestCount(numbers) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let retorno;
+  let posicaoCat1 = Math.abs(cat1 - mouse);
+  let posicaoCat2 = Math.abs(cat2 - mouse);
 
-  if ((cat1 === 0) || (cat2 === 0)) {
+  if ((posicaoCat1 === posicaoCat2) && (posicaoCat1 === mouse)) {
     retorno = 'os gatos trombam e o rato foge';
-  } else if (cat1 < cat2) {
+  } else if (posicaoCat1 < posicaoCat2) {
     retorno = 'cat1';
-  } else if (cat1 > cat2) {
+  } else if (posicaoCat1 > posicaoCat2) {
     retorno = 'cat2';
   }
 
   return retorno;
+
+  // Esse exercicio foi solucionado com a dica do Guilherme Rosa Turma 16 - Tribo B. Eu tinha entendido um dos requisitos de forma errada, mas a dica dele me fez perceber que eu tinha me enganado.
+  // Apesar da minha resolução ter passado nos testes, com a dica dele percebir que não era bem isso que o requisito pedia, e efetuei as mudanças.
+  // link na thread: https://trybecourse.slack.com/archives/C02B4PPBERE/p1630439370383100?thread_ts=1630436206.374200&cid=C02B4PPBERE
 }
 
 function verificaDivisao(number, meuArray) {
