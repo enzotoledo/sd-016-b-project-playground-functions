@@ -108,6 +108,7 @@ function decode(string) {
   return result.join('');
 }
 
+
 module.exports = {
   calcArea,
   catAndMouse,
