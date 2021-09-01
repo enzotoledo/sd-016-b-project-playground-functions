@@ -17,8 +17,8 @@ function splitSentence(arrString) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(concatenarNomesArr) {
+  return `${concatenarNomesArr[concatenarNomesArr.length -1]}, ${concatenarNomesArr[0]}`;
 }
 
 // Desafio 5
