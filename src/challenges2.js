@@ -1,7 +1,7 @@
 // Desafio 10
 function techList(arr, name) {
   let lista = [];
-  errorMsg = "Vazio!";
+  let errorMsg = 'Vazio!';
   if (arr.length === 0) {
     return errorMsg;
   }
@@ -19,13 +19,11 @@ function techList(arr, name) {
 
 // Desafio 11
 function generatePhoneNumber(arr) {
-  let erroA = "Array com tamanho incorreto.";
-  let erroB = "não é possível gerar um número de telefone com esses valores";
-
+  let erroA = 'Array com tamanho incorreto.';
+  let erroB = 'não é possível gerar um número de telefone com esses valores';
   if (arr.length !== 11) {
     return erroA;
   }
-
   for (let i = 0; i < arr.length; i += 1) {
     let count = 0;
     if (arr[i] < 0) {
