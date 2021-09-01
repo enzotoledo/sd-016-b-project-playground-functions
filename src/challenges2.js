@@ -3,10 +3,10 @@ function techList(arrayTech, name) {
   let ordenarArray = arrayTech.sort();
   let objeto = {};
   let array = [];
-  if (arrayTech.length == 0){
+  if (arrayTech.length === 0) {
     return 'Vazio!';
-  } else if (arrayTech.length > 0){
-    for (let index in ordenarArray){
+  } else if (arrayTech.length > 0) { 
+    for (let index in ordenarArray) {
       array.push(objeto[index] = {
         name: name,
         tech: arrayTech[index]      
@@ -22,9 +22,14 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if (lineA < (lineB + lineC) && lineB < (lineA + lineC) && lineC < (lineA + lineB)){
+    return true;
+  } else {
+    return false;
+  }
 }
+console.log(triangleCheck(1,14,8));
 
 // Desafio 13
 function hydrate() {
