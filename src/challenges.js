@@ -53,13 +53,40 @@ function footballPoints(wins,ties) {
 }
 
 // Desafio 6
-function highestCount() {
+/* usei esse video para moldar meu raciocionio https://www.youtube.com/watch?v=pkJXwPvselI */
+function highestCount(array) {
+  let maiorNumero= 0
+  let vezesQueRepete=0;
+     for (let index = 0; index < array.length; index+=1) {
+         if(array[index]> maiorNumero || array[index] < 0){
+          maiorNumero=array[index];
+         }
+      }  
+      for (let index = 0; index < array.length; index++) {    
+         if(array[index]== maiorNumero){
+             vezesQueRepete ++;
+             }
+      
+        }
  
+ return vezesQueRepete
 }
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
- 
+  let mensagem = "os gatos trombam e o rato foge";
+/*   se a distancia de valor absoluto de cat1 - mouse for menor que cat2 - mouse; */
+
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)){
+return "cat1";
+}
+else if(Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)){
+   return "cat2";
+  }
+  else {
+      return mensagem
+  }
+
 }
 
 // Desafio 8
