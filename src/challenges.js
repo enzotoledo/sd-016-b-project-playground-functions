@@ -64,8 +64,36 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+// Creditos a Israel Sant'Anna e Gabriel Rodrigues Leite que me deram a ideia de dividir em mais funcoes
+function divisibleBy3(number) {
+  return number % 3 === 0;
+}
+function divisibleBy5(number) {
+  return number % 5 === 0;
+}
+function divisblebyBoth(number) {
+  return number % 15 === 0;
+}
+
+function fizzAndBuzz(number2) {
+  if (divisblebyBoth(number2)) {
+    return 'fizzBuzz';
+  }
+  if (divisibleBy3(number2)) {
+    return 'fizz';
+  }
+  if (divisibleBy5(number2)) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
+
+function fizzBuzz(numbersArray) {
+  let result = [];
+  for (let i = 0; i < numbersArray.length; i += 1) {
+    result.push(fizzAndBuzz(numbersArray[i]));
+  }
+  return result;
 }
 
 // Desafio 9
