@@ -39,7 +39,7 @@ function catAndMouse(mouse, cat1, cat2) {
     return "os gatos trombam e o rato foge";
   }
 }
-// Desafio 8 feito com a ajuda de pessoas estudantes do grupo de estudos :whale:
+// Desafio 8 usei o exemplo do arr.forEach do Gabriel Sivestre da turma 16 tribo b
 function fizzBuzz(arr) {
   const starArray = [];
   arr.forEach(n => {
