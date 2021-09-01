@@ -1,12 +1,12 @@
 // Desafio 10
-function techList(arrayTech, name) {
+function techList(arrayTech, nome) {
   let arrayTech2 = [];
   if (arrayTech.length > 0) {
     arrayTech.sort();
     for (let index of arrayTech) {
       arrayTech2.push({
         tech: index,
-        name: name
+        name: nome,
       });
     }
     console.log(arrayTech2);
@@ -62,9 +62,35 @@ function generatePhoneNumber(z) {
   return str1;
 }
 
+function isShorter(a, b, c) {
+  let expr = [(a + b) > c,
+    ((b + c) > a),
+    ((a + c) > b)];
+  if (expr[0] === true && expr[1] === true && expr[2] === true) {
+    return true;
+  }
+  return false;
+}
+
+function isLonger(a, b, c) {
+  let expr = [(Math.abs(a - b) < c),
+    (Math.abs(b - c) < a),
+    (Math.abs(a - c) < b)];
+  if (expr[0] === true && expr[1] === true && expr[2] === true) {
+    return true;
+  }
+  return false;
+}
+
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  const a = lineA;
+  const b = lineB;
+  const c = lineC;
+  if (isShorter(a, b, c) === false || isLonger(a, b, c) === false) {
+    return false;
+  }
+  return true;
 }
 
 // Desafio 13
