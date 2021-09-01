@@ -20,11 +20,9 @@ function techList(tech, name) {
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  // seu código aqui
   let numero = '';
   let contador = 0;
   let valorFinal = 0;
-  //verificar numeros repetidos
   for (let teste in array) {
     for (let teste2 in array) {
       if (array[teste] === array[teste2]) {

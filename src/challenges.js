@@ -31,88 +31,56 @@ function concatName(array) {
 function footballPoints(wins, ties) {
   // seu código aqui
   let valor = 0;
-  if(wins === 0 && ties === 0) {
-    return valor;
-  } else {
-    valor = (wins * 3) + (ties);
+  if (wins === 0 && ties === 0) {
     return valor;
   }
+  valor = (wins * 3) + (ties);
+  return valor;
 }
 
 // Desafio 6
-function highestCount(array) {
-  // seu código aqui
-  let contador = 0;
-  let valorFinal = '';
-  let maiorNumero = array[0];
-  for (let index in array) {
-    for (let index2 in array) {
-      if (array[index] === array[index2]) {
-        contador += 1;
-        if (maiorNumero <= array[index]) {
-          maiorNumero = array[index];
-        }
-      }
-    }
-    if (maiorNumero <= array[index]) {
-      valorFinal = array[index];
-      contador = 0;
+function controle(outroNome) {
+  for (let index2 in outroNome) {
+    if (outroNome[index2] < 0) {
+      return true;
     }
   }
-  contador = 0;
-  for (let index3 in array) {
-    if (valorFinal === array[index3]) {
-      contador = contador + 1;
+}
+
+function highestCount(array) {
+  let funcao = controle(array);
+  if (funcao) {
+    array.sort().reverse();
+  } else {
+    array.sort();
+  }
+  let contador = 0;
+  let numeroMaior = array[array.length - 1];
+  for (let index in array) {
+    if (numeroMaior === array[index]) {
+      contador += 1;
     }
   }
   return contador;
 }
-console.log(highestCount([-2, -3, -2]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  if (cat1 > mouse && cat2 > mouse) {
-    if (cat2 - mouse > cat1 - mouse) {
-      return 'cat1';
-    } else if (cat2 - mouse < cat1 - mouse) {
-      return 'cat2';
-    } else if (cat2 - mouse === cat1 - mouse) {
-      return 'os gatos trombam e o rato foge';
-    }
-  } else if (cat1 < mouse && cat2 > mouse) {
-    if (cat2 - mouse > mouse - cat1) {
-      return 'cat1';
-    } else if (cat2 - mouse < mouse - cat1) {
-      return 'cat2';
-    } else if (cat2 - mouse === mouse - cat1) {
-      return 'os gatos trombam e o rato foge';
-    }
-  } else if (cat1 > mouse && cat2 < mouse) {
-    if (mouse - cat2 > cat1 - mouse) {
-      return 'cat1';
-    } else if (mouse - mouse < cat1 - mouse) {
-      return 'cat2';
-    } else if (mouse - cat2 === cat1 - mouse) {
-      return 'os gatos trombam e o rato foge';
-    }
-  } else if (cat1 < mouse && cat2 < mouse) {
-    if (mouse - cat2 > mouse - cat1) {
-      return 'cat1';
-    } else if (mouse - cat2 < mouse - cat1) {
-      return 'cat2';
-    } else if (mouse - cat2 === mouse - cat1) {
-      return 'os gatos trombam e o rato foge';
-    }
+  let resultado = '';
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+    resultado = 'cat1';
+  } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
+    resultado = 'cat2';
+  } else {
+    resultado = 'os gatos trombam e o rato foge';
   }
-
+  return resultado;
 }
-console.log(catAndMouse(10, 3, 2));
 
 // Desafio 8
 function fizzBuzz(array) {
-  // seu código aqui
-  newArray = [];
+  let newArray = [];
   for (let index in array) {
     if (array[index] % 3 === 0 && array[index] % 5 === 0) {
       newArray.push('fizzBuzz');
@@ -121,12 +89,11 @@ function fizzBuzz(array) {
     } else if (array[index] % 5 === 0) {
       newArray.push('buzz');
     } else {
-      newArray.push('bug!')
+      newArray.push('bug!');
     }
   }
   return newArray;
 }
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(string) {
