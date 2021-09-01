@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(value1, value2) {
   // seu código aqui
-  if ((value1 === true) && (value2 === true)) {
+  if (value1 === true && value2 === true) {
     return true;
   }
   return false;
@@ -63,7 +63,8 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
-  } if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
+  }
+  if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
     return 'cat2';
   }
   return 'os gatos trombam e o rato foge';
@@ -73,25 +74,41 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   // seu código aqui
   let resultado = [];
+
   for (let i of array) {
-    if ((i % 3 === 0) && (i % 5 === 0)) {
+    if (i % 3 === 0 && i % 5 === 0) {
       resultado.push('fizzBuzz');
     } else if (i % 3 === 0) {
       resultado.push('fizz');
     } else if (i % 5 === 0) {
       resultado.push('buzz');
-    }
+    } else {
       resultado.push('bug!');
+    }
   }
   return resultado;
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
+  let stringEncodada = string
+    .replace(/a/g, '1')
+    .replace(/e/g, '2')
+    .replace(/i/g, '3')
+    .replace(/o/g, '4')
+    .replace(/u/g, '5');
+  return stringEncodada;
 }
-function decode() {
+function decode(string2) {
   // seu código aqui
+  let stringCorreta = string2
+    .replace(/1/g, 'a')
+    .replace(/2/g, 'e')
+    .replace(/3/g, 'i')
+    .replace(/4/g, 'o')
+    .replace(/5/g, 'u');
+  return stringCorreta;
 }
 
 module.exports = {
