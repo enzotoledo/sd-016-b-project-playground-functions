@@ -17,9 +17,7 @@ function splitSentence(stringToSplit) {
 
 // Desafio 4
 function concatName(arrayString) {
-  let result = '';
-  result = `${arrayString[arrayString.length - 1]}, ${arrayString[0]}`;
-  return result;
+  return (`${arrayString[arrayString.length - 1]}, ${arrayString[0]}`);
 }
 
 // Desafio 5
@@ -56,65 +54,51 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-/* lint acusa uma complexidade maior que 5, requesita uma refatoracao da funcao */
+/* Dica fornecida pelo Gabriel Silvestre durante um grupo de estudos em usar o for.each */
 function fizzBuzz(arrayNumbers) {
   let result = [];
-  for (let i = 0; i < arrayNumbers.length; i += 1) {
-    if (arrayNumbers[i] % 15 === 0) {
+  arrayNumbers.forEach((n) => {
+    if (n % 15 === 0) {
       result.push('fizzBuzz');
-    } else if (arrayNumbers[i] % 3 === 0) {
+    } else if (n % 3 === 0) {
       result.push('fizz');
-    } else if (arrayNumbers[i] % 5 === 0) {
+    } else if (n % 5 === 0) {
       result.push('buzz');
     } else {
       result.push('bug!');
     }
-  }
+  });
   return result;
 }
 
 // Desafio 9
+function verifyChar(string, j, logic) {
+  for (let k in logic) {
+    if (j === k) {
+      string = string.replace(j, logic[k]);
+    }
+  }
+  return string;
+}
+
 function encode(string) {
   let logic = {
     a: 1, e: 2, i: 3, o: 4, u: 5,
   };
-  let result = '';
   for (let j of string) {
-    let z = 0;
-    for (let k in logic) {
-      if (j === k) {
-        result += logic[k];
-        z = 1;
-        break;
-      }
-    }
-    if (z === 0) {
-      result += j;
-    }
+    string = verifyChar(string, j, logic);
   }
-  return result;
+  return string;
 }
 
-/* lint acusa que devo usar '===' ao inves de '==' mas eu quero fazer a verificacao sem verificar se o tipo e igual */
 function decode(string) {
   let logic = {
-    a: '1', e: '2', i: '3', o: '4', u: '5',
+    1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u',
   };
-  let result = '';
   for (let j of string) {
-    let z = 0;
-    for (let k in logic) {
-      if (j === logic[k]) {
-        result += k;
-        z = 1;
-        break;
-      }
-    }
-    if (z === 0) {
-      result += j;
-    }
+    string = verifyChar(string, j, logic);
   }
-  return result;
+  return string;
 }
 
 module.exports = {

@@ -12,17 +12,32 @@ function techList(arrayString, name) {
 }
 
 // Desafio 11
-/* lint acusa uma quantidade de linhas superior a 20 */
-function generatePhoneNumber(arrayNumber) {
+function returnErroRepeat(arrayNumber) {
   let count = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-  if (arrayNumber.length !== 11) {
-    return ('Array com tamanho incorreto.');
-  }
   for (let i of arrayNumber) {
     count[i] += 1;
     if ((i < 0) || (i > 9) || (count[i] >= 3)) {
       return ('não é possível gerar um número de telefone com esses valores');
     }
+  }
+  return ('');
+}
+
+function returnErro(arrayNumber) {
+  if (arrayNumber.length !== 11) {
+    return ('Array com tamanho incorreto.');
+  }
+  let z = returnErroRepeat(arrayNumber);
+  if (z.length > 0) {
+    return z;
+  }
+  return '';
+}
+
+function generatePhoneNumber(arrayNumber) {
+  let z = returnErro(arrayNumber);
+  if (z.length > 0) {
+    return z;
   }
   let result = '(';
   result += (`${arrayNumber[0]}${arrayNumber[1]}) `);
@@ -34,7 +49,6 @@ function generatePhoneNumber(arrayNumber) {
 }
 
 // Desafio 12
-/* lint acusa uma complexidade maior que 5, requesita uma refatoracao da funcao */
 function triangleCheck(lineA, lineB, lineC) {
   let array = [lineA, lineB, lineC];
   let a = 0;
