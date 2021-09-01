@@ -52,13 +52,10 @@ function highestCount(arr) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let cat1Space = cat1 - mouse;
-  let cat2Space = cat2 - mouse;
+  let cat1Space = Math.abs(cat1 - mouse);
+  let cat2Space = Math.abs(cat2 - mouse);
   let returnStr = '';
-
-  if (cat1Space < 0) {
-    cat1Space *= -1;
-  }
+  
   if (cat1Space < cat2Space) {
     returnStr = 'cat1';
   } else if (cat1Space > cat2Space) {
