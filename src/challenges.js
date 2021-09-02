@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/cognitive-complexity */
 /* eslint-disable no-undef */
 // Desafio 1
 function compareTrue(value01, value02) {
@@ -56,9 +57,23 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(numTree) {
-  // let fizboz = [];
+/* eslint complexity: ["error", ] */
+function fizzBuzz(tree) {
+  let fazbuz = [];
+  for (indx = 0; indx < tree.length; indx += 1) {
+    if (tree[indx] % 3 === 0 && tree[indx] % 5 === 0) {
+      fazbuz.push('fizzBuzz'); // 1st path
+    } else if (tree[indx] % 3 === 0) {
+      fazbuz.push('fizz'); // 2nd path
+    } else if (tree[indx] % 5 === 0) {
+      fazbuz.push('buzz'); // 3rd path
+    } else {
+      fazbuz.push('bug!');
+    }
+  }
+  return fazbuz;
 }
+// essa '!' na palavra bug me bugou o dia inteiro =( 
 
 // Desafio 9
 function encode() {
