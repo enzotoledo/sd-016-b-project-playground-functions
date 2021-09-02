@@ -137,21 +137,70 @@ function fizzBuzz(array) {
 // --------------------------------------------------------------------------------------------------
 
 // Desafio 9
-function encode() {
+function encode(string) {
     // seu código aqui
-
+    let newString = '';
+    for (let i = 0; i < string.length; i += 1) {
+        switch (string[i]) {
+            case 'a':
+                string = string.replace('a', '1');
+                break;
+            case 'e':
+                string = string.replace('e', '2');
+                break;
+            case 'i':
+                string = string.replace('i', '3');
+                break;
+            case 'o':
+                string = string.replace('o', '4');
+                break;
+            case 'u':
+                string = string.replace('u', '5');
+                break;
+        }
+        newString = string;
+    }
+    return newString;
 }
 // testando a função
-// console.log(encode());
+// console.log(encode("hello"));
+// console.log(encode('go Trybe!'));
+// console.log(encode('How are you today?'));
+// console.log(encode('This is an encoding test.'));
+// console.log(encode('go Trybe!'));
 
 // --------------------------------------------------------------------------------------------------
 
-function decode() {
+function decode(string) {
     // seu código aqui
-
+    let newString = '';
+    for (let i = 0; i < string.length; i += 1) {
+        switch (string[i]) {
+            case '1':
+                string = string.replace('1', 'a');
+                break;
+            case '2':
+                string = string.replace('2', 'e');
+                break;
+            case '3':
+                string = string.replace('3', 'i');
+                break;
+            case '4':
+                string = string.replace('4', 'o');
+                break;
+            case '5':
+                string = string.replace('5', 'u');
+                break;
+        }
+        newString = string;
+    }
+    return newString;
 }
 // testando a função
-// console.log(decode());
+// console.log(decode('h2ll4'));
+// console.log(decode('H4w 1r2 y45 t4d1y?'));
+// console.log(decode('Th3s 3s 1n 2nc4d3ng t2st.'));
+// console.log(decode('g4 Tryb2!'));
 
 // --------------------------------------------------------------------------------------------------
 
