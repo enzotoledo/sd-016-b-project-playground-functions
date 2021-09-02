@@ -53,9 +53,21 @@ function triangleCheck(lineA,lineB,lineC) {
 } 
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let numbers = string.match(/\d+/g).map(Number);
+  let sum = 0;
+  for(let index of numbers){
+    sum += index;
+  }
+  if(sum === 1) {
+    return (sum + ' copo de água');
+  } else {
+    return (sum + ' copos de água');
+  }
 }
+  //Conteudo para solucionar o problema adquirido na pagina:
+  // https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994 
+  // https://stackoverflow.com/questions/10003683/how-can-i-extract-a-number-from-a-string-in-javascript//
 
 module.exports = {
   generatePhoneNumber,
