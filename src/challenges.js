@@ -60,7 +60,6 @@ function catAndMouse(mouse, cat1, cat2) {
   } else {
     return "os gatos trombam e o rato foge"
   }
-  // seu código aqui
 }
 
 // Desafio 8
@@ -78,15 +77,61 @@ function fizzBuzz(array) {
     }
   }
   return novoArray
-  // seu código aqui
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let stringEn = '';
+  for (let letter of string) {
+    switch (letter) {
+      case 'a':
+       stringEn += '1';
+        break;
+      case 'e':
+       stringEn += '2';
+        break;
+      case 'i':
+       stringEn += '3';
+        break;
+      case 'o':
+       stringEn += '4';
+        break;
+      case 'u':
+       stringEn += '5';
+        break;
+      default:
+       stringEn += letter;
+        break;
+    }
+  }
+  return stringEn;
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  let stringDe = '';
+  for (let letter of string) {
+    switch (letter) {
+      case '1':
+        stringDe += 'a';
+        break;
+      case '2':
+        stringDe += 'e';
+        break;
+      case '3':
+        stringDe += 'i';
+        break;
+      case '4':
+        stringDe += 'o';
+        break;
+      case '5':
+        stringDe += 'u';
+        break;
+      default:
+        stringDe += letter;
+        break;
+    }
+  }
+  return stringDe;
 }
 
 module.exports = {
