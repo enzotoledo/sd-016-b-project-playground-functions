@@ -93,9 +93,34 @@ function triangleCheck(a, b, c) {
   return true;
 }
 
+function catchNumbers(str) {
+  return str.replace(/\D/g, '');
+}
+
+function convertNumbers(str) {
+  let number = catchNumbers(str);
+  let result = [];
+  for (let i = 0; i < number.length; i += 1) {
+    result.push(+number[i]);
+  }
+  return result;
+}
+
+function sumNumbers(str) {
+  let number = convertNumbers(str);
+  let result = 0;
+  for (let i = 0; i < number.length; i += 1) {
+    result += number[i];
+  }
+  return result;
+}
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+  let sum = sumNumbers(str);
+  if (sum > 1) {
+    return `${sum} copos de água`;
+  }
+  return `${sum} copo de água`;
 }
 
 module.exports = {
