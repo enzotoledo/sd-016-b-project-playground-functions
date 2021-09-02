@@ -1,7 +1,7 @@
 // Desafio 10
 function techList(techs, theName) {
   let arrTechs = [];
-  if (techs == 0) {
+  if (techs.length === 0) {
     return 'Vazio!';
   }
   for (let index = 0; index < techs.length; index += 1) {
