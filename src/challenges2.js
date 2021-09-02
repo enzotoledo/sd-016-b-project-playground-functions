@@ -18,15 +18,12 @@ function techList(arrayTechs, name) {
 
 // Desafio 11
 function validaTamanho(arrayNumbers) {
-  if (arrayNumbers.length > 11 || arrayNumbers.length < 11) {
-    return false;
-  }
-  return true;
+  return arrayNumbers.length === 11;
 }
 
 function validaNumero(arrayValido) {
-  for (let index = 0; index < arrayValido.length; index += 1) {
-    if (arrayValido[index] > 9 || arrayValido[index] < 0) {
+  for (const key of arrayValido) {
+    if (arrayValido[key] > 9 || arrayValido[key] < 0) {
       return false;
     }
   }
@@ -73,21 +70,21 @@ function impressaoRetornoFalse(count) {
 
 function generatePhoneNumber(numbers) {
   let countFuncao = 0;
-  let aux;
+  let msgError;
 
-  if (validaTamanho(numbers) !== true) {
+  if (!validaTamanho(numbers)) {
     countFuncao = 1;
-    aux = impressaoRetornoFalse(countFuncao);
-  } else if (validaNumero(numbers) !== true) {
+    msgError = impressaoRetornoFalse(countFuncao);
+  } else if (!validaNumero(numbers)) {
     countFuncao = 2;
-    aux = impressaoRetornoFalse(countFuncao);
-  } else if (validaRepeticao(numbers) !== true) {
+    msgError = impressaoRetornoFalse(countFuncao);
+  } else if (!validaRepeticao(numbers)) {
     countFuncao = 3;
-    aux = impressaoRetornoFalse(countFuncao);
+    msgError = impressaoRetornoFalse(countFuncao);
   } else {
     return impressaoRetornoTrue(numbers);
   }
-  return aux;
+  return msgError;
 }
 
 // console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
