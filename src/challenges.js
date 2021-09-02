@@ -46,8 +46,8 @@ function highestCount(numeros) {
   numeroRepetido = 0
   maiorNumero = numeros[0]
   for (let index = 0; index < numeros.length; index+= 1) {
-    if (numeros > numeros[index]) {
-      maiorNumero = index;
+    if (maiorNumero < numeros[index]) {
+      maiorNumero = numeros[index]
     }
     
   }
@@ -84,14 +84,14 @@ function fizzBuzz(numbersArr) {
   // seu código aqui
   let result = [];
   for (let index = 0; index < numbersArr.length; index+= 1) {
-    if (numbersArr[index] % 3 === 0) {
-      result.push("fizz");
+    if (numbersArr[index] % 3 === 0 && numbersArr[index] % 5 === 0) {
+      result.push("fizzBuzz");
     }
     else if (numbersArr[index] % 5 === 0) {
       result.push("buzz")
     }
-    else if (numbersArr[index] % 3 === 0 && numbersArr[index] % 5 === 0) {
-      result.push("fizzBuzz");
+    else if (numbersArr[index] % 3 === 0) {
+      result.push("fizz");
     }
     else {
       result.push("bug!");
@@ -102,12 +102,53 @@ function fizzBuzz(numbersArr) {
 
 
 // Desafio 9
-function encode() {
+function encode(str) {
   // seu código aqui
+  let parametros = {
+    a: 1,
+    e: 2,
+    i: 3,
+    o: 4,
+    u: 5,
+  }
+  strSplit = str.split('')
+  
+
+  for (let index = 0; index < strSplit.length; index += 1) {
+    for (let key in parametros) {
+      if (strSplit[index] === key) {
+        strSplit[index] = parametros[key]
+      }
+    }
+  }
+  result = strSplit.join('');
+  return result;
 }
-function decode() {
+console.log(encode('hi there'));
+
+function decode(str) {
   // seu código aqui
+  let parametros = {
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  }
+  strSplit = str.split('')
+
+  for (let index = 0; index < strSplit.length; index += 1) {
+    for (let key in parametros) {
+      if (strSplit[index] === key) {
+        strSplit[index] = parametros[key]
+      }
+    }
+  }
+  result = strSplit.join('');
+  return result;
 }
+console.log(decode('h3 th2r2'));
+
 
 module.exports = {
   calcArea,
