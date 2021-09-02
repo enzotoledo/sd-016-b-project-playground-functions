@@ -33,7 +33,7 @@ function highestCount(maxNumber) {
   for (let index = 0; maxNumber.length; i += 1) {
     for (let index = i + 1; maxNumberA.length; index += 1)
       if (maxNumber[i] === maxNumberA[index]) {
-        maxNumber++;
+        maxNumber += 1;
         return;
       }
   }
@@ -68,11 +68,16 @@ function fizzBuzz(buzzFizz) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(codeY) {
+    let codeY = { a: '1', e: '2', i: '3', o: '4', u: '5' };
+    let codeY = codeY.replace(/[aeiou]/g,
+      letras => codeY[letras]);
+  
 }
-function decode() {
-  // seu código aqui
+function decode(codeX) {
+  let codeX = { '1': 'a', '2': 'e', '3': 'i', '4': 'o', '5': 'u' }
+  let codeX = codeX.replace(/[12345]/g,
+    (letras) => codeX[letras]);
 }
 
 module.exports = {
