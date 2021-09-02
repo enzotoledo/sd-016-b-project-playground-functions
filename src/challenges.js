@@ -23,24 +23,24 @@ function concatName(paLavras) {
 } 
 
 // Desafio 5
-function footballPoints(wins,ties) {
-  let points = (wins*3) + ties;
+function footballPoints(wins, ties) {
+  let points = (wins * 3) + ties;
   return points;
 }
 
 // Desafio 6
 function highestCount(listNumer) {
   // let listNumer = [0, 4, 4, 4, 9, 2, 1];
-  let maiorNum = Math.max.apply(null,listNumer);
+  let maiorNum = Math.max.apply(null, listNumer);
   let contador = 0;
   // let maxRepit = listNumer.length;
   // console.log(maxRepit);
   // console.log(contMaior);
-    for (index = 0 ; index < listNumer.length; index +=1) {
-      if (maiorNum === listNumer[index]) {
-        contador +=1;
-      }
+  for (index = 0; index < listNumer.length; index +=1) {
+    if (maiorNum === listNumer[index]) {
+      contador +=1;
     }
+  }
   return contador;
 }
 
@@ -58,30 +58,8 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-<<<<<<< HEAD
-function fizzBuzz(numTree) {
-  let fizboz = [];
-  for (ind = 0; ind < numTree.length; ind += 1) {
-      if (numTree[ind] === 0){
-        fizboz.push('bug');
-        }
-        else if (numTree[ind]% 3 === 0 && numTree[ind]% 5 === 0){
-        return fizboz.push('fizzBuzz');
-      }
-        else if (numTree[ind]% 3 === 0 && numTree[ind]% 5 !== 0){
-        return fizboz.push('fizz');
-        }
-        else if (numTree[ind]% 3 !== 0 && numTree[ind]% 5 === 0){
-        return fizboz.push('buzz');
-      }
-      else{
-        return fizboz.push('bug');
-      }
-  return fizboz;
-=======
 function fizzBuzz() {
   // seu código aqui
->>>>>>> parent of 701a551 (erro no teste ao tentar executar o test do 8º requirement)
 }
 
 // Desafio 9
