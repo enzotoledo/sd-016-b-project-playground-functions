@@ -1,30 +1,30 @@
 // Desafio 10
 function techList(arrayString, name) {
-  for (let index = 0; index < arrayString.length; i += 1){
+  for (let index = 0; index < arrayString.length; index += 1) {
     let listTech = [];
     let arrayStringSorted = arrayString.sort();
-    for (let key of arrayStringSorted){
-      listTech.push({tech: key, name : name});
+    for (let key of arrayStringSorted) {
+      listTech.push({ tech : key, name : name });
     }
     return listTech;
   }
-  return 'Vazio!'
+  return 'Vazio!';
 }
 
 // Desafio 11
 function generatePhoneNumber(numberArray) {
   let count = 0;
-    if (numberArray.length != 11){
-      return ('Array com tamanho incorreto.')
+    if (numberArray.length !== 11) {
+    return ('Array com tamanho incorreto.')
     } else {
-      for(let index of numberArray) {
-    if((index < 0) || (index > 9)){
-      return ('não é possível gerar um número de telefone com esses valores');
-    } else {
-      for(let i of numberArray){
-      if (numberArray[index] == numberArray[i]) {
-        count ++
-        if(count >= 3){
+      for (let index of numberArray) {
+    if ((index < 0) || (index > 9)) {
+        return ('não é possível gerar um número de telefone com esses valores');
+      }
+        for (let i of numberArray) {
+          if (numberArray[index] == numberArray[i]) {
+        count ++;
+        if (count >= 3) {
         return ('não é possível gerar um número de telefone com esses valores');
       }
     }
@@ -56,10 +56,10 @@ function triangleCheck(lineA,lineB,lineC) {
 function hydrate(string) {
   let numbers = string.match(/\d+/g).map(Number);
   let sum = 0;
-  for(let index of numbers){
+  for (let index of numbers) {
     sum += index;
   }
-  if(sum === 1) {
+  if (sum === 1) {
     return (sum + ' copo de água');
   } else {
     return (sum + ' copos de água');

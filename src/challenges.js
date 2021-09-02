@@ -96,17 +96,18 @@ function decode(string) {
     i: 3,
     o: 4,
     u: 5,
-  };
+  }
   let result = string.split('');
   for (let index = 0; index < result.length; index += 1) {
-    for (let key in code) {
-      if (result[index] === code[key]) {
+    for (let key in code){
+      if (result[index] == code[key]){
         result[index] = key;
       }
     }
   }
   return result.join('');
 }
+
 module.exports = {
   calcArea,
   catAndMouse,
