@@ -1,12 +1,6 @@
 // Desafio 1
 function compareTrue(a, b) {
-  let res = (a === true) && (b === true);
-  let exit = false;
-  
-  if (res) {
-    exit = true;
-  }
-    return exit;
+  return a && b === true ? true : false;
 }
 
 // Desafio 2
