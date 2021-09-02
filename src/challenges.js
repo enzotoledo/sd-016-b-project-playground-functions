@@ -10,18 +10,27 @@ function compareTrue(x, y) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  calcArea = (base * height) / 2;
-  return calcArea;
+  // let calcArea = (base * height) / 2;
+  // return calcArea;
+  return (base * height) / 2;
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(textString) {
   // seu código aqui
+  // let splitSentence = textString.split(' ');
+  // return splitSentence;
+  return textString.split(' ');
 }
 
 // Desafio 4
-function concatName() {
+function concatName(nameArray) {
   // seu código aqui
+  // let firstArray = nameArray[0];
+  // let lastArray = nameArray[nameArray.length - 1];
+  // let expectedArray = lastArray + ', ' + firstArray;
+  // return expectedArray;
+  return nameArray[nameArray.length - 1] + ', ' + nameArray[0];
 }
 
 // Desafio 5
