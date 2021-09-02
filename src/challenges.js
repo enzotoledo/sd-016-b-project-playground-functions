@@ -37,7 +37,7 @@ return pontos;
 
 // Desafio 6
 function highestCount(array) {
-let numeroMaior = 0;
+let numeroMaior = array[0];
 let quantidade = 0;
 for(let index=0 ;index<array.length ; index+=1){
   if(numeroMaior<array[index]){
@@ -72,16 +72,16 @@ function fizzBuzz(a) {
 let resultado = [];
 for (let index = 0; index < a.length; index+=1){
   if((a[index]%3===0) && (a[index]%5===0)){
-    resultado="fizzBuzz";
+    resultado.push("fizzBuzz");
   }
   else if(a[index]%3===0){
-  resultado="fizz"
+  resultado.push("fizz");
   }
   else if(a[index]%5===0){
-    resultado="buzz";
+    resultado.push("buzz");
   }
   else {
-    resultado="bug!";
+    resultado.push("bug!");
   }
 }
   return resultado;
