@@ -1,10 +1,10 @@
 // Desafio 1
 function compareTrue(parametA, parametB) {
   if (parametA === true && parametB === true) {
-    return true
-    } else {
-    return false
-  }
+  return true
+  } else {
+  return false
+ }
 }
 
 // Desafio 2
@@ -83,9 +83,6 @@ function fizzBuzz(array) {
     }
     return retorno
   }
-
-  console.log(fizzBuzz([9, 25]))
-
 
 // Desafio 9
 function encode() {
