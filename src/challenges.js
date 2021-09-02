@@ -69,7 +69,7 @@ function fizzBuzz() {
 }
 
 // Desafio 9
-function encode(gocode) {
+function encode(gocodeA) {
   let gocode = { a: '1', e: '2', i: '3', o: '4', u: '5' };
   let coded = gocode.replace(/[aeiou]/g, (letras) => gocode[letras]);
   return coded;

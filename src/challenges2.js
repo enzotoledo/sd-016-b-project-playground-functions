@@ -1,27 +1,27 @@
 // Desafio 10
-function techList(nomes, tech) {
+function techList(nomes, tecnoName) {
   let resultado = [];
   if (tech.length === 0) {
-    return 'vazia';
+    return 'Vazio!';
   } else {
     for (let tech of nomes.sort()) {
-      resultado.push({tech, name})
+      resultado.push({ tech, tecnoName })
     }
     return resultado;
   }
 }
 
 // Desafio 11
-function generatePhoneNumber(numero) {
-  if (Number.length === 11 && Number.length) {
+function generatePhoneNumber(number) {
+  if (number.length === 11 && number.length) {
     let numPhone = '(' + number.slice(0, -9) + ')' + number.slice(2, -4) + '-' + number.slice(7);
-    let resultado = numPhone.replace(',', '');
+    let resultado = numPhone.replaceAll(',', '');
     return resultado;
   } else if (number.length < 11) {
-    return 'array com tamanho errado';
+    return 'Array com tamanho incorreto';
   }  else if (number < 0 && number > 9) {
   } else {
-      return 'errado';
+      return 'Não é possivel gerar um numero de telefone com esses valores';
     }
   }
 
