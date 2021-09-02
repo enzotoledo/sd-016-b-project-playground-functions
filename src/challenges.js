@@ -101,71 +101,44 @@ function fizzBuzz(array) {
 }
 
 // Função de troca de caracteres da frase pelos respectivos números
-function charTrade(char) {
-  if (char === 'a') {
-    return '1';
-  } if (char === 'e') {
-    return '2';
-  } if (char === 'i') {
-    return '3';
-  } if (char === 'o') {
-    return '4';
-  }
-  return '5';
+function charsTrade(chars) {
+  const equal = {
+    a: '1',
+    e: '2',
+    i: '3',
+    o: '4',
+    u: '5',
+    1: 'a',
+    2: 'e',
+    3: 'i',
+    4: 'o',
+    5: 'u',
+  };
+  if (chars in equal) return equal[chars];
+  return chars;
 }
 
 // Função de identificar caracteres a serem substituídos
-function phraseTrade(splitedWord) {
-  let vogais = ['a', 'e', 'i', 'o', 'u'];
+function trade(splitedWord) {
+  let na = [];
   for (let i = 0; i < splitedWord.length; i += 1) {
-    for (let j in vogais) {
-      if (splitedWord[i] === vogais[j]) {
-        splitedWord[i] = charTrade(vogais[j]);
-      }
-    }
+    na.push(charsTrade(splitedWord[i]));
   }
-  return splitedWord;
+  return na;
 }
 
 // Desafio 9 - codificação
 function encode(palavra) {
   let palavraSplit = palavra.split('');
-  let codWord = phraseTrade(palavraSplit);
+  let codWord = trade(palavraSplit);
   let palavraJoined = codWord.join('');
   return palavraJoined;
 }
 
-// Função de troca de números da frase pelos respectivos caracteres
-function numTrade(char) {
-  if (char === '1') {
-    return 'a';
-  } if (char === '2') {
-    return 'e';
-  } if (char === '3') {
-    return 'i';
-  } if (char === '4') {
-    return 'o';
-  }
-  return 'u';
-}
-
-// Função de identificar números a serem substituídos
-function codTrade(splitedCod) {
-  let num = ['1', '2', '3', '4', '5'];
-  for (let i = 0; i < splitedCod.length; i += 1) {
-    for (let j in num) {
-      if (splitedCod[i] === num[j]) {
-        splitedCod[i] = numTrade(num[j]);
-      }
-    }
-  }
-  return splitedCod;
-}
-
-// Descodificação
+// Decodificação
 function decode(cod) {
-  let codSplit = cod.split('');
-  let uncodWord = codTrade(codSplit);
+  let splitedWord = cod.split('');
+  let uncodWord = trade(splitedWord);
   let newWordJoined = uncodWord.join('');
   return newWordJoined;
 }
