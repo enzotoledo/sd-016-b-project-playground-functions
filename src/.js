@@ -1,20 +1,37 @@
-let str = 'h3 th2r2!'
-let newArray = [];
-let splitString = str.split(""); 
-  for (let index in splitString) {
-      if (splitString[index]===1) {
-          splitString[index]='a';
-      } else if (splitString[index]===2){
-          splitString[index]='e';
-      } else if (splitString[index]===3) {
-          splitString[index]='i';
-      } else if (splitString[index]===4) {
-          splitString[index]='o';
-      } else if (splitString[index]===5) {
-          splitString[index]='u';
-      } else {
-      }
-  newArray.push(splitString[index]);
-  }  
-  let joinArray = newArray.join(""); 
-  console.log (joinArray);
+//function techList (tech, name) {
+	let tech = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+  	let name = 'Lucas';
+	tech.sort();
+
+	if (tech === '') { // || name === ''){
+		console.log ('Vazio!')
+	} else {
+		let techObject_0 = {
+			technology: tech[0],
+			nome: name
+		}
+		let techObject_1 = {
+			technology: tech[1],
+			nome: name
+		}
+		let techObject_2 = {
+			technology: tech[2],
+			nome: name
+		}
+		let techObject_3 = {
+			technology: tech[3],
+			nome: name
+		}
+		let techObject_4 = {
+			technology: tech[4],
+			nome: name
+		}
+	let objectArray = [techObject_0, techObject_1, techObject_2,techObject_3, techObject_4]
+	console.log (objectArray);		
+	}
+
+	
+
+//-----------------------------------
+/* let tech = ["React", "Jest", "HTML", "CSS", "JavaScript"];
+*/
