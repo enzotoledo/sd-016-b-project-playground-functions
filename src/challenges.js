@@ -20,7 +20,7 @@ console.log(calcArea(51, 1))
 
 // Desafio 3
 function splitSentence(office) {
-  let officeWork = office.split(' ', );
+  let officeWork = office.split(' ');
   return officeWork; 
 }
 
@@ -39,7 +39,9 @@ console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']))
 function footballPoints(wins, ties) {
   let vitoria = wins * 3;
   let empate = ties * 1;
-  //let somaPoints =  ;  
+  let somaPoints = vitoria + empate;
+  
+  return somaPoints;
 }
 
 // Desafio 6
