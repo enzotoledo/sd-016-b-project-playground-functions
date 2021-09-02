@@ -54,17 +54,57 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
+function verificarDivisor(cont) {
+  if ((cont % 3) === 0 && (cont % 5) === 0) {
+    return 'fizzBuzz';
+  }
+  if ((cont % 3) === 0) {
+    return 'fizz';
+  }
+  if ((cont % 5) === 0) {
+    return 'buzz';
+  }
+}
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbers) {
+  let arrayRetorno = [];
+  for (let cont of numbers) {
+    switch (verificarDivisor(cont)) {
+    case 'fizz':
+      arrayRetorno.push('fizz');
+      break;
+    case 'fizzBuzz':
+      arrayRetorno.push('fizzBuzz');
+      break;
+    case 'buzz':
+      arrayRetorno.push('buzz');
+      break;
+    default:
+      arrayRetorno.push('bug!');
+      break;
+    }
+  }
+  return arrayRetorno;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(texto) {
+  texto = texto.replace(/[a]/g, '1');
+  texto = texto.replace(/[e]/g, '2');
+  texto = texto.replace(/[i]/g, '3');
+  texto = texto.replace(/[o]/g, '4');
+  texto = texto.replace(/[u]/g, '5');
+  return texto;
 }
-function decode() {
-  // seu código aqui
+
+function decode(texto) {
+  texto = texto.replace(/[1]/g, 'a');
+  texto = texto.replace(/[2]/g, 'e');
+  texto = texto.replace(/[3]/g, 'i');
+  texto = texto.replace(/[4]/g, 'o');
+  texto = texto.replace(/[5]/g, 'u');
+  return texto;
 }
 
 module.exports = {
