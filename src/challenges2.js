@@ -19,24 +19,26 @@ return answer;
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  function repeat (n) {
-    let nOrder = n.sort();
-    console.log(nOrder);
-    console.log(n);
-    let count = 0;
-    let current = nOrder[0];
-    for (let i = 0; i < nOrder.length; i += 1) {
-      if (current === nOrder[(i + 1)]){
-        count += 1;
+  function repeat (n){  // estava tentando usar o comando sort, mas estava dando errado então recebi a sujestão de usar for dentro de for, vinda do Gustavo Mendes turma 11 , um amigo de longas datas com isso consegui completar o código;
+    let can = true;
+    let current = n[0];
+    let count = 1;
+    for (let i = 0; i < n.length; i += 1){
+      for (let i2 = 1; i2 < n.length; i2 += 1){
+        if (current === n[i2]){
+          count += 1;
+        }
+      }
+      current = n[i];
+      if ( count > 2){
+        can = false;
       } else {
-        current = nOrder[(i + 1)]
+        count = 0;
       }
     }
-    if ( count >= 3){
-      return false;
-    } else {
-      return true;
-    }
+    return can;
+  }
+
   function verify (n2){ // Verificar se o max é maior que 9 e o min é menor que 0 ok
   let maxhNumber = Math.max.apply(null, n2);// Retirado a informação para fazer a linha do código no site 'https://pt.stackoverflow.com/questions/35202/como-saber-o-maior-valor-de-um-array'
   let minNumber = Math.min.apply(null, n2);// Retirado a informação para fazer a linha do código no site 'https://pt.stackoverflow.com/questions/35202/como-saber-o-maior-valor-de-um-array'
@@ -46,6 +48,7 @@ function generatePhoneNumber(array) {
       return true;
     }
 }
+
 if ((array.length !== 11)) {
   return 'Array com tamanho incorreto.';
  } else if ((verify(array) === false ) || (repeat(array) === false)) {
@@ -71,7 +74,8 @@ let resposta = answer.join('');
 return resposta;
  }
 }
-console.log(generatePhoneNumber([1,2,3,4,5,6,7,8,9,0,1]));
+
+
 
 
 // Desafio 12
