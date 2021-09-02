@@ -70,14 +70,12 @@ function fizzBuzz(buzzFizz) {
 // Desafio 9
 function encode(codeY) {
     let codeEncode = { a: '1', e: '2', i: '3', o: '4', u: '5' };
-    let codeY = codeY.replace(/[aeiou]/g,
-      letras => codeY[letras]);
+    let codeYA = codeY.replace(/[aeiou]/g, (letras) => codeY[letras]);
   
 }
 function decode(codeX) {
-  let codeX = { '1': 'a', '2': 'e', '3': 'i', '4': 'o', '5': 'u' }
-  let codeX = codeX.replace(/[12345]/g,
-    (letras) => codeX[letras]);
+  let codeXDecode = { '1': 'a', '2': 'e', '3': 'i', '4': 'o', '5': 'u' }
+  let codeXA = codeX.replace(/[12345]/g, (letras) => codeX[letras]);
 }
 
 module.exports = {
