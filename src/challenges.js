@@ -89,12 +89,39 @@ function fizzBuzz(array) {
   return arrayResult;
 }
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+const code = {
+  "a": 1,
+  "e": 2,
+  "i": 3,
+  "o": 4,
+  "u": 5
 }
-function decode() {
-  // seu código aqui
+
+// Desafio 9
+function encode(string) {
+  let palavra = string.split('')
+
+  for (let indice in palavra) {
+    for (let indice2 in code) {
+      if (indice2 === palavra[indice]) {
+        palavra[indice] = code[indice2]
+      }
+    }
+  }
+  return palavra.join('');
+} 
+
+function decode(string) {
+  let palavra = string.split('')
+
+  for (let indice in palavra) {
+    for (let indice2 in code) {
+      if (palavra[indice] == code[indice2]) {
+        palavra[indice] = indice2
+      }
+    }
+  }
+  return palavra.join('');
 }
 
 module.exports = {
