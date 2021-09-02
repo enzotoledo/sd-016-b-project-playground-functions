@@ -53,8 +53,8 @@ function generatePhoneNumber(arrayOnzeNum) {
 
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  return (lineA + lineB > lineC ? true : false) && (lineA + lineC > lineB  ? true : false) && (lineB + lineC > lineA ? true : false);
 }
 
 // Desafio 13
