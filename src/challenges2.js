@@ -130,8 +130,9 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(a, b, c) {
+  if (a < (b + c) && a > (Math.abs(b - c))) return true;
+  return false;
 }
 
 // Desafio 13
