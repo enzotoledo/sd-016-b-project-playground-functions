@@ -100,8 +100,29 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function arrayNumbersInteger(text) {
+  let captureSection = text.replace(/[^0-9]/g,'');
+  let captureNumbers = captureSection.split('', 3);
+  let arrayInteger = [];
+
+  for (let index = 0; index < captureNumbers.length; index += 1) {
+    arrayInteger[index] = parseInt(captureNumbers[index], 10);
+  }
+  return arrayInteger;
+}
+
+function hydrate(textString) {
+  let arrayInteger = arrayNumbersInteger(textString);
+  let sum = 0;
+
+  for (const iterator of arrayInteger) {
+    sum += iterator;
+  }
+
+  if (sum === 1) {
+    return `${sum} copo de água`;
+  }
+  return `${sum} copos de água`;
 }
 
 module.exports = {
