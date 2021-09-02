@@ -74,7 +74,7 @@ function encode(gocodeA) {
   let coded = gocode.replace(/[aeiou]/g, (letras) => gocode[letras]);
   return coded;
 }
-function decode(uncode) {
+function decode(uncodeB) {
   let uncode = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
   let uncoded = uncode.replace(/[12345]/g, (letras) => uncoded[letras]);
   return uncoded;
