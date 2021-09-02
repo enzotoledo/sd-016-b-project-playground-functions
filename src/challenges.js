@@ -2,12 +2,12 @@
 function compareTrue(value01, value02) {
   if (value01 === true && value02 === true) {
     return true;
-  } else { return false }
+  } else { return false}
 }
 
 // Desafio 2
-function calcArea(base, height) {
-  let triAng = (base * height) / 2;
+function calcArea(base,height) {
+  let triAng =  (base * height)/2;
   return triAng;
 }
 
@@ -19,28 +19,28 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(paLavras) {
-  return (paLavras.pop() + ',' + paLavras.shift());
-}
+  return (paLavras.pop() +', '+ paLavras.shift());
+} 
 
 // Desafio 5
-function footballPoints(wins, ties) {
-  let points = (wins * 3) + ties;
+function footballPoints(wins,ties) {
+  let points = (wins*3) + ties;
   return points;
 }
 
 // Desafio 6
 function highestCount(listNumer) {
   // let listNumer = [0, 4, 4, 4, 9, 2, 1];
-  let maiorNum = Math.max.apply(null, listNumer);
+  let maiorNum = Math.max.apply(null,listNumer);
   let contador = 0;
   // let maxRepit = listNumer.length;
   // console.log(maxRepit);
   // console.log(contMaior);
-  for (index = 0; index < listNumer.length; index += 1) {
-    if (maiorNum === listNumer[index]) {
-      contador += 1;
+    for (index = 0 ; index < listNumer.length; index +=1) {
+      if (maiorNum === listNumer[index]) {
+        contador +=1;
+      }
     }
-  }
   return contador;
 }
 
@@ -51,13 +51,14 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
     return 'cat2';
-  }
+  } 
   else {
     return 'os gatos trombam e o rato foge';
   }
 }
 
 // Desafio 8
+<<<<<<< HEAD
 function fizzBuzz(numTree) {
   let fizboz = [];
   for (ind = 0; ind < numTree.length; ind += 1) {
@@ -77,7 +78,12 @@ function fizzBuzz(numTree) {
         return fizboz.push('bug');
       }
   return fizboz;
+=======
+function fizzBuzz() {
+  // seu código aqui
+>>>>>>> parent of 701a551 (erro no teste ao tentar executar o test do 8º requirement)
 }
+
 // Desafio 9
 function encode() {
   // seu código aqui
