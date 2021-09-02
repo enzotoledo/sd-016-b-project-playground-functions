@@ -74,23 +74,22 @@ function catAndMouse(mouse,cat1,cat2) {
 
 // Desafio 8
 function fizzBuzz(vetor) {
-  let vetorResposta = [];
+
+  let vetorResp = []; 
 
   for(let i = 0 ; i < vetor.length ; i++){
     if((vetor[i]%3 == 0) && (vetor[i]%5 == 0)){
-      vetorResposta.push("fizzBuzz");
-      console.log(vetorResposta[i]);
-    }else if((vetor[i]%3 == 0)){
-      vetorResposta.push("fizz");
-    }else if((vetor[i]%5 == 0)){
-      vetorResposta.push("buzz");
-    }else {
-      vetorResposta.push("bug!");
+      vetorResp[i] = "fizzBuzz";
+    }else if(vetor[i]%3 == 0){
+      vetorResp[i] = "fizz";
+    }else if(vetor[i]%5 == 0){
+      vetorResp[i] = "buzz";
+    }else{
+      vetorResp[i] = "bug!";
     }
-    return vetorResposta
   }
 
-
+  return vetorResp;
   
 }
 
