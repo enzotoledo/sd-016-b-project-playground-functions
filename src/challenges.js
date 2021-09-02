@@ -29,7 +29,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-// "mind blowing" do array.sort https://ricardo-reis.medium.com/o-m%C3%A9todo-sort-do-array-javascript-482576734e0a
+// "mind blowing" do array.sort - https://ricardo-reis.medium.com/o-m%C3%A9todo-sort-do-array-javascript-482576734e0a
   let x = array.sort((a, b) => a - b);
   let count = 0;
   for (let y of array) {
@@ -48,8 +48,15 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+// "Math.abs" - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
+  if (Math.abs((cat1 - mouse)) < Math.abs((cat2 - mouse))) {
+    return 'cat1';
+  }
+  if (Math.abs((cat1 - mouse)) === Math.abs((cat2 - mouse))) {
+    return 'os gatos trombam e o rato foge';
+  }
+  return 'cat2';
 }
 
 // Desafio 8
