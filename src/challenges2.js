@@ -2,19 +2,20 @@
 function techList(arrey, name) {
   let object = {};
   let list = [];
-  for (let tech of arrey.sort()) {
-    object.tech = tech;
-    object.name = name;
-    list.push(object);
-  }
-  if (list.length === 0) {
+  if (arrey.length === 0) {
     return 'Vazio!';
-  } else {
-    return list;
+  } else if (arrey.length > 0) {
+    for (let tech of arrey.sort()) {
+      object = {
+        tech: tech,
+        name: name
+      } 
+      list.push(object);
+    }
   }
+  return list;
 }
 
-techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Rafael');
 // Desafio 11
 function generatePhoneNumber() {
 
@@ -30,8 +31,8 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+
 }
 
 module.exports = {
