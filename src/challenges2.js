@@ -1,12 +1,10 @@
 // Desafio 10
 function techList(tech,name) {
   let lista = [];
+  let array = tech.sort();
   for(let objetos=0; objetos<tech.length; objetos+=1){
-  {
-    lista[objetos],
-    lista.tech =tech[objetos],
-    lista.name= name
-  };
+   
+  }
   return lista;
 }
 console.log(techList(["array,css"],"rafael"));
@@ -15,7 +13,6 @@ function generatePhoneNumber(array) {
   if(array<array[11] || array>array[11]){
     array = "Array com tamanho incorreto."
   }
-  for(let index=0; index<array.length)
   if(array=array[11]){
   array.splice(7,0,"-")
   array.splice(2,0,")")

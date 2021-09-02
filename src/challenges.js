@@ -72,16 +72,16 @@ function fizzBuzz(a) {
 let resultado = [];
 for (let index = 0; index < a.length; index+=1){
   if((a[index]%3===0) && (a[index]%5===0)){
-    resultado.push("fizzBuzz");
+    resultado="fizzBuzz";
   }
   else if(a[index]%3===0){
-  resultado.push("fizz");
+  resultado="fizz"
   }
   else if(a[index]%5===0){
-    resultado.push("buzz");
+    resultado="buzz";
   }
   else {
-    resultado.push("bug!");
+    resultado="bug!";
   }
 }
   return resultado;
