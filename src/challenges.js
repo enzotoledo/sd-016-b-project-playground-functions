@@ -63,24 +63,22 @@ function catAndMouse(mouse, cat1, cat2) {
   return catClose;
 }
 
-function divide3 (z) {
+function divide3(z) {
   if (z % 3 === 0) { return true; }
-  else {
   return false;
-}
 }
 
-function divide5 (z) {
+function divide5(z) {
   if (z % 5 === 0) { return true; }
-  else {
   return false;
-}
 }
 
 function div3and5(num) {
-  if (divide3(num) === true && divide5(num) === true) {return 'fizzBuzz'; }
-  else if (divide3(num) === true) {return 'fizz';}
-  else if (divide5(num) === true) {return 'buzz';}
+  if (divide3(num) === true && divide5(num) === true) {
+    return 'fizzBuzz';
+  } if (divide3(num) === true) {
+    return 'fizz';
+  } if (divide5(num) === true) { return 'buzz'; }
   return 'bug!';
 }
 
@@ -89,7 +87,8 @@ function fizzBuzz(arrayOfNumbers) {
   let newArrayStr = [];
   for (let i3 = 0; i3 < arrayOfNumbers.length; i3 += 1) {
     let actualNumber = arrayOfNumbers[i3];
-    newArrayStr.push(div3and5(actualNumber));}
+    newArrayStr.push(div3and5(actualNumber));
+  }
   return newArrayStr;
 }
 
