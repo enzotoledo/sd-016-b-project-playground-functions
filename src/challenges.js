@@ -2,11 +2,11 @@
 function compareTrue(a, b) {
   if ((a === true) && (b === true)) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
-console.log(compareTrue(true, false));
+
+console.log(compareTrue(true, true));
 // Desafio 2
 function calcArea(base, height) {
   let calculo = 0;
@@ -26,9 +26,10 @@ console.log(splitSentence('go trybe'));
 function concatName(concaArray) {
   let lista = concaArray;
   let ultimoNome = lista[lista.length - 1];
-  console.log(ultimoNome, concaArray[0]);
+  let nomeString = (ultimoNome + ", " + concaArray[0]);
+  return nomeString;
 }
-concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 
 // Desafio 5
 function footballPoints(wins, ties) {
@@ -39,9 +40,22 @@ function footballPoints(wins, ties) {
 console.log(footballPoints(1, 2));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(arrayNumeros) {
+  let maiorNumero = arrayNumeros[0];
+  let numeroRepitido = 0;
+  for (let key in arrayNumeros) {
+    if (maiorNumero < arrayNumeros[key]) {
+      maiorNumero = arrayNumeros[key];
+    }
+  }
+  for (let key2 in arrayNumeros) {
+    if (maiorNumero === arrayNumeros[key2]) {
+      numeroRepitido += 1;
+    }
+  }
+  return numeroRepitido;
 }
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7, 9]));
 
 // Desafio 7
 function catAndMouse() {
