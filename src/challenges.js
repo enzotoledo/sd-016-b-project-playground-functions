@@ -164,8 +164,6 @@ function techList (name,arrayTec){
   return listaTecnologia;
 }
 
-
-
 module.exports = {
   calcArea,
   catAndMouse,
