@@ -17,29 +17,67 @@ function techList(array, name) {
 }
 
 // Desafio 11
-// reference: https://www.alura.com.br/artigos/javascript-replace-manipulando-strings-e-regex?gclid=Cj0KCQjwpreJBhDvARIsAF1_BU0rI4vAleR89opVNbPQKNGAIfYsNu5A8OQVjhbCOvBZIp1SwEuWZZYaAhQQEALw_wcB 
-function generatePhoneNumber(array) {
-  let str = array.toString().replace(/,/g, '');
-  let strTelephone = str.replace(/(\d{2})?(\d{5})?(\d{4})?/, '($1) $2-$3');
-  let count = 0;
-  if (array.length !== 11) {
-    return 'Array com tamanho incorreto.';
-  }
+let message;
+
+function numberTelephone(array) {
+  // reference: https://www.alura.com.br/artigos/javascript-replace-manipulando-strings-e-regex?gclid=Cj0KCQjwpreJBhDvARIsAF1_BU0rI4vAleR89opVNbPQKNGAIfYsNu5A8OQVjhbCOvBZIp1SwEuWZZYaAhQQEALw_wcB
+  let strTel = array.toString().replace(/,/g, '').replace(/(\d{2})?(\d{5})?(\d{4})?/, '($1) $2-$3');
+  message = strTel;
+  return message;
+}
+
+function identifyNumber(array) {
   for (let index = 0; index < array.length; index += 1) {
     if (array[index] < 0 || array[index] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
+      message = 'não é possível gerar um número de telefone com esses valores';
+      return message;
     }
-    for (let position = 0; position < array.length; position += 1) {
-      if (array[index] === array[position]) {
-        count = count + 1;
-      }
-    }
-    if (count >= 3) {
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
-    count = 0;
   }
-  return strTelephone;
+}
+
+function sizeArray(array) {
+  if (array.length !== 11) {
+    message = 'Array com tamanho incorreto.';
+    return message;
+  }
+}
+
+function objectNumbers(array) {
+  let count = 1;
+  let numberNow = 0;
+  let repeatNumbers = {};
+  // reference: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+  let arraySort = array.sort(function (a, b) { return a - b; });
+  for (let i = 0; i < arraySort.length; i += 1) {
+    if (arraySort[i] === arraySort[i + 1]) {
+      numberNow = array[i];
+      count += 1;
+      repeatNumbers[numberNow] = count;
+    } else {
+      count = 1;
+    }
+  }
+
+  count = 0;
+  return repeatNumbers;
+}
+
+function quantityNumbers(array) {
+  let object = objectNumbers(array);
+  for (let key in object) {
+    if (object[key] >= 3) {
+      message = 'não é possível gerar um número de telefone com esses valores';
+      return message;
+    }
+  }
+}
+
+function generatePhoneNumber(array) {
+  numberTelephone(array);
+  identifyNumber(array);
+  sizeArray(array);
+  quantityNumbers(array);
+  return message;
 }
 
 // Desafio 12
@@ -60,7 +98,6 @@ function hydrate(str) {
   let reg = /\d+/g;
   let result = str.match(reg).map(Number);
   let sum = 0;
-  let message;
   for (let index = 0; index < result.length; index += 1) {
     sum += result[index];
   }
