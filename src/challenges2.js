@@ -136,8 +136,16 @@ function triangleCheck(a, b, c) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let form = /\d+/g;
+  let corresp = string.match(form);
+  let somador = 0;
+  let frase = ' copo de água';
+  for (let i = 0; i < corresp.length; i += 1) {
+    somador += parseInt(corresp[i], 10);
+  }
+  if (somador > 1) frase = ' copos de água';
+  return somador + frase;
 }
 
 module.exports = {
