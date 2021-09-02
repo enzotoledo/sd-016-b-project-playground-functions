@@ -1,5 +1,5 @@
 // Desafio 1
-function compareTrue (ValorA, ValorB){
+function compareTrue(ValorA, ValorB) {
   let compare = false;
   if (ValorA && ValorB) {
     compare = true;
