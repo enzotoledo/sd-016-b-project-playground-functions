@@ -60,10 +60,10 @@ function catAndMouse (mouse,cat1,cat2) {
     return("os gatos trombam e o rato foge")
   }
   else if(positionCat1 < positionCat2){
-    return(positionCat1,"cat1") 
+    return("cat1") 
   }
   else{
-    return(positionCat2,"cat2")
+    return("cat2")
   }
 }
  
