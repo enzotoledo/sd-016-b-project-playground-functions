@@ -36,12 +36,12 @@ function highestCount(numeros) {
   let maiorNumero = numeros[0];
   let repete = 0;
 
-  for (index = 0; index < numeros.length; index += 1) {
+  for (let index = 0; index < numeros.length; index += 1) {
   if (numeros[index] > maiorNumero) {
       maiorNumero = numeros[index];
       }
     }
-    for (index = 0; index < numeros.length; index += 1) {
+    for (let index = 0; index < numeros.length; index += 1) {
       if (numeros[index] === maiorNumero) {
         repete += 1;
       }
@@ -51,8 +51,8 @@ function highestCount(numeros) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  positionCat1 = Math.abs(cat1 - mouse)
-  positionCat2 = Math.abs(cat2 - mouse)
+  let positionCat1 = Math.abs(cat1 - mouse)
+  let positionCat2 = Math.abs(cat2 - mouse)
   if (positionCat1 < positionCat2){
     return "cat1"
   } else if (positionCat1 > positionCat2){
@@ -64,7 +64,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
+  let novoArray = [];
+  for (index of array){
+    if (index % 3 === 0 && index % 5 === 0){
+      novoArray.push("fizzBuzz")
+    } else if (index % 3 === 0){
+      novoArray.push("fizz")
+    } else if (index % 5 === 0){
+      novoArray.push("buzz")
+    } else {
+      novoArray.push("bug!")
+    }
+  }
+  return novoArray
   // seu código aqui
 }
 
