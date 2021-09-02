@@ -76,7 +76,6 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-//revisar npm test 
 let resFizzBuzz = [];
 function fizzBuzz(arrayDiv) {
   let numberDiv = arrayDiv;
@@ -85,22 +84,66 @@ function fizzBuzz(arrayDiv) {
     let divPor5 = numberDiv[index] % 5;
     if (divPor3 === 0 && divPor5 === 0) {
       return resFizzBuzz.push('fizzBuz');
-    } else if (divPor3 === 0) {
+    } if (divPor3 === 0) {
       return resFizzBuzz.push('fizz');
-    } else if (divPor5 === 0) {
+    } if (divPor5 === 0) {
       return resFizzBuzz.push('buzz');
-    } else {
-      return resFizzBuzz.push('bug!');
     }
+    return resFizzBuzz.push('bug!');
   }
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+let resCode = '';
+function encode(stringCode) {
+  for (let index = 0; index < stringCode.length; index += 1) {
+    switch (stringCode[index]) {
+    case 'a':
+      stringCode = stringCode.replace(stringCode[index], '1');
+      break;
+    case 'e':
+      stringCode = stringCode.replace(stringCode[index], '2');
+      break;
+    case 'i':
+      stringCode = stringCode.replace(stringCode[index], '3');
+      break;
+    case 'o':
+      stringCode = stringCode.replace(stringCode[index], '4');
+      break;
+    case 'u':
+      stringCode = stringCode.replace(stringCode[index], '5');
+      break;
+    default:
+    }
+    resCode = stringCode;
+  }
+  return resCode;
 }
-function decode() {
-  // seu código aqui
+
+let resDecode = '';
+function decode(stringDecode) {
+  for (let index = 0; index < stringDecode.length; index += 1) {
+    switch (stringDecode[index]) {
+    case '1':
+      stringDecode = stringDecode.replace(stringDecode[index], 'a');
+      break;
+    case '2':
+      stringDecode = stringDecode.replace(stringDecode[index], 'e');
+      break;
+    case '3':
+      stringDecode = stringDecode.replace(stringDecode[index], 'i');
+      break;
+    case '4':
+      stringDecode = stringDecode.replace(stringDecode[index], 'o');
+      break;
+    case '5':
+      stringDecode = stringDecode.replace(stringDecode[index], 'u');
+      break;
+    default:
+    }
+    resDecode = stringDecode;
+  }
+  return resDecode;
 }
 
 module.exports = {
