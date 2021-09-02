@@ -55,7 +55,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numberArray) {
   let fizbuz = [];
-  for (let index of numberArray){
+  for (let index of numberArray) {
     if ((index % 3 === 0) && (index % 5 === 0)) {
       fizbuz.push('fizzBuzz');
     } else if (index % 3 === 0) {
@@ -66,7 +66,7 @@ function fizzBuzz(numberArray) {
       fizbuz.push('bug!');
     }
   }
-    return fizbuz;
+  return fizbuz;
 }
 
 // Desafio 9
@@ -77,15 +77,15 @@ function encode(string) {
     i: 3,
     o: 4,
     u: 5,
-  }
+  };
   let result = string.split('');
- for (let index = 0; index < result.length; index += 1){
-   for (let key in code){
-     if( result[index] == key){
-       result[index] = code[key];
-     }
-   }
- }
+  for (let index = 0; index < result.length; index += 1) {
+    for (let key in code) {
+      if (result[index] === key) {
+        result[index] = code[key];
+      }
+    }
+  }
   return result.join('');
 }
 
@@ -96,19 +96,17 @@ function decode(string) {
     i: 3,
     o: 4,
     u: 5,
-  }
+  };
   let result = string.split('');
- for (let index = 0; index < result.length; index += 1){
-   for (let key in code){
-     if( result[index] == code[key]){
-       result[index] = key;
-     }
-   }
- }
+  for (let index = 0; index < result.length; index += 1) {
+    for (let key in code) {
+      if (result[index] === code[key]) {
+        result[index] = key;
+      }
+    }
+  }
   return result.join('');
 }
-
-
 module.exports = {
   calcArea,
   catAndMouse,
