@@ -32,13 +32,26 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numbers) {
+let maiorNumero = numbers[0];
+let contador = 0;
+
+for (let i = 0; i < numbers.length; i += 1) {
+  if (numbers[i] > maiorNumero) {
+    maiorNumero = numbers[i];
+  }
+}
+for (let i = 0; i < numbers.length; i += 1) {
+  if (numbers[i] === maiorNumero) {
+    contador += 1;
+  }
+}
+return contador;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  
 }
 
 // Desafio 8
@@ -50,6 +63,8 @@ function fizzBuzz() {
 function encode() {
   // seu código aqui
 }
+
+// Desafio 10
 function decode() {
   // seu código aqui
 }
