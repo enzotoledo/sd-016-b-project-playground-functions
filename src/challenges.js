@@ -123,9 +123,6 @@ function decode(string) {
   return decoded;
 }
 
-function ordenedObjects(array, name) {
-  // array = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-}
 module.exports = {
   calcArea,
   catAndMouse,
