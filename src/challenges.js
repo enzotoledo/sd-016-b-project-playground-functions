@@ -36,13 +36,13 @@ function highestCount(numeros) {
   let maiorNumero = numeros[0];
   let repete = 0;
 
-  for (i = 0; i < numeros.length; i += 1) {
-    if (numeros[i] > maiorNumero) {
-      maiorNumero = numeros[i];
+  for (index = 0; index < numeros.length; index += 1) {
+  if (numeros[index] > maiorNumero) {
+      maiorNumero = numeros[index];
       }
     }
-    for (i = 0; i < numeros.length; i += 1) {
-      if (numeros[i] === maiorNumero) {
+    for (index = 0; index < numeros.length; index += 1) {
+      if (numeros[index] === maiorNumero) {
         repete += 1;
       }
     }
@@ -50,7 +50,16 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2) {
+  positionCat1 = Math.abs(cat1 - mouse)
+  positionCat2 = Math.abs(cat2 - mouse)
+  if (positionCat1 < positionCat2){
+    return "cat1"
+  } else if (positionCat1 > positionCat2){
+    return "cat2"
+  } else {
+    return "os gatos trombam e o rato foge"
+  }
   // seu código aqui
 }
 
