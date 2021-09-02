@@ -64,12 +64,22 @@ function triangleCheck(lineA, lineB, lineC) {
   }
 }
 
-console.log(triangleCheck(21, 14, 8))
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  var numbers = string.match(/\d+/g).map(Number);
+  soma = 0;
+  for (let i = 0; i < numbers.length; i += 1) {
+    soma = soma + numbers[i]
+  }
+  if (soma <= 1 ) {
+    return soma + " copo de água";
+  } else {
+    return soma + " copos de água";
+
+  }
 }
+
+console.log(hydrate('são 1 '));
 
 module.exports = {
   generatePhoneNumber,
