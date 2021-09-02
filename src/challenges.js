@@ -76,8 +76,23 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+//revisar npm test 
+let resFizzBuzz = [];
+function fizzBuzz(arrayDiv) {
+  let numberDiv = arrayDiv;
+  for (let index = 0; index < numberDiv.length; index += 1) {
+    let divPor3 = numberDiv[index] % 3;
+    let divPor5 = numberDiv[index] % 5;
+    if (divPor3 === 0 && divPor5 === 0) {
+      return resFizzBuzz.push('fizzBuz');
+    } else if (divPor3 === 0) {
+      return resFizzBuzz.push('fizz');
+    } else if (divPor5 === 0) {
+      return resFizzBuzz.push('buzz');
+    } else {
+      return resFizzBuzz.push('bug!');
+    }
+  }
 }
 
 // Desafio 9
