@@ -55,7 +55,7 @@ function catAndMouse(mouse, catY, catX) {
 }
 
 // Desafio 8
-function fizzBuzz(check) {
+function check(buzzFizz) {
   if (buzzFizz % 3 === 0 && buzzFizz % 5 === 0) {
     return 'fizzBuzz';
   }
