@@ -78,11 +78,58 @@ function fizzBuzz(arrayNub) {
   
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(str) {
+  let vog = ['a', 'e', 'i', 'o', 'u'];
+  let tamStr = str.length;
+  let resultStr = '';
+  for(let counter = 0; counter < tamStr ; counter += 1){
+    switch(str[counter]){
+      case 'a':
+          resultStr += '1';
+          break;
+        case 'e':
+          resultStr += '2';
+          break;
+        case 'i':
+          resultStr += '3';
+          break;
+        case 'o':
+          resultStr += '4';
+          break;
+        case 'u':
+          resultStr += '5';
+          break;
+        default:  
+          resultStr += str[counter];
+    } 
+  }return resultStr;
 }
-function decode() {
-  // seu código aqui
+function decode(str2) {
+  let vog = ['1', '2', '3', '4', '5'];
+  let tamStr2 = str2.length;
+  let resultStr2 = '';
+  for(let counter2 = 0; counter2 < tamStr2 ; counter2 += 1){
+    switch(str2[counter2]){
+      case '1':
+          resultStr2 += 'a';
+          break;
+        case '2':
+          resultStr2 += 'e';
+          break;
+        case '3':
+          resultStr2 += 'i';
+          break;
+        case '4':
+          resultStr2 += 'o';
+          break;
+        case '5':
+          resultStr2 += 'u';
+          break;
+        default:  
+          resultStr2 += str2[counter2];
+    } 
+  }return resultStr2;
+
 }
 
 module.exports = {
