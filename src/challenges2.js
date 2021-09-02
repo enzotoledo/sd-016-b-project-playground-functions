@@ -20,57 +20,113 @@ function techList(array, name) {
   return objectList;
 }
 
+// Função que checa se o número é menor que zero
+function minorThanZero(array) {
+  let test = false;
+  for (let index in array) {
+    if (array[index] < 0) {
+      test = true;
+    }
+  }
+  return test;
+}
+
+// Função que checa se o número é maior que nove
+function biggerThanNine(array) {
+  let teste = false;
+  for (let index in array) {
+    if (array[index] > 9) {
+      teste = true;
+    }
+  }
+  return teste;
+}
+
+// Função que retorna true ou false para a posterior
+function trOrFal(num) {
+  return (num >= 3);
+}
+
+// Função pra passar a contagem no lint
+function count(array, num) {
+  let cont = 0;
+  for (let i = 0; i < array.length; i += 1) {
+    if (num === array[i]) cont += 1;
+  }
+  return cont;
+}
+
+// Função que checa o maior número de repetições
+function contThree(array) {
+  let cont = 0;
+  let biggestCont = 0;
+  for (let i = 0; i < array.length; i += 1) {
+    cont = count(array, array[i]);
+    if (cont > biggestCont) biggestCont = cont;
+    cont = 0;
+  }
+  return biggestCont;
+}
+
+// Função que checa se um número se repete 3 vezes ou mais
+function moreThanThreeTimes(array) {
+  let maiorCont = contThree(array);
+  return trOrFal(maiorCont);
+}
+
 // Função que checa se dentro do array existe algum valor inválido
 function checagem(array) {
-  let cont = 0;
-  let contBiggerThan9 = 0;
-  let contLowerThan0 = 0;
-  let biggestCont = 0;
-  for (let index = 0; index < array.length; index += 1) {
-    cont = 0;
-    if (array[index] < 0) {
-      contLowerThan0 += 1;
-    }
-    if (array[index] > 9) {
-      contBiggerThan9 += 1;
-    }
-    for (let i in array) {
-      if (array[index] === array[i]) {
-        cont += 1;
-      }
-      if (cont > biggestCont) {
-        biggestCont = cont;
-      }
-    }
+  let teste = true;
+  let threeTimes = moreThanThreeTimes(array);
+  let biggerNine = biggerThanNine(array);
+  let minorZero = minorThanZero(array);
+  if (threeTimes === true || biggerNine === true || minorZero === true) {
+    teste = false;
   }
-  if (biggestCont >= 3 || contLowerThan0 > 0 || contBiggerThan9 > 0) {
-    return 'false';
+  return teste;
+}
+
+// Função que monta a primera parte do número
+function mont2(array) {
+  let res = '';
+  let numb = [];
+  for (let index = 0; index < 2; index += 1) {
+    numb.push(array[index]);
   }
-  return 'true';
+  return res.concat('(', numb.join(''), ')', ' ');
+}
+
+// Função que monta a segunda parte do número
+function mont5(array) {
+  let res = '';
+  let numb = [];
+  for (let index = 2; index < 7; index += 1) {
+    numb.push(array[index]);
+  }
+  numb = numb.join('');
+  return res.concat(numb);
+}
+
+// Função que monta a última parte do número
+function mont4(array) {
+  let numb = [];
+  for (let index = 7; index < 11; index += 1) {
+    numb.push(array[index]);
+  }
+  return numb.join('');
 }
 
 // Desafio 11
 function generatePhoneNumber(array) {
-  let numberCheck = checagem(array);
-  let twoFirst = []
-  let fivePost = []
-  let lastFor = []
-  if (array.length != 11) {
-    return 'Array com tamanho incorreto.'
-  }
-  if (numberCheck === 'false') {
+  let res = '';
+  let valid = checagem(array);
+  if (array.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  } if (valid === false) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
-  for (let index in array) {
-    if (index < 2) {
-      twoFirst.push(array[index]);
-    } if (index >= 2 && index < 7) {
-      fivePost.push(array[index]);
-    } if (index >= 7 && index < 11) {
-      lastFor.push(array[index]);
-    }
-  }
-  return '(' + twoFirst.join('') + ')' + ' ' + fivePost.join('') + '-' + lastFor.join('')
+  res = res.concat(mont2(array), mont5(array), '-', mont4(array));
+  return res;
 }
 
 // Desafio 12
