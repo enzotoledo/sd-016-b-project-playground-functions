@@ -62,16 +62,16 @@ function fizzBuzz(numTree) {
   let fizboz = [];
   for (ind = 0; ind < numTree.length; ind += 1) {
       if (numTree[ind] === 0){
-        fizboz.push("bug");
+        fizboz.push('bug');
         }
         else if (numTree[ind]% 3 === 0 && numTree[ind]% 5 === 0){
-        return fizboz.push("fizzBuzz");
+        return fizboz.push('fizzBuzz');
       }
         else if (numTree[ind]% 3 === 0 && numTree[ind]% 5 !== 0){
-        return fizboz.push("fizz");
+        return fizboz.push('fizz');
         }
         else if (numTree[ind]% 3 !== 0 && numTree[ind]% 5 === 0){
-        return fizboz.push("buzz");
+        return fizboz.push('buzz');
       }
       else{
         return fizboz.push('bug');
@@ -85,7 +85,6 @@ function encode() {
 function decode() {
   // seu código aqui
 }
-
 module.exports = {
   calcArea,
   catAndMouse,
