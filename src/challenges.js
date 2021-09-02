@@ -2,8 +2,8 @@
 function compareTrue(param1, param2) {
   if (param1 === true && param2 === true){
     return (true);
-  } 
-    return (false);   
+  }
+  return (false);
 }
 
 // Desafio 2
@@ -70,11 +70,57 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  let codedPhrase = "";
+  for (let vowels of phrase){
+    switch(vowels) {
+      case "a": 
+        codedPhrase += "1"
+        break;
+      case "e": 
+        codedPhrase += "2"
+        break;
+      case "i": 
+        codedPhrase += "3"
+        break;
+      case "o": 
+        codedPhrase += "4"
+        break;
+      case "u": 
+        codedPhrase += "5"
+        break;
+      default:
+        codedPhrase += vowels
+        break;
+    }
+  }
+return codedPhrase;
 }
-function decode() {
-  // seu código aqui
+function decode(phrase) {
+  let decodedPhrase = "";
+  for (let numbers of phrase){
+    switch(numbers) {
+      case "1": 
+        decodedPhrase += "a"
+        break;
+      case "2": 
+        decodedPhrase += "e"
+        break;
+      case "3": 
+        decodedPhrase += "i"
+        break;
+      case "4": 
+        decodedPhrase += "o"
+        break;
+      case "5": 
+        decodedPhrase += "u"
+        break;
+      default:
+        decodedPhrase += numbers
+        break;
+    }
+  }
+return decodedPhrase;
 }
 
 module.exports = {
