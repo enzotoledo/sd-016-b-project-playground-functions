@@ -92,10 +92,21 @@ let answer = false;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(input) {
+let numberInput = input.match(/[0-9]+/g);  // usei essa expressão para separar os numeros de dentro da string https://stackoverflow.com/questions/42532450/extract-number-from-string-javascript
+let count = 0;  
+let answer = null;
+for ( let i = 0; i < numberInput.length; i += 1){
+ count += parseInt(numberInput[i]); // usei o parseInt para transformar a string em numeros, retirado no site https://stackabuse.com/javascript-convert-string-to-number/
+  } 
+  if ( count === 1){
+    answer = count + " copo de água";
+  } else {
+    answer = count + " copos de água";
+  }
 
+return answer;
+}
 module.exports = {
   generatePhoneNumber,
   techList,
