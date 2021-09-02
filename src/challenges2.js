@@ -14,8 +14,6 @@ function techList(tech, name) {
 }
 
 // Desafio 11
-
-
 function generatePhoneNumber(phoneNumber) {
   let phonePattern = '';
   let counter = 0;
@@ -34,17 +32,23 @@ function generatePhoneNumber(phoneNumber) {
         phonePattern = 'não é possível gerar um número de telefone com esses valores';
       } else {
         phonePattern = `(${phoneNumber.slice(0, 3)} 
-        ${phoneNumber.slice(3, 8)}-${phoneNumber.slice(8, 12)})`;}
-    }        
+        ${phoneNumber.slice(3, 8)}-${phoneNumber.slice(8, 12)})`}
+    }
   }
   return phonePattern;
 } 
 
-
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let sumBC = lineB + lineC;
+  let subtractionBC = Math.abs(lineB - lineC);
+
+  if (sumBC > lineA && subtractionBC < lineA) {
+    return true;
+  } return false;
 }
+
+console.log(triangleCheck(10, 15, 8));
 
 // Desafio 13
 function hydrate() {
