@@ -20,7 +20,7 @@ console.log(calcArea(51, 1))
 
 // Desafio 3
 function splitSentence(office) {
-  let officeWork = office.split(" ", 2);
+  let officeWork = office.split(' ', );
   return officeWork; 
 }
 
@@ -116,9 +116,17 @@ function fizzBuzz(array) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+    string.replace(/a/g,'1');
+    return string
 }
+        
+
+let a = 'he there'
+console.log(a.replace("he there"))
+
+
+
 function decode() {
   // seu código aqui
 }

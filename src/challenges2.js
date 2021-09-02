@@ -1,7 +1,19 @@
 // Desafio 10
 function techList() {
-  // seu código aqui
-}
+ 
+  /*let obj = {
+    tech: "CSS",
+    name: "LUCAS"
+  },*/
+  let player = {
+    name: 'Marta',
+    lastName: 'Silva',
+    age: 34,
+    medals: { golden: 2, silver: 3 },
+  };
+  
+
+//}
 
 // Desafio 11
 function generatePhoneNumber() {
