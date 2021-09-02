@@ -10,16 +10,13 @@ function techList(arrayT,name) {
       for (let index = 0; index < arrayT.length; index += 1) {
 
       /*   usei essa forma de empurrar os valores do objeto dentro do array com base na forma que o Orlando Dantas usou https://github.com/tryber/sd-016-b-project-playground-functions/pull/83/commits/f16c46076b377cb88a7c1b27dad39cefb9690436  */
-        
         arrayobjeto.push(
            {
              tech: arrayT[index],
              name: name,
            },
          );
-       }
-      
-     
+       }    
        return arrayobjeto
 }
 
@@ -36,7 +33,7 @@ function triangleCheck(lineA,lineB,lineC) {
 }
 else{
     return false
-}
+  }
 }
 
 // Desafio 13
