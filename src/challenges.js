@@ -1,57 +1,56 @@
 // Desafio 1
 function compareTrue(a, b) {
-    if ((a === true) && (b === true)) {
+  if ((a === true) && (b === true)) {
     return true;
-    } else {
+  } else {
     return false;
-    }
-    }
-    compareTrue (true, true);
+  }
+}
     
-
-
 // Desafio 2
 function calcArea(base, height) {
-let area = ( (base * height)/ 2 );
-return area;
-    }
-    calcArea (10, 50);
+  let area = ( (base * height)/ 2 );
+  return area;
+}
 
 
 // Desafio 3
 function splitSentence(string) {
-let arrayDeString = string.split(' ');
-return arrayDeString;
-    }
-    splitSentence("go Trybe");
+  let arrayDeString = string.split(' ');
+  return arrayDeString;
+}
 
 
 // Desafio 4
-function concatName(string) {
-let stringDeArray = string[3] + ", " + string[0];
-let strinfDeArray2 = string[0] + ", " + string[2];
-return stringDeArray;
-
-    }
-    concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
+function concatName(stringArray) {
+  let stringDeArray = stringArray[stringArray.length -1] + ", " + stringArray[0];
+  return stringDeArray;
+}
    
-    
-
-
 // Desafio 5
 function footballPoints(wins, ties) {
-  if (wins === 0 && ties === 0) {
-    let result = 0;
-  }
-return 0; }
-  
-footballPoints (0, 0);
-
-// Desafio 6
-function highestCount() {
-  // seu código aqui
+  const pointsOfWins = 3;
+  const pointsOfTies = 1;
+  let resultChampion = (wins * pointsOfWins) + (ties * pointsOfTies);
+  return resultChampion;
 }
 
+// Desafio 6
+function highestCount(arrayDeNumeros) {
+  let biggestNumber = arrayDeNumeros[0];
+  for (let index = 1; index < arrayDeNumeros.length; index +=1) {
+    if (arrayDeNumeros[index] > biggestNumber) {
+      biggestNumber = arrayDeNumeros[index];
+    }
+  }
+  let vezesMaiorNumero = 0;
+  for (let index2 = 0; index2 < arrayDeNumeros.length; index2 +=1) {
+    if (arrayDeNumeros[index2] === biggestNumber) {
+      vezesMaiorNumero +=1;
+    }
+  }
+  return vezesMaiorNumero;
+}
 // Desafio 7
 function catAndMouse() {
   // seu código aqui
