@@ -31,18 +31,18 @@ function validaNumero(arrayValido) {
 }
 
 function validaRepeticao(arrayValido) {
-  let aux = 1;
+  let count = 1;
 
-  for (let countL = 0; countL < arrayValido.length; countL += 1) {
-    for (let countC = 0; countC < arrayValido.length; countC += 1) {
-      if (arrayValido[countL] === arrayValido[countC + 1]) {
-        aux += 1;
-        if (aux >= 3) {
+  for (const iteratorL of arrayValido) {
+    for (const iteratorC of arrayValido) {
+      if (iteratorL === iteratorC + 1) {
+        count += 1;
+        if (count >= 3) {
           return false;
         }
       }
     }
-    aux = 0;
+    count = 0;
   }
   return true;
 }
@@ -101,7 +101,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function arrayNumbersInteger(text) {
-  let captureSection = text.replace(/[^0-9]/g,'');
+  let captureSection = text.replace(/[^0-9]/g, '');
   let captureNumbers = captureSection.split('', 3);
   let arrayInteger = [];
 

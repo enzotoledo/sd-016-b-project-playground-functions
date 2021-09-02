@@ -64,13 +64,14 @@ function divide3e5(number) {
   return (number % 3 === 0 && number % 5 === 0);
 }
 
+// eslint-disable-next-line sonarjs/cognitive-complexity
 function fizzBuzz(array) {
   let novoArray = [];
 
-  for (let key in array) {
-    if (divide3e5(array[key]) === true) novoArray.push('fizzBuzz');
-    else if (divide3(array[key]) === true) novoArray.push('fizz');
-    else if (divide5(array[key]) === true) novoArray.push('buzz');
+  for (let iterator of array) {
+    if (divide3e5(iterator) === true) novoArray.push('fizzBuzz');
+    else if (divide3(iterator) === true) novoArray.push('fizz');
+    else if (divide5(iterator) === true) novoArray.push('buzz');
     else novoArray.push('bug!');
   }
   return novoArray;
