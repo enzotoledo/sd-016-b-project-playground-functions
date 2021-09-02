@@ -88,8 +88,15 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  lineA = Math.abs(lineA);
+  lineB = Math.abs(lineB);
+  lineC = Math.abs(lineC);
+
+  if (lineA > (lineB + lineC) || lineB > (lineA + lineC) || lineC > (lineA + lineB)) {
+    return false;
+  }
+  return true;
 }
 
 // Desafio 13
