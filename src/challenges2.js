@@ -87,11 +87,6 @@ function generatePhoneNumber(numbers) {
   return msgError;
 }
 
-// console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
-// console.log(generatePhoneNumber([8, 4, 9, 8, 7, 4, 3, 9, 0, 1, 5]));
-// console.log(generatePhoneNumber([9, 2, 3, 0, 5, -6, 7, 0, 1, 2, 10]));
-// console.log(generatePhoneNumber([0, 1, 6]));
-
 // Desafio 12
 function triangleCheck() {
   // seu código aqui
