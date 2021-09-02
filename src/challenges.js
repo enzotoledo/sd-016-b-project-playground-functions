@@ -32,16 +32,15 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(array) {
   let sum = 0;
-  let indexBigger = 0;
+  const max = Math.max(...array);
 
-  for (const key in array) {
-    if (array[indexBigger] < array[key]) indexBigger = key;
-  }
-  for (const key in array) {
-    if (array[indexBigger] === array[key]) sum += 1;
+  for (const iterator of array) {
+    if (max === iterator) sum += 1;
   }
   return sum;
 }
+
+console.log(highestCount([-2, -2, -1]));
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
