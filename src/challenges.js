@@ -28,25 +28,25 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount(maxNumber) {
+function highestCount() {
   //
 }
 
 // Desafio 7
-function catAndMouse(mouse, catA, catB) {
+function catAndMouse() {
   //
 }
 
 // Desafio 8
-function fizzBuzz(buzzFizz) {
+function fizzBuzz() {
   //
 }
 
 // Desafio 9
-function encode(codeY) {
+function encode() {
   //
 }
-function decode(codeX) {
+function decode() {
 }
 
 module.exports = {
