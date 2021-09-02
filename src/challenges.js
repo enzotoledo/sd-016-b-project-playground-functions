@@ -64,7 +64,6 @@ function divide3e5(number) {
   return (number % 3 === 0 && number % 5 === 0);
 }
 
-// eslint-disable-next-line sonarjs/cognitive-complexity
 function fizzBuzz(array) {
   let novoArray = [];
 
