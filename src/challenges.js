@@ -3,7 +3,7 @@ function compareTrue(ValorA, ValorB) {
   let compare = false;
   if (ValorA && ValorB) {
     compare = true;
-  }else {
+  } else {
     compare = false;
   }
   return compare;
