@@ -1,15 +1,17 @@
 // Desafio 10
 function techList(textTen, myname) {
+  let result = [];
+  let lista = [];
   if (textTen.length > 0) {
     let ordemtextTen = textTen.sort();
-    let lista = [];
     for (let objeto of ordemtextTen) {
-      lista.push({tech: objeto, name: myname})
+      lista.push({ tech: objeto, name: myname });
     }
-    return lista;
+    result = lista;
   } else {
-    return 'Vazio!';
+    result = 'Vazio!';
   }
+  return result;
 }
 
 // Desafio 11
@@ -18,18 +20,12 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck(lineA, lineB, lineC) {
-  let modAB = Math.abs(lineA-lineB);
-  let modAC = Math.abs(lineA-lineC);
-  let modCB = Math.abs(lineC-lineB);
-  let somAB = lineA + lineB;
-  let somAC = lineA + lineC;
-  let somCB = lineC + lineB;
+function triangleCheck(lnA, lnB, lnC) {
   let triangulo = false;
-  if (lineA > modCB && lineB > modAC && lineC > modAB){
-    if (lineA < somCB && lineB < somAC && lineC < somAB){
-      triangulo = true;
-    }
+  let md = [Math.abs(lnA - lnB), Math.abs(lnA - lnC), Math.abs(lnC - lnB)];
+  let sm = [lnA + lnB, lnA + lnC, lnC + lnB];
+  if (lnA > md[2] && lnB > md[1] && lnC > md[0] && lnA < sm[2] && lnB < sm[1] && lnC < sm[0]) {
+    triangulo = true;
   }
   return triangulo;
 }
