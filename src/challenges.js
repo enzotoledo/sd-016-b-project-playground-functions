@@ -33,11 +33,21 @@ function footballPoints(wins, ties) {
  console.log(footballPoints(1, 1))
 
 // Desafio 6
+
 function highestCount(numArray) {
-  
+  let frequency = 0
+  let highestNum = Math.max.apply(null, numArray)
+
+  for (let index of numArray) {
+    if (index === highestNum) {
+       frequency++;
+    }
+  }
+  return frequency
 }
 
-// Desafio 7
+
+// Desafio 7 abs
 function catAndMouse(mouse, cat1, cat2) {
   if (mouse - cat1 < mouse - cat2) {
     return "cat2"
@@ -71,7 +81,7 @@ function encode() {
   // seu código aqui
 }
 function decode() {
-  // seu código aqui
+  
 }
 
 module.exports = {
