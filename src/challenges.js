@@ -165,9 +165,6 @@ function techList (name,arrayTec){
 }
 
 
-console.log(techList("Lucas"
-  ,["React", "Jest", "HTML", "CSS", "JavaScript"]));
-
 
 module.exports = {
   calcArea,
