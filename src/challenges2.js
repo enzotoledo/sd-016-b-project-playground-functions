@@ -93,10 +93,12 @@ function triangleCheck(a, b, c) {
   return true;
 }
 
+// Referencia da funcao replace em https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript/30160994
 function catchNumbers(str) {
   return str.replace(/\D/g, '');
 }
 
+// Referencia de como pegar os digitos do replace , passar pra um array e depois somar em https://www.codegrepper.com/code-examples/javascript/split+digits+in+a+number+and+sum+them+javascript
 function convertNumbers(str) {
   let number = catchNumbers(str);
   let result = [];
