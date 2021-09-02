@@ -9,7 +9,7 @@ function compareTrue(value1, value2) {
 
 // Desafio 2
 function calcArea(base, height) {
-   return (base * height) / 2; 
+  return (base * height) / 2; 
 }
 
 // Desafio 3
@@ -55,7 +55,7 @@ function catAndMouse(mouse, catY, catX) {
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(check) {
   if (buzzFizz % 3 === 0 && buzzFizz % 5 === 0) {
     return 'fizzBuzz';
   }
@@ -66,6 +66,13 @@ function fizzBuzz() {
     return 'fizz';
   }
   return 'bug!'
+}
+function fizzBuzz(fuzzBizz) {
+  let result = [];
+  for (let buzzFizz of fuzzBizz) {
+    result.push(check(buzzFizz));
+  }
+  return result;
 }
 
 // Desafio 9
