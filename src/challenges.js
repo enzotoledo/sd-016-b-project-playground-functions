@@ -19,7 +19,7 @@ function splitSentence(manga) {
 
 // Desafio 4
 function concatName(nameConcat) {
-  return nameConcat[nameConcat.length -1] + '' + nameConcat[0]
+  return nameConcat[nameConcat.length -1] + ', ' + nameConcat[0]
 }
 
 // Desafio 5
@@ -30,7 +30,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(maxNumber) {
   let maxNumberA = maxNumber;
-  for (let index = 0; maxNumber.length; i += 1) {
+  for (let i = 0; maxNumber.length; i += 1) {
     for (let index = i + 1; maxNumberA.length; index += 1)
       if (maxNumber[i] === maxNumberA[index]) {
         maxNumber += 1;
@@ -41,11 +41,11 @@ function highestCount(maxNumber) {
 
 // Desafio 7
 function catAndMouse(mouse, catA, catB) {
-  if (catA - mouse < catB - mouse) {
-    return catA;
-  } else if (catB - mouse < catA - mouse) {
-    return catB;
-  } else if (catA - mouse === catB - mouse) {
+  if (Math.abs(mouse - catB) < Math.abs(mouse - catA)) {
+    return 'catB';
+  } else if (Math.abs(mouse - catA) < Math.abs(mouse - catB)) {
+    return 'catA';
+  } else if (Math.abs(mouse - catA) === Math.abs(mouse - catB)) {
     return 'os gatos trombam e o rato foge';
   } else {
     return 'resultado não encontrado'
@@ -54,12 +54,12 @@ function catAndMouse(mouse, catA, catB) {
 
 // Desafio 8
 function fizzBuzz(buzzFizz) {
-  for (index = 0; index < buzzFizz; indexx += 1) {
+  for (index = 0; index < buzzFizz; index+= 1) {
     if (buzzFizz % 3 === 0) {
       return 'fizz';
     } else if (buzzFizz % 5 === 0) {
       return 'buzz'
-    } else if (buzzFizz % 3 === 0 && buzzFizz % 5 === 0) {
+    } if (buzzFizz % 3 === 0 && buzzFizz % 5 === 0) {
       return 'fizzBuzz';
     } else {
       return 'bug';
@@ -74,7 +74,7 @@ function encode(codeY) {
   
 }
 function decode(codeX) {
-  let codeXDecode = { '1': 'a', '2': 'e', '3': 'i', '4': 'o', '5': 'u' }
+  let codeXDecode = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' }
   let codeXA = codeX.replace(/[12345]/g, (letras) => codeX[letras]);
 }
 
