@@ -1,4 +1,29 @@
 /* eslint-disable max-lines-per-function */
+
+// Extra Functions
+function mouseAndCat(mouse, cat1, cat2, gatosTrombam) {
+  if (cat1 > mouse) {
+    if (cat1 - mouse > mouse - cat2) {
+      return 'cat2';
+    } if (cat1 - mouse === mouse - cat2) {
+      return gatosTrombam;
+    }
+    return 'cat1';
+  } if (cat2 - mouse > mouse - cat1) {
+    return 'cat1';
+  } if (cat2 - mouse === mouse - cat1) {
+    return gatosTrombam;
+  }
+  return 'cat2';
+}
+function mouseAndCat2(mouse, cat1, cat2, gatosTrombam) {
+  if (cat1 > cat2) {
+    return 'cat2';
+  } if (cat1 < cat2) {
+    return 'cat1';
+  }
+  return gatosTrombam;
+}
 // Desafio 1
 function compareTrue(a, b) {
   if (a === true && b === true) {
@@ -53,8 +78,19 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqu
+function catAndMouse(mouse, cat1, cat2) {
+  const gatosTrombam = 'os gatos trombam e o rato foge';
+  if (cat1 > mouse && cat2 > mouse) {
+    return mouseAndCat2(mouse, cat1, cat2, gatosTrombam);
+  } if (cat1 < mouse && cat2 < mouse) {
+    if (cat1 > cat2) {
+      return 'cat1';
+    } if (cat1 > cat2) {
+      return 'cat2';
+    }
+    return gatosTrombam;
+  }
+  return mouseAndCat(mouse, cat1, cat2, gatosTrombam);
 }
 
 // Desafio 8

@@ -1,6 +1,14 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(array, name) {
+  let objeto = {};
+  if (array === []) {
+    return 'Vazio!';
+  }
+  let newArray = array.sort();
+  for (let i = 0; i < array.length; i += 1) {
+    objeto[i] = { 'tech': newArray[i], 'name': name };
+  }
+  return Object.getOwnPropertyNames(objeto);
 }
 
 // Desafio 11
