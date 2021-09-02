@@ -62,19 +62,24 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+let avaliaValor = (value) => {
+  if (value % 3 === 0 && value % 5 === 0) {
+    return 'fizzBuzz';
+  }
+  if (value % 3 === 0) {
+    return 'fizz';
+  }
+  if (value % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+};
+
 function fizzBuzz(bigArray) {
   let arrayFizzBuzz = [];
 
-  for(let index = 0; index < bigArray.length; index += 1) {
-    if (bigArray[index] % 3 === 0 && bigArray[index] % 5 === 0) {
-      arrayFizzBuzz.push("fizzBuzz");
-    } else if (bigArray[index] % 3 === 0) {
-      arrayFizzBuzz.push("fizz"); 
-    } else if (bigArray[index] % 5 === 0) {
-      arrayFizzBuzz.push("buzz");
-    } else if (bigArray[index] % 3 !== 0 && bigArray[index] % 5 !== 0) {
-      arrayFizzBuzz.push("bug!");
-    }
+  for (let index = 0; index < bigArray.length; index += 1) {
+    arrayFizzBuzz.push(avaliaValor(bigArray[index]));
   }
   return arrayFizzBuzz;
 }
@@ -96,7 +101,6 @@ function encode(findVowelsInString) {
 }
 
 function decode(findNumbersInString) {
-
   let decodedString = '';
 
   for (let index = 0; index < findNumbersInString.length; index += 1) {
