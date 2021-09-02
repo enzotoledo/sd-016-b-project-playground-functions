@@ -46,6 +46,7 @@ function footballPoints(wins, ties) {
 function highestCount(vetorNumber) {
   let ordenar = vetorNumber.sort(); // ordena o vetor em ordem crescente
   let maiorNumero = ordenar[vetorNumber.length -1];
+  let menorNumero = ordenar[0];
   let qtdRepete = 0;
 
   for(let cont = 0; cont < vetorNumber.length; cont+=1) {
@@ -59,7 +60,7 @@ function highestCount(vetorNumber) {
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2) {
   let distanciaCat1 = Math.abs(mouse - cat1); // abs deixa o número absoluto
-  let distanciaCat2 = Math.abs(mouse - cat2);
+  let distanciaCat2 = Math.abs(mouse - cat2); // Busquei informação do Math.abs no 
   let resultado;
 
   if(distanciaCat1 > distanciaCat2) {
@@ -74,33 +75,99 @@ function catAndMouse(mouse,cat1,cat2) {
 
 // Desafio 8
 function fizzBuzz(arryNumber) {
-  let retorno ;
+
   let respostaArray = [];
-  for (let index = 0; index < arryNumber.length ; index+=1 ){
-    if(arryNumber[index] % 3 === 0 && arryNumber[index]%5 === 0){
-      retorno = 'fizzBuzz';
-      respostaArray.push(retorno);
-    } else if(arryNumber[index] % 3 === 0){
-      retorno = 'fizz';
-      respostaArray.push(retorno);
-    }else if(arryNumber[index] % 5 === 0){
-      retorno = 'buzz';
-      respostaArray.push(retorno);
-    }else{
-      retorno = 'bug!';
-      respostaArray.push(retorno);
+
+  for (let index = 0; index < arryNumber.length ; index+=1 ) {
+    if(arryNumber[index] % 3 === 0 && arryNumber[index]%5 === 0) {
+      respostaArray.push('fizzBuzz');
+    } 
+    else if(arryNumber[index] % 3 === 0){
+      respostaArray.push('fizz');
+    }
+    else if(arryNumber[index] % 5 === 0){
+      respostaArray.push('buzz');
+    }
+    else{
+      respostaArray.push('bug!');
     }
   }
   return respostaArray;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(vogais) {
+  let vogalSeparada = vogais.split("");
+
+  for(let value in vogalSeparada){
+      if(vogalSeparada[value] === 'a'){
+        vogalSeparada[value] ='1';
+
+      } if(vogalSeparada[value] === 'e'){
+        vogalSeparada[value] ='2';
+
+      } if(vogalSeparada[value] === 'i'){
+        vogalSeparada[value] ='3';
+
+      } if(vogalSeparada[value] === 'o'){
+        vogalSeparada[value] ='4';
+
+      } if(vogalSeparada[value] === 'u'){
+        vogalSeparada[value] ='5';
+      }
+ }
+    return vogalSeparada.join("");
 }
-function decode() {
-  // seu código aqui
+//console.log(encode("hi there"));
+
+function decode(vogais) {
+  let vogalSeparada = vogais.split("");
+
+  for(let value in vogalSeparada){
+      if(vogalSeparada[value] === '1'){
+        vogalSeparada[value] ='a';
+
+      } if(vogalSeparada[value] === '2'){
+        vogalSeparada[value] ='e';
+
+      } if(vogalSeparada[value] === '3'){
+        vogalSeparada[value] ='i';
+
+      } if(vogalSeparada[value] === '4'){
+        vogalSeparada[value] ='o';
+
+      } if(vogalSeparada[value] === '5'){
+        vogalSeparada[value] ='u';
+      }
+ }
+    return vogalSeparada.join("");
+
 }
+
+//Desafio 10
+function techList (name,arrayTec){
+  let listaTecnologia = [];
+
+  for(let index in arrayTec){
+    
+      let tecnologias = {
+        nome: name,
+        tech : arrayTec[index]
+      }
+      listaTecnologia.push(tecnologias);
+    
+     if(arrayTec.length === 0){
+      return "Vazio!";
+    }
+  }
+
+  return listaTecnologia;
+}
+
+
+console.log(techList("Lucas"
+  ,["React", "Jest", "HTML", "CSS", "JavaScript"]));
+
 
 module.exports = {
   calcArea,
@@ -113,4 +180,5 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
+  techList
 };
