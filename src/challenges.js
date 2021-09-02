@@ -62,21 +62,93 @@ function highestCount(numeros) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse,cat1,cat2) {
+  if((mouse+cat1+cat2)/3 == 1){
+    return "os gatos trombam e o rato foge";
+  }else if(cat1 > cat2){
+    return "cat2";
+  }else if(cat1 < cat2){
+    return "cat1";
+  }
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(vetor) {
+  let vetorResposta = [];
+
+  for(let i = 0 ; i < vetor.length ; i++){
+    if((vetor[i]%3 == 0) && (vetor[i]%5 == 0)){
+      vetorResposta.push("fizzBuzz");
+      console.log(vetorResposta[i]);
+    }else if((vetor[i]%3 == 0)){
+      vetorResposta.push("fizz");
+    }else if((vetor[i]%5 == 0)){
+      vetorResposta.push("buzz");
+    }else {
+      vetorResposta.push("bug!");
+    }
+    return vetorResposta
+  }
+
+
+  
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+
+  let vetor = [];
+  let frase;
+  vetor = string.split("");
+  console.log(vetor);
+
+  for(let i = 0 ; i < vetor.length ; i++){
+
+    if(vetor[i] == "a"){
+        vetor[i] = "1";
+    }else if(vetor[i] == "e"){
+        vetor[i] = "2";
+    }else if(vetor[i] == "i"){
+        vetor[i] = "3";
+    }else if(vetor[i] == "o"){
+        vetor[i] = "4";
+    }else if(vetor[i] == "u"){
+        vetor[i] = "5";
+    }  
+    
+  }
+  
+  frase = vetor.join('');
+
+  return frase;
+
 }
-function decode() {
-  // seu código aqui
+function decode(string) {
+
+  let vetor = [];
+  let frase;
+  vetor = string.split("");
+  console.log(vetor);
+
+  for(let i = 0 ; i < vetor.length ; i++){
+
+    if(vetor[i] == "1"){
+        vetor[i] = "a";
+    }else if(vetor[i] == "2"){
+        vetor[i] = "e";
+    }else if(vetor[i] == "3"){
+        vetor[i] = "i";
+    }else if(vetor[i] == "4"){
+        vetor[i] = "o";
+    }else if(vetor[i] == "5"){
+        vetor[i] = "u";
+    }  
+    
+  }
+  
+  frase = vetor.join('');
+
+  return frase;
 }
 
 module.exports = {
