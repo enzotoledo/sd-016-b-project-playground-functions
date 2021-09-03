@@ -73,7 +73,7 @@ function hydrate(drinkString) {
   let numberOfDrinks = 0;
 
   for (let index = 0; index < drinkString.length; index += 1) {
-    if (!drinkString.isNaN(parseInt(drinkString[index], 10))) {
+    if (!isNaN(parseInt(drinkString[index], 10))) {
       counter += drinkString[index] - 0;
     }
   }
