@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(vauleA, vauleB) {
-  if((vauleA === true) && (vauleB === true)) {
+  if ((vauleA === true) && (vauleB === true)) {
     return true;
   }  
     return false;
