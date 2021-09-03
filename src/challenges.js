@@ -1,3 +1,6 @@
+/* eslint-disable complexity */
+/* eslint-disable max-lines-per-function */
+/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 1
 let resCompareTrue = false;
 function compareTrue(parm1, parm2) {
@@ -84,12 +87,13 @@ function fizzBuzz(arrayDiv) {
     let divPor5 = numberDiv[index] % 5;
     if (divPor3 === 0 && divPor5 === 0) {
       return resFizzBuzz.push('fizzBuz');
-    } if (divPor3 === 0) {
+    } else if (divPor3 === 0) {
       return resFizzBuzz.push('fizz');
-    } if (divPor5 === 0) {
+    } else if (divPor5 === 0) {
       return resFizzBuzz.push('buzz');
+    } else {
+      return resFizzBuzz.push('bug!');
     }
-    return resFizzBuzz.push('bug!');
   }
 }
 
