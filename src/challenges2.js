@@ -27,9 +27,15 @@ function triangleCheck(lineA, lineB, lineC) {
   if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
     result = true;
   }
-
   return result;
 }
+//function triangleCheck(lineA, lineB, lineC) {
+//  let lineACheck = (lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC));
+//  let lineBCheck = (lineB < (lineA + lineC)) && (lineB > Math.abs(lineA - lineC));
+//  let lineCCheck = (lineC < (lineB + lineA)) && (lineC > Math.abs(lineB - lineA));
+
+//  return lineACheck && lineBCheck && lineCCheck; (forma mais legivel porem não passa no lint :((( )
+
 
 // Desafio 13
 function hydrate() {
