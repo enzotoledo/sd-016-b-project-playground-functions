@@ -76,9 +76,30 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
+function mutate(number) {
+  let text = 'bug!';
+  if (number % 3 === 0) {
+    text = 'fizz';
+    if (number % 5 === 0) {
+      text = 'fizzBuzz';
+    }
+  }
+  if (number % 5 === 0 && number % 3 !== 0) {
+    text = 'buzz';
+  }
+  return text;
+}
+
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(arrNumbers) {
   // seu código aqui
+  let arrayStrings = [];
+  let resultString;
+  for (let number of arrNumbers) {
+    resultString = mutate(number);
+    arrayStrings.push(resultString);
+  }
+  return arrayStrings;
 }
 
 // Desafio 9
