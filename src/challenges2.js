@@ -15,7 +15,7 @@ function triangleCheck(lineA, lineB, lineC) {
     result = true;
   }
 
-  return result
+  return result;
 }
 
 // Desafio 13
