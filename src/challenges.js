@@ -82,6 +82,7 @@ function fizzBuzz(array) {
     }
 
 // Desafio 9
+
 function decode() {
 
 }
@@ -89,6 +90,8 @@ function decode() {
 function encode() {
 
 }
+
+
 
 module.exports = {
   calcArea,
