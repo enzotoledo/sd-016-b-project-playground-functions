@@ -1,11 +1,11 @@
 // Desafio 10
-function techList(nomes, tecnoName) {
+function techList(techName, name) {
   let resultado = [];
-  if (tecnoName.length === 0) {
+  if (techName.length === 0) {
     return 'Vazio!';
   } else {
-    for (let tecnoName of nomes.sort()) {
-      resultado.push({ nomes, tecnoName })
+    for (let tech of techName.sort()) {
+      resultado.push({ nomes, techName })
     }
     return resultado;
   }
