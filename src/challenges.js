@@ -18,7 +18,7 @@ function concatName(arr) {
 }
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = wins * 3 + ties; 
+  let points = wins * 3 + ties;
   return points;
 }
 
@@ -29,14 +29,12 @@ function highestCount(num) {
   let totalHighestNums = 0;
   for (let index in num) {
     if (highestNum < 0) {
-      totalHighestNums = +1
-    }
-    else if (num[index] === highestNum) {
+      totalHighestNums = +1;
+    } else if (num[index] === highestNum) {
       totalHighestNums ++;
     }
   } return totalHighestNums;
 }
-
 
 
 // Desafio 7
@@ -46,13 +44,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let gatosTrombam = 'os gatos trombam e o rato foge';
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return gato1ganha;
-  } if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)){
+  } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
     return gato2ganha;
   } else {
     return gatosTrombam;
   }
 }
-// Esse requisito só foi feito graças a thread do Leandro Boralli no Slack. 
+// Esse requisito só foi feito graças a thread do Leandro Boralli no Slack.
 // Referência: https://trybecourse.slack.com/archives/C02B4PPBERE/p1630436206374200
 
 
@@ -60,7 +58,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(arrOfNums) {
   let arrOfWords = [];
   for (let index = 0; index < arrOfNums.length; index++) {
-    if (arrOfNums[index] % 3 === 0 && arrOfNums[index] % 5 === 0){
+    if (arrOfNums[index] % 3 === 0 && arrOfNums[index] % 5 === 0) {
       arrOfWords.push('fizzBuzz');
     } else if (arrOfNums[index] % 5 === 0) {
       arrOfWords.push('buzz');
@@ -74,8 +72,8 @@ function fizzBuzz(arrOfNums) {
 
 // Desafio 9
 function encode() {
-  // seu código aqui 
-} 
+  // seu código aqui
+}
 function decode() {
   // seu código aqui
 }
