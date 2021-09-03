@@ -75,12 +75,12 @@ function fizzBuzz(fuzzBizz) {
 // Desafio 9
 function encode(codificando) {
   let codifica = { a: '1', e: '2', i: '3', o: '4', u: '5' };
-  let codificado = codifica.replace(/[aeiou]/g, (letras) => codifica[letras]);
+  let codificado = codificando.replace(/[aeiou]/g, (letras) => codifica[letras]);
   return codificado;
 }
 function decode(decodificando) {
   let decodifica = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
-  let decodificado = decodifica.replace(
+  let decodificado = decodificando.replace(
     /[12345]/g,
     (letras) => decodifica[letras]
   );
