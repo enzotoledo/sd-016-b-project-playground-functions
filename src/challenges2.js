@@ -9,8 +9,13 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  let result = false;
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+    result = true;
+  }
+
+  return result
 }
 
 // Desafio 13
