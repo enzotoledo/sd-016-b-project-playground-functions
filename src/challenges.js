@@ -3,8 +3,7 @@ function compareTrue(a, b) {
   return a && b;
 }
 
-//Recebi dicas valiosas do Gabriel Rodrigues Leite (https://github.com/gabrielrodriguesleite) que me ajudaram a simplificar o código desse desafio, fica aqui o meu agradecimento.
-// 
+// Recebi dicas valiosas do Gabriel Rodrigues Leite (https://github.com/gabrielrodriguesleite) que me ajudaram a simplificar o código desse desafio, fica aqui o meu agradecimento.
 
 // Desafio 2
 function calcArea(base, height) {
@@ -13,18 +12,18 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  return string.split(" ");
+  return string.split(' ');
 }
-//Créditos ao Gabriel Rodrigues Leite (https://github.com/gabrielrodriguesleite) por me sugerir a função split(), que eu ainda não conhecia!
+// Créditos ao Gabriel Rodrigues Leite (https://github.com/gabrielrodriguesleite) por me sugerir a função split(), que eu ainda não conhecia!
 
 // Desafio 4
 function concatName(arrayOfStrings) {
-  return `${arrayOfStrings[arrayOfStrings.length - 1]}, ${arrayOfStrings[0]}`;;
+  return `${arrayOfStrings[arrayOfStrings.length - 1]}, ${arrayOfStrings[0]}`;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return wins * 3 + ties;;
+  return wins * 3 + ties;
 }
 
 // Desafio 6
