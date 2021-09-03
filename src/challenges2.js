@@ -21,9 +21,7 @@ function counting(number) {
         counter += 1;
       }
     }
-    if (counter >= 3) {
-      return true;
-    }
+    if (counter >= 3) return true;
   }
   return false;
 }
@@ -70,8 +68,21 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinkString) {
+  let counter = 0;
+  let numberOfDrinks = 0;
+
+  for (let index = 0; index < drinkString.length; index += 1) {
+    if (!isNaN(parseInt(drinkString[index]))) {
+      counter += drinkString[index] - 0;
+    }
+  }
+  if (counter === 1) {
+    numberOfDrinks = `${counter} copo de água`;
+  } else {
+    numberOfDrinks = `${counter} copos de água`;
+  }
+  return numberOfDrinks;
 }
 
 module.exports = {
