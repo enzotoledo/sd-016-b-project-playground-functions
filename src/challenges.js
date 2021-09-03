@@ -1,10 +1,6 @@
 // Desafio 1
 function compareTrue(arg, arg2) {
-  if ((arg == true) && (arg2 == true)) {
-    return true;
-  } else {
-    return false;
-  }
+  return arg && arg2;
 }
 
 // Desafio 2
