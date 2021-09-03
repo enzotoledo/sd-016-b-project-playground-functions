@@ -75,7 +75,7 @@ function fizzBuzz(fuzzBizz) {
 // Desafio 9
 function encode(codificando) {
   let codifica = { a: '1', e: '2', i: '3', o: '4', u: '5' };
-  let codificado = codifica.replace(/[aeiou]/g, (letras) => gocode[letras]);
+  let codificado = codifica.replace(/[aeiou]/g, (letras) => codifica[letras]);
   return codificado;
 }
 function decode(decodificando) {
