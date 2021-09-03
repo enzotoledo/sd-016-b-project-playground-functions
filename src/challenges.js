@@ -60,20 +60,32 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function bugFizzBuzz(call) {
-  if (call % 3 === 0 && call % 5 === 0) return 'fizzBuzz';
-  if (call % 3 === 0) return 'fizz';
-  if (call % 5 === 0) return 'buzz';
-  return 'bug!';
-}
-
 function fizzBuzz(array) {
   let frase = [];
-  for (let i of array) {
-    frase.push(bugFizzBuzz(i));
-  }
+  // Expected to return a value in function https://eslint.org/docs/rules/array-callback-return (map => forEach)
+  // array.map(function (call) {
+  array.forEach(function (call) {
+    if (call % 15 === 0) frase.push('fizzBuzz');
+    else if (call % 5 === 0) frase.push('buzz');
+    else if (call % 3 === 0) frase.push('fizz');
+    else frase.push('bug!');
+  });
   return frase;
 }
+// function bugFizzBuzz(call) {
+//   if (call % 3 === 0 && call % 5 === 0) return 'fizzBuzz';
+//   if (call % 3 === 0) return 'fizz';
+//   if (call % 5 === 0) return 'buzz';
+//   return 'bug!';
+// }
+// function fizzBuzz(array) {
+//   let frase = [];
+//   for (let i of array) {
+//     frase.push(bugFizzBuzz(i));
+//   }
+//   return frase;
+// }
+// function fizzBuzz(array) {
 // let frase = [];
 // const d1 = array.filter((div1) => ((div1 % 3 !== 0) && (div1 % 5 !== 0)));
 // const d3 = array.filter((div3) => ((div3 % 3 === 0) && (div3 % 5 !== 0)));
@@ -104,7 +116,7 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+// return array.replace (/ [aeiou] / g, '' ");
 }
 function decode() {
   // seu código aqui
