@@ -21,8 +21,7 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(string) {
-  let arrayDaString = string.split(' ');
-  let result = arrayDaString[arrayDaString.length-1]+","+ arrayDaString[0];
+  let result = string[string.length-1]+","+ string[0];
   return result;
 }
 
@@ -61,9 +60,7 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(lista) {
-  let array = lista.split(",");
-  console.log(array);
+function fizzBuzz(array){
   let novaArray = [];
   for(let i=0; i<array.length; i++) {
     if(array[i]%3==0 && array[i]%5==0){
@@ -82,12 +79,44 @@ function fizzBuzz(lista) {
 fizzBuzz ([2, 15, 7, 9, 45])
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  for(i=0; i<string.length; i++){
+    if(string[i] ==="a"){
+      string = string.replace('a', '1');
+    }else if(string[i] === "e"){
+      string = string.replace('e', '2');
+    }else if(string[i] === "i"){
+      string = string.replace('i', '3');
+    }else if(string[i] === "o"){
+      string = string.replace('o', '4');
+    }else if(string[i] === "u"){
+      string = string.replace('u', '5');
+    }
+  }
+  console.log(string)
 }
-function decode() {
-  // seu código aqui
+encode("hi there!")
+
+function decode(stringCodificada) {
+  let string ='';
+  for(i=0; i<stringCodificada.length; i++){
+    if(stringCodificada[i] === 1){
+      stringCodificada = stringCodificada.replace('1','a');
+    }else if(stringCodificada[i] === 2){
+      stringCodificada = stringCodificada.replace('2','e');
+    }else if(stringCodificada[i] === 3){
+      stringCodificada = stringCodificada.replace('3','i');
+    }else if(stringCodificada[i] === 4){
+      stringCodificada = stringCodificada.replace('4','o');
+    }else if(stringCodificada[i] === 5){
+      stringCodificada = stringCodificada.replace('5','u');
+    }
+  }
+  string = stringCodificada;
+  console.log(string);
 }
+decode("h3 th2r2!")
+
 
 module.exports = {
   calcArea,
