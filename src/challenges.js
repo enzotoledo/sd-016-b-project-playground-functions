@@ -60,20 +60,26 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz(teste) {
-  let result = [];
-  for (let i = 0; i < teste.length; i += 1) {
-    if (Math.trunc(teste[i] % 3) === 0 && Math.trunc(teste[i] % 5) === 0) {
-      result.push('fizzBuzz');
-    } else if (Math.trunc(teste[i] % 3) === 0) {
-      result.push('fizz');
-    } else if (Math.trunc(teste[i] % 5) === 0) {
-      result.push('buzz');
-    } else {
-      result.push('bug!');
-    }
+/* A função abaixo faz parte da resolução do Desafio 8, foi feita para reduzir a complexidade da function exigida pelo lint na resolução principal do desafio proposto. */
+
+function resultadoFinal(numAtual, arrayFinal) {
+  if (Math.trunc(numAtual % 3) === 0 && Math.trunc(numAtual % 5) === 0) {
+    arrayFinal.push('fizzBuzz');
+  } else if (Math.trunc(numAtual % 3) === 0) {
+    arrayFinal.push('fizz');
+  } else if (Math.trunc(numAtual % 5) === 0) {
+    arrayFinal.push('buzz');
+  } else {
+    arrayFinal.push('bug!');
   }
-  return result;
+}
+
+function fizzBuzz(arrayInicial) {
+  let resultado = [];
+  for (let i = 0; i < arrayInicial.length; i += 1) {
+    resultadoFinal(arrayInicial[i], resultado);
+  }
+  return resultado;
 }
 
 // Desafio 9
