@@ -16,30 +16,32 @@ function techList(techs, name) {
 }
 
 // Desafio 11
-function countMaxRepeatedNumber(numbers) {
-  let result = 0;
-  let counter;
-  for (let i = 1; i < numbers.length; i += 1) {
-    counter = 0;
-    for (let k = 0; k < numbers.length; k += 1) {
-      if (numbers[k] === numbers[i]) counter += 1;
-    }
-    if (counter > result) {
-      result = counter;
-    }
+function countMaxRepeatedNumber(number, list) {
+  let counter = 0;
+  for (const key in list) {
+    if (list[key] === number) counter += 1;
   }
-  return result;
+  return counter;
 }
-
+function validatePhoneNumberDigit(digit) {
+  if (digit < 0 || digit > 9) {
+    return false;
+  }
+  return true;
+}
 function generatePhoneNumber(numbers) {
   let errorMsg = 'não é possível gerar um número de telefone com esses valores';
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  if (countMaxRepeatedNumber(numbers) >= 3) {
-    return errorMsg;
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (
+      !validatePhoneNumberDigit(numbers[i])
+      || countMaxRepeatedNumber(numbers[i], numbers) >= 3
+    ) {
+      return errorMsg;
+    }
   }
-
   let phoneNumber = numbers;
   phoneNumber.splice(0, 0, '(');
   phoneNumber.splice(3, 0, ')');
