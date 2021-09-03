@@ -1,15 +1,14 @@
 // Desafio 1
 function compareTrue(vauleA, vauleB) {
-  if( (vauleA == true) && (vauleB== true)){
+  if((vauleA === true) && (vauleB === true)) {
     return true;
-  } else { 
+  }  
     return false;
-  }
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return ((base*height)/2);
+  return ((base * height) / 2);
 }
 
 // Desafio 3
@@ -40,24 +39,22 @@ console.log(higthNumber);
  }
  return counter;
 }
-console.log(highestCount([1, 9, 2, 3, 9, 5, 7]))
-/*
-  let higthNumber[0];
-  let counter = 0;
+/*let higthNumber = [0];
+let counter = 0;
 
-  for (let index = 0; index < numbers.length; index +=1) {
-    if (numbers[index] > higthNumber) {
+for (let index = 0; index < numbers.length; index +=1) {
+ if (numbers[index] > higthNumber) {
       higthNumer = numbers[index];
       counter = 0;
     }
 
-    if (numbers[index] === higthNumber) {
+ if (numbers[index] === higthNumber) {
       counter += 1;
     }
-  }
-  return counter;
-}
-*/
+ }
+return counter;*/
+
+
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
