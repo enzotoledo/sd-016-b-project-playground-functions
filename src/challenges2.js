@@ -66,9 +66,9 @@ function triangleCheck(lineA, lineB, LineC) {
   let diffLines = 0;
 
   for (let index = 0; index < 4; index += 1) {
-    sumLines = arrayTriangle[index +1] + arrayTriangle[index + 2];
+    sumLines = arrayTriangle[index + 1] + arrayTriangle[index + 2];
 
-    diffLines = Math.abs(arrayTriangle[index +1] - arrayTriangle[index + 2]);
+    diffLines = Math.abs(arrayTriangle[index + 1] - arrayTriangle[index + 2]);
 
     if ((arrayTriangle[index] >= sumLines) || (arrayTriangle[index] <= diffLines)) {
       lineTriangleCheck = false;
@@ -78,8 +78,24 @@ function triangleCheck(lineA, lineB, LineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(text) {
+  let regexp = /\d+/g;
+
+  let matchesArray = text.match(regexp).map(Number);
+
+  let cupsWatter = 0;
+
+  let numberCupsWatter = 0;
+
+  for (let index = 0; index < matchesArray.length; index += 1) {
+    cupsWatter += matchesArray[index];
+  }
+  if (cupsWatter > 1) {
+    numberCupsWatter = cupsWatter + ' copos de água';
+  } else {
+    numberCupsWatter = '1 copo de água';
+  }
+  return numberCupsWatter;
 }
 
 module.exports = {
