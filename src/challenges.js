@@ -1,5 +1,7 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(valor1, valor2) {
+  if ( valor1 =true && valor2 = true){compareTrue=true}
+  else {compareTrue=false}
  
 }
 
