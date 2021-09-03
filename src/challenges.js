@@ -10,7 +10,8 @@ function compareTrue(bool1, bool2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return base * height 
+  let triangleArea = (base * height) / 2;
+  return triangleArea;
 }
 
 
@@ -23,7 +24,7 @@ function splitSentence(string) {
 let Arr = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']
 
 function concatName(stringArr) {
-return stringArr[stringArr.length - 1] + " " + stringArr[0]
+return stringArr[stringArr.length - 1] + ", " + stringArr[0]
 } console.log(concatName(Arr))
 
 // Desafio 5
@@ -62,19 +63,19 @@ function catAndMouse(mouse, cat1, cat2) {
 let fizzArr = [] 
 
 function fizzBuzz(numArray2) {
-  for (let index = 0; index < numArray2.length; index++) {    
+  for (let index = 0; index < numArray2.length; index += 1) {    
     if (numArray2[index] % 5 === 0 && numArray2[index] % 3 === 0 ) {
-      fizzArr.push("fizzBuzz"); 
-     } else if (numArray2[index] % 5 === 0) {
-      fizzArr.push("buzz");         
-      } else if (numArray2[index] % 3 === 0) {
-        fizzArr.push("fizz"); 
-      } else { 
-        fizzArr.push("bug");
+      fizzArr.push('fizzBuzz'); 
+    } else if (numArray2[index] % 5 === 0) {
+      fizzArr.push('buzz');         
+    } else if (numArray2[index] % 3 === 0) {
+      fizzArr.push('fizz'); 
+    } else { 
+      fizzArr.push('bug');
       }
     }  return fizzArr
       }
- console.log(fizzBuzz([2, 15, 7, 9, 45]))
+
 
 // Desafio 9
 function encode() {
