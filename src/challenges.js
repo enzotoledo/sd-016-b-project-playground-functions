@@ -24,17 +24,20 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(num) {
-  let organizedNums = num.sort();
-  let highestNums = organizedNums[num.length - 1];
+  let organizedNums = num.sort()
+  let highestNum = num[organizedNums.length - 1]
   let totalHighestNums = 0;
-  let negativeNums
   for (let index in num){
-    if(Math.abs(num[index]) === highestNums){
+    if (highestNum < 0){
+      totalHighestNums = +1
+    }
+     else if (num[index] === highestNum){
       totalHighestNums ++;
     }
-  }
-  return totalHighestNums;
-}
+  }return totalHighestNums;
+ }
+
+
 
 // Desafio 7
 function catAndMouse(mouse,cat1,cat2){
@@ -70,8 +73,10 @@ function fizzBuzz(arrOfNums) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(phrase) {
+  for (let index = 0; index > phrases.length; index++){
+    if (phrases[index]){}
+  }
 }
 function decode() {
   // seu código aqui
