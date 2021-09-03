@@ -81,83 +81,14 @@ function fizzBuzz(array) {
     return array;
     }
 
-
 // Desafio 9
-function encode(letterNumber) {
-  let result = '';
-  for (i = 0; i < letterNumber.length; i += 1) {
-    if (letterNumber[i] === "a") {
-      result += "1";
+function decode() {
 
-    } else if (letterNumber[i] === "e") {
-      result += "2";
-
-    } else if (letterNumber[i] === "i") {
-      result += "3";
-
-    } else if (letterNumber[i] === "o") {
-      result += "4";
-
-    } else if (letterNumber[i] === "u") {
-      result += "5";
-
-    } else {
-      result += letterNumber[i];
-    }
-}
-return result;
 }
 
+function encode() {
 
-function decode(numberLetter) {
-  let result = '';
-  for (i = 0; i < letterNumber.length; i += 1) {
-    if (letterNumber[i] === "1") {
-      result += "a";
-
-    } else if (letterNumber[i] === "2") {
-      result += "e";
-
-    } else if (letterNumber[i] === "3") {
-      result += "i";
-
-    } else if (letterNumber[i] === "4") {
-      result += "o";
-
-    } else if (letterNumber[i] === "5") {
-      result += "u";
-
-    } else {
-      result += letterNumber[i];
-    }
 }
-return result;
-}
-
-  // Desafio 10
-
-  function techList (array, name) {
-    let sortedArray = array.sort();
-    let returnArray = [];
-    let result;
-    
-    for (let i = 0; i < sortedArray.length; i += 1) {
-      returnArray.push (
-        {
-          tech: sortedArray[i],
-          name: name,
-        }
-      );
-    }
-
-    if (returnArray.length === 0) {
-      result = "vazio!";
-
-    } else {
-      result = sortedArray;
-    }
-    return result;
-    }
 
 module.exports = {
   calcArea,
