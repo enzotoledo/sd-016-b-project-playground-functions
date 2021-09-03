@@ -40,14 +40,17 @@ function highestCount(maxNumber) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
-    return 'cat1';
+  if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
+    return 'os gatos trombam e o rato foge';
   } else if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
     return 'cat2';
-  } else if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
-    return 'os gatos se trombaram e o rato foge';
+  } else if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+    return 'cat1';
+  } else {
+    return 'sem resultado';
   }
 }
+
 
 // Desafio 8
 function check(buzzFizz) {
@@ -71,15 +74,14 @@ function fizzBuzz(fuzzBizz) {
 }
 
 // Desafio 9
-function encode(gocodeA) {
+function encode(codifica) {
   let gocode = { a: '1', e: '2', i: '3', o: '4', u: '5' };
   let coded = gocode.replace(/[aeiou]/g, (letras) => gocode[letras]);
   return coded;
 }
-function decode(uncodeB) {
-  let uncode = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
-  let uncoded = uncode.replace(/[12345]/g, (letras) => uncoded[letras]);
-  return uncoded;
+function decode(decodifica) {
+  let decodifica = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
+  return encode(codifica);
 }
 
 module.exports = {
