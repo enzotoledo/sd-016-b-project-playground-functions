@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  return value1 && value2
+  return value1 && value2;
 }
 
 // Desafio 2
@@ -15,7 +15,6 @@ function splitSentence(manga) {
 
 // Desafio 4
 function concatName(nameConcat) {
-  let namConcat = 0;
   return nameConcat = nameConcat[nameConcat.length - 1] + ',' + nameConcat[0];
 }
 
