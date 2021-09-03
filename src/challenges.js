@@ -21,101 +21,96 @@ function splitSentence(frase) {
 
 // Desafio 4
 function concatName(string) {
-  let result = string[string.length-1]+","+ string[0];
-  return result;
+  return string[string.length-1] + ',' + string[0];
 }
+
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  points = (wins*3)+ties;
-  return points;
+  return (wins*3)+ties;
 }
 
 
 // Desafio 6
 function highestCount(numeros) {
-  let arrayDosNumeros = numeros.split(",");
-  let max = Math.max(...arrayDosNumeros)
+  let max = Math.max(...numeros)
   let contadorMaiorNumero = 0;
-  for(let i=0; i<arrayDosNumeros.length;i++){
-    if(arrayDosNumeros[i]== max){
+  for(let i=0; i<numeros.length; i++) {
+    if(numeros[i] == max){
       contadorMaiorNumero += 1;
     }
   } 
   return contadorMaiorNumero;
 }
 
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
- let distanciaCat1 = Math.abs(cat1-mouse);
- let distanciaCat2 = Math.abs(cat2-mouse);
-  if(distanciaCat1>distanciaCat2) {
-    return "cat1"; 
-  }else if(distanciaCat2>distanciaCat1) {
-    return "cat2";
+ let distanciaCat1 = Math.abs(cat1 - mouse);
+ let distanciaCat2 = Math.abs(cat2 - mouse);
+  if(distanciaCat1 > distanciaCat2) {
+    return "cat2"; 
+  }else if(distanciaCat2 > distanciaCat1) {
+    return "cat1";
   }else {
     return "os gatos trombam e o rato foge";
   } 
 }
 
+
 // Desafio 8
-function fizzBuzz(array){
+function fizzBuzz(array) {
   let novaArray = [];
   for(let i=0; i<array.length; i++) {
-    if(array[i]%3==0 && array[i]%5==0){
+    if(array[i] % 3 === 0 && array[i] % 5 === 0) {
       novaArray[i] = "fizzbuzz";
-    }else if(array[i]%3==0){
+    }else if(array[i] % 3 === 0) {
       novaArray[i] = "fizz";
-    }else if(array[i]%5==0){
+    }else if(array[i] % 5 ===0) {
       novaArray[i] = "buzz";
     }else{
       novaArray[i] = "bug!";
     }
-    
   }
-  console.log(novaArray);
+  return novaArray;
 }
-fizzBuzz ([2, 15, 7, 9, 45])
 
 // Desafio 9
 function encode(string) {
   for(i=0; i<string.length; i++){
-    if(string[i] ==="a"){
+    if(string[i] =="a"){
       string = string.replace('a', '1');
-    }else if(string[i] === "e"){
+    }else if(string[i] == "e"){
       string = string.replace('e', '2');
-    }else if(string[i] === "i"){
+    }else if(string[i] == "i"){
       string = string.replace('i', '3');
-    }else if(string[i] === "o"){
+    }else if(string[i] == "o"){
       string = string.replace('o', '4');
-    }else if(string[i] === "u"){
+    }else if(string[i] == "u"){
       string = string.replace('u', '5');
     }
   }
-  console.log(string)
+  return string;
 }
-encode("hi there!")
 
 function decode(stringCodificada) {
-  let string ='';
-  for(i=0; i<stringCodificada.length; i++){
-    if(stringCodificada[i] === 1){
+  let decodificada ='';
+  for(i=0; i < stringCodificada.length; i++) {
+    if(stringCodificada[i] == 1){
       stringCodificada = stringCodificada.replace('1','a');
-    }else if(stringCodificada[i] === 2){
+    }else if(stringCodificada[i] == 2){
       stringCodificada = stringCodificada.replace('2','e');
-    }else if(stringCodificada[i] === 3){
+    }else if(stringCodificada[i] == 3){
       stringCodificada = stringCodificada.replace('3','i');
-    }else if(stringCodificada[i] === 4){
+    }else if(stringCodificada[i] == 4){
       stringCodificada = stringCodificada.replace('4','o');
-    }else if(stringCodificada[i] === 5){
+    }else if(stringCodificada[i] == 5){
       stringCodificada = stringCodificada.replace('5','u');
     }
   }
-  string = stringCodificada;
-  console.log(string);
+  decodificada = stringCodificada;
+  return decodificada;
 }
-decode("h3 th2r2!")
+
 
 
 module.exports = {
