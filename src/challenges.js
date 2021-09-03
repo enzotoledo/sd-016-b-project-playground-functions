@@ -29,26 +29,29 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-let counter = [];
-let higthNumber = Math.max(numbers);
+let counter = 0;
+let higthNumber = Math.max(...numbers);
+console.log(higthNumber);
 
   for (let index = 0; index < numbers.length; index+=1) {
    if (higthNumber === numbers[index]) {
      counter +=1;
    }
-  return counter;
  }
+ return counter;
 }
-
+console.log(highestCount([1, 9, 2, 3, 9, 5, 7]))
 /*
   let higthNumber[0];
   let counter = 0;
 
   for (let index = 0; index < numbers.length; index +=1) {
     if (numbers[index] > higthNumber) {
-      maiorNumero = arrayDeNumeros[index];
+      higthNumer = numbers[index];
+      counter = 0;
     }
-    if (number[index] === higthNumber) {
+
+    if (numbers[index] === higthNumber) {
       counter += 1;
     }
   }
@@ -57,46 +60,46 @@ let higthNumber = Math.max(numbers);
 */
 
 // Desafio 7
-function catAndMouse(cat1, cat2, mouse) {
+function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
   } 
   else if(Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
     return 'cat2';
-  } 
-  else if (Math.abs(cat1 - mouse) == Math.abs(cat2 - mouse)) {
-    return ('os gatos trombam e o rato foge');
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(numbers) {
   let mensager = []
   for (let index = 0; index < numbers.length; index+=1) {
-    if (numbers[index]%3 === 0) {
-      return mensager.push ('fizz');
+    if (numbers[index]%3 === 0 && numbers[index]%5 === 0) {
+      mensager.push ('fizzBuzz');
     } else if (numbers[index]%5 === 0) {
-      return mensager.push('buzz');
-    } else if((numbers[index]%3 ) && (numbers[index]%5)) {
-      return mensager.push('fizzbuzz');
-    } else { 
-      return mensager.push ('bug!');
-    }
-  }    
+      mensager.push('buzz');
+    } else if(numbers[index]%3 === 0) {
+      mensager.push('fizz');
+    }  
+      else mensager.push ('bug!');
+  }
+  return mensager   
 }
 
 //if elseesafio 9
 function encode(msg) {
+ 
  msg = msg.replace(/[a]/g, '1');
  msg = msg.replace(/[e]/g, '2');
  msg = msg.replace(/[i]/g, '3');
  msg = msg.replace(/[o]/g, '4');
- msg = msg.replace(/[u]/g, '5');
-return msg;
+ msg= msg.replace(/[u]/g, '5');
+ return msg;
 }
 // Desafio concluido com dicas do Luiz Wanderson.
 
-function decode() {
+function decode(msg) {
+
   msg = msg.replace(/[1]/g, 'a');
   msg = msg.replace(/[2]/g, 'e');
   msg = msg.replace(/[3]/g, 'i');
@@ -104,6 +107,7 @@ function decode() {
   msg = msg.replace(/[5]/g, 'u');
  return msg;
 }
+
 
 module.exports = {
   calcArea,
