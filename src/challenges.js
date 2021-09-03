@@ -18,35 +18,35 @@ function concatName(arr) {
 }
 // Desafio 5
 function footballPoints(wins, ties) {
-  let points = wins * 3 + ties 
-  return points
+  let points = wins * 3 + ties; 
+  return points;
 }
 
 // Desafio 6
 function highestCount(num) {
-  let organizedNums = num.sort()
-  let highestNum = num[organizedNums.length - 1]
+  let organizedNums = num.sort();
+  let highestNum = num[organizedNums.length - 1];
   let totalHighestNums = 0;
-  for (let index in num){
-    if (highestNum < 0){
+  for (let index in num) {
+    if (highestNum < 0) {
       totalHighestNums = +1
     }
-     else if (num[index] === highestNum){
+    else if (num[index] === highestNum) {
       totalHighestNums ++;
     }
-  }return totalHighestNums;
- }
+  } return totalHighestNums;
+}
 
 
 
 // Desafio 7
-function catAndMouse(mouse,cat1,cat2){
-  let gato1ganha = 'cat1'
-  let gato2ganha = 'cat2'
-  let gatosTrombam = 'os gatos trombam e o rato foge'
-  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)){
+function catAndMouse(mouse, cat1, cat2) {
+  let gato1ganha = 'cat1';
+  let gato2ganha = 'cat2';
+  let gatosTrombam = 'os gatos trombam e o rato foge';
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return gato1ganha;
-  } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)){
+  } if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)){
     return gato2ganha;
   } else {
     return gatosTrombam;
@@ -58,26 +58,24 @@ function catAndMouse(mouse,cat1,cat2){
 
 // Desafio 8
 function fizzBuzz(arrOfNums) {
-  let arrOfWords = []
+  let arrOfWords = [];
   for (let index = 0; index < arrOfNums.length; index++) {
     if (arrOfNums[index] % 3 === 0 && arrOfNums[index] % 5 === 0){
       arrOfWords.push('fizzBuzz');
     } else if (arrOfNums[index] % 5 === 0) {
       arrOfWords.push('buzz');
     } else if (arrOfNums[index] % 3 === 0) {
-      arrOfWords.push('fizz')
+      arrOfWords.push('fizz');
     } else {
-      arrOfWords.push('bug!')
+      arrOfWords.push('bug!');
     }
-  } return arrOfWords
+  } return arrOfWords;
 }
 
 // Desafio 9
-function encode(phrase) {
-  for (let index = 0; index > phrases.length; index++){
-    if (phrases[index]){}
-  }
-}
+function encode() {
+  // seu código aqui 
+} 
 function decode() {
   // seu código aqui
 }
