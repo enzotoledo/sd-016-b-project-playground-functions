@@ -73,19 +73,12 @@ function fizzBuzz(tree) {
   }
   return fazbuz;
 }
-// essa '!' na palavra bug me bugou o dia inteiro =(
-
-// function coder(str) {
-// let codigo = str.replace(/a/gi, 1).replace(/e/gi, 2).replace(/i/gi, 3).replace(/o/gi, 4).replace(/u/gi, 5);
 
 // Desafio 9
 function encode(fraze) {
-//  let frase = 'abeiouua';
   let ecod = fraze.replace(/a/g, 1).replace(/e/g, 2).replace(/i/g, 3)
     .replace(/o/g, 4)
     .replace(/u/g, 5);
-  // codigo = codigo.join('');
-  // console.log(codigo);
   return ecod;
 }
 
