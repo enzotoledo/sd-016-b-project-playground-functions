@@ -85,9 +85,27 @@ function fizzBuzz(array) {
   }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+  let splitString = string.split('');
+  
+  for (let i in splitString) {
+    if(splitString[i] === "a") {
+      splitString[i] = 1;
+    } else if (splitString[i] === "e") {
+      splitString[i] = 2;
+    } else if (splitString[i] === "i") {
+      splitString[i] = 3;
+    } else if (splitString[i] === "o") {
+      splitString[i] = 4;
+    } else if (splitString[i] === "u") {
+      splitString[i] = 5;
+    }
+  }
+  string = splitString.join('');
+  return string;
 }
+console.log(encode('hi there'))
+
 function decode() {
   // seu código aqui
 }
