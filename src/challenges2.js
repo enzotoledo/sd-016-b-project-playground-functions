@@ -68,8 +68,29 @@ function generatePhoneNumber(array) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function isHigher(a, b, c) {
+  if (a < b + c && b < a + c && c < a + b) {
+    return true;
+  }
+}
+
+function diference(a, b) {
+  return Math.abs(a - b);
+}
+
+function isLower(a, b, c) {
+  if (a > diference(b, c) && b > diference(a, c) && c > diference(a, b)) {
+    return true;
+  }
+}
+
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let high = isHigher(lineA, lineB, lineC);
+  let low = isLower(lineA, lineB, lineC);
+  let result = high === true && low === true
+
+  return result
 }
 
 // Desafio 13
