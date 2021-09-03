@@ -1,6 +1,3 @@
-/* eslint-disable complexity */
-/* eslint-disable max-lines-per-function */
-/* eslint-disable sonarjs/cognitive-complexity */
 // Desafio 1
 let resCompareTrue = false;
 function compareTrue(parm1, parm2) {
@@ -79,26 +76,26 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-let resFizzBuzz = [];
+
 function fizzBuzz(arrayDiv) {
-  let numberDiv = arrayDiv;
-  for (let index = 0; index < numberDiv.length; index += 1) {
-    let divPor3 = numberDiv[index] % 3;
-    let divPor5 = numberDiv[index] % 5;
+  let resFizzBuzz = [];
+  for (let index = 0; index < arrayDiv.length; index += 1) {
+    let divPor3 = arrayDiv[index] % 3;
+    let divPor5 = arrayDiv[index] % 5;
     if (divPor3 === 0 && divPor5 === 0) {
-      return resFizzBuzz.push('fizzBuz');
+      resFizzBuzz.push('fizzBuzz');
     } else if (divPor3 === 0) {
-      return resFizzBuzz.push('fizz');
+      resFizzBuzz.push('fizz');
     } else if (divPor5 === 0) {
-      return resFizzBuzz.push('buzz');
+      resFizzBuzz.push('buzz');
     } else {
-      return resFizzBuzz.push('bug!');
+      resFizzBuzz.push('bug!');
     }
   }
+  return resFizzBuzz;
 }
 
 // Desafio 9
-let resCode = '';
 function encode(stringCode) {
   for (let index = 0; index < stringCode.length; index += 1) {
     switch (stringCode[index]) {
@@ -119,12 +116,10 @@ function encode(stringCode) {
       break;
     default:
     }
-    resCode = stringCode;
   }
-  return resCode;
+  return stringCode;
 }
 
-let resDecode = '';
 function decode(stringDecode) {
   for (let index = 0; index < stringDecode.length; index += 1) {
     switch (stringDecode[index]) {
@@ -145,9 +140,8 @@ function decode(stringDecode) {
       break;
     default:
     }
-    resDecode = stringDecode;
   }
-  return resDecode;
+  return stringDecode;
 }
 
 module.exports = {

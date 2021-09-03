@@ -3,13 +3,12 @@ let resTechList = [];
 function techList(techNames, name) {
   if (techNames.length === 0) {
     resTechList = 'Vazio!';
-  } else {
-    for (let tech of techNames.sort()) {
-      resTechList.push({
-        tech,
-        name,
-      });
-    }
+  }
+  for (let tech of techNames.sort()) {
+    resTechList.push({
+      tech,
+      name,
+    });
   }
   return resTechList;
 }
