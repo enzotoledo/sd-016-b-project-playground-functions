@@ -60,9 +60,47 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function bugFizzBuzz(call) {
+  if (call % 3 === 0 && call % 5 === 0) return 'fizzBuzz';
+  if (call % 3 === 0) return 'fizz';
+  if (call % 5 === 0) return 'buzz';
+  return 'bug!';
 }
+
+function fizzBuzz(array) {
+  let frase = [];
+  for (let i of array) {
+    frase.push(bugFizzBuzz(i));
+  }
+  return frase;
+}
+// let frase = [];
+// const d1 = array.filter((div1) => ((div1 % 3 !== 0) && (div1 % 5 !== 0)));
+// const d3 = array.filter((div3) => ((div3 % 3 === 0) && (div3 % 5 !== 0)));
+// const d5 = array.filter((div5) => ((div5 % 5 === 0) && (div5 % 3 !== 0)));
+// const d15 = array.filter((div15) => ((div15 % 5 === 0) && (div15 % 3 === 0)));
+// for (let i = 0; i < array.length; i += 1) {
+//   for (let z = 0; z < d1.length; z += 1) {
+//     if (array[i] === d1[z]) frase.push('bug!');
+//   }
+//   for (let y = 0; y < d3.length; y += 1) {
+//     if (array[i] === d3[y]) frase.push('fizz');
+//   }
+//   for (let x = 0; x < d5.length; x += 1) {
+//     if (array[i] === d5[x]) frase.push('buzz');
+//   }
+//   for (let w = 0; w < d15.length; w += 1) {
+//     if (array[i] === d15[w]) frase.push('fizzBuzz');
+//   }
+// }
+// return frase;
+// }
+// let d3 = array.map(split3x => {return 'fizz';});
+// let d3 = array.map(div3 => { if ((div3 % 3) === 0) return 'fizz'});
+// let d3 = array.filter((div3) => (div3 % 3) === 0);
+//
+// let d3 = array.filter((div3) => (div3 % 3) === 0);
+// let fizz = d3.map(function() {return 'fizz';});
 
 // Desafio 9
 function encode() {
