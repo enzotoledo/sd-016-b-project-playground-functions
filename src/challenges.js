@@ -46,7 +46,6 @@ function footballPoints(wins, ties) {
 function highestCount(vetorNumber) {
   let ordenar = vetorNumber.sort(); // ordena o vetor em ordem crescente
   let maiorNumero = ordenar[vetorNumber.length -1];
-  let menorNumero = ordenar[0];
   let qtdRepete = 0;
 
   for(let cont = 0; cont < vetorNumber.length; cont+=1) {
@@ -145,24 +144,6 @@ function decode(vogais) {
 }
 
 //Desafio 10
-function techList (name,arrayTec){
-  let listaTecnologia = [];
-
-  for(let index in arrayTec){
-    
-      let tecnologias = {
-        nome: name,
-        tech : arrayTec[index]
-      }
-      listaTecnologia.push(tecnologias);
-    
-     if(arrayTec.length === 0){
-      return "Vazio!";
-    }
-  }
-
-  return listaTecnologia;
-}
 
 module.exports = {
   calcArea,
@@ -175,5 +156,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-  techList
 };
