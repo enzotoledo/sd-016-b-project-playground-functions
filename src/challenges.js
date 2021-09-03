@@ -79,7 +79,7 @@ function encode(codifica) {
   let coded = gocode.replace(/[aeiou]/g, (letras) => gocode[letras]);
   return coded;
 }
-function decode(decodifica) {
+function decode(bCode) {
   let decodifica = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
   return encode(codifica);
 }

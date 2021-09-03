@@ -4,7 +4,7 @@ function techList(nomes, tecnoName) {
   if (tecnoName.length === 0) {
     return 'Vazio!';
   } else {
-    for (let tech of nomes.sort()) {
+    for (let tecnoName of nomes.sort()) {
       resultado.push({ nomes, tecnoName })
     }
     return resultado;
@@ -20,7 +20,6 @@ function generatePhoneNumber(number) {
   } else if (number.length < 11) {
     return 'Array com tamanho incorreto';
   } else if (number < 0 && number > 9) {
-  } else {
     return 'Não é possivel gerar um numero de telefone com esses valores';
   }
 }
