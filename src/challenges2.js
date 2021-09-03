@@ -1,13 +1,13 @@
 // Desafio 10
 function techList(techName, name) {
-  let resultado = [];
+  let result = [];
   if (techName.length === 0) {
     return 'Vazio!';
   } else {
     for (let tech of techName.sort()) {
       resultado.push({ nomes, techName })
     }
-    return resultado;
+    return result;
   }
 }
 
@@ -21,6 +21,8 @@ function generatePhoneNumber(number) {
     return 'Array com tamanho incorreto';
   } else if (number < 0 && number > 9) {
     return 'Não é possivel gerar um numero de telefone com esses valores';
+  } else {
+    return 'Não é possivel';
   }
 }
 
