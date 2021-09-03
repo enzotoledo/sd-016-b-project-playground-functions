@@ -44,7 +44,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(vetorNumber) {
-  let ordenar = vetorNumber.sort(); // ordena o vetor em ordem crescente
+  let ordenar = vetorNumber.sort(function(a,b) { return a - b; }); // ordena o vetor em ordem crescente
   let maiorNumero = ordenar[vetorNumber.length -1];
   let qtdRepete = 0;
 
