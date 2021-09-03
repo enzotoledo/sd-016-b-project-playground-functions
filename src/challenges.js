@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(valor1, valor2) {
-  if (valor1 === true && valor2 === true){
+  if (valor1 === true && valor2 === true) {
     return true;
   } else {
     return false;
@@ -9,8 +9,8 @@ function compareTrue(valor1, valor2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base * height)/2;
-  return area
+  let area = (base * height) /2;
+  return area;
 }
 
 // Desafio 3
@@ -53,15 +53,25 @@ function catAndMouse(mouse, c1, c2) {
   } else if (Math.abs(c1 - mouse) > Math.abs(c2 - mouse)) {
     return 'cat2';
   } else {
-    return 'os gatos trombam e o rato foge'
+    return 'os gatos trombam e o rato foge';
   }
   }
-
-
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(numbersArray) {
+  let wordsArray = [];
+  for (let index = 0; index < numbersArray.length; index += 1) {
+    if (numbersArray[index] % 3 == 0 && numbersArray[index] % 5 == 0) {
+    wordsArray.push("fizzBuzz");
+    } else if (numbersArray[index] % 5 == 0) {
+      wordsArray.push("buzz");
+    } else if (numbersArray[index] % 3 == 0) {
+        wordsArray.push("fizz");
+    } else {
+      wordsArray.push("bug!");
+    }
+    return wordsArray;
+  }
 }
 
 // Desafio 9
