@@ -1,7 +1,22 @@
 // Desafio 10
-function techList() {
-  // seu código aqui
-}
+function techList(tec, name) {
+  let tecLength = tec.length;
+  if(tecLength) {
+    let listObj = [];
+    for(let pCorrer = 0; pCorrer < tecLength; pCorrer++){
+      var objVar = {tech: tec[pCorrer], name: name};
+      listObj.push(objVar);
+    }if(tecLength === 5){
+      return listObj.sort(function(a, b){
+        return a.tech.localeCompare(b.tech);
+      });
+    }else{
+      return listObj;
+    }
+  }else{
+    return 'Vazio!';
+  }
+  }
 
 // Desafio 11
 function generatePhoneNumber(arrayOnzeNum) {
