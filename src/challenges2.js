@@ -12,39 +12,35 @@ function techList(arrayString, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(numberArray) {
-  let count = [];
-  if(numberArray.length !== 11){
-      return ('Array com tamanho incorreto.')
-  } else {
-      for (let index of numberArray) {
-          if ((index <0) || (index >9)) {
-              return ('não é possível gerar um número de telefone com esses valores');
-          } else {
-              for (let i of numberArray) {
-                  if (numberArray[index] == numberArray[i]) {
-                      count ++;
-                      if (count >= 3) {
-                          return ('não é possível gerar um número de telefone com esses valores');
-                      }
-                  }
-              }
-          }
-      }
-  }
+function generatePhoneNumber(arrayNumber) {
+  let count = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
   let result = '(';
-  for(i=0;i<2;i+=1){
-      result += numberArray[i];
+  if(arrayNumber.length!=11){
+    return ('Array com tamanho incorreto.');
+  } else {
+    for(let index of arrayNumber) {
+      if((index < 0) || (index > 9)) {
+        return ('não é possível gerar um número de telefone com esses valores');
+      } else {
+        count[index] += 1;
+        if(count[index] >= 3) {
+          return ('não é possível gerar um número de telefone com esses valores');
+        }
+      }
     }
-    result += ') ';
-    for(i=2;i<7;i+=1){
-      result += numberArray[i];
-    }
-    result += '-';
-    for(i=7;i<11;i+=1){
-      result += numberArray[i];
-    }
-    return result;
+  }
+  for(let index = 0;index < 2;index += 1) {
+    result += arrayNumber[index];
+  }
+  result += ') ';
+  for(let index = 2;index < 7;index += 1) {
+    result += arrayNumber[index];
+  }
+  result += '-';
+  for(let index = 7;index < 11;index += 1){
+    result += arrayNumber[index];
+  }
+  return result;
 }
 
 // Desafio 12
