@@ -79,24 +79,24 @@ function triangleCheck(lineA, lineB, LineC) {
 
 // Desafio 13
 function hydrate(text) {
-  let regexp = /\d+/g;
+//  let regexp = /\d+/g;
 
-  let matchesArray = text.match(regexp).map(Number);
+//  let matchesArray = text.match(regexp).map(Number);
 
-  let cupsWatter = 0;
+//  let cupsWatter = 0;
 
-  let numberCupsWatter = 0;
+//  let numberCupsWatter = 0;
 
-  for (let index = 0; index < matchesArray.length; index += 1) {
-    cupsWatter += matchesArray[index];
-  }
-  if (cupsWatter > 1) {
-    numberCupsWatter = cupsWatter + ' copos de água';
-  } else {
-    numberCupsWatter = '1 copo de água';
-  }
+//  for (let index = 0; index < matchesArray.length; index += 1) {
+//    cupsWatter += matchesArray[index];
+//  }
+//  if (cupsWatter > 1) {
+//    numberCupsWatter = cupsWatter + ' copos de água';
+//  } else {
+//    numberCupsWatter = '1 copo de água';
+//  }
 
-  return numberCupsWatter;
+//  return numberCupsWatter;
 }
 
 module.exports = {
