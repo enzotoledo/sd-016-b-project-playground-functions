@@ -81,83 +81,48 @@ function fizzBuzz(array) {
     return array;
     }
 
-
 // Desafio 9
-function encode(letterNumber) {
-  let result = '';
-  for (i = 0; i < letterNumber.length; i += 1) {
-    if (letterNumber[i] === "a") {
-      result += "1";
 
-    } else if (letterNumber[i] === "e") {
-      result += "2";
+function encode (letterNumber) {
+ let letterNumber = letterNumber.replace(/a/g, '1');
+   letterNumber = letterNumber.replace(/e/g, '2');
+   letterNumber = letterNumber.replace(/i/g, '3');
+   letterNumber = letterNumber.replace(/o/g, '4');
+   letterNumber = letterNumber.replace(/u/g, '5');
 
-    } else if (letterNumber[i] === "i") {
-      result += "3";
-
-    } else if (letterNumber[i] === "o") {
-      result += "4";
-
-    } else if (letterNumber[i] === "u") {
-      result += "5";
-
-    } else {
-      result += letterNumber[i];
-    }
-}
-return result;
+   return letterNumber;
 }
 
+function decode (numberLetter) {
+  let numberLetter = numberLetter.replace(/1/g, 'a');
+  numberLetter = numberLetter.replace(/2/g, 'e');
+  numberLetter = numberLetter.replace(/3/g, 'i');
+  numberLetter = numberLetter.replace(/4/g, 'o');
+  numberLetter = numberLetter.replace(/5/g, 'u');
 
-function decode(numberLetter) {
-  let result = '';
-  for (i = 0; i < letterNumber.length; i += 1) {
-    if (letterNumber[i] === "1") {
-      result += "a";
-
-    } else if (letterNumber[i] === "2") {
-      result += "e";
-
-    } else if (letterNumber[i] === "3") {
-      result += "i";
-
-    } else if (letterNumber[i] === "4") {
-      result += "o";
-
-    } else if (letterNumber[i] === "5") {
-      result += "u";
-
-    } else {
-      result += letterNumber[i];
-    }
+  return numberLetter;
 }
-return result;
-}
+
 
   // Desafio 10
 
-  function techList (array, name) {
-    let sortedArray = array.sort();
-    let returnArray = [];
-    let result;
-    
-    for (let i = 0; i < sortedArray.length; i += 1) {
-      returnArray.push (
-        {
-          tech: sortedArray[i],
-          name: name,
-        }
-      );
-    }
+  function techList (list, name) {
 
-    if (returnArray.length === 0) {
-      result = "vazio!";
+    list = list.sort();
+    let array = [];
+    if (list.length === 0) {
+      return "vazio!";
+    }
+    for (i = 0; i < list.length; i += 1) {
+      let techName = {
+        tech: list[i],
+        name: name
+      };
+      array.push(techName);
+    }
+    return array;
+  }
 
-    } else {
-      result = sortedArray;
-    }
-    return result;
-    }
 
 module.exports = {
   calcArea,
