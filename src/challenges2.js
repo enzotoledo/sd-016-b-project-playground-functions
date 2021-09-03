@@ -1,15 +1,23 @@
 // Desafio 10
-function techList(tech,name) {
+function techList(tecnologia,name) {
+if(tecnologia.length===0){
+  return 'Vazio!';
+} 
   let lista = [];
-  let array = tech.sort();
-  for(let objetos=0; objetos<tech.length; objetos+=1){
-   
-  }
+  let array = tecnologia.sort();
+for(valor of array){
+  lista.push({tech:valor,name} )
+}
   return lista;
 }
-console.log(techList(["array,css"],"rafael"));
+console.log(techList(["react","java","html"],"rafael"));
 // Desafio 11
 function generatePhoneNumber(array) {  
+  for(let index=0; index<array.length ; index++){
+
+
+  }
+  
   if(array<array[11] || array>array[11]){
     array = "Array com tamanho incorreto."
   }
