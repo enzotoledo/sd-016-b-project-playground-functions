@@ -1,7 +1,10 @@
 // Desafio 1
 function compareTrue(a, b) {
-  return a === true && b === true;
+  return a && b;
 }
+
+//Recebi dicas valiosas do Gabriel Rodrigues Leite (https://github.com/gabrielrodriguesleite) que me ajudaram a simplificar o código desse desafio, fica aqui o meu agradecimento.
+// 
 
 // Desafio 2
 function calcArea(base, height) {
@@ -10,35 +13,18 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-  let arrayOfWords = [];
-  let words = '';
-
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] !== ' ') {
-      words += string[index];
-    } else {
-      arrayOfWords.push(words);
-      words = '';
-    }
-  }
-
-  arrayOfWords.push(words);
-
-  return arrayOfWords;
+  return string.split(" ");
 }
+//Créditos ao Gabriel Rodrigues Leite (https://github.com/gabrielrodriguesleite) por me sugerir a função split(), que eu ainda não conhecia!
 
 // Desafio 4
 function concatName(arrayOfStrings) {
-  let finalString = `${arrayOfStrings[arrayOfStrings.length - 1]}, ${arrayOfStrings[0]}`;
-
-  return finalString;
+  return `${arrayOfStrings[arrayOfStrings.length - 1]}, ${arrayOfStrings[0]}`;;
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  let finalPoints = wins * 3 + ties;
-
-  return finalPoints;
+  return wins * 3 + ties;;
 }
 
 // Desafio 6
@@ -68,13 +54,13 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  let cat1Distance = Math.abs(mouse - cat1);
-  let cat2Distance = Math.abs(mouse - cat2);
+  cat1 = Math.abs(mouse - cat1);
+  cat2 = Math.abs(mouse - cat2);
   let result = '';
 
-  if (cat1Distance < cat2Distance) {
+  if (cat1 < cat2) {
     result = 'cat1';
-  } else if (cat2Distance < cat1Distance) {
+  } else if (cat2 < cat1) {
     result = 'cat2';
   } else {
     result = 'os gatos trombam e o rato foge';
