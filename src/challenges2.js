@@ -1,17 +1,13 @@
 // Desafio 10
 function techList(techs, theName) {
+  let techSort = techs.sort();
   let arrTechs = [];
   if (techs.length === 0) {
     return 'Vazio!';
   }
   for (let index = 0; index < techs.length; index += 1) {
-    arrTechs.push({ tech: techs[index], name: theName });
+    arrTechs.push({ tech: techSort[index], name: theName });
   }
-  arrTechs.sort(function (a, b) {
-    if (a.tech < b.tech) {
-      return false;
-    } return true;
-  });
   return arrTechs;
 }
 
