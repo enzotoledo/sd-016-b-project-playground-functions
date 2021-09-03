@@ -27,9 +27,26 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(valor1, valor2, valor3) {
   // seu código aqui
+  if (valor1 > valor2 + valor3 && valor1 < Math.abs(valor1 + valor2 + valor3)) {
+    return false;
+  } else if (valor2 > valor1 + valor3 && valor2 < Math.abs(valor1 + valor2 + valor3)) {
+    return false;
+  } else if (valor3 > valor1 + valor2 && valor3 < Math.abs(valor1 + valor2 + valor3)) {
+    return false;
+  } else if (valor1 < valor2 + valor3) {
+    return true;
+  } else if (valor2 < valor1 + valor3) {
+    return true;
+  } else if (valor3 < valor1 + valor2) {
+    return true;
+  }
+  
+  
+   
 }
+console.log(triangleCheck(10, 13, 2));
 
 // Desafio 13
 function hydrate() {
