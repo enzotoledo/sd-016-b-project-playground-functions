@@ -5,7 +5,7 @@ function techList(techName, name) {
     return 'Vazio!';
   } else {
     for (let tech of techName.sort()) {
-      resultado.push({ name, techName })
+      result.push({ tech, name })
     }
     return result;
   }
