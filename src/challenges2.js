@@ -20,10 +20,10 @@ function generatePhoneNumber(number) {
   } else if (number.length < 11) {
     return 'Array com tamanho incorreto';
   } else if (number < 0 && number > 9) {
-  }else {
-      return 'Não é possivel gerar um numero de telefone com esses valores';
-    }
+  } else {
+    return 'Não é possivel gerar um numero de telefone com esses valores';
   }
+}
 
 // Desafio 12
 function triangleCheck() {

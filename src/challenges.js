@@ -1,15 +1,11 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if (value1 === true && value2 === true) {
-    return true;
-  } else {
-    return false;
-  }
+  return value1 && value2
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2; 
+  return (base * height) / 2;
 }
 
 // Desafio 3
@@ -19,8 +15,8 @@ function splitSentence(manga) {
 
 // Desafio 4
 function concatName(nameConcat) {
-  let namCon = 0;
-  return (nameConcat = nameConcat[nameConcat.length - 1] + ',' + nameConcat[0]);
+  let namConcat = 0;
+  return nameConcat = nameConcat[nameConcat.length - 1] + ',' + nameConcat[0];
 }
 
 // Desafio 5
@@ -34,7 +30,7 @@ function highestCount(maxNumber) {
   let maxRes;
   for (let number of maxNumber) {
     if (number === maxRes) {
-      result++;
+      resultado += 1;
     } else if (!maxRes || number > maxNumber) {
       maxRes = number;
       resultado = 1;
@@ -44,14 +40,14 @@ function highestCount(maxNumber) {
 }
 
 // Desafio 7
-function catAndMouse(mouse, catY, catX) {
-  if (Math.abs(mouse - catY) < Math.abs(mouse - catX)) {
-    return 'catY'
-  } else if (Math.abs(mouse - catX) < Math.abs(mouse - catY)){
-    return 'catX'
-  } else if (Math.abs(mouse - catY) === Math.abs(mouse - catX)) {
-    return 'os gatos se trombaram e o rato foge'
-  } 
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+    return 'catY';
+  } else if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
+    return 'catX';
+  } else if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
+    return 'os gatos se trombaram e o rato foge';
+  }
 }
 
 // Desafio 8
