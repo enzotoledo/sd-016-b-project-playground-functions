@@ -30,7 +30,7 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
-  let bigger = Math.max.apply(numbers);
+  let bigger = -Infinity;
   for (let index in numbers) {
     if (numbers[index] > bigger) {
       bigger = numbers[index];
@@ -44,7 +44,7 @@ function highestCount(numbers) {
   }
   return biggerCount;
 }
-console.log(highestCount([2, 15, 7, 9, 45]));
+
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   let distancia1 = Math.sqrt((cat1 - mouse) ** 2);
@@ -80,11 +80,14 @@ function fizzBuzz(alarm) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(x) {
+  let str = x.replace(/[a]/g, '1').replace(/[e]/g, '2').replace(/[i]/g, '3').replace(/[o]/g, '4').replace(/[u]/g, '5');
+  return str;
 }
-function decode() {
-  // seu código aqui
+
+function decode(y) {
+  let str = y.replace(/[1]/g, 'a').replace(/[2]/g, 'e').replace(/[3]/g, 'i').replace(/[4]/g, 'o').replace(/[5]/g, 'u');
+  return str;
 }
 
 module.exports = {
