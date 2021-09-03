@@ -95,6 +95,7 @@ function hydrate(text) {
   } else {
     numberCupsWatter = '1 copo de água';
   }
+
   return numberCupsWatter;
 }
 
