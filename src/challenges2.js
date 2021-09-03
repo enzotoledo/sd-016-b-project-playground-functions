@@ -1,4 +1,3 @@
-/* eslint-disable complexity */
 // Desafio 10
 function techList(techs, name) {
   let techObjects = [];
@@ -17,31 +16,30 @@ function techList(techs, name) {
 }
 
 // Desafio 11
-// eslint-disable-next-line max-lines-per-function
-function generatePhoneNumber(numbers) {
+function countMaxRepeatedNumber(numbers) {
+  let result = 0;
   let counter;
-  let errorMsg = 'não é possível gerar um número de telefone com esses valores';
+  for (let i = 1; i < numbers.length; i += 1) {
+    counter = 0;
+    for (let k = 0; k < numbers.length; k += 1) {
+      if (numbers[k] === numbers[i]) counter += 1;
+    }
+    if (counter > result) {
+      result = counter;
+    }
+  }
+  return result;
+}
 
+function generatePhoneNumber(numbers) {
+  let errorMsg = 'não é possível gerar um número de telefone com esses valores';
   if (numbers.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  for (const number of numbers) {
-    counter = 0;
-    if (number < 0) {
-      return errorMsg;
-    }
-    if (number > 9) {
-      return errorMsg;
-    }
-    for (let i = 0; i < numbers.length; i += 1) {
-      if (numbers[i] === number) {
-        counter += 1;
-      }
-    }
-    if (counter >= 3) {
-      return errorMsg;
-    }
+  if (countMaxRepeatedNumber(numbers) >= 3) {
+    return errorMsg;
   }
+
   let phoneNumber = numbers;
   phoneNumber.splice(0, 0, '(');
   phoneNumber.splice(3, 0, ')');
@@ -63,7 +61,10 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(string) {
-  // https://stackoverflow.com/a/1623227
+  /*
+  Consultei as respostas dessa pergunta no Stack Overflow para entender como extrair os números de uma string para uma lista usando regex.
+  https://stackoverflow.com/q/1623221
+  */
   let drinkQty = string.match(/\d+/g);
   for (let i = 0; i < drinkQty.length; i += 1) {
     drinkQty[i] = parseInt(drinkQty[i], 10);
