@@ -1,4 +1,3 @@
-/* eslint-disable complexity */
 // Desafio 1
 function compareTrue(value1, value2) {
   if (value1 && value2) {
@@ -65,18 +64,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function checkDivisibility(num) {
+  if (num % 3 === 0 && num % 5 === 0) {
+    return 'fizzBuzz';
+  } if (num % 3 === 0) {
+    return 'fizz';
+  } if (num % 5 === 0) {
+    return 'buzz';
+  }
+  return 'bug!';
+}
 function fizzBuzz(numArray) {
   let returnArray = [];
   for (let i = 0; i < numArray.length; i += 1) {
-    if (numArray[i] % 3 === 0 && numArray[i] % 5 === 0) {
-      returnArray.push('fizzBuzz');
-    } else if (numArray[i] % 3 === 0) {
-      returnArray.push('fizz');
-    } else if (numArray[i] % 5 === 0) {
-      returnArray.push('buzz');
-    } else {
-      returnArray.push('bug!');
-    }
+    returnArray.push(checkDivisibility(numArray[i]));
   }
   return returnArray;
 }
