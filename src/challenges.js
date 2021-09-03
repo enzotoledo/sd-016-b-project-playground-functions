@@ -15,7 +15,7 @@ function splitSentence(manga) {
 
 // Desafio 4
 function concatName(nameConcat) {
-  return nameConcat = nameConcat[nameConcat.length - 1] + ',' + nameConcat[0];
+  return nameConcat[nameConcat.length - 1] + ',' + nameConcat[0];
 }
 
 // Desafio 5
@@ -41,9 +41,9 @@ function highestCount(maxNumber) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
-    return 'catY';
+    return 'cat1';
   } else if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
-    return 'catX';
+    return 'cat2';
   } else if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
     return 'os gatos se trombaram e o rato foge';
   }
@@ -60,7 +60,7 @@ function check(buzzFizz) {
   if (buzzFizz % 3 === 0) {
     return 'fizz';
   }
-  return 'bug!'
+  return 'bug!';
 }
 function fizzBuzz(fuzzBizz) {
   let result = [];
