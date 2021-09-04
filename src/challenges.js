@@ -61,17 +61,17 @@ function catAndMouse(mouse, c1, c2) {
 function fizzBuzz(numbersArray) {
   let wordsArray = [];
   for (let index = 0; index < numbersArray.length; index += 1) {
-    if (numbersArray[index] % 3 == 0 && numbersArray[index] % 5 == 0) {
+    if (numbersArray[index] % 3 === 0 && numbersArray[index] % 5 === 0) {
     wordsArray.push("fizzBuzz");
-    } else if (numbersArray[index] % 5 == 0) {
+    } else if (numbersArray[index] % 5 === 0) {
       wordsArray.push("buzz");
-    } else if (numbersArray[index] % 3 == 0) {
+    } else if (numbersArray[index] % 3 === 0) {
         wordsArray.push("fizz");
     } else {
       wordsArray.push("bug!");
     }
-    return wordsArray;
   }
+  return wordsArray;
 }
 
 // Desafio 9
