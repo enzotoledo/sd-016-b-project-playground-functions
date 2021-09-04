@@ -3,7 +3,7 @@ function techList(techs, name) {
   let objects = [];
   for (let tech of techs.sort()) {
     objects.push({
-      tech, name
+      tech, name,
     });
   }
   if (objects.length === 0) {
@@ -15,8 +15,7 @@ function techList(techs, name) {
 // Desafio 11
 function validateArrayNumbers(array) {
   let countNumber = 0;
-  let countRepeatedNumbers = 0
-  let indexMostRepeatedNumber = 0;
+  let countRepeatedNumbers = 0;
   for (let num in array) {
     let checkNumber = array[num];
     for (let num2 in array) {
@@ -26,7 +25,6 @@ function validateArrayNumbers(array) {
     }
     if (countNumber > countRepeatedNumbers) {
       countRepeatedNumbers = countNumber;
-      indexMostRepeatedNumber = num;
     }
     countNumber = 0;
   }
@@ -69,7 +67,7 @@ function generatePhoneNumber(array) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let isTriangle = false;
-  if (((lineB + lineC) > lineA && lineA > Math.abs(lineB - lineC)) || ((lineA + lineC) > lineB && lineB > Math.abs(lineA - lineC)) || ((lineA + lineB) > lineC && lineC > Math.abs(lineA - lineB))) {
+  if (((lineB + lineC) > lineA) && ((lineA + lineC) > lineB) && ((lineA + lineB) > lineC)) {
     isTriangle = true;
   }
   return isTriangle;
