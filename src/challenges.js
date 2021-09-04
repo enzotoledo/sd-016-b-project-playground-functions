@@ -1,7 +1,7 @@
 // Desafio 1
 function compareTrue(a, b) {
   // seu código aqui
-  if (a == true && b == true) {
+  if (a === true && b === true) {
     return true;
   }
   return false;
@@ -16,9 +16,6 @@ function calcArea(base, height) {
   let area = (base * height) / 2;
   return area;
 }
-calcArea(10, 50);
-calcArea(5, 2);
-calcArea(51, 1);
 
 // Desafio 3
 function splitSentence(str) {
@@ -27,14 +24,7 @@ function splitSentence(str) {
   return splitString;
 }
 
-splitSentence('go Trybe');
-splitSentence('vamo que vamo');
-splitSentence('foguete');
-
 // Desafio 4
-/* Escreva uma função com o nome concatName que, ao receber uma array de strings, retorne uma string com o formato 'ÚLTIMO ITEM, PRIMEIRO ITEM', independente do tamanho da array.
-Isso quer dizer que, caso o parâmetro passado para concatName seja a Array ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'], a função deverá retornar Paolillo, Lucas.
- */
 
 function concatName(names) {
   for (let index in names) {
@@ -44,20 +34,12 @@ function concatName(names) {
     return concatd;
   }
 }
-concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']);
-concatName(['foguete', 'não', 'tem', 'ré']);
-concatName(['captain', 'my', 'captain']);
-
-// console.log (concatName)
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  points = ((wins * 3) + (ties * 1));
+  let points = ((wins * 3) + (ties * 1));
   return points;
 }
-footballPoints(14, 8);
-footballPoints(1, 2);
-footballPoints(0, 0);
 
 // Desafio 6
 
@@ -71,21 +53,15 @@ function highestCount(numeros) {
       maiorNumero = index;
     }
   }
-  // console.log ('maior numero: '+numeros[maiorNumero]);
 
   for (let index in numeros) {
-    if (numeros[maiorNumero] == numeros[index]) {
+    if (numeros[maiorNumero] === numeros[index]) {
       repeticoes += 1;
     }
   }
   // console.log ('repeticoes: '+repeticoes);
   return repeticoes;
 }
-
-highestCount([9, 1, 2, 3, 9, 5, 7]);
-highestCount([0, 4, 4, 4, 9, 2, 1]);
-highestCount([-2, -2, -1]);
-highestCount([0, 0, 0]);
 
 // Desafio 7
 
@@ -101,9 +77,6 @@ function catAndMouse(mouse, cat1, cat2) {
   // console.log (end)
   return end;
 }
-catAndMouse(0, 3, 2);
-catAndMouse(0, 6, 12);
-catAndMouse(2, 2);
 
 // Desafio 8
 function fizzBuzz(numeros) {
@@ -124,9 +97,6 @@ function fizzBuzz(numeros) {
   }
   return newArray;
 }
-fizzBuzz([2, 15, 7, 9, 45]);
-fizzBuzz([7, 9]);
-fizzBuzz([9, 25]);
 
 // Desafio 9
 function encode(str) {
