@@ -20,8 +20,10 @@ function splitSentence(frase) {
 }
 
 // Desafio 4
-function concatName(string) {
-  return string[string.length-1] + ',' + string[0];
+function concatName(arrayDeStrings) {
+  lastName = arrayDeStrings[arrayDeStrings.length-1];
+  firstName = arrayDeStrings[0];
+  return  lastName + ',' + firstName;
 }
 
 
