@@ -25,7 +25,7 @@ console.log(splitSentence('foguete'));
 // Desafio 4
 function concatName(array) {
   const nameList = [];
-  let names = nameList.push(array[array.length - 1], array[0]);
+  nameList.push(array[array.length - 1], array[0]);
   let nameConcat = nameList.join(', ');
   return nameConcat;
 }
