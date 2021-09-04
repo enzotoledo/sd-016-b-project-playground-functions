@@ -24,7 +24,7 @@ function splitSentence(phrase) {
 // Desafio 4
 function concatName(vetorstring) {
   // seu código aqui
-  let phrase = vetorstring[vetorstring.length - 1] +', '+ vetorstring[0];
+  let phrase = `${vetorstring[vetorstring.length - 1]}, ${vetorstring[0]}`;
   return phrase;
 }
 
@@ -47,7 +47,7 @@ function highestCount(numbers) {
   let count = 0;
   for (let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] === maior) {
-      count = count + 1; 
+      count += 1;
     }
   }
   return count;
@@ -59,11 +59,11 @@ function catAndMouse(mouse, cat1, cat2) {
   let conta1 = Math.abs(mouse - cat1);
   let conta2 = Math.abs(mouse - cat2);
   if (conta1 === conta2) {
-    return "os gatos trombam e o rato foge";
-  }   else if (conta1 < conta2) {
-    return "cat1";
-  } 
-  return "cat2"; 
+    return 'os gatos trombam e o rato foge';
+  } if (conta1 < conta2) {
+    return 'cat1';
+  }
+  return 'cat2';
 }
 
 // Desafio 8
@@ -72,13 +72,13 @@ function fizzBuzz(vetornumbers) {
   let vetorfizzBuzz = [];
   for (let i = 0; i < vetornumbers.length; i += 1) {
     if (((vetornumbers[i] % 3) === 0) && ((vetornumbers[i] % 5) !== 0)) {
-      vetorfizzBuzz.push("fizz");
+      vetorfizzBuzz.push('fizz');
     } else if (((vetornumbers[i] % 5) === 0) && ((vetornumbers[i] % 3) !== 0)) {
-      vetorfizzBuzz.push("buzz");
-    } else if (((vetornumbers[i] % 5) === 0) && ((vetornumbers[i] % 3 ) === 0)) {
-      vetorfizzBuzz.push("fizzBuzz");
+      vetorfizzBuzz.push('buzz');
+    } else if (((vetornumbers[i] % 5) === 0) && ((vetornumbers[i] % 3) === 0)) {
+      vetorfizzBuzz.push('fizzBuzz');
     } else {
-      vetorfizzBuzz.push("bug!");
+      vetorfizzBuzz.push('bug!');
     }
   }
   return vetorfizzBuzz;
@@ -87,44 +87,44 @@ function fizzBuzz(vetornumbers) {
 // Desafio 9
 function encode(normalPhrase) {
   // seu código aqui
-  let codePhrase = "";
+  let codePhrase = '';
   for (let i = 0; i < normalPhrase.length; i += 1) {
-    if (normalPhrase[i] === "a") {
-      codePhrase = codePhrase + "1";
-    } else if (normalPhrase[i] === "e") {
-      codePhrase = codePhrase + "2";
-    } else if (normalPhrase[i] === "i") {
-      codePhrase = codePhrase + "3";
-    } else if (normalPhrase[i] === "o") {
-      codePhrase = codePhrase + "4";
-    } else if (normalPhrase[i] === "u") {
-      codePhrase = codePhrase + "5";
+    if (normalPhrase[i] === 'a') {
+      codePhrase += '1';
+    } else if (normalPhrase[i] === 'e') {
+      codePhrase += '2';
+    } else if (normalPhrase[i] === 'i') {
+      codePhrase += '3';
+    } else if (normalPhrase[i] === 'o') {
+      codePhrase += '4';
+    } else if (normalPhrase[i] === 'u') {
+      codePhrase += '5';
     } else {
-    codePhrase = codePhrase + normalPhrase[i]; 
+      codePhrase += normalPhrase[i];
     }
   }
-return codePhrase;
+  return codePhrase;
 }
 
 function decode(codePhrase) {
   // seu código aqui
-  let normalPhrase = "";
+  let normalPhrase = '';
   for (let i = 0; i < codePhrase.length; i += 1) {
-    if (codePhrase[i] === "1") {
-      normalPhrase = normalPhrase + "a";
-    } else if (codePhrase[i] === "2") {
-      normalPhrase = normalPhrase + "e";
-    } else if (codePhrase[i] === "3") {
-      normalPhrase = normalPhrase + "i";
-    } else if (codePhrase[i] === "4") {
-      normalPhrase = normalPhrase + "o";
-    } else if (codePhrase[i] === "5") {
-      normalPhrase = normalPhrase + "u";
+    if (codePhrase[i] === '1') {
+      normalPhrase += 'a';
+    } else if (codePhrase[i] === '2') {
+      normalPhrase += 'e';
+    } else if (codePhrase[i] === '3') {
+      normalPhrase += 'i';
+    } else if (codePhrase[i] === '4') {
+      normalPhrase += 'o';
+    } else if (codePhrase[i] === '5') {
+      normalPhrase += 'u';
     } else {
-    normalPhrase = normalPhrase + codePhrase[i]; 
+      normalPhrase += codePhrase[i];
     }
   }
-return normalPhrase;
+  return normalPhrase;
 }
 
 module.exports = {
