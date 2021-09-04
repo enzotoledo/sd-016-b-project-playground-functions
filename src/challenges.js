@@ -94,18 +94,26 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(str) {
+
   let newStr = "";
+
   for (let index = 0; index < str.length; index += 1) {
+
     if (str[index] === "a") {
       newStr += "1";
+
     } else if (str[index] === "e") {
       newStr += "2";
+
     } else if (str[index] === "i") {
       newStr += "3";
+
     } else if (str[index] === "o") {
       newStr += "4";
+
     } else if (str[index] === "u") {
       newStr += "5";
+
     } else {
       newStr += str[index];
     }
