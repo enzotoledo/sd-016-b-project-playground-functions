@@ -61,7 +61,7 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return 'os gatos trombam e o rato foge';
 }
-console.log(catAndMouse(2, 3, 4));
+
 
 // Desafio 8
 function fizzBuzz(arrayDeNumeros) {
@@ -81,11 +81,23 @@ function fizzBuzz(arrayDeNumeros) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(vogaisEmNumeros) {
+  vogaisEmNumeros = vogaisEmNumeros.replace(/a/g, '1');
+  vogaisEmNumeros = vogaisEmNumeros.replace(/e/g, '2');
+  vogaisEmNumeros = vogaisEmNumeros.replace(/i/g, '3');
+  vogaisEmNumeros = vogaisEmNumeros.replace(/o/g, '4');
+  vogaisEmNumeros = vogaisEmNumeros.replace(/u/g, '5');
+  return vogaisEmNumeros;
 }
-function decode() {
-  // seu código aqui
+
+
+function decode(numeroEmVogais) {
+  numeroEmVogais = numeroEmVogais.replace(/1/g, 'a');
+  numeroEmVogais = numeroEmVogais.replace(/2/g, 'e');
+  numeroEmVogais = numeroEmVogais.replace(/3/g, 'i');
+  numeroEmVogais = numeroEmVogais.replace(/4/g, 'o');
+  numeroEmVogais = numeroEmVogais.replace(/5/g, 'u');
+  return numeroEmVogais;
 }
 
 module.exports = {
