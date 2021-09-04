@@ -39,13 +39,17 @@ let contador = [0,0,0,0,0,0,0,0,0,0];
   let part2 = numbers.slice(7).join("");
   return ddd + " " + part1 + "-" + part2;
   }
- 
-//, generatePhoneNumber
- //deverá retornar (12) 34567-8901.
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  if ((lineA + lineB > lineC) && (lineC + lineB > lineA) && (lineA + lineC > lineB)) {
+    if (Math.abs(lineA - lineB) < Math.abs(lineC) && Math.abs(lineC - lineB) < Math.abs(lineA) && Math.abs(lineA - lineC) < Math.abs(lineB)) {
+     return true;
+    }
+  } else {
+     return false;
+  }
 }
 
 // Desafio 13
