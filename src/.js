@@ -1,20 +1,27 @@
-    let numeros = [9, 1, 2, 3, 9, 5, 10];
-    let repeticoes = 0;
-    let maiorNumero = 0;
-    
-    for (let index in numeros) {
-        if (numeros[maiorNumero] < numeros[index]) {
-            maiorNumero = index;
-          }  
-        }
-    //console.log ('maior numero: '+numeros[maiorNumero]);
-    
-    for (let index in numeros) {
-        if (numeros[maiorNumero] == numeros[index]) {
-            repeticoes += 1;
-          }
-        } 
-    //console.log ('repeticoes: '+repeticoes);
-    console.log (repeticoes);
-   
-  
+function triangleCheck(lineA, lineB, lineC) {
+  if (Math.abs(lineA) > (Math.abs(lineB) + Math.abs(lineC))) {
+    return false;
+  } else if (Math.abs(lineA) < (Math.abs(lineB) - Math.abs(lineC))) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+
+let arrayTriangle = [10, 14, 8];
+let lineA = arrayTriangle[0];
+let lineB = arrayTriangle[1];
+let lineC = arrayTriangle[2];
+// let result= Boolean;
+
+if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
+  console.log (true);
+} else if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
+  console.log (true);
+} else if (lineC < (lineA + lineB) && lineC > Math.abs(lineB - lineA)) {
+  console.log (true);
+} else {
+  console.log (false);
+}
+
