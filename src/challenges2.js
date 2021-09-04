@@ -17,35 +17,39 @@ if(array.length === 0){
 //console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'],"Lucas"));
 
 // Desafio 11
-function generatePhoneNumber(arrayPhone) {
-  let qtdRepete = 0;
- 
-  if (arrayPhone.length !== 11){
-    return 'Array com tamanho incorreto.';
-   }else{
-    for(let index of arrayPhone){
-      if(index < 0 || index > 9){
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
-      for (let index2 of arrayPhone){
-        if(index2 === index){
-          qtdRepete+=1;
-        }
-        if(qtdRepete >=3){
-          return 'não é possível gerar um número de telefone com esses valores';
-       }
+
+  function generatePhoneNumber(arrayPhone) {
+    let qtdRepete;
+
+    if (arrayPhone.length !== 11){
+      return 'Array com tamanho incorreto.';
      }
-   }
-  //     //Remove 0 elementos apartir de onde se desejaarray.splice(2,0,"") e acrescenta oq está dentro das aspas
+      for(let index of arrayPhone){// Para fazer a comparação foi preciso colocar um for dentro de outro 
+        qtdRepete = 0; // A variável não inicializada zera aqui e não permite que o for seja realizado de novo após passar pelos ifs anteriores
+
+        if(index < 0 || index > 9){
+          return 'não é possível gerar um número de telefone com esses valores';
+        }
+          for(let index2 of arrayPhone){
+            if(index2 === index){
+              qtdRepete+=1;
+            }
+            if(qtdRepete>=3){
+              return 'não é possível gerar um número de telefone com esses valores';
+            }
+          }
+        }
+        let phone = arrayPhone;
+        phone.splice(0,0,"(");
+        phone.splice(3,0,")");
+        phone.splice(4,0," ");
+        phone.splice(10,0,"-");
+      
+        return phone.join("");
   }
-  let phone = arrayPhone;
-      phone.splice(0,0,"(");
-      phone.splice(3,0,")");
-      phone.splice(4,0," ");
-      phone.splice(10,0,"-");
-    
-      return phone.join("");
-}
+ 
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
@@ -79,10 +83,10 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 function hydrate(string) {
   //Para extrair o número de uma string é preciso usar do método match
-  // que é uma expressão regular que determnina a busca por dígitos e de mais de um na frase
+  // que é uma expressão regular que determnina a busca por dígitos em uma frase
   // /\d+/g (global flag/parar procurar todos)
   // Gera como resultado uma array dos resultados encontrados
-  // Para transformar os elementos strings em Interiros usa do termo parseInt();
+  // Para transformar os elementos strings em Inteiros usa do termo parseInt();
   let reg = /\d+/g;
   let regString = string.match(reg);
   let regInt;
