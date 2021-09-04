@@ -14,28 +14,46 @@ function techList(techNames, name) {
 }
 
 // Desafio 11
-generatePhoneNumber([3,2,3,5,3,7,4,8,0,5,2])
 function generatePhoneNumber(arrayNumbers) {
-  if (arrayNumbers.length !== 11){
+  if (arrayNumbers.length !== 11) {
     arrayNumbers = 'Array com tamanho incorreto.';
   } else {
     let contador = 0;
-    for (let index = 0; index < arrayNumbers.length; index += 1){
+    for (let index = 0; index < arrayNumbers.length; index += 1) {
       let verifyNumber = arrayNumbers[index];
       if (verifyNumber < 0 || verifyNumber > 9 || contador >= 3) {
-        arrayNumbers = 'não é possível gerar um número de telefone com esses valores'
+        arrayNumbers = 'não é possível gerar um número de telefone com esses valores';
         break;
       }
       contador = 0;
-      for (let index2 = 0; index2 < arrayNumbers.length; index2 += 1){
+      for (let index2 = 0; index2 < arrayNumbers.length; index2 += 1) {
         if (verifyNumber === arrayNumbers[index2]) {
           contador += 1;
         }
       }
     }
   }
+  if (typeof arrayNumbers !== 'string') {
+    let phoneNumber = '';
+    let ddd = [];
+    let numberChunk2 = [];
+    let numberChunk1 = [];
+    for (let index = 0; index < 2; index += 1) {
+      ddd.push(arrayNumbers[index]);
+    }
+    for (let index = 2; index < 7; index += 1) {
+      numberChunk1.push(arrayNumbers[index]);
+    }
+    for (let index = 7; index < 11; index += 1) {
+      numberChunk2.push(arrayNumbers[index]);
+    }
+    phoneNumber = `(${ddd.join('')}) ${numberChunk1.join('')}-${numberChunk2.join('')}`;
+    arrayNumbers = phoneNumber;
+    return arrayNumbers;
+  }
   return arrayNumbers;
 }
+
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let triangleDone = false;
@@ -47,7 +65,7 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate() {
-  
+
 }
 
 module.exports = {
