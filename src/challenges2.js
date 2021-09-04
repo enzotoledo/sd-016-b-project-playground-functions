@@ -88,14 +88,35 @@ function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
   let high = isHigher(lineA, lineB, lineC);
   let low = isLower(lineA, lineB, lineC);
-  let result = high === true && low === true
+  let result = high === true && low === true;
 
-  return result
+  return result;
 }
 
 // Desafio 13
-function hydrate() {
+
+function waterNum(soma) {
+  if (soma == 1) {
+    return '1 copo de água';
+  }
+  return soma + ' copos de água';
+}
+
+function sum(array) {
+  let count = 0;
+  for (const iterator of array) {
+    count += parseFloat(iterator);
+  }
+  return count;
+}
+
+function hydrate(str) {
   // seu código aqui
+  // matches referencia : https://www.geeksforgeeks.org/extract-a-number-from-a-string-using-javascript/
+  let matches = str.match(/\d+/g);
+  let soma = sum(matches);
+  let frase = waterNum(soma);
+  return frase;
 }
 
 module.exports = {
