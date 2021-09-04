@@ -1,37 +1,20 @@
-//function techList (tech, name) {
-	let tech = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-  	let name = 'Lucas';
-	tech.sort();
-
-	if (tech === '') { // || name === ''){
-		console.log ('Vazio!')
-	} else {
-		let techObject_0 = {
-			technology: tech[0],
-			nome: name
-		}
-		let techObject_1 = {
-			technology: tech[1],
-			nome: name
-		}
-		let techObject_2 = {
-			technology: tech[2],
-			nome: name
-		}
-		let techObject_3 = {
-			technology: tech[3],
-			nome: name
-		}
-		let techObject_4 = {
-			technology: tech[4],
-			nome: name
-		}
-	let objectArray = [techObject_0, techObject_1, techObject_2,techObject_3, techObject_4]
-	console.log (objectArray);		
-	}
-
-	
-
-//-----------------------------------
-/* let tech = ["React", "Jest", "HTML", "CSS", "JavaScript"];
-*/
+    let numeros = [9, 1, 2, 3, 9, 5, 10];
+    let repeticoes = 0;
+    let maiorNumero = 0;
+    
+    for (let index in numeros) {
+        if (numeros[maiorNumero] < numeros[index]) {
+            maiorNumero = index;
+          }  
+        }
+    //console.log ('maior numero: '+numeros[maiorNumero]);
+    
+    for (let index in numeros) {
+        if (numeros[maiorNumero] == numeros[index]) {
+            repeticoes += 1;
+          }
+        } 
+    //console.log ('repeticoes: '+repeticoes);
+    console.log (repeticoes);
+   
+  

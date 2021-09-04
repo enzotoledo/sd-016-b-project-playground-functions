@@ -89,7 +89,6 @@ function highestCount(numeros) {
   highestCount([-2,-2,-1]);
   highestCount([0, 0, 0]);
 
-
 // Desafio 7
 
 function catAndMouse(mouse, cat1, cat2) {
