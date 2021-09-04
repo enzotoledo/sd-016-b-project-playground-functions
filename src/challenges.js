@@ -95,33 +95,22 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(str) {
-  str = str.replace(/a/gi, 1);
-  str = str.replace(/e/gi, 2);
-  str = str.replace(/i/gi, 3);
-  str = str.replace(/o/gi, 4);
-  str = str.replace(/u/gi, 5);
+  str = str.replace(/a/gi, '1');
+  str = str.replace(/e/gi, '2');
+  str = str.replace(/i/gi, '3');
+  str = str.replace(/o/gi, '4');
+  str = str.replace(/u/gi, '5');
   return str;
 }
-console.log(encode("hi there!"));
+console.log(encode('hi there!'));
 
 function decode(str) {
-  let newStr2 = '';
-  for (let index = 0; index < str.length; index += 1) {
-    if (str[index] === '1') {
-      newStr2 += 'a';
-    } else if (str[index] === '2') {
-      newStr2 += 'e';
-    } else if (str[index] === '3') {
-      newStr2 += 'i';
-    } else if (str[index] === '4') {
-      newStr2 += 'o';
-    } else if (str[index] === '5') {
-      newStr2 += 'u';
-    } else {
-      newStr2 += str[index];
-    }
-  }
-  return newStr2;
+  str = str.replace(/1/gi, 'a');
+  str = str.replace(/2/gi, 'e');
+  str = str.replace(/3/gi, 'i');
+  str = str.replace(/4/gi, 'o');
+  str = str.replace(/5/gi, 'u');
+  return str;
 }
 console.log(decode('h3 th2r2!'));
 
