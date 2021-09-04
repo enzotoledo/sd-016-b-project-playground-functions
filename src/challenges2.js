@@ -77,10 +77,30 @@ function triangleCheck(lineA, lineB, lineC) {
 
 
 // Desafio 13
-function hydrate() {
+function hydrate(string) {
+  //Para extrair o número de uma string é preciso usar do método match
+  // que é uma expressão regular que determnina a busca por dígitos e de mais de um na frase
+  // /\d+/g (global flag/parar procurar todos)
+  // Gera como resultado uma array dos resultados encontrados
+  // Para transformar os elementos strings em Interiros usa do termo parseInt();
+  let reg = /\d+/g;
+  let regString = string.match(reg);
+  let regInt;
+  let arrayInt = [];
+  let sum = 0;
+
+  for(let index = 0 ; index < regString.length ; index+=1){
+    regInt = parseInt(regString[index]);
+    arrayInt.push(regInt);
+    sum+=arrayInt[index];
+  }
+  if(sum === 1){
+    return (sum+" copo de água")
+  }else{
+    return (sum+" copos de água");
+  }
   
 }
-
 module.exports = {
   generatePhoneNumber,
   techList,
