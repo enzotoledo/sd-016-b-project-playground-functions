@@ -2,9 +2,8 @@
 function compareTrue(param1, param2) {
   if ((param1 === true) && (param2 === true)) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 2
@@ -28,14 +27,19 @@ function footballPoints(wins, tie) {
   return (wins * 3) + tie;
 }
 
-// Desafio 6
-function highestCount(param) {
+// Descubrir o maior número.
+function biggerNumber(param) {
   let bigger = param[0];
   for (let number of param) {
     if (number > bigger) {
       bigger = number;
     }
   }
+  return bigger;
+}
+
+// Descubrir quantas vezes o número que se repete.
+function repeatNumber(bigger, param) {
   let cont = 0;
   for (let numbers of param) {
     if (bigger === numbers) {
@@ -43,6 +47,11 @@ function highestCount(param) {
     }
   }
   return cont;
+}
+
+// Desafio 6
+function highestCount(param) {
+  return repeatNumber(biggerNumber(param), param);
 }
 
 // Desafio 7
@@ -59,7 +68,8 @@ function catAndMouse(mouse, cat1, cat2) {
   }
   return result;
 }
-// Foi resolvido com a ajuda do Gabriel Rodrigues Leite.
+// Foi resolvido com a ajuda do Gabriel Rodrigues Leite, com a thread no slack.
+
 // Desafio 8
 function fizzBuzz(param) {
   let words = [];

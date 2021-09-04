@@ -2,14 +2,13 @@
 function techList(arrey, name) {
   let object = {};
   let list = [];
-  if (arrey.length === 0) {
-    return 'Vazio!';
-  } else if (arrey.length > 0) {
+  if (arrey.length === 0) return 'Vazio!';
+  if (arrey.length > 0) {
     for (let tech of arrey.sort()) {
       object = {
         tech: tech,
-        name: name
-      } 
+        name: name,
+      };
       list.push(object);
     }
   }
@@ -20,20 +19,20 @@ function techList(arrey, name) {
 function generatePhoneNumber() {
 
 }
-
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if ((lineA + lineB > lineC) && (lineB + lineC > lineA) && (lineA + lineC > lineB) && (lineA > Math.abs(lineB) - Math.abs(lineC)) && (lineB > Math.abs(lineA) - Math.abs(lineC)) && (lineC > Math.abs(lineB) - Math.abs(lineA))) {
+  if ((lineA < lineB + lineC) && (lineA > Math.abs(lineB) - Math.abs(lineC))) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 // Desafio 13
-function hydrate(drinks) {
+function hydrate() {
 
 }
+
+hydrate('1 cachaça, 5 cervejas e 1 copo de vinho');
 
 module.exports = {
   generatePhoneNumber,
