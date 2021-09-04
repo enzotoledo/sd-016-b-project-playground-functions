@@ -1,5 +1,5 @@
 // Desafio 10
-// Referência: Grupo de estudos com Mariana Saraiva - Turma 16 - Tribo B.
+// Referência: Grupo de estudos com (Mariana Saraiva - Turma 16 - Tribo B).
 function techList(tech, name) {
   let arrayTech = tech.sort();
   let result = [];
@@ -22,9 +22,18 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+// Referência: Grupo de estudos com (Luiz Wanderson - Turma 16 - Tribo B).
+function triangleCheck(lineA, lineB, lineC) {
+  let difference = Math.abs(lineA - lineB);
+  let difference2 = Math.abs(difference - lineC);
+  let maior = Math.max(lineA, lineB, lineC);
+
+  if (lineA < (lineB + lineC) && (lineB < (lineA + lineC)) && (lineC < (lineA + lineB)) && (maior > difference2)) {
+    return true;
+  }
+  return false;
 }
+console.log(triangleCheck(10, 14, 8));
 
 // Desafio 13
 function hydrate() {
