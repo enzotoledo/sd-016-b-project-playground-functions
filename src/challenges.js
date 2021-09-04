@@ -68,10 +68,19 @@ function fizzBuzz(array) {
   let novoArray = [];
 
   for (let iterator of array) {
-    if (divide3e5(iterator) === true) novoArray.push('fizzBuzz');
-    else if (divide3(iterator) === true) novoArray.push('fizz');
-    else if (divide5(iterator) === true) novoArray.push('buzz');
-    else novoArray.push('bug!');
+    switch (true) {
+    case (divide3e5(iterator)):
+      novoArray.push('fizzBuzz');
+      break;
+    case (divide3(iterator)):
+      novoArray.push('fizz');
+      break;
+    case (divide5(iterator)):
+      novoArray.push('buzz');
+      break;
+    default:
+      novoArray.push('bug!');
+    }
   }
   return novoArray;
 }
@@ -143,7 +152,6 @@ function encode(text) {
 
   return aux.join('');
 }
-console.log(encode('hello'));
 
 function decode(text1) {
   let aux = text1.split('');
