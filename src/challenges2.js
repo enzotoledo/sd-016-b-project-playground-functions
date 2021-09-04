@@ -1,5 +1,5 @@
 // Desafio 10
-function techList(tech, name) {
+function techList(tech, nm) {
   // seu código aqui
   let array = [];
   let novoObjeto = {};
@@ -7,10 +7,10 @@ function techList(tech, name) {
     return 'Vazio!';
   }
   tech.sort();
-  for (let index in tech) {
+  for (let index of tech) {
     novoObjeto = {
-      tech: tech[index],
-      name: name,
+      tech: index,
+      name: nm,
     };
     array.push(novoObjeto);
   }
@@ -21,9 +21,9 @@ function techList(tech, name) {
 function verificador(seRepete) {
   let contador = 0;
   let valorFinal = 0;
-  for (let teste in seRepete) {
-    for (let teste2 in seRepete) {
-      if (seRepete[teste] === seRepete[teste2]) {
+  seRepete.forEach((num) => {
+    for (let num2 of seRepete) {
+      if (num === num2) {
         contador += 1;
       }
     }
@@ -31,7 +31,7 @@ function verificador(seRepete) {
       valorFinal = contador;
     }
     contador = 0;
-  }
+  });
   return valorFinal;
 }
 
@@ -43,24 +43,27 @@ function validarArray(arr) {
 
 function numberPhone(phone) {
   let numero = '';
-  for (let index in phone) {
-    if (index === '0') {
-      numero = '(' + phone[index];
-    } else if (index === '1') {
-      numero += '' + phone[index] + ') ';
-    } else if (index > '1' && index < '7') {
-      numero += '' + phone[index];
-    } else if (index === '7') {
-      numero += '-' + phone[index];
-    } else if (index > '7') {
-      numero += '' + phone[index];
+  let paranteses = '(';
+  let outroparenteses = ') ';
+  let menos = '-';
+  let ddd = '';
+  let numero2 = '';
+  let final = '';
+  phone.forEach((value, index) => {
+    if (index < 2) {
+      ddd += value;
+    } else if (index >= 2 && index < 7) {
+      numero += value;
+    } else if (index >= 7) {
+      numero2 += value;
     }
-  }
-  return numero;
+  });
+  final = paranteses + ddd + outroparenteses + numero + menos + numero2;
+  return final;
 }
 
-function validNumbers(n){
-  let valorFinal = verificador(n);
+function validNumbers(n) {
+  let valorFinal = verificador(n); // ajuda do Gabriel Silvestre Turma-16-B para entender o por que puxar o (n) ao invés do (array);
   for (let index in n) {
     if (n[index] < 0 || n[index] > 9 || valorFinal >= 3) {
       return true;
@@ -76,9 +79,9 @@ function generatePhoneNumber(array) {
   if (validar === true) {
     return 'Array com tamanho incorreto.';
   }
-  if(validarNumero === true){
-      return 'não é possível gerar um número de telefone com esses valores';
-    }
+  if (validarNumero === true) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
   return numero;
 }
 
@@ -99,8 +102,8 @@ function hydrate(string) {
   let code = /\d+/g;
   let valorFinal = 0;
   let valor = string.match(code);
-  for (let index in valor) {
-    valorFinal += parseInt(valor[index]);
+  for (let index of valor) {
+    valorFinal += parseInt(index, 10);
   }
   if (valorFinal > 1) {
     return valorFinal + copos;

@@ -80,64 +80,53 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
+  // dica passada pelo Gabriel Pinheiro Turma 16-B de usar o forEach para passar no lint - buscado como funciona no youtube da trybe:https://www.youtube.com/watch?v=NvTJJDDu7iE&ab_channel=Trybe
   let newArray = [];
-  for (let index in array) {
-    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+  array.forEach((index) => {
+    if (index % 3 === 0 && index % 5 === 0) {
       newArray.push('fizzBuzz');
-    } else if (array[index] % 3 === 0) {
+    } else if (index % 3 === 0) {
       newArray.push('fizz');
-    } else if (array[index] % 5 === 0) {
+    } else if (index % 5 === 0) {
       newArray.push('buzz');
     } else {
       newArray.push('bug!');
     }
-  }
+  });
   return newArray;
 }
 
 // Desafio 9
 function encode(string) {
   // seu código aqui
-  let novaPalavra = '';
-  for (let index in string) {
-    if (string[index] === 'a') {
-      novaPalavra += '1';
-    } else if (string[index] === 'e') {
-      novaPalavra += '2';
-    } else if (string[index] === 'i') {
-      novaPalavra += '3';
-    } else if (string[index] === 'o') {
-      novaPalavra += '4';
-    } else if (string[index] === 'u') {
-      novaPalavra += '5';
-    } else {
-      novaPalavra += string[index];
-    }
-  }
-  return novaPalavra;
+  // dica de refatorar com o replace passada e explicada sua funcionalidade pelo André Melo Turma 16-B via Zoom
+  string = string.replace(/a/gi, '1');
+
+  string = string.replace(/e/gi, '2');
+
+  string = string.replace(/i/gi, '3');
+
+  string = string.replace(/o/gi, '4');
+
+  string = string.replace(/u/gi, '5');
+
+  return string;
 }
 
 function decode(string) {
   // seu código aqui
-  let novaPalavra = '';
-  for (let index in string) {
-    if (string[index] === '1') {
-      novaPalavra += 'a';
-    } else if (string[index] === '2') {
-      novaPalavra += 'e';
-    } else if (string[index] === '3') {
-      novaPalavra += 'i';
-    } else if (string[index] === '4') {
-      novaPalavra += 'o';
-    } else if (string[index] === '5') {
-      novaPalavra += 'u';
-    } else {
-      novaPalavra += string[index];
-    }
-  }
-  return novaPalavra;
+  string = string.replace(/1/gi, 'a');
+
+  string = string.replace(/2/gi, 'e');
+
+  string = string.replace(/3/gi, 'i');
+
+  string = string.replace(/4/gi, 'o');
+
+  string = string.replace(/5/gi, 'u');
+
+  return string;
 }
-console.log(decode('h3 th2r5!'));
 
 module.exports = {
   calcArea,
