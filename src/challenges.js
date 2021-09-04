@@ -89,44 +89,21 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
+// Código refatorado com ajuda Airton Lopes
 function encode(string) {
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === 'a') {
-      string = string.replace(string[index], '1');
-    }
-    if (string[index] === 'e') {
-      string = string.replace(string[index], '2');
-    }
-    if (string[index] === 'i') {
-      string = string.replace(string[index], '3');
-    }
-    if (string[index] === 'o') {
-      string = string.replace(string[index], '4');
-    }
-    if (string[index] === 'u') {
-      string = string.replace(string[index], '5');
-    }
-  }
+  string = string.replace(/a/gi, '1');
+  string = string.replace(/e/gi, '2');
+  string = string.replace(/i/gi, '3');
+  string = string.replace(/o/gi, '4');
+  string = string.replace(/u/gi, '5');
   return string;
 }
 function decode(string) {
-  for (let index = 0; index < string.length; index += 1) {
-    if (string[index] === '1') {
-      string = string.replace(string[index], 'a');
-    }
-    if (string[index] === '2') {
-      string = string.replace(string[index], 'e');
-    }
-    if (string[index] === '3') {
-      string = string.replace(string[index], 'i');
-    }
-    if (string[index] === '4') {
-      string = string.replace(string[index], 'o');
-    }
-    if (string[index] === '5') {
-      string = string.replace(string[index], 'u');
-    }
-  }
+  string = string.replace(/1/gi, 'a');
+  string = string.replace(/2/gi, 'e');
+  string = string.replace(/3/gi, 'i');
+  string = string.replace(/4/gi, 'o');
+  string = string.replace(/5/gi, 'u');
   return string;
 }
 
