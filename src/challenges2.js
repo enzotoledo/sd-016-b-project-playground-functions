@@ -83,10 +83,20 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return false;
 }
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+  let num = str.replace(/\D/g, '');
+  let numbers = num.split('').map(Number);
+  let soma = 0;
+
+  for (let index in numbers) {
+    soma += numbers[index];
+  }
+
+  if (soma === 1) {
+    return `${soma} copo de água`;
+  }
+  return `${soma} copos de água`;
 }
 
 module.exports = {

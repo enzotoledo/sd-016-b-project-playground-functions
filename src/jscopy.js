@@ -1,20 +1,16 @@
-let arrayTriangle = [10, 14, 8];
-let lineA = arrayTriangle[0];
-let lineB = arrayTriangle[1];
-let lineC = arrayTriangle[2];
-// let result= Boolean;
+/* var myString = 'abc123.8<blah>';
 
-if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
-  console.log (true);
-} else if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
-  console.log (true);
-} else if (lineC < (lineA + lineB) && lineC > Math.abs(lineB - lineA)) {
-  console.log (true);
-} else {
-  console.log (false);
-}
+myString = myString.replace(/\D/g,'');
 
-/* 
-a medida de qualquer um dos lados seja menor que a soma das medidas dos outros dois
-e
-a medida de qualquer um dos lados seja maior que o valor absoluto da diferença entre essas medidas. */
+console.log (myString)
+ */
+
+var regex = /\d+/g;
+var string = "you can enter maximum 500 choices or 12 alternatives";
+var matches = string.match(regex);  // creates array from matches
+
+console.log(matches);
+console.log(matches[0]+matches[1]);
+
+var a = "you can enter maximum 500 choices or 12 alternatives";
+var b = a.split(',').map(Number);

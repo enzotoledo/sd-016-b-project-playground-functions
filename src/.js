@@ -1,27 +1,36 @@
-function triangleCheck(lineA, lineB, lineC) {
-  if (Math.abs(lineA) > (Math.abs(lineB) + Math.abs(lineC))) {
-    return false;
-  } else if (Math.abs(lineA) < (Math.abs(lineB) - Math.abs(lineC))) {
-    return false;
-  } else {
-    return true;
-  }
-}
 
+//function hydrate(str) {
+//let str = '1 cachaça, 5 cervejas e 1 copo de vinho'
+let num = str.replace(/\D/g,'');
+let numbers = num.split('').map(Number);
+//console.log (numbers);
+let soma = 0;
 
-let arrayTriangle = [10, 14, 8];
-let lineA = arrayTriangle[0];
-let lineB = arrayTriangle[1];
-let lineC = arrayTriangle[2];
-// let result= Boolean;
-
-if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC)) {
-  console.log (true);
-} else if (lineB < (lineA + lineC) && lineB > Math.abs(lineA - lineC)) {
-  console.log (true);
-} else if (lineC < (lineA + lineB) && lineC > Math.abs(lineB - lineA)) {
-  console.log (true);
+for (let index in numbers) {
+      soma +=numbers[index];
+      }
+      //console.log (soma);
+    
+if (soma =1) {
+  return soma+' copo de água';
 } else {
-  console.log (false);
+  return soma+' copos de água';
 }
 
+/* 
+Segundo as regras desse bar, a cada bebida deve-se beber um copo de água para que não se tenha ressaca.
+
+Crie a função hydrate que recebe uma string, e retorne a sugestão de quantos copos de água você deve beber. Exemplos: 
+String recebida:
+  "1 cerveja"
+String retornada:
+  "1 copo de água"
+String recebida:
+  "1 cachaça, 5 cervejas e 1 copo de vinho"
+String retornada:
+  "7 copos de água"
+String recebida:
+  "1 cachaça, 5 cervejas e 1 copo de vinho"
+String retornada:
+  "7 copos de água"
+  */
