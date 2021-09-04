@@ -21,17 +21,18 @@ console.log(calcArea(10, 50));
 // Desafio 3
 function splitSentence(string) {
   let array = 0;
-  array = string.split(" ");
+  array = string.split(' ');
   return array;
 }
-console.log(splitSentence("go trybe"));
+console.log(splitSentence('go trybe'));
 
 // Desafio 4
 function concatName(array) {
-  let result = "";
-  lastWord = array[array.length - 1];
-  firstWord = array[0];
-  result = lastWord + "," + " " + firstWord;
+  let result = '';
+  let lastWord = array[array.length - 1];
+  let firstWord = array[0];
+  let space = ', ';
+  result = lastWord + space + firstWord;
   return result;
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -65,11 +66,11 @@ console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
-    return "cat1";
-  } else if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
-    return "cat2";
+    return 'cat1';
+  } if (Math.abs(mouse - cat1) > Math.abs(mouse - cat2)) {
+    return 'cat2';
   } else {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
 }
 console.log(catAndMouse(0, 4, 4));
@@ -79,13 +80,13 @@ function fizzBuzz(array) {
   let result = [];
   for (let index = 0; index < array.length; index += 1) {
     if ((array[index] % 3 === 0) && (array[index] % 5 === 0)) {
-      result.push("fizzBuzz");
+      result.push('fizzBuzz');
     } else if (array[index] % 3 === 0) {
-      result.push("fizz");
+      result.push('fizz');
     } else if (array[index] % 5 === 0) {
-      result.push("buzz");
+      result.push('buzz');
     } else {
-      result.push("bug!");
+      result.push('bug!');
     }
   }
   return result;
@@ -94,54 +95,35 @@ console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
 function encode(str) {
-
-  let newStr = "";
-
-  for (let index = 0; index < str.length; index += 1) {
-
-    if (str[index] === "a") {
-      newStr += "1";
-
-    } else if (str[index] === "e") {
-      newStr += "2";
-
-    } else if (str[index] === "i") {
-      newStr += "3";
-
-    } else if (str[index] === "o") {
-      newStr += "4";
-
-    } else if (str[index] === "u") {
-      newStr += "5";
-
-    } else {
-      newStr += str[index];
-    }
-  }
-  return newStr;
+  str = str.replace(/a/gi, 1);
+  str = str.replace(/e/gi, 2);
+  str = str.replace(/i/gi, 3);
+  str = str.replace(/o/gi, 4);
+  str = str.replace(/u/gi, 5);
+  return str;
 }
 console.log(encode("hi there!"));
 
 function decode(str) {
-  let newStr2 = "";
+  let newStr2 = '';
   for (let index = 0; index < str.length; index += 1) {
-    if (str[index] ===  "1") {
-      newStr2 += "a";
-    } else if (str[index] === "2") {
-      newStr2 += "e";
-    } else if (str[index] === "3") {
-      newStr2 += "i";
-    } else if (str[index] === "4") {
-      newStr2 += "o";
-    } else if (str[index] === "5") {
-      newStr2 += "u";
+    if (str[index] === '1') {
+      newStr2 += 'a';
+    } else if (str[index] === '2') {
+      newStr2 += 'e';
+    } else if (str[index] === '3') {
+      newStr2 += 'i';
+    } else if (str[index] === '4') {
+      newStr2 += 'o';
+    } else if (str[index] === '5') {
+      newStr2 += 'u';
     } else {
       newStr2 += str[index];
     }
   }
   return newStr2;
 }
-console.log(decode("h3 th2r2!"));
+console.log(decode('h3 th2r2!'));
 
 module.exports = {
   calcArea,
