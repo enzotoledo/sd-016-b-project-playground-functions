@@ -1,17 +1,18 @@
 // Desafio 10
+// Referência: Grupo de estudos com Mariana Saraiva - Turma 16 - Tribo B.
 function techList(tech, name) {
-let arrayTech = tech.sort();
-let result = [];
-for (let index = 0; index < arrayTech.length; index += 1) {
+  let arrayTech = tech.sort();
+  let result = [];
+  for (let index = 0; index < arrayTech.length; index += 1) {
     result.push({
       tech: arrayTech[index],
       name: name
-  });
-}
-if (tech.length === 0) {
-  result = "Vazio!";
-}
-return result;
+    });
+  }
+  if (tech.length === 0) {
+    result = "Vazio!";
+  }
+  return result;
 }
 console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
 
