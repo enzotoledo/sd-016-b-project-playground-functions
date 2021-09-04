@@ -39,27 +39,26 @@ function generatePhoneNumber(array) {
   }
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
-  } else {
-    for (let index = 0; index < array.length - 9; index += 1) {
-      if (array[index] < 0 || array[index] > 10) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
-      phone += array[index];
+  }
+  for (let index = 0; index < array.length - 9; index += 1) {
+    if (array[index] < 0 || array[index] > 10) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
-    phone += ') ';
-    for (let index = 2; index < array.length - 4; index += 1) {
-      if (array[index] < 0 || array[index] > 10) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
-      phone += array[index];
+    phone += array[index];
+  }
+  phone += ') ';
+  for (let index = 2; index < array.length - 4; index += 1) {
+    if (array[index] < 0 || array[index] > 10) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
-    phone += '-';
-    for (let index = 7; index < array.length; index += 1) {
-      if (array[index] < 0 || array[index] > 10) {
-        return 'não é possível gerar um número de telefone com esses valores';
-      }
-      phone += array[index];
+    phone += array[index];
+  }
+  phone += '-';
+  for (let index = 7; index < array.length; index += 1) {
+    if (array[index] < 0 || array[index] > 10) {
+      return 'não é possível gerar um número de telefone com esses valores';
     }
+    phone += array[index];
   }
   return phone;
 }
@@ -79,9 +78,10 @@ function hydrate(string) {
   let drinks = string.match(findDrinks);
   let sum = 0;
   for (let key of drinks) {
-    sum = sum + parseInt(key);
+    let result = parseInt(key, 10);
+    sum += result;
   }
-  let response = sum > 1 ? sum + ' copos de água' : sum + ' copo de água';
+  let response = sum > 1 ? `${sum} copos de água` : `${sum} copo de água`;
   return response;
 }
 
