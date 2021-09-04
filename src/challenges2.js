@@ -69,9 +69,7 @@ function generatePhoneNumber(array) {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let isTriangle = false;
-  if (((lineB + lineC) > lineA && lineA > Math.abs(lineB - lineC))
-    || ((lineA + lineC) > lineB && lineB > Math.abs(lineA - lineC))
-    || ((lineA + lineB) > lineC && lineC > Math.abs(lineA - lineB))) {
+  if (((lineB + lineC) > lineA && lineA > Math.abs(lineB - lineC)) || ((lineA + lineC) > lineB && lineB > Math.abs(lineA - lineC)) || ((lineA + lineB) > lineC && lineC > Math.abs(lineA - lineB))) {
     isTriangle = true;
   }
   return isTriangle;
