@@ -6,10 +6,10 @@ function compareTrue(a, b) {
     return false;
   }
 }
-    
+
 // Desafio 2
 function calcArea(base, height) {
-  let area = ( (base * height)/ 2 );
+  let area = ((base * height) / 2);
   return area;
 }
 
@@ -23,10 +23,10 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(stringArray) {
-  let stringDeArray = stringArray[stringArray.length -1] + ", " + stringArray[0];
+  let stringDeArray = stringArray[stringArray.length - 1] + ", " + stringArray[0];
   return stringDeArray;
 }
-   
+
 // Desafio 5
 function footballPoints(wins, ties) {
   const pointsOfWins = 3;
@@ -38,34 +38,41 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(arrayDeNumeros) {
   let biggestNumber = arrayDeNumeros[0];
-  for (let index = 1; index < arrayDeNumeros.length; index +=1) {
+  for (let index = 1; index < arrayDeNumeros.length; index += 1) {
     if (arrayDeNumeros[index] > biggestNumber) {
       biggestNumber = arrayDeNumeros[index];
     }
   }
   let vezesMaiorNumero = 0;
-  for (let index2 = 0; index2 < arrayDeNumeros.length; index2 +=1) {
+  for (let index2 = 0; index2 < arrayDeNumeros.length; index2 += 1) {
     if (arrayDeNumeros[index2] === biggestNumber) {
-      vezesMaiorNumero +=1;
+      vezesMaiorNumero += 1;
     }
   }
   return vezesMaiorNumero;
 }
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs((cat1 - mouse)) > Math.abs((cat2 - mouse))) {
+    return 'cat2';
+  }
+  if (Math.abs((cat1 - mouse)) < Math.abs((cat2 - mouse))) {
+    return 'cat1';
+  }
+  return 'os gatos trombam e o rato foge';
 }
+console.log(catAndMouse(2, 3, 4));
 
 // Desafio 8
 function fizzBuzz(arrayDeNumeros) {
   let novoArray = [];
-  for (let index= 0; index < arrayDeNumeros.length; index +=1){
+  for (let index = 0; index < arrayDeNumeros.length; index += 1) {
     if (arrayDeNumeros[index] % 3 === 0 && arrayDeNumeros[index] % 5 === 0) {
-      novoArray.push ("fizzBuzz");
+      novoArray.push("fizzBuzz");
     } else if (arrayDeNumeros[index] % 3 === 0) {
       novoArray.push("fizz");
     } else if (arrayDeNumeros[index] % 5 === 0) {
-      novoArray.push("buzz"); 
+      novoArray.push("buzz");
     } else {
       novoArray.push("bug!");
     }
