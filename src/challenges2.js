@@ -23,18 +23,29 @@ function generatePhoneNumber() {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < (lineB + lineC) && lineB < (lineA + lineC) && lineC < (lineA + lineB)){
+  if (lineA < (lineB + lineC) && lineB < (lineA + lineC) && lineC < (lineA + lineB)) { 
     return true;
   } else {
     return false;
   }
 }
-console.log(triangleCheck(1,14,8));
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(bebeu) {
+  let somaBebeu = 0;
+  let capturaNumeros = bebeu.replace(/[^0-9]/g,'');  
+  let arrayCapturaNumeros =  capturaNumeros.split('').map(Number);
+  for (let index in arrayCapturaNumeros){
+    somaBebeu += arrayCapturaNumeros[index];
+  }
+  if (somaBebeu > 1){ 
+    return `${+somaBebeu} copos de água`;
+  } else {
+    return `${+somaBebeu} copo de água`;    
+  }  
 }
+
+
 
 module.exports = {
   generatePhoneNumber,
