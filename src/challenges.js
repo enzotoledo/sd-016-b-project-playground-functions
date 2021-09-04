@@ -62,15 +62,15 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(array) {
   let novaArray = [];
-  for(let i=0; i<array.length; i++) {
+  for(let i = 0; i < array.length; i++) {
     if(array[i] % 3 === 0 && array[i] % 5 === 0) {
-      novaArray[i] = "fizzbuzz";
+      novaArray.push('fizzbuzz');
     }else if(array[i] % 3 === 0) {
-      novaArray[i] = "fizz";
+      novaArray.push('fizz');
     }else if(array[i] % 5 ===0) {
-      novaArray[i] = "buzz";
+      novaArray.push('buzz');
     }else{
-      novaArray[i] = "bug!";
+      novaArray.push('bug!');
     }
   }
   return novaArray;
