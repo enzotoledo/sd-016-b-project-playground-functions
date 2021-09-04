@@ -53,8 +53,18 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(quantdrinks) {
   // seu código aqui
+  let glasswater = 0;
+  let numbers = quantdrinks.replace(/[^0-9]/g,'').split("");
+    //fonte replace: https://www.horadecodar.com.br/2020/10/14/como-obter-apenas-os-numeros-de-uma-string-em-javascript/ pega os numeros na string. 
+  for (i=0; i < numbers.length; i+=1) {
+    glasswater += parseInt(numbers[i]);
+  }
+  if (glasswater === 1) {
+    return glasswater.toString() + " copo de água";
+  }
+    return glasswater.toString() + " copos de água";
 }
 
 module.exports = {
