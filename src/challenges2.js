@@ -52,9 +52,23 @@ return checkTriangle
 };
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
-}
+function hydrate(string) {
+numbers = string.match(/\d+/g).map(Number);
+let sum = 0
+  for (let i = 0 ; i < numbers.length ; i++){
+    sum += numbers [i];
+  }
+  if (sum === 1 ) {
+    return (sum + " copo de água");
+  }
+   return (sum + " copos de água");
+};
+
+// Conteúdo retirado do link abaixo para resolução deste requisito
+// https://codereview.stackexchange.com/questions/115885/extract-numbers-from-a-string-javascript
+
+//  /\d Encontra correspondência com um número. Equivalente a [0-9]
+
 
 module.exports = {
   generatePhoneNumber,
