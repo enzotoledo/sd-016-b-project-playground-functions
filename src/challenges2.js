@@ -27,9 +27,29 @@ return ("(" + numbersList[0] + numbersList [1] + ") " + numbersList [2] + number
 };
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+let checkTriangle = false
+let checklineA = false
+let checklineB = false
+let checklineC = false
+
+if (lineA > ( lineB - lineC ) && lineA < (lineB + lineC)){
+  checklineA = true
 }
+
+if (lineB > ( lineA - lineC ) && lineB < (lineA + lineC)) {
+  checklineB = true
+}
+
+if (lineC > ( lineA - lineB ) && lineC < (lineA + lineB)) {
+  checklineC = true
+}
+
+if (checklineA === true && checklineB === true && checklineC === true) {
+  checkTriangle = true
+}
+return checkTriangle
+};
 
 // Desafio 13
 function hydrate() {
