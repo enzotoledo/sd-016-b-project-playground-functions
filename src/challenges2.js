@@ -39,7 +39,7 @@ function elementIsOutOfRange(numbers) {
     }
   }
 }
-function sizeIsOutOfRang(numbers) {
+function sizeIsOutOfRange(numbers) {
   if (numbers.length !== 11) {
     return true;
   }
@@ -48,7 +48,7 @@ function putPhoneNumberElements(numbers) {
   return `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
 }
 function generatePhoneNumber(numbers) {
-  if (sizeIsOutOfRang(numbers)) {
+  if (sizeIsOutOfRange(numbers)) {
     return 'Array com tamanho incorreto.';
   }
 
@@ -62,13 +62,52 @@ function generatePhoneNumber(numbers) {
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function sideCheck(side, oppositeSide1, oppositeSide2) {
+  let sum = oppositeSide1 + oppositeSide2;
+  let difference = Math.abs(oppositeSide1 - oppositeSide2);
+
+  if (side < sum && side > difference) {
+    return true;
+  }
+
+  return false;
+}
+function triangleCheck(lineA, lineB, lineC) {
+  if (sideCheck(lineA, lineB, lineC) && sideCheck(lineB, lineA, lineC)) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function convertArrayOfStringsIntoArrayOfNumber(arrayOfStrings) {
+  let arrayOfNumbers = [];
+
+  for (let index = 0; index < arrayOfStrings.length; index += 1) {
+    arrayOfNumbers[index] = parseInt(arrayOfStrings[index], 10);
+  }
+
+  return arrayOfNumbers;
+}
+function sumAllNumbersFromArray(arrayOfNumbers) {
+  let sum = 0;
+
+  for (let element of arrayOfNumbers) {
+    sum += element;
+  }
+
+  return sum;
+}
+function hydrate(sentence) {
+  let sentenceNumbers = sentence.match(/[0-9]/g);
+  let numbersOfDrinks = convertArrayOfStringsIntoArrayOfNumber(sentenceNumbers);
+  let cupOfWater = sumAllNumbersFromArray(numbersOfDrinks);
+
+  if (cupOfWater > 1) {
+    return `${cupOfWater} copos de água`;
+  }
+
+  return `${cupOfWater} copo de água`;
 }
 
 module.exports = {
