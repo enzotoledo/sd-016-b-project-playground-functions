@@ -5,17 +5,15 @@
  */
 function techList(array, name) {
   if (array.length > 0) {
-    //ordena o array e define a lista de objetos.
     let organizedArray = array.sort();
     let list = [];
-    //coloca cada um dos valores do array (já ordenados) na lista como objetos com as devidas propriedades. 
     for (let techs of organizedArray) {
       list.push({
         tech: techs,
         name: name
       });
     }
-    return list
+    return list;
   }
   return 'Vazio!'
 }

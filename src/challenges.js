@@ -82,17 +82,21 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+function fizzBuzzTransformer(value) {
+  if (value % 15 === 0) {
+    value = 'fizzBuzz';
+  } else if (value % 3 === 0) {
+    value = 'fizz';
+  } else if (value % 5 === 0) {
+    value = 'buzz';
+  } else {
+    value = 'bug!';
+  }
+  return value;
+}
 function fizzBuzz(array) {
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] % 15 === 0) {
-      array[index] = 'fizzBuzz';
-    } else if (array[index] % 3 === 0) {
-      array[index] = 'fizz';
-    } else if (array[index] % 5 === 0) {
-      array[index] = 'buzz';
-    } else {
-      array[index] = 'bug!';
-    }
+    array[index] = fizzBuzzTransformer(array[index]);
   }
   return array;
 }
@@ -115,7 +119,7 @@ function encode(string) {
     let control = 0;
     for (let property in code) {
       if (letter === property) {
-        codedString += code[property]
+        codedString += code[property];
         control = 1;
         break;
       }
@@ -126,6 +130,7 @@ function encode(string) {
   }
   return codedString;
 }
+console.log(encode('hello'));
 function decode(string) {
   let code = {
     1: 'a',
@@ -139,7 +144,7 @@ function decode(string) {
     let control = 0;
     for (let property in code) {
       if (letter === property) {
-        decodedString += code[property]
+        decodedString += code[property];
         control = 1;
         break;
       }
