@@ -5,7 +5,6 @@ function compareTrue(a, b) {
   }
   return false;
 }
-
 // Desafio 2
 function calcArea(base, height) {
   return (base * height) / 2;
@@ -13,7 +12,6 @@ function calcArea(base, height) {
 console.log(calcArea(10, 50));
 console.log(calcArea(5, 2));
 console.log(calcArea(51, 1));
-
 // Desafio 3
 function splitSentence(string) {
   const array = string.split(' ');
@@ -22,7 +20,6 @@ function splitSentence(string) {
 console.log(splitSentence('go Trybe'));
 console.log(splitSentence('vamo que vamo'));
 console.log(splitSentence('foguete'));
-
 // Desafio 4
 function concatName(array) {
   let a = array[array.length - 1];
@@ -84,7 +81,7 @@ console.log(catAndMouse(0, 6, 12));
 console.log(catAndMouse(2, 2, 2));
 
 // Desafio 8
-function module(numberOfArray) {
+function divisorModulo(numberOfArray) {
   if ((numberOfArray % 3 === 0) && (numberOfArray % 5 === 0)) {
     return 'fizzBuzz';
   }
@@ -99,7 +96,7 @@ function module(numberOfArray) {
 function fizzBuzz(array) {
   let returnValuesArray = [];
   for (let numberOfArray of array) {
-    switch (module(numberOfArray)) {
+    switch (divisorModulo(numberOfArray)) {
     case 'fizz':
       returnValuesArray.push('fizz');
       break;
