@@ -1,20 +1,20 @@
-//Desafio 10
-function techList (arrayTec,name){
-  let listaTecnologia = [];
-  let array = arrayTec.sort();
+// Desafio 10
+function techList(arrayTec, name) {
+let listaTecnologia = [];
+let array = arrayTec.sort();
 
-if(array.length === 0){
-  return "Vazio!";
-}
-  for(let index in array){
-      listaTecnologia.push({
-        tech : array[index],
-        name 
-      });
-  }
-  return listaTecnologia;
-}
-//console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'],"Lucas"));
+if (array.length === 0) {
+return "Vazio!";}
+
+  for(let index in array) {
+    listaTecnologia.push({
+      ech : array[index],
+      name 
+      });}
+
+return listaTecnologia;}
+
+// console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'],"Lucas"));
 
 // Desafio 11
 
@@ -40,7 +40,7 @@ if(array.length === 0){
           }
         }
         let phone = arrayPhone;
-        phone.splice(0,0,"(");
+        phone.splice(0,0,"(");  // Forma de colocar um elemento em determinado lugar sem precisar retirá- lo, elementos que não foram ensinados em aula foram pegos em sites como referência.
         phone.splice(3,0,")");
         phone.splice(4,0," ");
         phone.splice(10,0,"-");
