@@ -81,23 +81,23 @@ function fizzBuzz(numbers) {
 }
 
 // Desafio 9
-function encode(sentence) {
-  let phrase = sentence;
-  phrase = phrase.replace(/a/g, '1');
-  phrase = phrase.replace(/e/g, '2');
-  phrase = phrase.replace(/i/g, '3');
-  phrase = phrase.replace(/o/g, '4');
-  phrase = phrase.replace(/u/g, '5');
-  return phrase;
+function encode(string) {
+  let sentence = string;
+  sentence = sentence.replace(/a/g, '1');
+  sentence = sentence.replace(/e/g, '2');
+  sentence = sentence.replace(/i/g, '3');
+  sentence = sentence.replace(/o/g, '4');
+  sentence = sentence.replace(/u/g, '5');
+  return sentence;
 }
-function decode(sentence) {
-  let phrase = sentence;
-  phrase = phrase.replace(/1/g, 'a');
-  phrase = phrase.replace(/2/g, 'e');
-  phrase = phrase.replace(/3/g, 'i');
-  phrase = phrase.replace(/4/g, 'o');
-  phrase = phrase.replace(/5/g, 'u');
-  return phrase;
+function decode(string) {
+  let sentence = string;
+  sentence = sentence.replace(/1/g, 'a');
+  sentence = sentence.replace(/2/g, 'e');
+  sentence = sentence.replace(/3/g, 'i');
+  sentence = sentence.replace(/4/g, 'o');
+  sentence = sentence.replace(/5/g, 'u');
+  return sentence;
 }
 
 module.exports = {
