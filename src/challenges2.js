@@ -12,7 +12,6 @@ let tech = ["HTML", "Javascript", "CSS", "Phyton", "React"]
    
 }
 
-console.log (resultado)
 
 // Desafio 11
 function generatePhoneNumber(numbers) {
@@ -40,14 +39,18 @@ function generatePhoneNumber(numbers) {
   let first = generateFirst.join('');
   let last = generateLast.join('');
 
-  let vezesQueRepete = 1;
+  let vezesQueRepete = 0;
 
   for (let i =1; i < numbers.length; i+=1){
-    if( numbers[0] == numbers[i]){
-      vezesQueRepete+=1
-    }
-  }
+      
+      for (let j = 0; j < i; j+=1){
   
+        if (numbers[i] == numbers[j]){
+          vezesQueRepete+= 1
+        }
+      }
+  }
+
   let valores = "";
   for (let i =0; i < numbers.length; i+=1){
     if (numbers[i] < 0 || numbers[i] > 9){
@@ -63,7 +66,6 @@ function generatePhoneNumber(numbers) {
   } else {
     return "("+prefixo+")"+first+"-"+last
   }
-
 }
 //console.log(generatePhoneNumber (numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
