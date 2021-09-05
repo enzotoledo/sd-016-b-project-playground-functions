@@ -16,19 +16,32 @@ function techList(technologies,person) {
     }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function generatePhoneNumber(phoneNumber) {
+  
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(lineA, lineB, lineC) {
+  if(lineA < lineB + lineC && lineC < lineB + lineA && lineB < lineC + lineA){
+    return true
+  }else{
+    return false;
+  }
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(str) {
+  let num = /[0-9]/gi
+  let found = str.match(num);
+  let finalNum = 0;
+  for(let i = 0; i < found.length; i += 1){
+      parseInt(finalNum = finalNum + found[i])
+  }
+  return finalNum;
 }
+
+
+
 
 module.exports = {
   generatePhoneNumber,
