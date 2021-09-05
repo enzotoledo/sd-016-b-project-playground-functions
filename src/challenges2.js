@@ -1,16 +1,28 @@
-// Desafio 10
+// let list = ["React", "Jest", "HTML", "CSS", "JavaScript"]; list = list.sort();
+// let nam = "lucas";
 
-function techList(tecs,str) {
-  if (tecs.length === 0) {
-    return 'Vazio!';
-  } else {
-    let result =[];
-    let nome = str;
-    for (let iter of tecs) {
-      result.push('tech: ' : (tecs[iter]),'name: ' (nome));
-    }
+// Desafio 10
+function makList(list, nam) {
+  let ordlist = list.sort();
+  let result = [];
+  for (let iter of ordlist) {
+    let tec = iter;
+    result.push({
+      tech: tec,
+      name: nam,
+    });
   }
   return result;
+  // console.log(result);
+}
+
+function techList(tecs, str) {
+  if (tecs.length === 0) {
+    return 'Vazio!';
+  }
+  let objList = makList(tecs, str);
+  return objList;
+  // console.log(objList);
 }
 
 // Desafio 11
