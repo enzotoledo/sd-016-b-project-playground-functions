@@ -20,6 +20,7 @@ function techList(arrayTechs, name) {
 function validaTamanho(arrayNumbers) {
   return arrayNumbers.length === 11;
 }
+
 function validaNumero(arrayValido) {
   for (const key of arrayValido) {
     if (arrayValido[key] > 9 || arrayValido[key] < 0) {
@@ -28,21 +29,31 @@ function validaNumero(arrayValido) {
   }
   return true;
 }
-function validaRepeticao(arrayValido) {
-  let count = 1;
-  for (let countL = 0; countL < arrayValido.length; countL += 1) {
-    for (let countC = 0; countC < arrayValido.length; countC += 1) {
-      if (arrayValido[countL] === arrayValido[countC + 1]) {
-        count += 1;
-        if (count >= 3) {
-          return false;
-        }
-      }
+
+function confirmaRepeticao(numberIndex, arrayValido) {
+  let numberCount = 0;
+
+  for (const iterator of arrayValido) {
+    if (numberIndex === iterator) {
+      numberCount += 1;
     }
-    count = 0;
+  }
+  return numberCount;
+}
+
+function validaRepeticao(arrayValido) {
+  let count = 0;
+
+  for (let index = 0; index < arrayValido.length; index += 1) {
+    count = confirmaRepeticao(arrayValido[index], arrayValido);
+
+    if (count >= 3) {
+      return false;
+    }
   }
   return true;
 }
+
 function impressaoRetornoTrue(retorno) {
   let textAjust;
   const part1 = retorno.slice(0, 2).join('');
@@ -51,6 +62,7 @@ function impressaoRetornoTrue(retorno) {
   textAjust = `(${part1}) ${part2}-${part3}`; // referência: https://www.alura.com.br/artigos/criando-uma-mascara-de-telefone-com-javascript
   return textAjust;
 }
+
 function impressaoRetornoFalse(count) {
   let aux = '';
   if (count === 1) aux = 'Array com tamanho incorreto.';
@@ -59,6 +71,7 @@ function impressaoRetornoFalse(count) {
   }
   return aux;
 }
+
 function generatePhoneNumber(numbers) {
   let countFuncao = 0;
   let msgError;
