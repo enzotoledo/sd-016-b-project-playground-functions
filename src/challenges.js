@@ -19,27 +19,36 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName(arr) {
-  for(let i= 0 ; i<4 ; i+=1){
-    let first = arr[0];
-    let last = arr[arr.length-1] + ", ";
+function concatName(name) {
+  for(let i= 0 ; i < name.length; i+=1){
+    let first = name[0];
+    // length-1 name.length-1é o último índice da matriz name
+    let last = name[name.length-1] + ", ";
     let firstLast = (last + first)
     console.log(firstLast)
     return firstLast
+
   }
 }
+concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'])
+
 
 // Desafio 5
 function footballPoints (wins,ties) {
 let winsTies = (wins * 3) + ties;
-return winsTies
-}
+console.log(winsTies);
+return winsTies;
 
+}
+footballPoints(1,2)
 // Desafio 6
+
 function highestCount(numbers) {
+  // -Infinity por causa dos negativos
+  // -Infinity (o infinito negativo) é menor do que qualquer número finito.
   let highestNumber = -Infinity;
   let counter = 0;
-    for (i = 0; i < numbers.length; i += 1) {
+    for (let i = 0; i < numbers.length; i += 1) {
     if (numbers[i] > highestNumber) {
       highestNumber = numbers[i];  
    }
@@ -49,10 +58,15 @@ function highestCount(numbers) {
       counter++
     }
   }
+  console.log(counter);
   return counter;
 }
+highestCount([-2, -2, -1])
+
+
 // Desafio 7
 function catAndMouse (mouse,cat1,cat2) {
+  // Match.abs porque a posição pode ser negativa e a função Match.abs, transforma em numeros absolutos
   let positionCat1 = Math.abs(mouse - cat1); 
   let positionCat2 = Math.abs(mouse - cat2);
   
