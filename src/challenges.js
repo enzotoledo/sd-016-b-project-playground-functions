@@ -93,17 +93,17 @@ function fizzBuzz(numbers) {
 }
 // Desafio 9
 function encode(string) {
-  let array = string.split('')
+  let array = string.split('');
   for (let index = 0; index < array.length; index += 1) {
-    if (array[index] === "a") {
+    if (array[index] === 'a') {
       array[index] = 1;
-    } else if (array[index] === "e") {
+    } else if (array[index] === 'e') {
       array[index] = 2;
-    } else if (array[index] === "i") {
+    } else if (array[index] === 'i') {
       array[index] = 3;
-    } else if (array[index] === "o") {
+    } else if (array[index] === 'o') {
       array[index] = 4;
-    } else if (array[index] === "u") {
+    } else if (array[index] === 'u') {
       array[index] = 5;
     }
   }
@@ -112,7 +112,7 @@ function encode(string) {
 console.log(encode('hi there!'));
 
 function decode(string) {
-  let decodeArray = string.split('')
+  let decodeArray = string.split('');
   for (let index = 0; index < decodeArray.length; index += 1) {
     if (decodeArray[index] === '1') {
       decodeArray[index] = 'a';
