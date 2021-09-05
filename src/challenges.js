@@ -128,7 +128,14 @@ function encode(stringEncode) {
   return stringEncode;
 }
 
-function decode() {}
+function decode(numbersDecode) {
+  numbersDecode = numbersDecode.replace(/[1]/g, 'a');
+  numbersDecode = numbersDecode.replace(/[2]/g, 'e');
+  numbersDecode = numbersDecode.replace(/[3]/g, 'i');
+  numbersDecode = numbersDecode.replace(/[4]/g, 'o');
+  numbersDecode = numbersDecode.replace(/[5]/g, 'u');
+  return numbersDecode;
+}
 
 module.exports = {
   calcArea,
