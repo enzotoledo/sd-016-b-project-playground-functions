@@ -106,54 +106,45 @@ function fizzBuzz(array) {
  * Consultei o pull request do projeto do Lucas Araujo Carvalho para resolver essa parte.
  * Link: https://github.com/tryber/sd-016-b-project-playground-functions/pull/85
  */
-function encode(string) {
-  let code = {
+function code(letter) {
+  let codeRule = {
     a: 1,
     e: 2,
     i: 3,
     o: 4,
     u: 5,
   };
+  if (codeRule[letter] !== undefined) {
+    return codeRule[letter];
+  }
+  return letter;
+}
+function encode(string) {
   let codedString = '';
   for (let letter of string) {
-    let control = 0;
-    for (let property in code) {
-      if (letter === property) {
-        codedString += code[property];
-        control = 1;
-        break;
-      }
-    }
-    if (control === 0) {
-      codedString += letter;
-    }
+    codedString += code(letter);
   }
   return codedString;
 }
-console.log(encode('hello'));
-function decode(string) {
-  let code = {
+function reCode(letter) {
+  let reCodeRule = {
     1: 'a',
     2: 'e',
     3: 'i',
     4: 'o',
     5: 'u',
   };
-  let decodedString = '';
-  for (let letter of string) {
-    let control = 0;
-    for (let property in code) {
-      if (letter === property) {
-        decodedString += code[property];
-        control = 1;
-        break;
-      }
-    }
-    if (control === 0) {
-      decodedString += letter;
-    }
+  if (reCodeRule[letter] !== undefined) {
+    return reCodeRule[letter];
   }
-  return decodedString;
+  return letter;
+}
+function decode(string) {
+  let reCodedString = '';
+  for (let letter of string) {
+    reCodedString += reCode(letter);
+  }
+  return reCodedString;
 }
 
 module.exports = {
