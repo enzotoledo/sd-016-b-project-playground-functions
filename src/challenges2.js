@@ -80,7 +80,7 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function convertArrayOfStringsIntoArrayOfNumber(arrayOfStrings) {
+function convertArrayOfStringsIntoArrayOfNumbers(arrayOfStrings) {
   let arrayOfNumbers = [];
 
   for (let index = 0; index < arrayOfStrings.length; index += 1) {
@@ -99,8 +99,8 @@ function sumAllNumbersFromArray(arrayOfNumbers) {
   return sum;
 }
 function hydrate(sentence) {
-  let sentenceNumbers = sentence.match(/[0-9]/g);
-  let numbersOfDrinks = convertArrayOfStringsIntoArrayOfNumber(sentenceNumbers);
+  let numbersFromSentence = sentence.match(/[0-9]/g);
+  let numbersOfDrinks = convertArrayOfStringsIntoArrayOfNumbers(numbersFromSentence);
   let cupOfWater = sumAllNumbersFromArray(numbersOfDrinks);
 
   if (cupOfWater > 1) {
