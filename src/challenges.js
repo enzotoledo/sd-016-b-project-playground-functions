@@ -105,9 +105,12 @@ fizzBuzz([2,15,7,9,45])
 function encode(palavra) {
   let palavraCodificada = '';
   for (let naoCodificada of palavra) {
+    // for of percore a string e exibe cada objeto separado, exemplo 'w','e','1','2'
     switch (naoCodificada) {
+      // switch mostra a string para o case
       case 'a':
        palavraCodificada += '1';
+       // case compara a string se for verdadeiro concatena a string na variável 'palavraCodificada'. 
         break;
       case 'e':
        palavraCodificada += '2';
@@ -134,9 +137,12 @@ encode('wellington')
 function decode(palavra) {
 let palavraCodificada = '';
 for (let codificada of palavra) {
+  // for of percore a string e exibe cada objeto separado, exemplo 'w','e','1','2'
   switch (codificada) {
+    // switch mostra a string para o case
     case '1':
       palavraCodificada += 'a';
+    // case compara a string se for verdadeiro concatena a string na variável 'palavraCodificada'. 
       break;
     case '2':
       palavraCodificada += 'e';
