@@ -12,19 +12,9 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(phrase) {
-  let phraseCharactersArray = phrase.split('');
-  let wordsArray = [];
-  let word = '';
-  for (let index = 0; index <= phraseCharactersArray.length; index += 1) {
-    if (phraseCharactersArray[index] === ' ' || index === phraseCharactersArray.length) {
-      wordsArray.push(word);
-      word = '';
-    } else {
-      word += phraseCharactersArray[index];
-    }
-  }
-  return wordsArray;
+function splitSentence(sentence) {
+  let arrayOfWords = sentence.split(' ');
+  return arrayOfWords;
 }
 
 // Desafio 4
