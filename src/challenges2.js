@@ -73,7 +73,11 @@ function sideCheck(side, oppositeSide1, oppositeSide2) {
   return false;
 }
 function triangleCheck(lineA, lineB, lineC) {
-  if (sideCheck(lineA, lineB, lineC) && sideCheck(lineB, lineA, lineC)) {
+  let sideA = sideCheck(lineA, lineB, lineC);
+  let sideB = sideCheck(lineB, lineA, lineC);
+  let sideC = sideCheck(lineC, lineA, lineB);
+
+  if (sideA && sideB && sideC) {
     return true;
   }
   return false;
