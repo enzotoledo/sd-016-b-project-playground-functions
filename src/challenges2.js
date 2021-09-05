@@ -1,5 +1,28 @@
 // Desafio 10
-function techList(newTechs, name) {
+function techList(newTechs,name) {
+
+  let vetorOrganizado = newTechs.sort();
+  let vetorObjetos = [];
+
+  if(newTechs.length < 1){
+    return "Vazio!";
+  }
+
+  for(let i = 0; i < newTechs.length; i++){
+
+    
+    let objeto = {
+
+      tech: vetorOrganizado[i],
+      name: name
+
+    };
+
+    vetorObjetos[i] = objeto;
+
+  }
+  
+  return vetorObjetos;
   
 }
 
@@ -108,9 +131,9 @@ function hydrate(string) {
 
   if(soma === 1){
     return soma + " copo de água";
-  }else{
+  }
     return soma + " copos de água";
-  } 
+   
 
 }
 
