@@ -89,7 +89,9 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
-// Código refatorado com ajuda Airton Lopes
+/*
+Código refatorado com ajuda de Airton Lopes - Turma 16 -Tribo B
+*/
 function encode(string) {
   string = string.replace(/a/gi, '1');
   string = string.replace(/e/gi, '2');
