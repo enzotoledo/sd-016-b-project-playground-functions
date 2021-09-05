@@ -31,7 +31,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numbers) {
 let max = Math.max (...numbers);
-let cont = 0;;
+let cont = 0;
   for (index = 0; index < numbers.length; index += 1) {
     if (numbers[index] === max) cont += 1;
 }
@@ -74,19 +74,19 @@ function encode(phrase) {
   let codedPhrase = "";
   for (let vowels of phrase){
     switch(vowels) {
-      case "a": 
+      case "a":
         codedPhrase += "1"
         break;
-      case "e": 
+      case "e":
         codedPhrase += "2"
         break;
-      case "i": 
+      case "i":
         codedPhrase += "3"
         break;
-      case "o": 
+      case "o":
         codedPhrase += "4"
         break;
-      case "u": 
+      case "u":
         codedPhrase += "5"
         break;
       default:
@@ -100,19 +100,19 @@ function decode(phrase) {
   let decodedPhrase = "";
   for (let numbers of phrase){
     switch(numbers) {
-      case "1": 
+      case "1":
         decodedPhrase += "a"
         break;
-      case "2": 
+      case "2":
         decodedPhrase += "e"
         break;
-      case "3": 
+      case "3":
         decodedPhrase += "i"
         break;
-      case "4": 
+      case "4":
         decodedPhrase += "o"
         break;
-      case "5": 
+      case "5":
         decodedPhrase += "u"
         break;
       default:
