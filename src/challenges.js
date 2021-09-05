@@ -10,17 +10,17 @@ function compareTrue(x, y) {
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
-  let calcArea = (base * height) / 2;
-  return calcArea;
-  //return (base * height) / 2;
+  let area = (base * height) / 2;
+  return area;
+  // return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(textString) {
   // seu código aqui
-  let splitSentence = textString.split(' ');
-  return splitSentence;
-  //return textString.split(' ');
+  let newText = textString.split(' ');
+  return newText;
+  // return textString.split(' ');
 }
 
 // Desafio 4
@@ -28,7 +28,7 @@ function concatName(nameArray) {
   // seu código aqui
   let firstArray = nameArray[0];
   let lastArray = nameArray[nameArray.length - 1];
-  let expectedArray = lastArray + ', ' + firstArray;
+  let expectedArray = `${lastArray}, ${firstArray}`;
   return expectedArray;
   // return `${nameArray[nameArray.length - 1]}, ${nameArray[0]}`;
 }
