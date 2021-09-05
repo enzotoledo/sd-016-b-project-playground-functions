@@ -102,12 +102,64 @@ return numbers
 fizzBuzz([2,15,7,9,45])
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(palavra) {
+  let palavraCodificada = '';
+  for (let naoCodificada of palavra) {
+    switch (naoCodificada) {
+      case 'a':
+       palavraCodificada += '1';
+        break;
+      case 'e':
+       palavraCodificada += '2';
+        break;
+      case 'i':
+       palavraCodificada += '3';
+        break;
+      case 'o':
+       palavraCodificada += '4';
+        break;
+      case 'u':
+       palavraCodificada += '5';
+        break;
+      default:
+       palavraCodificada += naoCodificada;
+        break;
+    }
+  }
+  console.log(palavraCodificada);
+  return palavraCodificada;
 }
-function decode() {
-  // seu código aqui
+encode('wellington')
+
+function decode(palavra) {
+let palavraCodificada = '';
+for (let codificada of palavra) {
+  switch (codificada) {
+    case '1':
+      palavraCodificada += 'a';
+      break;
+    case '2':
+      palavraCodificada += 'e';
+      break;
+    case '3':
+      palavraCodificada += 'i';
+      break;
+    case '4':
+      palavraCodificada += 'o';
+      break;
+    case '5':
+      palavraCodificada += 'u';
+      break;
+    default:
+      palavraCodificada += codificada;
+      break;
+  }
 }
+console.log(palavraCodificada);
+  return palavraCodificada;
+}
+decode('w2ll3ngt4n')
+
 
 module.exports = {
   calcArea,
