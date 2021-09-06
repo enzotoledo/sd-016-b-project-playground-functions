@@ -5,9 +5,8 @@ function compareTrue(param1, param2) {
   } else {
     return false;
   }
-};
+}
 compareTrue(true, true);
-
 
 
 
@@ -20,35 +19,31 @@ console.log(calcArea);
 
 
 
-
 // Desafio 3
 // const str = "go Trybe!";
 
 function splitSentence(sentence) {
-  const myArr = sentence.split(" ");
+  const myArr = sentence.split(' ');
 
   return myArr
-}
+};
 // console.log(splitSentence(str));
 
 
 
-
 // // Desafio 4
-const vingadores = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-const foguete = ['foguete', 'não', 'tem', 'ré'];
-const captain = ['captain', 'my', 'captain'];
+// const vingadores = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+// const foguete = ['foguete', 'não', 'tem', 'ré'];
+// const captain = ['captain', 'my', 'captain'];
 
 function concatName(names) {
   let getFirstName = names[0];
   let getLastName = names[names.length - 1];
   return getLastName + ', ' + getFirstName;
 }
-console.log(concatName(vingadores));
-console.log(concatName(foguete));
-console.log(concatName(captain));
-
-
+// console.log(concatName(vingadores));
+// console.log(concatName(foguete));
+// console.log(concatName(captain));
 
 
 
@@ -90,15 +85,15 @@ console.log(highestCount(firstArr));
 // const RESULT = "os dois gatos se trombam e o rato foge"
 
 function catAndMouse(mouse, cat1, cat2) {
-  const firstDistance = mouse - cat1;
-  const secondDistance = mouse - cat2;
+  const firstDistance = Math.abs(mouse - cat1);
+  const secondDistance = Math.abs(mouse - cat2);
 
-  if (firstDistance < secondDistance) return "cat1"
-  if (secondDistance < firstDistance) return "cat2"
+  if (firstDistance > secondDistance) return "cat2"
+  if (secondDistance > firstDistance) return "cat1"
+  if (firstDistance === secondDistance) return "os gatos trombam e o rato foge"
 
-  return "os gatos trombam e o rato foge"
 }
-console.log(catAndMouse(5, 4, 4));
+console.log(catAndMouse(0, 2, 3));
 
 
 
