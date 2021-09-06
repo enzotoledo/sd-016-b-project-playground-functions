@@ -11,14 +11,12 @@ compareTrue(true, true);
 
 
 
-
 // Desafio 2
 function calcArea(base, height) {
   return ((base * height) / 2);
 }
 calcArea(10, 50);
 console.log(calcArea);
-
 
 
 
@@ -32,7 +30,6 @@ function splitSentence(sentence) {
   return myArr
 }
 // console.log(splitSentence(str));
-
 
 
 
@@ -101,7 +98,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
   return "os dois gatos se trombam e o rato foge"
 }
-console.log(catAndMouse(5, 1, 2));
+// console.log(catAndMouse(5, 1, 2));
 
 
 
