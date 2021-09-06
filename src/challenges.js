@@ -56,19 +56,32 @@ return theFinalCountUp;
 // Desafio 7
 function catAndMouse(cat1, cat2, mouse) {
   // seu código aqui
-  if (cat1 + 1 == cat2 || cat1 - 1 == cat2) {
-    return 'os gatos trombam e o rato foge'
-  }
-  else if (cat1 - mouse > cat2 - mouse)  {
-    return 'cat1'
-  }else if (cat2 - mouse > cat1 - mouse ) {
-    return 'cat2'
+  if (cat1 + 1 === cat2 || cat1 - 1 === cat2) {
+    return 'os gatos trombam e o rato foge';
+  } else if (cat1 - mouse > cat2 - mouse)  {
+    return 'cat1';
+  } else if (cat2 - mouse > cat1 - mouse ) {
+    return 'cat2';
   } 
 }
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(a) {
   // seu código aqui
+  aF = [];
+  for (let i in a) {
+    if (a[i] % 3 != 0 && a[i] % 5 != 0) {
+      aF.push('bug!');
+    }
+    if (a[i] % 3 == 0 && a[i] % 5 == 0) {
+      aF.push('fizzBuzz');
+    }else if (a[i] % 3 == 0) {
+      aF.push('fizz');
+    }else if (a[i] % 5 == 0) {
+      aF.push('buzz');
+    }
+  }
+  return aF;
 }
 
 // Desafio 9
