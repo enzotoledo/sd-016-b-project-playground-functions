@@ -96,9 +96,9 @@ function catAndMouse(mouse, cat1, cat2) {
   if (firstDistance < secondDistance) return "cat1"
   if (secondDistance < firstDistance) return "cat2"
 
-  return "os dois gatos se trombam e o rato foge"
+  return "os gatos trombam e o rato foge"
 }
-// console.log(catAndMouse(5, 1, 2));
+console.log(catAndMouse(5, 4, 4));
 
 
 
