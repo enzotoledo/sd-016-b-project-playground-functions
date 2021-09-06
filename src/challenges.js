@@ -67,8 +67,8 @@ function highestCount(array) {
     }  
     for (let index = 0; index < array.length; index++) {    
     if(array[index] == maiorNumero){
-  vezesQueRepete += 1;
-    }
+      vezesQueRepete += 1;
+     }
     }
 
  return vezesQueRepete
@@ -152,7 +152,7 @@ for (let index = 0; index < param.length; index += 1) {
     decodifica.push("o");
   }
   else if(param[index] === "5"){
-      decodifica.push("u");
+    decodifica.push("u");
   }
   else{
     decodifica.push(param[index]);
