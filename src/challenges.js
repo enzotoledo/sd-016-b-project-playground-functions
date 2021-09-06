@@ -33,12 +33,17 @@ return result
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
+  let winPoints = wins * 3
+  let tiePoints = ties * 1
+  return winPoints + tiePoints
   // seu código aqui
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(numbers) {
+  
+
   // seu código aqui
 }
 
