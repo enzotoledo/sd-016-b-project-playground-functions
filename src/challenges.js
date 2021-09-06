@@ -23,7 +23,7 @@ function splitSentence(frase) {
 function concatName(arrayDeStrings) {
   lastName = arrayDeStrings[arrayDeStrings.length-1];
   firstName = arrayDeStrings[0];
-  return  lastName + ',' + firstName;
+  return  lastName + ', ' + firstName;
 }
 
 
@@ -64,7 +64,7 @@ function fizzBuzz(array) {
   let novaArray = [];
   for(let i = 0; i < array.length; i++) {
     if(array[i] % 3 === 0 && array[i] % 5 === 0) {
-      novaArray.push('fizzbuzz');
+      novaArray.push('fizzBuzz');
     }else if(array[i] % 3 === 0) {
       novaArray.push('fizz');
     }else if(array[i] % 5 ===0) {
