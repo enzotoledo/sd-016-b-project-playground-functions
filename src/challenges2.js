@@ -78,8 +78,8 @@ function hydrate(drinkString) {
 
   for (let index = 0; index < drinkString.length; index += 1) {
     let number = drinkString[index];
-    // Use of isNaN is intented to coerces non-numbers to numbers, returning true for anything that coerces to NaN. That why the use !.
-    if (!isNaN(parseInt(number, 10))) {
+    // Use of isNaN is intented to coerce non-numbers to numbers, returning true for anything that coerces to NaN. That why the use !.
+    if (!Number.isNaN(parseInt(number, 10))) {
       counter += drinkString[index] - 0;
     }
   }

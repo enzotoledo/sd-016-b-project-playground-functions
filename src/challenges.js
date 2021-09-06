@@ -60,8 +60,6 @@ function catAndMouse(mouse, cat1, cat2) {
   return 'os gatos trombam e o rato foge';
 }
 
-console.log(catAndMouse(5, 8, 2));
-
 // Desafio 8
 let avaliaValor = (value) => {
   if (value % 3 === 0 && value % 5 === 0) {
