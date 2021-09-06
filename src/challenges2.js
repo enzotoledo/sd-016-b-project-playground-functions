@@ -7,43 +7,42 @@ function techList(array, name) {
   for (let i = 0; i < myArray.length; i += 1) {
     lista.push(
       {
-        "tech": myArray[i],
-        "name": name
-      }
-    )
+        tech: myArray[i],
+        name,
+      },
+    );
   }
   if (lista.length === 0) {
-    return "Vazio!"
-  }else{
-    return lista;
+    return 'Vazio!';
   }
+  return lista;
 }
 
 // Desafio 11
 function generatePhoneNumber(array) {
   // seu código aqui
-  let error = 0
-  let numStructure = ['(','','',')',' ','','','','','','-','','','','',]
+  let error = 0;
+  let numStructure = ['(', '', '', ')', ' ', '', '', '', '', '', '-', '', '', '', ''];
 
   if (array.length !== 11) {
-    return 'Array com tamanho incorreto.'
+    return 'Array com tamanho incorreto.';
   }
 
   function errorMsg() {
-    return 'não é possível gerar um número de telefone com esses valores'
+    return 'não é possível gerar um número de telefone com esses valores';
   }
 
   for (const iterator of array) {
-    let count = 0
+    let count = 0;
     if (iterator < 0 || iterator > 9) {
-      error += 1
+      error += 1;
     }
     for (let i = 0; i < array.length; i += 1) {
       if (iterator === array[i]) {
-        count += 1
+        count += 1;
       }
       if (count >= 3) {
-        error += 1
+        error += 1;
       }
     }
   }
@@ -52,19 +51,19 @@ function generatePhoneNumber(array) {
     for (const iterator of param) {
       for (let i = 0; i < numStructure.length; i += 1) {
         if (numStructure[i] === '') {
-          numStructure[i] = iterator
-          break
+          numStructure[i] = iterator;
+          break;
         }
       }
     }
-    return numStructure
+    return numStructure;
   }
 
   if (error > 0) {
-    return errorMsg()
+    return errorMsg();
   }
 
-  return number(array).join('')
+  return number(array).join('');
 }
 
 // Desafio 12
@@ -96,10 +95,10 @@ function triangleCheck(lineA, lineB, lineC) {
 // Desafio 13
 
 function waterNum(soma) {
-  if (soma == 1) {
+  if (soma === 1) {
     return '1 copo de água';
   }
-  return soma + ' copos de água';
+  return `${soma} copos de água`;
 }
 
 function sum(array) {

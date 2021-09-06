@@ -82,19 +82,39 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
+let item = 'bug!';
+
+function isDivisible3(i, array) {
+  if (array[i] % 3 === 0) {
+    return true;
+  }
+}
+
+function isDivisible5(i, array) {
+  if (array[i] % 5 === 0) {
+    return true;
+  }
+}
+
+function compareDivisibles(i, array) {
+  if (isDivisible3(i, array) === true) {
+    item = 'fizz';
+  }
+  if (isDivisible5(i, array) === true) {
+    item = 'buzz';
+  }
+  if (isDivisible3(i, array) && isDivisible5(i, array) === true) {
+    item = 'fizzBuzz';
+  }
+}
+
 function fizzBuzz(array) {
   // seu código aqui
   let result = [];
   for (let i = 0; i < array.length; i += 1) {
-    if ((array[i] % 3 === 0) && (array[i] % 5 === 0)) {
-      result.push('fizzBuzz');
-    } else if (array[i] % 3 === 0) {
-      result.push('fizz');
-    } else if (array[i] % 5 === 0) {
-      result.push('buzz');
-    } else if ((array[i] % 3 !== 0) && (array[i] % 5 !== 0)) {
-      result.push('bug!');
-    }
+    compareDivisibles(i, array);
+    result.push(item);
+    item = 'bug!';
   }
   return result;
 }
@@ -108,26 +128,26 @@ function stringToArray(param1) {
 function encode(string) {
   // seu código aqui
   let myArray = stringToArray(string);
-  
+
   for (let i = 0; i < myArray.length; i += 1) {
     switch (myArray[i]) {
-      case 'a':
-        myArray[i] = 1;
-        break;
-      case 'e':
-        myArray[i] = 2;
-        break;
-      case 'i':
-        myArray[i] = 3;
-        break;
-      case 'o':
-        myArray[i] = 4;
-        break;
-      case 'u':
-        myArray[i] = 5;
-        break;
-      default:
-        break;
+    case 'a':
+      myArray[i] = 1;
+      break;
+    case 'e':
+      myArray[i] = 2;
+      break;
+    case 'i':
+      myArray[i] = 3;
+      break;
+    case 'o':
+      myArray[i] = 4;
+      break;
+    case 'u':
+      myArray[i] = 5;
+      break;
+    default:
+      break;
     }
   }
   return myArray.join('');
@@ -136,28 +156,28 @@ function decode(string) {
   // seu código aqui
   let myArray = stringToArray(string);
 
-  for (let i = 0; i < myArray.length; i+= 1) {
+  for (let i = 0; i < myArray.length; i += 1) {
     switch (myArray[i]) {
-      case '1':
-        myArray[i] = 'a';
-        break;
-      case '2':
-        myArray[i] = 'e';
-        break;
-      case '3':
-        myArray[i] = 'i';
-        break;
-      case '4':
-        myArray[i] = 'o';
-        break;
-      case '5':
-        myArray[i] = 'u';
-        break;
-      default:
-        break;
+    case '1':
+      myArray[i] = 'a';
+      break;
+    case '2':
+      myArray[i] = 'e';
+      break;
+    case '3':
+      myArray[i] = 'i';
+      break;
+    case '4':
+      myArray[i] = 'o';
+      break;
+    case '5':
+      myArray[i] = 'u';
+      break;
+    default:
+      break;
     }
   }
-  return myArray.join('')
+  return myArray.join('');
 }
 
 module.exports = {
