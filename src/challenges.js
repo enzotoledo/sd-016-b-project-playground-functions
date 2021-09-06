@@ -130,26 +130,36 @@ console.log(fizzBuzz(arrayNumbers));
 
 
 // Desafio 9
-const vogals = {
-  a: "1",
-  e: "2",
-  i: "3",
-  o: "4",
-  u: "5"
+// let sentenceEncode = "hi there!";
+// let sentenceDecode = "h3 th2r2!";
+
+function encode(str) {
+  let newSentence = str
+  newSentence = newSentence.replace(/a/g, "1");
+  newSentence = newSentence.replace(/e/g, "2");
+  newSentence = newSentence.replace(/i/g, "3");
+  newSentence = newSentence.replace(/o/g, "4");
+  newSentence = newSentence.replace(/u/g, "5");
+  return newSentence
 }
 
-function encode(string) {
-  const splittedString = string.split("") //separa por caracter (sem espacos entre as aspas)
-  const changedLetters = splittedString.map((item) => {
-    if (Object.keys(vogals).includes(item)) return vogals[item]
-
-    return item
-  })
-  const encoded = changedLetters.join("")
-
-  return encoded
+function decode(str) {
+  let newSentence = str
+  newSentence = newSentence.replace(/1/g, "a");
+  newSentence = newSentence.replace(/2/g, "e");
+  newSentence = newSentence.replace(/3/g, "i");
+  newSentence = newSentence.replace(/4/g, "o");
+  newSentence = newSentence.replace(/5/g, "u");
+  return newSentence
 }
-console.log(encode("hi there!"));
+
+// console.log(encode(sentenceEncode));
+// console.log(decode(sentenceDecode));
+
+
+
+
+
 
 // const vogals = {
 //   a: "1",
@@ -159,43 +169,64 @@ console.log(encode("hi there!"));
 //   u: "5"
 // }
 
-function decode(string) {
-  //Recebendo string e separando por caracteres gerando um array
-  const splittedString = string.split("")
+// function encode(string) {
+//   const splittedString = string.split("") //separa por caracter (sem espacos entre as aspas)
+//   const changedLetters = splittedString.map((item) => {
+//     if (Object.keys(vogals).includes(item)) return vogals[item]
 
-  // Percorrendo cada item desse novo array (splittedString) e
-  // transformando o caracter encriptado
-  const changedCharacters = splittedString.map((character) => {
-    // Pega os valores do objeto vogals (1, 2, 3, 4, 5) 
-    const vogalObjectValues = Object.values(vogals)
-    // Pega as chaves/propriedades do objeto vogal (a, e, i, o, u)
-    const vogalObjectKeys = Object.keys(vogals)
+//     return item
+//   })
+//   const encoded = changedLetters.join("")
 
-    // Verifica se o caractere eh um numero ou nao
-    // Se nao for um numero ele retorna o proprio caractere
-    if (Number.isNaN(character)) return character
+//   return encoded
+// }
+// console.log(encode("hi there!"));
 
-    // Se pular o if anterior, significa que o caractere eh um numero
-    // entao, verifica se o numero faz parte dos numeros/valores do objeto vogals
-    // Se o numero nao esta incluse nos valores do objeto vogals retorna ele proprio
-    if (!vogalObjectValues.includes(character)) return character
+// // const vogals = {
+// //   a: "1",
+// //   e: "2",
+// //   i: "3",
+// //   o: "4",
+// //   u: "5"
+// // }
 
-    // Se chegou ate aqui, significa que eh um valor do objeto vogals
-    // entao devo descobrir em qual posicao/index do objeto ele se encontra pra saber qual chave ele representa (a, e, i, o, u)
-    const index = vogalObjectValues.findIndex(value => character === value)
+// function decode(string) {
+//   //Recebendo string e separando por caracteres gerando um array
+//   const splittedString = string.split("")
 
-    // tranformei as chaves em array e agora acesso a posicao do meu caractere e retornar qual letra ele representa
-    return vogalObjectKeys[index]
-  })
+//   // Percorrendo cada item desse novo array (splittedString) e
+//   // transformando o caracter encriptado
+//   const changedCharacters = splittedString.map((character) => {
+//     // Pega os valores do objeto vogals (1, 2, 3, 4, 5) 
+//     const vogalObjectValues = Object.values(vogals)
+//     // Pega as chaves/propriedades do objeto vogal (a, e, i, o, u)
+//     const vogalObjectKeys = Object.keys(vogals)
 
-  //o map gerou um array de strings modificadas
-  //agora unifica o array e transforma numa string atraves do metodo join
-  const decoded = changedCharacters.join("")
-  // retorna a string decodificada
-  return decoded
+//     // Verifica se o caractere eh um numero ou nao
+//     // Se nao for um numero ele retorna o proprio caractere
+//     if (Number.isNaN(character)) return character
 
-}
-console.log(decode("h3 th2r2!"));
+//     // Se pular o if anterior, significa que o caractere eh um numero
+//     // entao, verifica se o numero faz parte dos numeros/valores do objeto vogals
+//     // Se o numero nao esta incluse nos valores do objeto vogals retorna ele proprio
+//     if (!vogalObjectValues.includes(character)) return character
+
+//     // Se chegou ate aqui, significa que eh um valor do objeto vogals
+//     // entao devo descobrir em qual posicao/index do objeto ele se encontra pra saber qual chave ele representa (a, e, i, o, u)
+//     const index = vogalObjectValues.findIndex(value => character === value)
+
+//     // tranformei as chaves em array e agora acesso a posicao do meu caractere e retornar qual letra ele representa
+//     return vogalObjectKeys[index]
+//   })
+
+//   //o map gerou um array de strings modificadas
+//   //agora unifica o array e transforma numa string atraves do metodo join
+//   const decoded = changedCharacters.join("")
+//   // retorna a string decodificada
+//   return decoded
+
+// }
+// console.log(decode("h3 th2r2!"));
 
 
 

@@ -1,9 +1,22 @@
 // Desafio 10
-let firstArr = ["React", "JavaScript", "Python", "React Native", "TypeScript"];
-function techList() {
-  // seu código aqui
-}
+// const firstArr = ["React", "JavaScript", "Python", "React Native", "TypeScript"];
 
+
+function techList(technologies, name) {
+  let technologiesList = technologies.sort();
+  let objList = [];
+
+  for (i = 0; i < technologiesList.length; i++) {
+    objList[i] = {
+      tech: technologiesList[i],
+      name,
+    };
+  }
+  if (technologiesList.length === 0) return 'Vazio!'
+
+  return objList;
+}
+// console.log(techList(firstArr));
 
 
 
