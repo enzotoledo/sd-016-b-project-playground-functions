@@ -13,14 +13,19 @@ function techList(tech, title) {
   return objectsList;
 }
 
+function countingSencondLoop(number, secondNumber) {
+  let counter = 0;
+  for (let indexSecondLoop = 0; indexSecondLoop < number.length; indexSecondLoop += 1) {
+    if (secondNumber === number[indexSecondLoop]) {
+      counter += 1;
+    }
+  }
+  return counter;
+}
+
 function counting(number) {
   for (let index = 0; index < number.length; index += 1) {
-    let counter = 0;
-    for (let indexSecondLoop = 0; indexSecondLoop < number.length; indexSecondLoop += 1) {
-      if (number[index] === number[indexSecondLoop]) {
-        counter += 1;
-      }
-    }
+    let counter = countingSencondLoop(number, number[index]);
     if (counter >= 3) return true;
   }
   return false;
@@ -30,7 +35,6 @@ function turningNumbers(number) {
   let newNumber = '';
 
   newNumber += `(${number.slice(0, 2)}) ${number.slice(2, 7)}-${number.slice(7, number.length)}`;
-
   newNumber = newNumber.replace(/,/g, '');
 
   return newNumber;
@@ -73,7 +77,9 @@ function hydrate(drinkString) {
   let numberOfDrinks = 0;
 
   for (let index = 0; index < drinkString.length; index += 1) {
-    if (!isNaN(parseInt(drinkString[index], 10))) {
+    let number = drinkString[index];
+    // Use of isNaN is intented to coerces non-numbers to numbers, returning true for anything that coerces to NaN. That why the use !.
+    if (!isNaN(parseInt(number, 10))) {
       counter += drinkString[index] - 0;
     }
   }
