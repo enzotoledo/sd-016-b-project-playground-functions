@@ -17,19 +17,23 @@ function techList(technologies, name) {
 }
 
 // Desafio 11
-function elementIsRepeated(numbers) {
+function count(numbers, number) {
   let counter = 0;
 
-  for (let index = 0; index < numbers.length; index += 1) {
-    for (let element of numbers) {
-      if (element === numbers[index]) {
-        counter += 1;
-        if (counter >= 3) {
-          return true;
-        }
-      }
+  for (let element of numbers) {
+    if (element === number) {
+      counter += 1;
     }
-    counter = 0;
+    if (counter >= 3) {
+      return true;
+    }
+  }
+}
+function elementIsRepeated(numbers) {
+  for (let index = 0; index < numbers.length; index += 1) {
+    if (count(numbers, numbers[index])) {
+      return true;
+    }
   }
 }
 function elementIsOutOfRange(numbers) {
@@ -44,8 +48,12 @@ function sizeIsOutOfRange(numbers) {
     return true;
   }
 }
-function putPhoneNumberElements(numbers) {
-  return `(${numbers[0]}${numbers[1]}) ${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
+function concatPhoneNumberElements(numbers) {
+  let ddd = `(${numbers[0]}${numbers[1]}) `;
+  let firstHalf = `${numbers[2]}${numbers[3]}${numbers[4]}${numbers[5]}${numbers[6]}`;
+  let secondHalf = `-${numbers[7]}${numbers[8]}${numbers[9]}${numbers[10]}`;
+
+  return ddd.concat(firstHalf, secondHalf);
 }
 function generatePhoneNumber(numbers) {
   if (sizeIsOutOfRange(numbers)) {
@@ -56,7 +64,7 @@ function generatePhoneNumber(numbers) {
     return 'não é possível gerar um número de telefone com esses valores';
   }
 
-  let phoneNumber = putPhoneNumberElements(numbers);
+  let phoneNumber = concatPhoneNumberElements(numbers);
 
   return phoneNumber;
 }
