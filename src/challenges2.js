@@ -6,7 +6,7 @@ function techList(arrey, name) {
   if (arrey.length > 0) {
     for (let tech of arrey.sort()) {
       object = {
-        tech: tech,
+        tech: tech, 
         name: name,
       };
       list.push(object);
@@ -27,47 +27,22 @@ function triangleCheck(lineA, lineB, lineC) {
   return false;
 }
 
+// Nesse desafio tive que usar o Template string para passar no texte do lint.
+// O template string serve para criarmos string sem precisar ficar abre 'aspa', fecha 'aspa', coloca '+' ou ',', para colocar uma variavel em uma string.
+// No template string basta que eu abra as duas 'crases' e quando for colocar uma variavel use um '$'seguido de'{}' e a variave no meio das '{}'.
+
 // Desafio 13
 function hydrate(param) {
-  let character = param.split('');
+  let character = param.split(' ').join('');
   let cont = 0;
   for (let value of character) {
-    switch (value) {
-      case '1':
-        cont += 1;
-        break;
-      case '2':
-        cont +=2;
-        break;
-      case '3':
-        cont +=3;
-        break;
-      case '4':
-        cont += 4;
-        break;
-      case '5':
-        cont += 5;
-        break;
-      case '6':
-        cont += 6;
-        break;
-      case '7':
-        cont += 7;
-        break;
-      case '8':
-        cont += 8;
-        break;
-      case '9':
-        cont += 9;
-        break;
+    if (value <= 9) {
+      cont += parseInt(value, 10);
     }
   }
-  if (cont === 1){
-    return cont +' copo de água';
-  } else {
-    return cont + ' copos de água';
-  }
-  }
+  if (cont === 1) return `${cont} copo de água`;
+  return `${cont} copos de água`;
+}
 
 module.exports = {
   generatePhoneNumber,

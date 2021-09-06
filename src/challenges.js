@@ -74,15 +74,10 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(param) {
   let words = [];
   for (let number of param) {
-    if ((number % 3 === 0) && (number % 5 === 0)) {
-      words.push('fizzBuzz');
-    } else if (number % 3 === 0) {
-      words.push('fizz');
-    } else if (number % 5 === 0) {
-      words.push('buzz');
-    } else {
-      words.push('bug!');
-    }
+    if (number % 15 === 0) words.push('fizzBuzz');
+    else if (number % 3 === 0) words.push('fizz');
+    else if (number % 5 === 0) words.push('buzz');
+    else words.push('bug!');
   }
   return words;
 }
@@ -97,6 +92,7 @@ function encode(param) {
   result = result.replace(/u/gi, 5);
   return result;
 }
+
 function decode(param) {
   let comingBackNormal = param;
   comingBackNormal = comingBackNormal.replace(/1/gi, 'a');
