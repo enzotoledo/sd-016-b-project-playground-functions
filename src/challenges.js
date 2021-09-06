@@ -131,8 +131,9 @@ for (let index = 0; index < param.length; index += 1) {
     codifica.push("5");
   }
   else {
-    codifica.push(param[index]);
-
+    codifica.push(param[index])
+  }
+}
 
 return codifica.join("");
 }
@@ -172,4 +173,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-  };
+};
