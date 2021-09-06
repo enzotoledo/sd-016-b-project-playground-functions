@@ -50,8 +50,21 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(array) {
+  // A função retorna o número de vezes que o maior número foi repetido. Primeiro a função verifica qual é o maior número da array e depois verifica quantas vezes ele foi repetido.
+  let greatestNumber = array[0];
+  let repetitions = 0;
+  for (let index = 1; index < array.length ; index += 1) {
+    if (array[index] >= greatestNumber) {
+      greatestNumber = array[index];
+    }
+  }
+  for (let i = 0; i < array.length ; i += 1) {
+    if (array[i] === greatestNumber) {
+      repetitions += 1;
+    }
+  }
+  return repetitions;
 }
 
 // Desafio 7
