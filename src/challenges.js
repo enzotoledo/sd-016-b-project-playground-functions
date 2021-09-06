@@ -60,8 +60,21 @@ function catAndMouse() {
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(arrayOfNumbers) {
+  // Uma vez que a array é iterável, é possível usar o o loop for/of.
+  let newArray = [];
+  for (let number of arrayOfNumbers) {
+    if (((number % 3) === 0) && ((number % 5) === 0)) {
+      newArray.push('fizzBuzz');
+    } else if ((number % 3) === 0) {
+      newArray.push('fizz');
+    } else if ((number % 5) === 0) {
+    newArray.push('buzz');
+    } else {
+    newArray.push('bug!');
+    }
+  }
+  return newArray;
 }
 
 // Desafio 9
