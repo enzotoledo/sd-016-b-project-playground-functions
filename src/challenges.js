@@ -4,6 +4,7 @@ function compareTrue(value1, value2) {
   if (value1 === true && value2 === true) {
     return true;
   } 
+  return false;
 }
 
 // Desafio 2
@@ -13,8 +14,9 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
+  return string.split(' ');
 }
 
 // Desafio 4
@@ -29,14 +31,31 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(novaArray) {
   // seu código aqui
-
+  let maiorNumero = novaArray[0];
+  let repeticao = 0;
+  for (let i = 0; i < novaArray.length; i += 1) {
+    if (novaArray[i] > maiorNumero) {
+      maiorNumero = novaArray[i];
+      repeticao = 1;
+    } else if (novaArray[i] === maiorNumero) {
+      repeticao += 1;
+    }
+  }
+  return repeticao
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(mouse, cat1, cat2)  {
   // seu código aqui
+  if (cat1 > cat2) {
+    return 'cat2'
+  } else if(cat2 > cat1){
+    return 'cat1'
+  } else {
+    return 'os gatos trombam e o rato foge'
+  }
 }
 
 // Desafio 8
