@@ -56,20 +56,19 @@ function generatePhoneNumber(n) {
   return `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
 }
 // Desafio 12
+function checkTriangleAddOfSides(lineToCompare, line1, line2) {
+  let soma = line1 + line2;
+  let diff = Math.abs(line1 - line2);
+  if (lineToCompare < diff || lineToCompare > soma) {
+    return false;
+  }
+  return true;
+}
 function triangleCheck(lineA, lineB, lineC) {
-  let somaAB = lineA + lineB;
-  let somaBC = lineB + lineC;
-  let somaCA = lineC + lineA;
-  let diffAB = Math.abs(lineA - lineB);
-  let diffBC = Math.abs(lineB - lineC);
-  let diffAC = Math.abs(lineA - lineC);
-  if ((lineA < diffBC) || (lineA > somaBC)) {
-    return false;
-  }
-  if ((lineB < diffAC) || (lineB > somaCA)) {
-    return false;
-  }
-  if ((lineC < diffAB) || (lineC > somaAB)) {
+  let side1 = checkTriangleAddOfSides(lineA, lineB, lineC);
+  let side2 = checkTriangleAddOfSides(lineB, lineA, lineC);
+  let side3 = checkTriangleAddOfSides(lineC, lineA, lineB);
+  if ((side1 === false) || (side2 === false) || (side3 === false)) {
     return false;
   }
   return true;
