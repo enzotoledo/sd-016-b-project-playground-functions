@@ -10,39 +10,51 @@ function techList(array, name) {
     for (let techs of organizedArray) {
       list.push({
         tech: techs,
-        name: name
+        name,
       });
     }
     return list;
   }
-  return 'Vazio!'
+  return 'Vazio!';
 }
 
 // Desafio 11
 /*
  * Consultei esse link para utilizar o template literals
  * Link: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Template_literals
- */
-function generatePhoneNumber(array) {
-  if((array.length !== 11)) {
-    return 'Array com tamanho incorreto.';
-  } else {
-    let numberRepeat = 0;
-    for(let numbers of array) {
-      for (let index in array) {
-        if (numbers === array[index]){
-          numberRepeat += 1;
-        }
-        if ((numberRepeat >= 3) || (numbers > 10) || (numbers < 0)) {
-          return 'não é possível gerar um número de telefone com esses valores';
-        }
-      }
-      numberRepeat = 0;
+*/
+function checkNumberRepeatError(array, number) {
+  let numberRepeat = 0;
+  for (let value of array) {
+    if (value === number) {
+      numberRepeat += 1;
     }
-    return `(${array[0]}${array[1]}) ${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}-${array[7]}${array[8]}${array[9]}${array[10]}`;
+    if (numberRepeat >= 3) {
+      return true;
+    }
   }
 }
-
+function checkTheNumbersError(array) {
+  for (let number of array) {
+    if (number < 0 || number > 9) {
+      return true;
+    }
+  }
+}
+function generatePhoneNumber(n) {
+  if ((n.length !== 11)) {
+    return 'Array com tamanho incorreto.';
+  }
+  if (checkTheNumbersError(n) === true) {
+    return 'não é possível gerar um número de telefone com esses valores';
+  }
+  for (let number of n) {
+    if (checkNumberRepeatError(n, number) === true) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  return `(${n[0]}${n[1]}) ${n[2]}${n[3]}${n[4]}${n[5]}${n[6]}-${n[7]}${n[8]}${n[9]}${n[10]}`;
+}
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   let somaAB = lineA + lineB;
@@ -51,8 +63,7 @@ function triangleCheck(lineA, lineB, lineC) {
   let diffAB = Math.abs(lineA - lineB);
   let diffBC = Math.abs(lineB - lineC);
   let diffAC = Math.abs(lineA - lineC);
-
-  if ((lineA < diffBC) || (lineA > somaBC)) { 
+  if ((lineA < diffBC) || (lineA > somaBC)) {
     return false;
   }
   if ((lineB < diffAC) || (lineB > somaCA)) {
@@ -63,7 +74,6 @@ function triangleCheck(lineA, lineB, lineC) {
   }
   return true;
 }
-
 // Desafio 13
 /*
  * Consultei esse link para resolver o desafio.
@@ -72,11 +82,10 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(request) {
   let glassOfWater = 0;
   let requestNumbers = request.match(/\d+/g).map(Number);
-  
-  for(let number of requestNumbers) {
-    glassOfWater += number
+  for (let number of requestNumbers) {
+    glassOfWater += number;
   }
-  if (glassOfWater === 1){
+  if (glassOfWater === 1) {
     return `${glassOfWater} copo de água`;
   }
   return `${glassOfWater} copos de água`;
