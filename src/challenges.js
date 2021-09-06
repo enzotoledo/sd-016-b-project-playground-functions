@@ -20,8 +20,14 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
+function splitSentence(text) {
+  /**
+   * Converte uma string separadas por espaço em um array de strings.
+   * Usei o split() method.
+   * Ref: https://www.w3schools.com/js/js_string_methods.asp
+  */
+  let newArray = text.split(" "); // Separa a string onde há espaço.
+  return newArray;
 }
 
 // Desafio 4
