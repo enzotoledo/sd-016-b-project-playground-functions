@@ -1,7 +1,26 @@
 // Desafio 10
+let firstArr = ["React", "JavaScript", "Python", "React Native", "TypeScript"];
 function techList() {
   // seu código aqui
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Desafio 11
 function generatePhoneNumber() {
