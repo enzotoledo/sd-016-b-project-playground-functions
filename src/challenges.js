@@ -54,8 +54,16 @@ return theFinalCountUp;
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse(cat1, cat2, mouse) {
   // seu código aqui
+  if (cat1 + 1 == cat2 || cat1 - 1 == cat2) {
+    return 'os gatos trombam e o rato foge'
+  }
+  else if (cat1 - mouse > cat2 - mouse)  {
+    return 'cat1'
+  }else if (cat2 - mouse > cat1 - mouse ) {
+    return 'cat2'
+  } 
 }
 
 // Desafio 8
