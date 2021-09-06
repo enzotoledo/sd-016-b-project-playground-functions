@@ -115,11 +115,21 @@ function fizzBuzz(array) {
 // let fizz = d3.map(function() {return 'fizz';});
 
 // Desafio 9
-function encode() {
-// return array.replace (/ [aeiou] / g, '' ");
+function encode(arr) {
+  let arr1 = arr.replace(/[a]/g, '1');
+  let arr2 = arr1.replace(/[e]/g, '2');
+  let arr3 = arr2.replace(/[i]/g, '3');
+  let arr4 = arr3.replace(/[o]/g, '4');
+  let arr5 = arr4.replace(/[u]/g, '5');
+  return arr5;
 }
-function decode() {
-  // seu código aqui
+function decode(arr) {
+  let arr1 = arr.replace(/[1]/g, 'a');
+  let arr2 = arr1.replace(/[2]/g, 'e');
+  let arr3 = arr2.replace(/[3]/g, 'i');
+  let arr4 = arr3.replace(/[4]/g, 'o');
+  let arr5 = arr4.replace(/[5]/g, 'u');
+  return arr5;
 }
 
 module.exports = {
