@@ -22,7 +22,7 @@ function splitSentence(string) {
 function concatName(name) {
   for(let i= 0 ; i < name.length; i+=1){
     let first = name[0];
-    // length-1 name.length-1é o último índice da matriz name
+    // length-1 name.length-é o último índice da matriz name
     let last = name[name.length-1] + ", ";
     let firstLast = (last + first)
     console.log(firstLast)
