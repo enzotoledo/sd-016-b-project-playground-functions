@@ -1,10 +1,9 @@
 // Desafio 1
 function compareTrue(number1, number2) {
-  if ((number1 == true) && (number2 == true)){
+  if ((number1 === true) && (number2 === true)) {
     return true;
-  } else { return false;
   }
-
+  return false;
 }
 
 // Desafio 2
@@ -14,14 +13,14 @@ function calcArea(base, heignt) {
 
 // Desafio 3
 function splitSentence(phrase) {
-  return phrase
+  return phrase.split(' ');
 }
 
 // Desafio 4
 function concatName(words) {
-  var end = words[words.length-1];
-  var start = words[0];
-  var junction = (end + ', ' + start);
+  let end = words[words.length - 1];
+  let start = words[0];
+  let junction = (end + ', ' + start);
   return junction;
 
 }
@@ -32,16 +31,16 @@ function footballPoints(wins, ties) {
 }
 
 // Desafio 6
-function highestCount() {
-
+function highestCount(cellPhone) {
+ 
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)){
-    return "cat1";
-  } else if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)){
-    return "cat2";
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+    return 'cat1';
+  } if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
+    return 'cat2';
   } else {
     return "os gatos trombam e o rato foge";
   }
@@ -49,7 +48,7 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz() {
-  // seu código aqui
+
 }
 
 // Desafio 9
