@@ -24,14 +24,14 @@ console.log(calcArea);
 
 
 // Desafio 3
-const str = "go Trybe!";
+// const str = "go Trybe!";
 
 function splitSentence(sentence) {
   const myArr = sentence.split(" ");
 
-  return myArr;
+  return myArr
 }
-console.log(splitSentence(str));
+// console.log(splitSentence(str));
 
 
 
@@ -72,7 +72,7 @@ console.log(footballPoints(0, 0));
 
 
 // Desafio 6
-const firstArr = [9, 1, 2, 3, 9, 5, 7, 10, 10, 10];
+const firstArr = [9, 1, 2, 3, 9, 5, 7,];
 
 function highestCount(numbers) {
   const biggestNumber = Math.max(...numbers);
@@ -83,39 +83,23 @@ function highestCount(numbers) {
 }
 console.log(highestCount(firstArr));
 
-// firstArr.filter(function (item) {
-//   if (biggestNumber === item) {
-//     return item;
-//   }
-// })
-
-// firstArr.filter((item) => {
-//   return item === biggestNumber;
-// })
-
-// firstArr.filter(item => item === biggestNumber)
-
-
-
-
-
 
 
 
 
 // Desafio 7
-const FIRST_CAT = "cat1"
-const SECOND_CAT = "cat2"
-const RESULT = "os dois gatos se trombam e o rato foge"
+// const FIRST_CAT = "cat1"
+// const SECOND_CAT = "cat2"
+// const RESULT = "os dois gatos se trombam e o rato foge"
 
 function catAndMouse(mouse, cat1, cat2) {
   const firstDistance = mouse - cat1;
   const secondDistance = mouse - cat2;
 
-  if (firstDistance < secondDistance) return FIRST_CAT
-  if (secondDistance < firstDistance) return SECOND_CAT
+  if (firstDistance < secondDistance) return "cat1"
+  if (secondDistance < firstDistance) return "cat2"
 
-  return RESULT
+  return "os dois gatos se trombam e o rato foge"
 }
 console.log(catAndMouse(5, 1, 2));
 
@@ -125,18 +109,18 @@ console.log(catAndMouse(5, 1, 2));
 
 // Desafio 8
 const arrayNumbers = [2, 15, 7, 9, 45];
-const FIZZBUZZ = "fizzBuzz"
-const FIZZ = "fizz"
-const BUZZ = "buzz"
-const BUG = "bug!"
+// const FIZZBUZZ = "fizzBuzz"
+// const FIZZ = "fizz"
+// const BUZZ = "buzz"
+// const BUG = "bug!"
 
 
 function fizzBuzz(numbers) {
   const finalArrayNumbers = numbers.map((item) => {
-    if (item % 3 === 0 && item % 5 === 0) return FIZZBUZZ
-    if (item % 3 === 0) return FIZZ
-    if (item % 5 === 0) return BUZZ
-    if (item % 3 !== 0 && item % 5 !== 0) return BUG
+    if (item % 3 === 0 && item % 5 === 0) return "fizzBuzz"
+    if (item % 3 === 0) return "fizz"
+    if (item % 5 === 0) return "buzz"
+    if (item % 3 !== 0 && item % 5 !== 0) return "bug!"
   })
 
   return finalArrayNumbers
@@ -168,15 +152,15 @@ function encode(string) {
 
   return encoded
 }
-// console.log(encode("hi there!"));
+console.log(encode("hi there!"));
 
-const vogals = {
-  a: "1",
-  e: "2",
-  i: "3",
-  o: "4",
-  u: "5"
-}
+// const vogals = {
+//   a: "1",
+//   e: "2",
+//   i: "3",
+//   o: "4",
+//   u: "5"
+// }
 
 function decode(string) {
   //Recebendo string e separando por caracteres gerando um array
