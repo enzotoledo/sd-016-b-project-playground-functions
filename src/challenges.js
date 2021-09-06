@@ -102,12 +102,49 @@ function fizzBuzz(arrNumbers) {
   return arrayStrings;
 }
 
-// Desafio 9
-function encode() {
-  // seu código aqui
+function mutateNumber(num) {
+  let word = 'a';
+  if (num === '2') {
+    word = 'e';
+  }
+  if (num === '3') {
+    word = 'i';
+  }
+  if (num === '4') {
+    word = 'o';
+  }
+  if (num === '5') {
+    word = 'u';
+  }
+  return word;
 }
-function decode() {
+
+// Desafio 9
+function encode(textString) {
   // seu código aqui
+  let newtext = textString;
+  let vogals = ['a', 'e', 'i', 'o', 'u'];
+  let numbersString = ['1', '2', '3', '4', '5'];
+  for (let i = 0; i < vogals.length; i += 1) {
+    let vogal = new RegExp(vogals[i], 'g');
+    newtext = newtext.replace(vogal, numbersString[i]);
+  }
+  return newtext;
+}
+
+function decode(textString) {
+  // seu código aqui
+  let textDecode = '';
+  let transform;
+  for (let letter of textString) {
+    let characterKey = letter.charCodeAt();
+    transform = letter;
+    if (characterKey > 48 && characterKey < 54) {
+      transform = mutateNumber(letter);
+    }
+    textDecode += transform;
+  }
+  return textDecode;
 }
 
 module.exports = {
