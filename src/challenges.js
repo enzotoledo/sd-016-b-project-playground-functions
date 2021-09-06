@@ -47,8 +47,20 @@ function catAndMouse(mouse, cat1, cat2) {
 }
 
 // Desafio 8
-function fizzBuzz() {
-
+function fizzBuzz(arrPhrase) {
+  let result = [];
+  for (let i = 0; i < arrPhrase.length; i++) {
+    if((arrPhrase[i] % 3 === 0) && (arrPhrase[i] % 5 === 0)){
+      result.push("fizzBuzz");
+    }else if (arrPhrase[i] % 3 === 0){
+      result.push("fizz");
+    }else if (arrPhrase[i] % 5 === 0){
+      result.push("buzz");
+    }else{
+      result.push("bug!")
+    }
+  } 
+  return result;
 }
 
 // Desafio 9
