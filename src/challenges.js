@@ -43,8 +43,10 @@ function concatName(list) {
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  // Calcula a quantidade de pontos que um time marcou em um campeonato, em que uma vitória vale 3 pontos e um empate vale 1 ponto.
+  let points = (wins * 3) + ties;
+  return points;
 }
 
 // Desafio 6
