@@ -55,18 +55,20 @@ return count
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  mouse = 0
-let distanCat1Mouse = mouse - cat1 
-let distanCat2Mouse = mouse - cat2
 
-if (distanCat1Mouse > distanCat2Mouse){
-  return cat2
-} if (distanCat2Mouse > distanCat1Mouse){
-  return cat1
-} if (distanCat1Mouse === distanCat2Mouse){
-  return 'os gatos se trombam e o rato foge'
-}
-}
+
+  let distanCat1Mouse = mouse - cat1 
+  let distanCat2Mouse = mouse - cat2
+  
+  if (Math.abs(distanCat1Mouse) > Math.abs(distanCat2Mouse)){
+    return "cat2"
+  } if (Math.abs(distanCat2Mouse) > Math.abs(distanCat1Mouse)){
+    return "cat1"
+  } if (Math.abs(distanCat1Mouse) === Math.abs(distanCat2Mouse)){
+    return 'os gatos trombam e o rato foge'
+  }
+  }
+
 
 // Desafio 8
 function fizzBuzz(arrayDeNumero) {
