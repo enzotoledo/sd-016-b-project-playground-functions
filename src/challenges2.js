@@ -19,8 +19,11 @@ function techList(arrayTechs, name) {
 // Desafio 11
 function generatePhoneNumber(arrayNumbers) {
   let phoneNumber = '';
+  
   let repeatTest = 0;
+  
   let repeatTest2 = false;
+  
   let numbersIr = false;
 
   for (let index = 0; index < arrayNumbers.length; index += 1) {
