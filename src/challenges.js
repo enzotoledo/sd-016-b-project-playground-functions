@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(vauleA, vauleB) {
   if ((vauleA === true) && (vauleB === true)) {
-    return true;
-  }  
-    return false;
+  return true;
+}  
+  return false;
 }
 
 // Desafio 2
@@ -12,8 +12,8 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence(sentence, separator) {
- return (sentence.split(" "));
+function splitSentence(sentence) {
+  return (sentence.split(" "));
 }
 
 // Desafio 4
@@ -23,14 +23,14 @@ function concatName(names) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
- return ((wins*3) + ties);
+  return ((wins * 3) + ties);
 }
 
 // Desafio 6
 function highestCount(numbers) {
-let counter = 0;
-let higthNumber = Math.max(...numbers);
-console.log(higthNumber);
+  let counter = 0;
+  let higthNumber = Math.max(...numbers);
+  console.log(higthNumber);
 
   for (let index = 0; index < numbers.length; index+=1) {
    if (higthNumber === numbers[index]) {

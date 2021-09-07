@@ -1,17 +1,19 @@
 // Desafio 10
 function techList(techs, names) {
-let tech = 0;
-tech.sort =[];
-  
-for (let index = 0; index < techs.length; index+=1) {
- if (techs === []) {
-   return 'Vazio!';
- }
-   if (tech.sort.push({tech:techs[index], name:names}) {
-   return tech
- }
+let tech = techs.sort ();
+let returnList = [];
+
+if (tech.length === 0) {
+  return 'Vazio!';
 }
-   
+for (let index = 0; index < techs.length; index+=1) {
+  returnList.push ({
+      tech:techs[index], 
+      name:names,});
+}
+return returnList;
+}
+//console.log(returnList);
 
 // Desafio 11
 function generatePhoneNumber() {
