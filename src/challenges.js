@@ -38,7 +38,7 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(numeros) {
   // seu código aqui
-  // ~~ Créditos ao Gabriel Rodigues por ajudar o entendimento do requisito. ~~
+  // ~~ Créditos ao Gabriel Rodrigues por ajudar o entendimento do requisito. ~~
   numeroRepetido = 0;
   maiorNumero = numeros[0];
   for (let index = 0; index < numeros.length; index += 1) {
