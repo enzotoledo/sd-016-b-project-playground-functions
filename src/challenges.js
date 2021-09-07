@@ -77,11 +77,42 @@ function fizzBuzz(divisible) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(string) {
+
+  let separeteVowel = string.split('');
+  for (let index = 0; index < string.length; index += 1) {
+    if (separeteVowel[index] === 'a') {
+      separeteVowel[index] = '1';
+    } else if (separeteVowel[index] === 'e') {
+      separeteVowel[index] = '2';
+    } else if (separeteVowel[index] === 'i') {
+      separeteVowel[index] = '3';
+    } else if (separeteVowel[index] === 'o') {
+      separeteVowel[index] = '4';
+    } else if (separeteVowel[index] === 'u') {
+      separeteVowel[index] = '5';
+    }
+  }
+  return separeteVowel.join('');
 }
-function decode() {
-  // seu código aqui
+
+function decode(string) {
+  
+  let separeteVowel = string.split('');
+  for (let index = 0; index < string.length; index += 1) {
+    if (separeteVowel[index] === '1') {
+      separeteVowel[index] = 'a';
+    } else if (separeteVowel[index] === '2') {
+      separeteVowel[index] = 'e';
+    } else if (separeteVowel[index] === '3') {
+      separeteVowel[index] = 'i';
+    } else if (separeteVowel[index] === '4') {
+      separeteVowel[index] = 'o';
+    } else if (separeteVowel[index] === '5') {
+      separeteVowel[index] = 'u';
+    }
+  }
+  return separeteVowel.join('');
 }
 
 module.exports = {
