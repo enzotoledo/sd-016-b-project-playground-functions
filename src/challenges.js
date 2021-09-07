@@ -70,7 +70,7 @@ function highestCount(array) {
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // Calcula a distância entre o rato e o gato 1, e a distãncia entre o rato e o gato 2 e retorna aquele que estiver mais perto. Se estiverem igualmente distantes, retorna outra string.
-  //Primeiro a função calcula a distância e caso seja um número negativo o transforma em um número positivo. Depois a função compara as distâncias e retorna o gato mais próximo ou outra string.
+  // Primeiro a função calcula a distância e caso seja um número negativo o transforma em um número positivo. Depois a função compara as distâncias e retorna o gato mais próximo ou outra string.
   let distanceMouseCat1 = mouse - cat1;
   if (distanceMouseCat1 < 0) {
     distanceMouseCat1 *= -1;
@@ -80,11 +80,11 @@ function catAndMouse(mouse, cat1, cat2) {
     distanceMouseCat2 *= -1;
   }
   if (distanceMouseCat1 === distanceMouseCat2) {
-    return 'os gatos trombam e o rato foge'
-  } else if (distanceMouseCat1 < distanceMouseCat2) {
-    return 'cat1'
+    return 'os gatos trombam e o rato foge';
+  } if (distanceMouseCat1 < distanceMouseCat2) {
+    return 'cat1';
   } else {
-    return 'cat2'
+    return 'cat2';
   }
 }
 
@@ -115,7 +115,7 @@ function encode(text) {
   */
   let newText = '';
   for (let i = 0; i < text.length; i += 1) {
-    if (text.charAt(i) == 'a') {
+    if (text.charAt(i) === 'a') {
       newText += 1;
     } else if (text.charAt(i) === 'e') {
       newText += 2;
