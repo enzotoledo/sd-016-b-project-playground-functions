@@ -1,8 +1,13 @@
 // Desafio 1
-function compareTrue( ) {  
-  
- 
-}
+function compareTrue(valor1, valor2 ) { 
+  let resultado1
+  if (valor1 === true && valor2 === true) {
+    resultado1 = true;
+    } else {
+    resultado1 = false;
+    }
+    return resultado1;
+    } 
 
 // Desafio 2
 function calcArea(base, height) {
@@ -11,52 +16,69 @@ function calcArea(base, height) {
 }
 
 // Desafio 3
-function splitSentence() {
-  let resultado = splitSentence.split ("",)
+function splitSentence(name) {
+  let resultado = name.split(" ");
   return resultado;
 }
 
 // Desafio 4
-function concatName(ultimoItem, primeiroItem) {
-  let ultimoItem = concatName.length - 1;
-  let primeiroItem = concatName[0];
-  let resultado = concatName.concat(ultimoItem, primeiroItem);
-  console.log (resultado);  
+function concatName(nomes) {
+  let ultimoItem = nomes[nomes.length - 1];
+  let primeiroItem = nomes[0];
+  let resultado  = ultimoItem + ", " + primeiroItem;
+  return resultado;  
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-    
+   let vitoria = wins *3;
+   let empate= ties *1;
+   let resultado = vitoria + empate;
+   return resultado;    
 }
 
 // Desafio 6
-function highestCount() {
-  let nMaior = Math.max (highestCount);
-  for ( let i=0; i < nMaior.length; nMaior++)
-  return nMaior++;
+function highestCount(contagem) {
+  let nMaior = Math.max.apply(null, contagem);
+  let verificaRepeticao = 0;
+  for ( let i=0; i < contagem.length; i++){
+    if(nMaior === contagem[i]) { 
+      verificaRepeticao++            
+      }
+  }
+  return verificaRepeticao;
 }
 
 // Desafio 7
-function catAndMouse(cat1, cat2) {
-  if (cat2<cat1){
-  console.log ("cat2")}
- else if ( cat1<cat2)
- {console.log ("cat1")}
- else{
-  console.log ("os gatos trombam e o rato foge")}  
+function catAndMouse(cat1, cat2, mouse) { 
+  
+  let distanciacat1 = (cat1 - mouse) ;
+  let distanciacat2 = (cat2 - mouse);
+  let distancia2gatos= ((cat1 - cat2) * mouse);
+
+  
+  if(distancia2gatos === mouse ){return "os gatos trombam e o rato foge";}
+  else if (distanciacat2 <  distanciacat1){return "cat1";}
+  else if (distanciacat1 < distanciacat2){return "cat2";} 
+  
 }
 
 // Desafio 8
-function fizzBuzz(n) {
-      if(n % 3 == 0 && n % 5 == 0){
-        console.log(n +" FizzBuzz");
-    }else if(n % 5 == 0){
-        console.log(n +" Buzz");
-    }else if(n % 3 == 0){
-        console.log(n +" Fizz");
-    }
-    n++;
+function fizzBuzz(){
+  let newArray = [];
+array.forEach((value) => {
+if (value % 3 === 0 && value % 5 === 0) {
+newArray.push('fizzBuzz');
+} else if (value % 3 === 0) {
+newArray.push('fizz');
+} else if (value % 5 === 0) {
+newArray.push('buzz');
+} else {
+newArray.push('bug!');
 }
+});
+return newArray;
+} 
 
 // Desafio 9
 function encode() {
@@ -80,4 +102,4 @@ module.exports = {
   footballPoints,
   highestCount,
   splitSentence,
-};
+}
