@@ -29,16 +29,24 @@ function footballPoints(wins, ties) {
   return ((wins*3)+ties)  
 }
 
-// Desafio 6******
+// Desafio 6
 function highestCount(numbers) { 
-  let highestNumber = 0;
-  for (let index = 0; index < numbers.length; index++) {
-    if (highestNumber === 0){
-
-    }    
-    
+  numbers = numbers.sort(function (a, b) {  return a - b;  });
+  let highestNumber = numbers[numbers.length-1];
+  let countAux = 0;
+  let mostAppear = 0;
+  for (let index = 0; index < numbers.length; index++) {  
+    if(highestNumber === numbers[index]){
+      countAux = countAux + 1;
+    }        
   }
+  if(mostAppear < countAux){
+    mostAppear = countAux;
+  }
+  countAux = 0;
+  return mostAppear;
 }  
+
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -132,7 +140,7 @@ function encode(string) {
     
   return encodedString
 }
-console.log(encode('hoje ta muito frio'));
+
 
 function decode() {
   let codeVowel = {
@@ -159,14 +167,7 @@ function decode() {
     }
   }  
 }
-let codeVowel = {
-  a: 1,
-  e: 2,
-  i: 3,
-  o: 4,
-  u: 5
-}  
-console.log(codeVowel.key(a));
+
 
 
 module.exports = {
