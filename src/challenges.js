@@ -1,21 +1,19 @@
 // Desafio 1
 function compareTrue( ) {  
-  if (compareTrue = true && true){return true}
-  else if (compareTrue = false && false) {return  false}
-  else {return false}
+  
  
 }
 
 // Desafio 2
 function calcArea(base, height) {
   calcArea = (base*height)/2;
-  return calcArea
+  return calcArea;
 }
 
 // Desafio 3
 function splitSentence() {
   let resultado = splitSentence.split;
-  return resultado
+  return resultado;
 }
 
 // Desafio 4
@@ -40,14 +38,12 @@ function highestCount() {
 
 // Desafio 7
 function catAndMouse(cat1, cat2) {
-  switch(catAndMouse){case cat2<cat1;
-  console.log "cat2";
- break;
-case cat1<cat2;
-console.log "cat1";
- break;
-default:
-  console.log "os gatos trombam e o rato foge";}
+  if (cat2<cat1){
+  console.log "cat2"};
+ if else( cat1<cat2);
+ {console.log "cat1"};
+ else{
+  console.log "os gatos trombam e o rato foge"};
 
   
 }
