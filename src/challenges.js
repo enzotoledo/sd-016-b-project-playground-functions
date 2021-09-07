@@ -134,15 +134,14 @@ function encode(string) {
       }              
     }
     if (stringAux !== ''){
-      encodedString = encodedString + (stringAux)
+      encodedString = encodedString + (stringAux);
     }
   }
     
   return encodedString
 }
 
-
-function decode() {
+function decode(string) {
   let codeVowel = {
     a: 1,
     e: 2,
@@ -152,21 +151,53 @@ function decode() {
   }  
   let splitString = string.split("");
   let stringAux = '';
-  let encodedString ='';
+  let encodedString = '';
     
   for (let index = 0; index < splitString.length; index++) {
-    stringAux = splitString[index];
-    for (let index1 in codeVowel) {      
-      if(stringAux === codeVowel[index1]){
-        encodedString = encodedString + (codeVowel[index1]);
-        stringAux = '';       
-      }              
+    stringAux = splitString[index];       
+    for (let index1 in codeVowel) {            
+      if(stringAux == codeVowel[index1]){
+        encodedString = encodedString + index1;         
+        stringAux = '';                    
+      }   
     }
     if (stringAux !== ''){
       encodedString = encodedString + (stringAux)
+      stringAux = '';            
     }
+    
   }  
+      
+  return encodedString;
 }
+
+// Desafio 10
+function techList(technology, name){
+  technology = technology.sort()
+  let techObject = {
+    
+  }
+  let techFinal = {
+
+  }
+  for (let index = 0; index < technology.length; index++) {
+    techObject['tech'] = technology[index];
+    techObject['name'] = name;
+    techFinal = Object.assign(techObject)
+  }
+  return techFinal;
+}
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
+
+let codeVowel = {
+  x: 'hoje',
+}  
+let codeVowel2 = {
+  u: 'amanha'
+}  
+codeVowel2 = Object.assign(codeVowel,codeVowel2);
+
+console.log(codeVowel2);
 
 
 
