@@ -1,7 +1,7 @@
 // Desafio 1
-function compareTrue(v, k) {
+function compareTrue(v, number) {
   // seu código aqui
-  return v && k
+  return v && number
 }
 
 // Desafio 2
@@ -61,7 +61,21 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(value) {
   // seu código aqui
+  let array = [];
   
+  for (let v of value) {
+    if (v % 3 === 0 && v % 5 === 0) {
+      array.push('fizzBuzz');
+    } else if (v % 3 === 0) {
+      array.push('fizz');
+    } else if (v % 5 === 0) {
+      array.push('buzz'); 
+    } else {
+      array.push('bug!');
+    }
+  }
+
+  return array;
 }
 
 // Desafio 9
