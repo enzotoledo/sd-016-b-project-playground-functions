@@ -9,10 +9,26 @@ function techList(arr, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
-  // seu código aqui
+function menorPhoneMaior(i) {
+  if ((i < 0) || (i > 9)) return true;
 }
 
+function numberPhoneRepeat(i, a) {
+  let count = 0;
+  for (let x of a) {
+    if (x === i) count += 1;
+  }
+  if (count >= 3) return true;
+}
+
+function generatePhoneNumber(a) {
+  let msg = 'não é possível gerar um número de telefone com esses valores';
+  if (a.length !== 11) return 'Array com tamanho incorreto.';
+  for (let i of a) {
+    if (menorPhoneMaior(i) || numberPhoneRepeat(i, a)) return msg;
+  }
+  return `(${a[0]}${a[1]}) ${a[2]}${a[3]}${a[4]}${a[5]}${a[6]}-${a[7]}${a[8]}${a[9]}${a[10]}`;
+}
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   if ((lineA < (lineB + lineC)) && (lineA > Math.abs(lineB - lineC))) return true;
