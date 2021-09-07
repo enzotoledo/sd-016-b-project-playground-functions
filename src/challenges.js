@@ -171,36 +171,6 @@ function decode(string) {
   return encodedString;
 }
 
-// Desafio 10
-function techList(technology, name){
-  technology = technology.sort()
-  let techObject = {
-    
-  }
-  let techFinal = {
-
-  }
-  for (let index = 0; index < technology.length; index++) {
-    techObject['tech'] = technology[index];
-    techObject['name'] = name;
-    techFinal = Object.assign(techObject)
-  }
-  return techFinal;
-}
-console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], "Lucas"));
-
-let codeVowel = {
-  x: 'hoje',
-}  
-let codeVowel2 = {
-  u: 'amanha'
-}  
-codeVowel2 = Object.assign(codeVowel,codeVowel2);
-
-console.log(codeVowel2);
-
-
-
 module.exports = {
   calcArea,
   catAndMouse,
