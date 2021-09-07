@@ -15,29 +15,37 @@ function techList(arrayTecnologias, nome) { /* Para a resolucao desse exercicio 
 }
 
 // Desafio 11
-function generatePhoneNumber(arrayNumeros) {
-  let contadorNumerosRepetidos = 0;
-  let numeroAtual = arrayNumeros[0];
+function createTheNumber(array) {
   let numeroTelefone = '';
-  if (arrayNumeros.length !== 11) {
+  let prefixo = `(${array[0]}${array[1]})`;
+  let fist = `${array[2]}${array[3]}${array[4]}${array[5]}${array[6]}`;
+  let second = `${array[7]}${array[8]}${array[9]}${array[10]}`;
+  numeroTelefone = `${prefixo} ${fist}-${second}`;
+  return numeroTelefone;
+}
+
+function generatePhoneNumber(array) {
+  let contadorNumerosRepetidos = 0;
+  let numeroAtual = array[0];
+  if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
-  for (let index = 0; index < arrayNumeros.length; index += 1) {
-    for (let indexNumero = 0; indexNumero < arrayNumeros.length; indexNumero += 1) {
-      numeroAtual = arrayNumeros[index];
+  for (let index = 0; index < array.length; index += 1) {
+    for (let indexNumero = 0; indexNumero < array.length; indexNumero += 1) {
+      numeroAtual = array[index];
       /* verifica se o numero repete 3 vezes */
-      if (arrayNumeros[indexNumero] === numeroAtual) {
+      if (array[indexNumero] === numeroAtual) {
         contadorNumerosRepetidos += 1;
         if (contadorNumerosRepetidos === 3) {
           return 'não é possível gerar um número de telefone com esses valores';
         }
-      } else if (arrayNumeros[indexNumero] < 0 || arrayNumeros[indexNumero] > 9) { /* Verifica se e menor que 0 ou maior que 9 */
+      } else if (array[indexNumero] < 0 || array[indexNumero] > 9) { /* Verifica se e menor que 0 ou maior que 9 */
         return 'não é possível gerar um número de telefone com esses valores';
       }
     }
     contadorNumerosRepetidos = 0;
   }
-  numeroTelefone = `(${arrayNumeros[0]}${arrayNumeros[1]}) ${arrayNumeros[2]}${arrayNumeros[3]}${arrayNumeros[4]}${arrayNumeros[5]}${arrayNumeros[6]}-${arrayNumeros[7]}${arrayNumeros[8]}${arrayNumeros[9]}${arrayNumeros[10]}`;
+  let numeroTelefone = createTheNumber(array);
   return numeroTelefone;
 }
 
