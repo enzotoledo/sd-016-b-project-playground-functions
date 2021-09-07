@@ -1,31 +1,30 @@
 // Desafio 1
 function compareTrue(param1, param2) {
-  if (param1 == true && param2 == true) {
-    return true
-  } else {
-    return false
+  if (param1 && param2 === true) {
+    return true;
   }
+  return false;
 }
 
 // Desafio 2
 function calcArea(base, height) {
-  let area = (base*height)/2
-  return area
+  let area = (base * height) / 2;
+  return area;
 }
 
 // Vi a explicação de como utilizar o .split em: https://www.w3schools.com/jsref/jsref_split.asp
 // Desafio 3
 function splitSentence(phrase) {
-  arrPhrase = phrase.split(" ");
-  return arrPhrase
+  let arrPhrase = phrase.split(" ");
+  return arrPhrase;
 }
 
 // Desafio 4
 function concatName(names) {
-  for (let index = 0; index < names.length; index++) {
-    let last = names.pop()
-    let fristAndLast = last + ", " + names[0]
-    return fristAndLast
+  for (let index = 0; index < names.length; index += 1) {
+    let last = names.pop();
+    let fristAndLast = last + ", " + names[0];
+    return fristAndLast;
   }
 }
 
