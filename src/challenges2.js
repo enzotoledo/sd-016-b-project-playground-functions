@@ -64,8 +64,20 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-
+function hydrate(bebidas) {
+  let countBebidas = /\d+/g;
+  let copoDagua = bebidas.match(countBebidas);
+  if (copoDagua.length > 1) {
+    let sum = 0;
+    for (let index = 0; index < copoDagua.length; index += 1) {
+      let count = parseInt(copoDagua[index], 10);
+      sum += count;
+    }
+    bebidas = `${sum} copos de água`;
+  } else {
+    bebidas = `${parseInt(copoDagua, 10)} copo de água`;
+  }
+  return bebidas;
 }
 
 module.exports = {
