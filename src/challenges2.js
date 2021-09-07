@@ -29,6 +29,7 @@ function hydrate(drinks) {
 
   return `${sumtotal} copo de água`;
 }
+// Fonte: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/match 
 console.log(hydrate('1 cerveja 2'));
 
 module.exports = {
