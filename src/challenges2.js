@@ -83,8 +83,8 @@ function hydrate(str) {
   let sum = 0;
 
   for (let index of bebidasArray) {
-    if (Number.parseInt(index)) {
-      number.push(Number.parseInt(index));
+    if (Number.parseInt(index, 10)) {
+      number.push(Number.parseInt(index, 10));
     }
   }
 
