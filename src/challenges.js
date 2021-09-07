@@ -26,7 +26,7 @@ function splitSentence(text) {
    * Usei o split() method.
    * Ref: https://www.w3schools.com/js/js_string_methods.asp
   */
-  let newArray = text.split(" "); // Separa a string onde há espaço.
+  let newArray = text.split(' '); // Separa a string onde há espaço.
   return newArray;
 }
 
@@ -54,12 +54,12 @@ function highestCount(array) {
   // A função retorna o número de vezes que o maior número foi repetido. Primeiro a função acessa cada posição da array para fim comparativo, verifica qual é o maior número da array e depois verifica quantas vezes ele foi repetido.
   let highestNumber = array[0];
   let repetitions = 0;
-  for (let index = 1; index < array.length ; index += 1) {
+  for (let index = 1; index < array.length; index += 1) {
     if (array[index] >= highestNumber) {
       highestNumber = array[index];
     }
   }
-  for (let i = 0; i < array.length ; i += 1) {
+  for (let i = 0; i < array.length; i += 1) {
     if (array[i] === highestNumber) {
       repetitions += 1;
     }
@@ -68,8 +68,24 @@ function highestCount(array) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  // Calcula a distância entre o rato e o gato 1, e a distãncia entre o rato e o gato 2 e retorna aquele que estiver mais perto. Se estiverem igualmente distantes, retorna outra string.
+  //Primeiro a função calcula a distância e caso seja um número negativo o transforma em um número positivo. Depois a função compara as distâncias e retorna o gato mais próximo ou outra string.
+  let distanceMouseCat1 = mouse - cat1;
+  if (distanceMouseCat1 < 0) {
+    distanceMouseCat1 *= -1;
+  }
+  let distanceMouseCat2 = mouse - cat2;
+  if (distanceMouseCat2 < 0) {
+    distanceMouseCat2 *= -1;
+  }
+  if (distanceMouseCat1 === distanceMouseCat2) {
+    return 'os gatos trombam e o rato foge'
+  } else if (distanceMouseCat1 < distanceMouseCat2) {
+    return 'cat1'
+  } else {
+    return 'cat2'
+  }
 }
 
 // Desafio 8
@@ -82,9 +98,9 @@ function fizzBuzz(arrayOfNumbers) {
     } else if ((number % 3) === 0) {
       newArray.push('fizz');
     } else if ((number % 5) === 0) {
-    newArray.push('buzz');
+      newArray.push('buzz');
     } else {
-    newArray.push('bug!');
+      newArray.push('bug!');
     }
   }
   return newArray;
@@ -120,20 +136,20 @@ function decode(text) {
   // Faz o oposto da função encode.
   let newText = '';
   for (let i = 0; i < text.length; i += 1) {
-    if (text.charAt(i) == 1) {
+    if (text.charAt(i) === '1') {
       newText += 'a';
-    } else if (text.charAt(i) == 2) {
+    } else if (text.charAt(i) === '2') {
       newText += 'e';
-    } else if (text.charAt(i) == 3) {
+    } else if (text.charAt(i) === '3') {
       newText += 'i';
-    } else if (text.charAt(i) == 4) {
+    } else if (text.charAt(i) === '4') {
       newText += 'o';
-    } else if (text.charAt(i) == 5) {
+    } else if (text.charAt(i) === '5') {
       newText += 'u';
     } else {
       newText += text.charAt(i);
     }
-  } 
+  }
   return newText;
 }
 
