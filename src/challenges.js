@@ -64,30 +64,63 @@ function catAndMouse(cat1, cat2, mouse) {
 }
 
 // Desafio 8
-function fizzBuzz(n) {
-  let array = [];
-  for (let index = 0; index < n[index].length; index += 1) {
-    if (n[index] % 3 === 0 && n[index] % 5 === 0){
-      array.push("FizzBuzz");
-    } else if (n[index] % 5 === 0){
-      array.push("Buzz");
-    } else if (n[index] % 3 === 0){
-      array.push("Fizz");
-    } else {
-      array.push("bug!");
-    }
-  }
-  return array;
+function fizzBuzz(array) {
+  let newArray = [];
+ array.forEach((value) => {
+   if (value % 3 === 0 && value % 5 === 0) {
+     newArray.push('fizzBuzz');
+   } else if (value % 3 === 0) {
+     newArray.push('fizz');
+   } else if (value % 5 === 0) {
+     newArray.push('buzz');
+   } else {
+     newArray.push('bug!');
+   }
+ });
+ return newArray;
 }
 
 // Desafio 9
 function encode() {
-  // seu código aqui
+  function encode(string) {
+    // seu código aqui
+      string = string.replace(/a/gi, '1');
+    string = string.replace(/e/gi, '2');
+    string = string.replace(/i/gi, '3');
+    string = string.replace(/o/gi, '4');
+    string = string.replace(/u/gi, '5');
+    return string;
+  }
+  function decode(string) {
+    // seu código aqui
+    string = string.replace(/1/gi, 'a');
+    string = string.replace(/2/gi, 'e');
+    string = string.replace(/3/gi, 'i');
+    string = string.replace(/4/gi, 'o');
+    string = string.replace(/5/gi, 'u');
+    return string;
+  }
 }
 function decode() {
   // seu código aqui
 }
 
+// Desafio 10
+function Objetos(array, nome) {
+  let newList = [];
+  let newObjeto;
+  array = array.sort();
+
+  for (let key in array) {
+    newObjeto = {
+      tech: array[key],
+      name: nome
+    };
+
+    newList[key] = newObjeto;
+  }
+  return newList;
+}
 module.exports = {
   calcArea,
   catAndMouse,
