@@ -120,9 +120,24 @@ function fizzBuzz(array) {
 }
 
 // Desafio 9
+let vogais = ['a', 'e', 'i', 'o', 'u'];
+let numbers = ['1', '2', '3', '4', '5'];
+
 function stringToArray(param1) {
   let array = param1.split('');
   return array;
+}
+
+function isVowel(array1, array2, i, index) {
+  if (array1[i] === array2[index]) {
+    array1[i] = numbers[index];
+  }
+}
+
+function isNumber(array1, array2, i, index) {
+  if (array1[i] === array2[index]) {
+    array1[i] = vogais[index];
+  }
 }
 
 function encode(string) {
@@ -130,51 +145,20 @@ function encode(string) {
   let myArray = stringToArray(string);
 
   for (let i = 0; i < myArray.length; i += 1) {
-    switch (myArray[i]) {
-    case 'a':
-      myArray[i] = 1;
-      break;
-    case 'e':
-      myArray[i] = 2;
-      break;
-    case 'i':
-      myArray[i] = 3;
-      break;
-    case 'o':
-      myArray[i] = 4;
-      break;
-    case 'u':
-      myArray[i] = 5;
-      break;
-    default:
-      break;
+    for (let index = 0; index < vogais.length; index += 1) {
+      isVowel(myArray, vogais, i, index);
     }
   }
   return myArray.join('');
 }
+
 function decode(string) {
   // seu código aqui
   let myArray = stringToArray(string);
 
   for (let i = 0; i < myArray.length; i += 1) {
-    switch (myArray[i]) {
-    case '1':
-      myArray[i] = 'a';
-      break;
-    case '2':
-      myArray[i] = 'e';
-      break;
-    case '3':
-      myArray[i] = 'i';
-      break;
-    case '4':
-      myArray[i] = 'o';
-      break;
-    case '5':
-      myArray[i] = 'u';
-      break;
-    default:
-      break;
+    for (let index = 0; index < numbers.length; index += 1) {
+      isNumber(myArray, numbers, i, index);
     }
   }
   return myArray.join('');
