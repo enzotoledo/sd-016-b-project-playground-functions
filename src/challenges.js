@@ -97,10 +97,38 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 9
-function encode() {
+function encode(string) {
+  let encoded = ""
+  for (let index = 0; index < string.length; index++) {
+    if (string[index] === "a")
+    encoded += "1"
+    else if (string[index] === "e")
+    encoded += "2"
+    else if (string[index] === "i")
+    encoded += "3"
+    else if (string[index] === "o")
+    encoded += "4"
+    else if (string[index] === "u")
+    encoded += "5"
+    else encoded += string[index]}
+  return encoded;  
   // seu código aqui
 }
-function decode() {
+function decode(string1) {
+  let decoded = ""
+  for (let index = 0; index < string1.length; index++) {
+    if (string1[index] === "1")
+    decoded += "a"
+    else if (string1[index] === "2")
+    decoded += "e"
+    else if (string1[index] === "3")
+    decoded += "i"
+    else if (string1[index] === "4")
+    decoded += "o"
+    else if (string1[index] === "5")
+    decoded += "u"
+    else decoded += string1[index]}
+  return decoded;
   // seu código aqui
 }
 
