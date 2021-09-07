@@ -78,7 +78,6 @@ function fizzBuzz(divisible) {
 
 // Desafio 9
 function encode(string) {
-
   let separeteVowel = string.split('');
   for (let index = 0; index < string.length; index += 1) {
     if (separeteVowel[index] === 'a') {
@@ -97,7 +96,6 @@ function encode(string) {
 }
 
 function decode(string) {
-  
   let separeteVowel = string.split('');
   for (let index = 0; index < string.length; index += 1) {
     if (separeteVowel[index] === '1') {
