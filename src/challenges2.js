@@ -15,10 +15,15 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(arr) {
+  let array = arr.match(/\d+/g).map(Number); // dica https://stackoverflow.com/questions/48343478/what-does-mapnumber-do-here
+  let count = 0;
+  for (let i of array) {
+    count += i;
+  }
+  if (count === 1) return '1 copo de água';
+  if (count > 1) return `${count} copos de água`;
 }
-
 module.exports = {
   generatePhoneNumber,
   techList,
