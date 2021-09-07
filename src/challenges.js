@@ -1,8 +1,10 @@
 // Desafio 1
 function compareTrue(value1, value2) {
+  let compare = false;
   if ((value1 === true) && (value2 === true)) {
-    return true;
+    compare = true;
   }
+  return compare;
 }
 // Desafio 2
 function calcArea(base, height) {
@@ -41,8 +43,18 @@ function highestCount(arrayNumbers) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let mouseCat1 = Math.abs(mouse - cat1);
+  let mouseCat2 = Math.abs(mouse - cat2);
+  let result;
+  if (mouseCat1 > mouseCat2) {
+    result = 'cat2';
+  } else if (mouseCat1 < mouseCat2) {
+    result = 'cat1';
+  } else {
+    result = 'os gatos trombam e o rato foge';
+  }
+  return result;
 }
 
 // Desafio 8
