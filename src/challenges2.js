@@ -63,11 +63,18 @@ let result = 0
   }return result
 }
 
-console.log(triangleCheck(10, 14, 8));
-
-// Desafio 13
-function hydrate() {
-  // seu código aqui
+// Desafio 13  => sobre regExp https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/RegExp
+// sobre split => https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/split
+// sobre ideia de como fazer => https://pt.stackoverflow.com/questions/279662/javascript-separar-uma-string-e-ent%C3%A3o-somar-os-valores
+function hydrate(str) {
+  let result = str.replace(/\D/g, '')
+  result = result.split("")
+  result = result.reduce((a, b) => parseInt(a) + parseInt(b))
+  if (result > 1) {
+    return `${result} copos de água`
+  } else {
+    return `${result} copo de água`
+  }
 }
 
 module.exports = {
