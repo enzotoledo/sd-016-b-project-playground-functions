@@ -58,9 +58,27 @@ function generatePhoneNumber(arrPhone) {
   return 'não é possível gerar um número de telefone com esses valores';
 }
 
+function sizesTriangle(param1, param2, param3) {
+  let side1 = param1 < (param2 + param3) && param1 > Math.abs((param2 - param3));
+  let side2 = param2 < (param1 + param3) && param2 > Math.abs((param1 - param3));
+  let side3 = param3 < (param1 + param2) && param3 > Math.abs((param1 - param2));
+  return {
+    side1,
+    side2,
+    side3,
+  };
+}
+
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
+  let triangle = sizesTriangle(lineA, lineB, lineC);
+  for (let key in triangle) {
+    if (triangle[key] === false) {
+      return false;
+    }
+  }
+  return true;
 }
 
 // Desafio 13
