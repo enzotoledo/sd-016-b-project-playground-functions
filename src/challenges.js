@@ -25,7 +25,9 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(arrayDes4) {
-  let phrase = arrayDes4[arrayDes4.length - 1] + ', ' + arrayDes4[0];
+  let string1 = ', ';
+
+  let phrase = arrayDes4[arrayDes4.length - 1] + string1 + arrayDes4[0];
 
   return phrase;
 }
@@ -77,19 +79,26 @@ function catAndMouse(positionMouse, positionCat1, positionCat2) {
 }
 
 // Desafio 8
+function testFizzBuzzBug(number) {
+  let result = '';
+  if ((number % 3 === 0) && (number % 5 === 0)) {
+    result = 'fizzBuzz';
+  } else if (number % 3 === 0) {
+    result = 'fizz';
+  } else if (number % 5 === 0) {
+    result = 'buzz';
+  } else {
+    result = 'bug!';
+  }
+
+  return result;
+}
+
 function fizzBuzz(arrayNumbers) {
   let arrayFizzBuzz = [];
 
   for (let index = 0; index < arrayNumbers.length; index += 1) {
-    if ((arrayNumbers[index] % 3 === 0) && (arrayNumbers[index] % 5 === 0)) {
-      arrayFizzBuzz.push('fizzBuzz');
-    } else if (arrayNumbers[index] % 3 === 0) {
-      arrayFizzBuzz.push('fizz');
-    } else if (arrayNumbers[index] % 5 === 0) {
-      arrayFizzBuzz.push('buzz');
-    } else {
-      arrayFizzBuzz.push('bug!');
-    }
+    arrayFizzBuzz.push(testFizzBuzzBug(arrayNumbers[index]));
   }
 
   return arrayFizzBuzz;
