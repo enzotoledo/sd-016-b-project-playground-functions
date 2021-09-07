@@ -14,40 +14,66 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence() {
-  // seu código aqui
+  let resultado = splitSentence.split;
+  return resultado
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(ultimoItem, primeiroItem) {
+  let ultimoItem = concatName[concatName.length-1];
+  let primeiroItem = concatName[0];
+  let resultado = concatName.concat(ultimoItem, primeiroItem);
+  return resultado;  
 }
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+    
 }
 
 // Desafio 6
 function highestCount() {
-  // seu código aqui
+  let nMaior = Math.max (highestCount);
+  for ( let i=0; i < nMaior.length; nMaior++;)
+  return nMaior++;
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(cat1, cat2) {
+  switch(catAndMouse){case cat2<cat1;
+  console.log "cat2";
+ break;
+case cat1<cat2;
+console.log "cat1";
+ break;
+default:
+  console.log "os gatos trombam e o rato foge";}
+
+  
 }
 
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(n) {
+  for (n <= 45) {
+    if(n % 3 == 0 && n % 5 == 0){
+        console.log(n +" FizzBuzz");
+    }else if(n % 5 == 0){
+        console.log(n +" Buzz");
+    }else if(n % 3 == 0){
+        console.log(n +" Fizz");
+    }
+    n++;
 }
 
 // Desafio 9
 function encode() {
-  // seu código aqui
-}
+  let numeros = encode.replace ("hi, there!", "h3, th2r2!");
+  console.log (numeros);
+  }
 function decode() {
-  // seu código aqui
+  let minusculas = decode.replace ("h3, th2r2!","hi, there!" );
+  console.log (minusculas);
+  
 }
 
 module.exports = {
