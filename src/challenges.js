@@ -51,16 +51,16 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-  // A função retorna o número de vezes que o maior número foi repetido. Primeiro a função verifica qual é o maior número da array e depois verifica quantas vezes ele foi repetido.
-  let greatestNumber = array[0];
+  // A função retorna o número de vezes que o maior número foi repetido. Primeiro a função acessa cada posição da array para fim comparativo, verifica qual é o maior número da array e depois verifica quantas vezes ele foi repetido.
+  let highestNumber = array[0];
   let repetitions = 0;
   for (let index = 1; index < array.length ; index += 1) {
-    if (array[index] >= greatestNumber) {
-      greatestNumber = array[index];
+    if (array[index] >= highestNumber) {
+      highestNumber = array[index];
     }
   }
   for (let i = 0; i < array.length ; i += 1) {
-    if (array[i] === greatestNumber) {
+    if (array[i] === highestNumber) {
       repetitions += 1;
     }
   }
@@ -91,12 +91,50 @@ function fizzBuzz(arrayOfNumbers) {
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(text) {
+  /**
+   * Recebe um texto e substitui os caracteres: 'a' por 1, 'e' por 2, 'i' por 3, 'o' por 4 e 'u' por 5.
+   * O charAt() method permite acessar o caractere de uma posição de uma string.
+   * Ref: https://www.w3schools.com/js/js_string_methods.asp
+  */
+  let newText = '';
+  for (let i = 0; i < text.length; i += 1) {
+    if (text.charAt(i) == 'a') {
+      newText += 1;
+    } else if (text.charAt(i) === 'e') {
+      newText += 2;
+    } else if (text.charAt(i) === 'i') {
+      newText += 3;
+    } else if (text.charAt(i) === 'o') {
+      newText += 4;
+    } else if (text.charAt(i) === 'u') {
+      newText += 5;
+    } else {
+      newText += text.charAt(i);
+    }
+  } 
+  return newText;
 }
 
-function decode() {
-  // seu código aqui
+function decode(text) {
+  // Faz o oposto da função encode.
+  let newText = '';
+  for (let i = 0; i < text.length; i += 1) {
+    if (text.charAt(i) == 1) {
+      newText += 'a';
+    } else if (text.charAt(i) == 2) {
+      newText += 'e';
+    } else if (text.charAt(i) == 3) {
+      newText += 'i';
+    } else if (text.charAt(i) == 4) {
+      newText += 'o';
+    } else if (text.charAt(i) == 5) {
+      newText += 'u';
+    } else {
+      newText += text.charAt(i);
+    }
+  } 
+  return newText;
 }
 
 module.exports = {
