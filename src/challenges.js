@@ -36,7 +36,7 @@ function concatName(array) {
   let primeiroele = array.shift();
   let ultimoele = array.pop();
   let elementos = ultimoele.concat(', ', primeiroele);
-  return elementos;n
+  return elementos;
   // seu código aqui
 }
 
@@ -44,30 +44,70 @@ function concatName(array) {
 function footballPoints(wins, ties) {
   let pontos = (wins * 3) + ties;
   return pontos;
-
 }
 
-// Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(Arrayn) {
+  let biggestNumber = Arrayn[0];
+  for (let index = 1; index < Arrayn.length; index += 1) {
+    if (Arrayn[index] > biggestNumber) {
+      biggestNumber = Arrayn[index];
+    }
+  }
+  let numberoftimes = 0;
+  for (let index2 = 0; index2 < Arrayn.length; index2 += 1) {
+    if (Arrayn[index2] === biggestNumber) {
+      numberoftimes += 1;
+    }
+  }
+  return numberoftimes;
 }
 
 // Desafio 7
-function catAndMouse() {v
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  if (Math.abs((cat1 - mouse)) > Math.abs((cat2 - mouse))) {
+    return 'cat2';
+  }
+  if (Math.abs((cat1 - mouse)) < Math.abs((cat2 - mouse))) {
+    return 'cat1';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
+
 // Desafio 8
-function fizzBuzz() {
-  // seu código aqui
+function fizzBuzz(ArrayN) {
+  let newarray = [];
+  for (let index = 0; index < ArrayN.length; index += 1) {
+    if (ArrayN[index] % 3 === 0 && ArrayN[index] % 5 === 0) {
+      newarray.push("fizzBuzz");
+    } else if (ArrayN[index] % 3 === 0) {
+      newarray.push("fizz");
+    } else if (ArrayN[index] % 5 === 0) {
+      newarray.push("buzz");
+    } else {
+      newarray.push("bug!");
+    }
+  }
+  return newarray;
 }
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(Vowels) {
+  Vowels = Vowels.replace(/a/g, '1');
+  Vowels = Vowels.replace(/e/g, '2');
+  Vowels = Vowels.replace(/i/g, '3');
+  Vowels = Vowels.replace(/o/g, '4');
+  Vowels = Vowels.replace(/u/g, '5');
+  return Vowels;
 }
-function decode() {
-  // seu código aqui
+
+function decode(Vowelsdecode) {
+  Vowelsdecode = Vowelsdecode.replace(/1/g, 'a');
+  Vowelsdecode = Vowelsdecode.replace(/2/g, 'e');
+  Vowelsdecode = Vowelsdecode.replace(/3/g, 'i');
+  Vowelsdecode = Vowelsdecode.replace(/4/g, 'o');
+  Vowelsdecode = Vowelsdecode.replace(/5/g, 'u');
+  return Vowelsdecode;
 }
 
 module.exports = {
