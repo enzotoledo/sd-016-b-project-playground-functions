@@ -72,14 +72,10 @@ console.log(catAndMouse(7, 9, 5));
 
 // Desafio 8
 function fizzBuzz(arrayNumber) {
-  let number = 0;
-  let resultado3 = 0;
-  let resultado5 = 0;
   let resultado = [];
   for (let key in arrayNumber) {
-    resultado3 = arrayNumber[key] / 3;
-    resultado5 = arrayNumber[key] /5;
-    
+    let resultado3 = arrayNumber[key] / 3;
+    let resultado5 = arrayNumber[key] /5;
     if (resultado3 % 1 === 0 && resultado5 % 1 === 0) {
       resultado.push("fizzBuzz");
     } else if (resultado3 % 1 === 0 && !(resultado5 % 1 === 0)) {
@@ -95,12 +91,47 @@ function fizzBuzz(arrayNumber) {
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(strg) {
+  let troca = "";
+  for (let key in strg) {
+    if (strg[key] === "a") {
+      troca += 1;
+    } else if (strg[key] === "e") {
+      troca += 2;
+    } else if (strg[key] === "i") {
+      troca += 3;
+    } else if (strg[key] === "o") {
+      troca += 4;
+    } else if (strg[key] === "u") {
+      troca += 5;
+    } else {
+    troca += strg[key];
+    }
+  }
+  return troca;
 }
-function decode() {
-  // seu código aqui
+console.log(encode("hi there!"));
+
+function decode(strg2) {
+  let destroca = "";
+  for (let key in strg2) {
+    if (strg2[key] === "1") {
+      destroca += "a";
+    } else if (strg2[key] === "2") {
+      destroca += "e";
+    } else if (strg2[key] === "3") {
+      destroca += "i";
+    } else if (strg2[key] === "4") {
+      destroca += "o";
+    } else if (strg2[key] === "5") {
+      destroca += "u";
+    } else {
+    destroca += strg2[key];
+    }
+  }
+  return destroca;
 }
+console.log(decode("h3 th2r2!"));
 
 module.exports = {
   calcArea,
