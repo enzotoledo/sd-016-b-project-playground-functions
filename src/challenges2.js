@@ -47,13 +47,44 @@ function generatePhoneNumber(value) {
 }
 
 // Desafio 12
-function triangleCheck() {
+function triangleCheck(l1, l2, l3) {
   // seu código aqui
+  let a, b, c;
+  if ((l1 < l2 + l3) && (l1 > Math.abs(l2 - l3)))
+    return (a = true); 
+  if ((l1 > l2 + l3) && (l1 > Math.abs(l2 - l3)))
+    return (a = false);
+  if ((l2 < l1 + l3) && (l2 < Math.abs(l1 - l3)))
+    return (b = true);
+  if ((l2 > l1 + l3) && (l2 > Math.abs(l1 - l3)))
+    return (b = false);
+  if (l3 < l1 + l2 && l3 < Math.abs(l1 - l2))
+    return (c = true);
+  if (l3 < l1 + l2 && l3 > Math.abs(l1 - l2))
+    return (c = false);
+  return a + b + c;
 }
 
 // Desafio 13
-function hydrate() {
+function hydrate(value) {
   // seu código aqui
+  let s = value.match(/\d+/g);
+  let int;
+  let array = [];
+  let c = 0;
+
+  for (let index = 0 ; index < s.length ; index += 1) {
+    int = parseInt(s[index]);
+    array.push(int);
+    c += array[index];
+  }
+
+  if (c === 1) {
+    return (c + ' copo de água');
+  } else {
+    return (c + ' copos de água');
+  }
+
 }
 
 module.exports = {
