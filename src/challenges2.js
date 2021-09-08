@@ -73,30 +73,28 @@ function triangleCheck(lineA, lineB, lineC) {
   let absValueBC = Math.abs(lineB - lineC);
   let absValueAC = Math.abs(lineC - lineA);
   let isTriangle = false;
-  if (lineC < (lineA + lineB) && lineB < (lineA + lineC) && lineA < (lineC + lineB)) {    
-    if (lineC > absValueAB && lineB > absValueAC && lineA > absValueBC) {
-      isTriangle = true;
-    }
+  if (lineC < (lineA + lineB) && lineB < (lineA + lineC) && lineA < (lineC + lineB) && lineC > absValueAB && lineB > absValueAC && lineA > absValueBC) {
+    isTriangle = true;   
   }
   return isTriangle;
 }
 
 // Desafio 13
 function hydrate(drinks) {
-  let numberDrinks = drinks.match(/\d+/g).map(Number);//função .match tirada o stackOverflow nao entendi direito como funciona
+  let numberDrinks = drinks.match(/\d+/g).map(Number); // função .match tirada o stackOverflow nao entendi direito como funciona
   let count = 0;
-  let waterString;
+  let waterString = ' copos de água';
+  let returnString;
   for (let index = 0; index < numberDrinks.length; index += 1) {
     if (numberDrinks[index] > 0) {
       count += numberDrinks[index];
     }
   }
-  waterString = count + ' copos de água';
-  if (count == 1) {
-    waterString = count + ' copo de água';
+  if (count === 1) {
+    waterString = (' copo de água');
   }
-  
-  return waterString;
+  returnString = count + waterString;
+  return returnString;
 }
 
 module.exports = {
