@@ -54,7 +54,7 @@ function highestCount(arrNumbers) {
 function catAndMouse(mouse, cat1, cat2) {
   let param1 = 'cat1';
   let param2 = 'cat2';
-  let param3 = 'Os gatos trombam e o rato foge';
+  let param3 = 'os gatos trombam e o rato foge';
 
   if (Math.abs(cat1 - mouse) < (cat2 - mouse)) {
     return param1;
@@ -83,40 +83,40 @@ function fizzBuzz(arr) {
 
 // Desafio 9
 function encode(strg) {
-  let result = "";
+  let result = '';
   for (let key in strg) {
-    if (strg[key] === "a"){
+    if (strg[key] === 'a') {
       result += 1;
-    } else if (strg[key] === "e") {
+    } else if (strg[key] === 'e') {
       result += 2;
-    } else if (strg[key] === "i") {
+    } else if (strg[key] === 'i') {
       result += 3;
-    } else if (strg[key] === "o") {
+    } else if (strg[key] === 'o') {
       result += 4;
-    } else if (strg[key] === "u") {
+    } else if (strg[key] === 'u') {
       result += 5;
     } else {
-    result += strg[key];
+      result += strg[key];
     }
   }
   return result;
 }
 
 function decode(strg2) {
-   let change2 = "";
+  let change2 = '';
   for (let key in strg2) {
-    if (strg2[key] === "1") {
-      change2 += "a";
-    } else if (strg2[key] === "2") {
-      change2 += "e";
-    } else if (strg2[key] === "3") {
-      change2 += "i";
-    } else if (strg2[key] === "4") {
-      change2 += "o";
-    } else if (strg2[key] === "5") {
-      change2 += "u";
+    if (strg2[key] === '1') {
+      change2 += 'a';
+    } else if (strg2[key] === '2') {
+      change2 += 'e';
+    } else if (strg2[key] === '3') {
+      change2 += 'i';
+    } else if (strg2[key] === '4') {
+      change2 += 'o';
+    } else if (strg2[key] === '5') {
+      change2 += 'u';
     } else {
-    change2 += strg2[key];
+      change2 += strg2[key];
     }
   }
   return change2;
