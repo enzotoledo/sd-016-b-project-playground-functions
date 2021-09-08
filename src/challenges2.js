@@ -58,7 +58,7 @@ function generatePhoneNumber(numerosArray) {
     }
     contNumero = 0;
   } 
-  // return contRepetido;
+  
   if (numerosArray.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
