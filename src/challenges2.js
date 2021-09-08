@@ -82,8 +82,21 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(drinks) {
+  let numberDrinks = drinks.match(/\d+/g).map(Number);//função .match tirada o stackOverflow nao entendi direito como funciona
+  let count = 0;
+  let waterString;
+  for (let index = 0; index < numberDrinks.length; index += 1) {
+    if (numberDrinks[index] > 0) {
+      count += numberDrinks[index];
+    }
+  }
+  waterString = count + ' copos de água';
+  if (count == 1) {
+    waterString = count + ' copo de água';
+  }
+  
+  return waterString;
 }
 
 module.exports = {
