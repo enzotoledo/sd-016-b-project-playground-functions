@@ -20,35 +20,67 @@ console.log(techList(
   ["React", "Jest", "HTML", "CSS", "JavaScript"],
   "Lucas"));
 
-
+// function contaNumero(numeros) {
+//   let contRepetido = 0;
+//   let contNumero = 0;
   
+//   for (let index in numeros) {
+//     let verificaNumero = numeros[index];
+//     for (let index2 in numeros) {
+//       if (verificaNumero === numeros[index2]) {
+//         contNumero += 1;
+//       }
+//     }
+//     if (contNumero > contRepetido) {
+//       contRepetido = contNumero;
+      
+//     }
+//     contNumero = 0;
+//   }
+//   return contRepetido;
+// }
+// console.log(contaNumero([1, 2, 2, 4, 5, 5, 2, 8, 9, 0, 1]));
+
 // Desafio 11
-function generatePhoneNumber(numeros) {
+function generatePhoneNumber(numerosArray) {
   // seu código aqui
-  // let numeroQueMaisAparece = 0;
-  // let vezesQueAparece = 0;
-
-  // for (let index = 0; index < numeros.length; index += 1) {
-  //   if (numeros[index] === numeros[index]) {
-  //       numeroQueMaisAparece = numeros[index];
-  //   }
-  // }
-  // for (let i = 0; i < numeros.length; i += 1) {
-  //   if (numeros[i] === numeroQueMaisAparece) {
-  //       vezesQueAparece += 1;
-  //   }
-  // }
- 
-  // for (let index =0; index < numeros.length; index += 1) {
-  //   if (numeros[index] > 9 || numeros[index] < 0 || vezesQueAparece >= 3) {
-  //     return 'não é possível gerar um número de telefone com esses valores';
-  //   } else if (numeros.length !== 11) {
-  //     return 'Array com tamanho incorreto.';
-  //   } 
-  // }
-
+  let contRepetido = 0;
+  let contNumero = 0;
+  for (let index in numerosArray) {
+    let verificaNumeros = numerosArray[index];
+    for (let index2 in numerosArray) {
+      if (verificaNumeros === numerosArray[index2]) {
+        contNumero += 1;
+      } 
+    }
+    if (contNumero > contRepetido) {
+      contRepetido = contNumero;
+    }
+    contNumero = 0;
+  } 
+  // return contRepetido;
+  if (numerosArray.length !== 11) {
+    return 'Array com tamanho incorreto.';
+  }
+  for (let index3 = 0; index3 < numerosArray.length; index3 += 1) {
+    if (numerosArray[index3] < 0 || numerosArray[index3] > 9 || contRepetido >= 3) {
+      return 'não é possível gerar um número de telefone com esses valores';
+    }
+  }
+  let DDD = 0;
+  let numeroPrimeiraParte = 0;
+  let numeroSegundaParte = 0;
+  let numeroFinal = 0;
+  for (let index4 = 0; index4 < numerosArray.length; index4 += 1) {
+    DDD = numerosArray.slice(0, 2).join('');
+    numeroPrimeiraParte = numerosArray.slice(2, 7).join('');
+    numeroSegundaParte = numerosArray.slice(7, 11).join('');
+  }
+  numeroFinal = '(' + DDD + ') ' + numeroPrimeiraParte + '-' + numeroSegundaParte;
+  return numeroFinal;
 }
-console.log(generatePhoneNumber([1, 2, 2, 4, 5, 5, 2, 8, 9, 0, 1]));
+
+console.log(generatePhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]));
 
 // Desafio 12
 function triangleCheck(valor1, valor2, valor3) {
@@ -84,8 +116,6 @@ function hydrate(stringBebidas) {
     } else if (coposDeAgua >= 2) {
       return coposDeAgua + ' copos de água';
     }
-  
-  
 }
 console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 
