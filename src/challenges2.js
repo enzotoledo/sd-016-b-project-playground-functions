@@ -20,26 +20,6 @@ console.log(techList(
   ["React", "Jest", "HTML", "CSS", "JavaScript"],
   "Lucas"));
 
-// function contaNumero(numeros) {
-//   let contRepetido = 0;
-//   let contNumero = 0;
-  
-//   for (let index in numeros) {
-//     let verificaNumero = numeros[index];
-//     for (let index2 in numeros) {
-//       if (verificaNumero === numeros[index2]) {
-//         contNumero += 1;
-//       }
-//     }
-//     if (contNumero > contRepetido) {
-//       contRepetido = contNumero;
-      
-//     }
-//     contNumero = 0;
-//   }
-//   return contRepetido;
-// }
-// console.log(contaNumero([1, 2, 2, 4, 5, 5, 2, 8, 9, 0, 1]));
 
 // Desafio 11
 function generatePhoneNumber(numerosArray) {
