@@ -6,20 +6,18 @@
 // Desafio 1
 function compareTrue(par1, par2) {
     // seu código aqui
-    return par1 && par2;
+    return (par1 && par2);
 }
 // testando a função
 // console.log(compareTrue(true, false));
 // console.log(compareTrue(false, false));
 // console.log(compareTrue(false, true));
 // console.log(compareTrue(true, true));
-
 // --------------------------------------------------------------------------------------------------
-
 // Desafio 2
 function calcArea(base, height) {
     // seu código aqui
-    return (base * height) / 2
+    return (base * height) / 2;
 }
 // testando a função
 // console.log(calcArea(10, 50));
@@ -201,9 +199,7 @@ function decode(string) {
 // console.log(decode('H4w 1r2 y45 t4d1y?'));
 // console.log(decode('Th3s 3s 1n 2nc4d3ng t2st.'));
 // console.log(decode('g4 Tryb2!'));
-
 // --------------------------------------------------------------------------------------------------
-
 module.exports = {
     calcArea,
     catAndMouse,
