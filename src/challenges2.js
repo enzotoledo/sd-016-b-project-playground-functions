@@ -19,13 +19,13 @@ function generatePhoneNumber() {
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
   // seu código aqui
-  let A = Math.abs(lineA - lineB);
-  let B = Math.abs(A - lineC);
-  let C = Math.max.apply(null, [lineA, lineB, lineC]);
-  if (((lineA < lineB + lineC) && (lineB < lineA + lineC) && (lineC < lineA + lineB)) && B < C) {
-    return true;
-  }
-  return false;
+  // let A = Math.abs(lineA - lineB);
+  // let B = Math.abs(A - lineC);
+  // let C = Math.max.apply(null, [lineA, lineB, lineC]);
+  // if (((lineA < lineB + lineC) && (lineB < lineA + lineC) && (lineC < lineA + lineB)) && B < C) {
+  //   return true;
+  // }
+  // return false;
 }
 
 // Desafio 13
