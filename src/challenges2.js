@@ -22,9 +22,9 @@ function generatePhoneNumber() {
 }
 
 // Desafio 12
-// Consultei este tutorial e artigo para aprender sobre math. 
+// Consultei este tutorial e artigo para aprender sobre math.
 // https://www.youtube.com/watch?v=8xqU_hXb-9k&ab_channel=GustavoNeitzke
-// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs 
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 function triangleCheck(lineA, lineB, lineC) {
   let sum = lineA + lineB;
   let sub = Math.abs(lineA - lineB);
