@@ -18,12 +18,21 @@ function techList(array, name) {
 
 // Desafio 11
 function generatePhoneNumber() {
-  // seu código aqui
+// seu código aqui
 }
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+// Consultei este tutorial e artigo para aprender sobre math. 
+// https://www.youtube.com/watch?v=8xqU_hXb-9k&ab_channel=GustavoNeitzke
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/abs 
+function triangleCheck(lineA, lineB, lineC) {
+  let sum = lineA + lineB;
+  let sub = Math.abs(lineA - lineB);
+
+  if (sum > lineC && sub < lineC) {
+    return true;
+  }
+  return false;
 }
 
 // Desafio 13
