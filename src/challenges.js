@@ -57,26 +57,23 @@ function concatName(array) {
 function footballPoints(wins, ties) {
   // seu código aqui
   return (wins * 3) + ties;
-
 }
 // testando a função
 // console.log(footballPoints(14, 8));
 // console.log(footballPoints(1, 2));
 // console.log(footballPoints(0, 0));
-
 // --------------------------------------------------------------------------------------------------
-
 // Desafio 6
 function highestCount(array) {
   // seu código aqui
   let highestNumber = array[0];
   let timesRepeated = 0;
-  for (i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i+=1) {
     if (array[i] > highestNumber) {
       highestNumber = array[i];
     }
   }
-  for (i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i+=1) {
     if (array[i] === highestNumber) {
       timesRepeated++;
     }
@@ -87,9 +84,7 @@ function highestCount(array) {
 // console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 // console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 // console.log(highestCount([0, 0, 0]));
-
 // --------------------------------------------------------------------------------------------------
-
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
@@ -107,9 +102,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // console.log(catAndMouse(0, 3, 2));
 // console.log(catAndMouse(0, 6, 12));
 // console.log(catAndMouse(1, 0, 2));
-
 // --------------------------------------------------------------------------------------------------
-
 // Desafio 8
 function fizzBuzz(array) {
   // seu código aqui
@@ -131,9 +124,7 @@ function fizzBuzz(array) {
 // console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // console.log(fizzBuzz([7, 9]));
 // console.log(fizzBuzz([9, 25]));
-
 // --------------------------------------------------------------------------------------------------
-
 // Desafio 9
 function encode(string) {
   // seu código aqui
@@ -166,9 +157,7 @@ function encode(string) {
 // console.log(encode('How are you today?'));
 // console.log(encode('This is an encoding test.'));
 // console.log(encode('go Trybe!'));
-
-// --------------------------------------------------------------------------------------------------
-
+//--------------------------------------------------------------------------------------------------
 function decode(string) {
   // seu código aqui
   let newString = '';

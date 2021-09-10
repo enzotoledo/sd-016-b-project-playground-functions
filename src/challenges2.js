@@ -7,7 +7,7 @@ function techList(Technology, name) {
   // Caso o array venha vazio sua função deve retornar 'Vazio!'
   let objectList = [];
   if (Technology.length !== 0) {
-    for (i = 0; i < Technology.length; i++) {
+    for (let i = 0; i < Technology.length; i+=1) {
       let object = {};
       object.tech = Technology.sort()[i];
       object.name = name;
