@@ -5,8 +5,8 @@
 
 // Desafio 1
 function compareTrue(par1, par2) {
-    // seu código aqui
-    return (par1 && par2);
+  // seu código aqui
+  return (par1 && par2);
 }
 // testando a função
 // console.log(compareTrue(true, false));
@@ -16,8 +16,8 @@ function compareTrue(par1, par2) {
 // --------------------------------------------------------------------------------------------------
 // Desafio 2
 function calcArea(base, height) {
-    // seu código aqui
-    return (base * height) / 2;
+  // seu código aqui
+  return (base * height) / 2;
 }
 // testando a função
 // console.log(calcArea(10, 50));
@@ -28,8 +28,8 @@ function calcArea(base, height) {
 
 // Desafio 3
 function splitSentence(string) {
-    // seu código aqui
-    return string.split(' ');
+  // seu código aqui
+  return string.split(' ');
 }
 // testando a função
 // console.log(splitSentence('go Trybe'));
@@ -40,11 +40,11 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-    // seu código aqui
-    let firstElement = array.shift();
-    let lastElement = array.pop();
-    let concatElements = lastElement.concat(', ', firstElement);
-    return concatElements;
+  // seu código aqui
+  let firstElement = array.shift();
+  let lastElement = array.pop();
+  let concatElements = lastElement.concat(', ', firstElement);
+  return concatElements;
 }
 // testando a função
 // console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
@@ -55,8 +55,8 @@ function concatName(array) {
 
 // Desafio 5
 function footballPoints(wins, ties) {
-    // seu código aqui
-    return (wins * 3) + ties;
+  // seu código aqui
+  return (wins * 3) + ties;
 
 }
 // testando a função
@@ -68,20 +68,20 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(array) {
-    // seu código aqui
-    let highestNumber = array[0];
-    let timesRepeated = 0;
-    for (i = 0; i < array.length; i++) {
-        if (array[i] > highestNumber) {
-            highestNumber = array[i];
-        }
+  // seu código aqui
+  let highestNumber = array[0];
+  let timesRepeated = 0;
+  for (i = 0; i < array.length; i++) {
+    if (array[i] > highestNumber) {
+      highestNumber = array[i];
     }
-    for (i = 0; i < array.length; i++) {
-        if (array[i] === highestNumber) {
-            timesRepeated++;
-        }
+  }
+  for (i = 0; i < array.length; i++) {
+    if (array[i] === highestNumber) {
+      timesRepeated++;
     }
-    return timesRepeated;
+  }
+  return timesRepeated;
 }
 // testando a função
 // console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
@@ -92,16 +92,16 @@ function highestCount(array) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-    // seu código aqui
-    positionCat1 = Math.abs(cat1 - mouse);
-    positioncat2 = Math.abs(cat2 - mouse);
-    if (positionCat1 < positioncat2) {
-        return "cat1";
-    } else if (positionCat1 > positioncat2) {
-        return "cat2";
-    } else {
-        return "os gatos trombam e o rato foge";
-    }
+  // seu código aqui
+  positionCat1 = Math.abs(cat1 - mouse);
+  positioncat2 = Math.abs(cat2 - mouse);
+  if (positionCat1 < positioncat2) {
+    return "cat1";
+  } else if (positionCat1 > positioncat2) {
+    return "cat2";
+  } else {
+    return "os gatos trombam e o rato foge";
+  }
 }
 // testando a função
 // console.log(catAndMouse(0, 3, 2));
@@ -112,20 +112,20 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-    // seu código aqui
-    let newArray = [];
-    for (i = 0; i < array.length; i++) {
-        if (array[i] % 3 === 0 && array[i] % 5 === 0) {
-            newArray.push('fizzBuzz');
-        } else if (array[i] % 3 === 0) {
-            newArray.push('fizz');
-        } else if (array[i] % 5 === 0) {
-            newArray.push('buzz');
-        } else {
-            newArray.push('bug!');
-        }
+  // seu código aqui
+  let newArray = [];
+  for (i = 0; i < array.length; i++) {
+    if (array[i] % 3 === 0 && array[i] % 5 === 0) {
+      newArray.push('fizzBuzz');
+    } else if (array[i] % 3 === 0) {
+      newArray.push('fizz');
+    } else if (array[i] % 5 === 0) {
+      newArray.push('buzz');
+    } else {
+      newArray.push('bug!');
     }
-    return newArray;
+  }
+  return newArray;
 }
 // testando a função
 // console.log(fizzBuzz([2, 15, 7, 9, 45]));
@@ -136,29 +136,29 @@ function fizzBuzz(array) {
 
 // Desafio 9
 function encode(string) {
-    // seu código aqui
-    let newString = '';
-    for (let i = 0; i < string.length; i += 1) {
-        switch (string[i]) {
-            case 'a':
-                string = string.replace('a', '1');
-                break;
-            case 'e':
-                string = string.replace('e', '2');
-                break;
-            case 'i':
-                string = string.replace('i', '3');
-                break;
-            case 'o':
-                string = string.replace('o', '4');
-                break;
-            case 'u':
-                string = string.replace('u', '5');
-                break;
-        }
-        newString = string;
+  // seu código aqui
+  let newString = '';
+  for (let i = 0; i < string.length; i += 1) {
+    switch (string[i]) {
+      case 'a':
+        string = string.replace('a', '1');
+        break;
+      case 'e':
+        string = string.replace('e', '2');
+        break;
+      case 'i':
+        string = string.replace('i', '3');
+        break;
+      case 'o':
+        string = string.replace('o', '4');
+        break;
+      case 'u':
+        string = string.replace('u', '5');
+        break;
     }
-    return newString;
+    newString = string;
+  }
+  return newString;
 }
 // testando a função
 // console.log(encode("hello"));
@@ -170,29 +170,29 @@ function encode(string) {
 // --------------------------------------------------------------------------------------------------
 
 function decode(string) {
-    // seu código aqui
-    let newString = '';
-    for (let i = 0; i < string.length; i += 1) {
-        switch (string[i]) {
-            case '1':
-                string = string.replace('1', 'a');
-                break;
-            case '2':
-                string = string.replace('2', 'e');
-                break;
-            case '3':
-                string = string.replace('3', 'i');
-                break;
-            case '4':
-                string = string.replace('4', 'o');
-                break;
-            case '5':
-                string = string.replace('5', 'u');
-                break;
-        }
-        newString = string;
+  // seu código aqui
+  let newString = '';
+  for (let i = 0; i < string.length; i += 1) {
+    switch (string[i]) {
+      case '1':
+        string = string.replace('1', 'a');
+        break;
+      case '2':
+        string = string.replace('2', 'e');
+        break;
+      case '3':
+        string = string.replace('3', 'i');
+        break;
+      case '4':
+        string = string.replace('4', 'o');
+        break;
+      case '5':
+        string = string.replace('5', 'u');
+        break;
     }
-    return newString;
+    newString = string;
+  }
+  return newString;
 }
 // testando a função
 // console.log(decode('h2ll4'));
@@ -201,14 +201,14 @@ function decode(string) {
 // console.log(decode('g4 Tryb2!'));
 // --------------------------------------------------------------------------------------------------
 module.exports = {
-    calcArea,
-    catAndMouse,
-    compareTrue,
-    concatName,
-    decode,
-    encode,
-    fizzBuzz,
-    footballPoints,
-    highestCount,
-    splitSentence,
+  calcArea,
+  catAndMouse,
+  compareTrue,
+  concatName,
+  decode,
+  encode,
+  fizzBuzz,
+  footballPoints,
+  highestCount,
+  splitSentence,
 };
