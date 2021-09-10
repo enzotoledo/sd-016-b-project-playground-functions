@@ -31,8 +31,22 @@ function triangleCheck(lineA, lineB, lineC) {
 }
 
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(shots) {
+  shots = shots.replace(/\D/g, '');
+  let drinkGlassWater = 0;
+  for (index = 0; index < shots.length; index++) {
+    let glassWater = parseInt(shots[index], 10);
+    drinkGlassWater = drinkGlassWater + glassWater;
+  }
+
+  switch (drinkGlassWater) {
+    case 1:
+      return `${drinkGlassWater} copo de água`;
+      break;
+
+    default:
+      return `${drinkGlassWater} copos de água`;
+  }
 }
 
 module.exports = {
