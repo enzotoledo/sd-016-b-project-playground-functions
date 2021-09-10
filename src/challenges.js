@@ -40,7 +40,7 @@ function highestCount(array) {
   // seu código aqui
   let highest = -Infinity;
   let theFinalCountUp = 0;
-  for (let i in array){
+  for (let i in array) {
     if (array[i] > highest) {
       highest = array[i];
     }
@@ -50,7 +50,7 @@ function highestCount(array) {
       theFinalCountUp += 1;
     }
   }
-return theFinalCountUp;  
+  return theFinalCountUp;
 }
 
 // Desafio 7
@@ -58,11 +58,11 @@ function catAndMouse(cat1, cat2, mouse) {
   // seu código aqui
   if (cat1 + 1 === cat2 || cat1 - 1 === cat2) {
     return 'os gatos trombam e o rato foge';
-  } else if (cat1 - mouse > cat2 - mouse)  {
+  } else if (cat1 - mouse > cat2 - mouse) {
     return 'cat1';
-  } else if (cat2 - mouse > cat1 - mouse ) {
+  } else if (cat2 - mouse > cat1 - mouse) {
     return 'cat2';
-  } 
+  }
 }
 
 // Desafio 8
@@ -70,14 +70,14 @@ function fizzBuzz(a) {
   // seu código aqui
   aF = [];
   for (let i in a) {
-    if (a[i] % 3 != 0 && a[i] % 5 != 0) {
+    if (a[i] % 3 !== 0 && a[i] % 5 !== 0) {
       aF.push('bug!');
     }
-    if (a[i] % 3 == 0 && a[i] % 5 == 0) {
+    if (a[i] % 3 === 0 && a[i] % 5 === 0) {
       aF.push('fizzBuzz');
-    } else if (a[i] % 3 == 0) {
+    } else if (a[i] % 3 === 0) {
       aF.push('fizz');
-    } else if (a[i] % 5 == 0) {
+    } else if (a[i] % 5 === 0) {
       aF.push('buzz');
     }
   }

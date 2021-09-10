@@ -4,8 +4,11 @@ function techList() {
 }
 
 // Desafio 11
-function generatePhoneNumber() {
+function generatePhoneNumber(num) {
   // seu código aqui
+  if (num.lenght >= 11){
+    return num
+  }
 }
 
 // Desafio 12
