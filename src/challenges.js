@@ -68,34 +68,32 @@ function highestCount(array) {
   // seu código aqui
   let highestNumber = array[0];
   let timesRepeated = 0;
-  for (let i = 0; i < array.length; i+=1) {
+  for (let i = 0; i < array.length; i += 1) {
     if (array[i] > highestNumber) {
       highestNumber = array[i];
     }
-  }
-  for (let i = 0; i < array.length; i+=1) {
     if (array[i] === highestNumber) {
-      timesRepeated++;
-    }
+        timesRepeated += 1;
+      }
   }
   return timesRepeated;
 }
 // testando a função
-// console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
+console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
 // console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
 // console.log(highestCount([0, 0, 0]));
 // --------------------------------------------------------------------------------------------------
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
-  positionCat1 = Math.abs(cat1 - mouse);
-  positioncat2 = Math.abs(cat2 - mouse);
+  let positionCat1 = Math.abs(cat1 - mouse);
+  let positioncat2 = Math.abs(cat2 - mouse);
   if (positionCat1 < positioncat2) {
-    return "cat1";
+    return 'cat1';
   } else if (positionCat1 > positioncat2) {
-    return "cat2";
+    return 'cat2';
   } else {
-    return "os gatos trombam e o rato foge";
+    return 'os gatos trombam e o rato foge';
   }
 }
 // testando a função
@@ -107,7 +105,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(array) {
   // seu código aqui
   let newArray = [];
-  for (i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i += 1) {
     if (array[i] % 3 === 0 && array[i] % 5 === 0) {
       newArray.push('fizzBuzz');
     } else if (array[i] % 3 === 0) {

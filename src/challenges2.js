@@ -7,27 +7,25 @@ function techList(Technology, name) {
   // Caso o array venha vazio sua função deve retornar 'Vazio!'
   let objectList = [];
   if (Technology.length !== 0) {
-    for (let i = 0; i < Technology.length; i+=1) {
-      let object = {};
+    for (let i = 0; i < Technology.length; i += 1) {
+      let object;
       object.tech = Technology.sort()[i];
       object.name = name;
       objectList.push(object);
     }
     return objectList;
-  } else {
-    return 'Vazio!';
   }
+    return 'Vazio!';
 }
 // testando a função
-// console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'));
-// console.log(techList([], 'Lucas'));
+console.log(techList(["React", "Jest", "HTML", "CSS", "JavaScript"], 'Lucas'));
+console.log(techList([], 'Lucas'));
 // --------------------------------------------------------------------------------------------------
 // Desafio 11
 function generatePhoneNumber(array) {
   console.log(array.length);
   // seu código aqui
   let counter = 0;
-  //Verificação das condições de entrada
   if (array.length !== 11) {
     return 'Array com tamanho incorreto.';
   }
@@ -45,7 +43,6 @@ function generatePhoneNumber(array) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  // Montando o numero de telefone
   return `(${array.slice(0,2).join("")}) ${array.slice(2,7).join("")}-${array.slice(7,11).join("")}`;
 }
 // Testando a função
