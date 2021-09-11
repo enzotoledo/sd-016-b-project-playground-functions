@@ -31,6 +31,10 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(numbers) {
+  /**
+  Consultei: O MDN, após buscar no google uma função que retorna o maior valor de uma lista de números
+  Link: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/max
+  */
   let highestNumber = Math.max(...numbers);
   let counter = 0;
 
@@ -83,6 +87,10 @@ function fizzBuzz(numbers) {
 // Desafio 9
 function encode(string) {
   let sentence = string;
+  /**
+  Consultei: O MDN, após pesquisar no google como substituir os valores de uma sting
+  Link: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/replace
+  */
   sentence = sentence.replace(/a/g, '1');
   sentence = sentence.replace(/e/g, '2');
   sentence = sentence.replace(/i/g, '3');
