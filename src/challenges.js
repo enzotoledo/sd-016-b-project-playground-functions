@@ -55,7 +55,6 @@ function catAndMouse(cat1, cat2, mouse) {
   let distanciacat1 = (cat1 - mouse) ;
   let distanciacat2 = (cat2 - mouse);
   let distancia2gatos= ((cat1 - cat2) * mouse);
-
   
   if(distancia2gatos === mouse ){return "os gatos trombam e o rato foge";}
   else if (distanciacat2 <  distanciacat1){return "cat1";}
@@ -64,32 +63,58 @@ function catAndMouse(cat1, cat2, mouse) {
 }
 
 // Desafio 8
-function fizzBuzz(){
-  let newArray = [];
-array.forEach((value) => {
-if (value % 3 === 0 && value % 5 === 0) {
-newArray.push('fizzBuzz');
-} else if (value % 3 === 0) {
-newArray.push('fizz');
-} else if (value % 5 === 0) {
-newArray.push('buzz');
-} else {
-newArray.push('bug!');
+function fizzBuzz(arrayOfNum){
+  let fizzBuzzArray = arrayOfNum.map((element) => {
+    if (element % 3 === 0 && element % 5 === 0) {
+      return 'fizzBuzz';
+    }
+    if (element % 3 === 0) {
+      return 'fizz'; 
+    }
+    if (element % 5 === 0) {
+      return 'buzz';
+    }
+    return 'bug!';
+  });
+  return fizzBuzzArray;
 }
-});
-return newArray;
-} 
-
 // Desafio 9
-function encode() {
-  let numeros = encode.replace ("hi, there!", "h3, th2r2!");
-  console.log (numeros);
+function encode(string) { 
+  let array = string.split('');
+for (let index = 0; index < array.length; index += 1) {
+  if (array[index] === 'a') {
+    array[index] = 1;
+  } else if (array[index] === 'e') {
+    array[index] = 2;
+  } else if (array[index] === 'i') {
+    array[index] = 3;
+  } else if (array[index] === 'o') {
+    array[index] = 4;
+  } else if (array[index] === 'u') {
+    array[index] = 5;
   }
-function decode() {
-  let minusculas = decode.replace ("h3, th2r2!","hi, there!" );
-  console.log (minusculas);
-  
 }
+return array.join('');
+}
+function decode(string){
+  let decodeArray = string.split('');
+  for (let index = 0; index < decodeArray.length; index += 1) {
+    if (decodeArray[index] === '1') {
+      decodeArray[index] = 'a';
+    } else if (decodeArray[index] === '2') {
+      decodeArray[index] = 'e';
+    } else if (decodeArray[index] === '3') {
+      decodeArray[index] = 'i';
+    } else if (decodeArray[index] === '4') {
+      decodeArray[index] = 'o';
+    } else if (decodeArray[index] === '5') {
+      decodeArray[index] = 'u';
+    }
+  }
+  return decodeArray.join('');
+}
+console.log(decode('h3 th2r2!'));
+
 
 module.exports = {
   calcArea,
@@ -101,5 +126,4 @@ module.exports = {
   fizzBuzz,
   footballPoints,
   highestCount,
-  splitSentence,
-}
+  splitSentence,}
