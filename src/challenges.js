@@ -1,17 +1,23 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(x, y) {
   // seu código aqui
+  if (x && y){
+    return true
+  }
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base, height) {
   // seu código aqui
+  return (base * height)/2
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(string) {
   // seu código aqui
+  return string.split(" ")
 }
+console.log(splitSentence('go trybe'));
 
 // Desafio 4
 function concatName() {
