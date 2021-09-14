@@ -17,21 +17,37 @@ function splitSentence(string) {
   // seu código aqui
   return string.split(" ")
 }
-console.log(splitSentence('go trybe'));
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
+  return array[0] + ", " + array[array.length - 1]
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let winsVal = 3;
+  let tiesVal = 1;
+
+  return (wins * winsVal) + (ties * tiesVal)
+
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(array) {
   // seu código aqui
+  let maiorValor;
+  let cont = 0;
+  
+  maiorValor = Math.max.apply(Math, array);
+
+  for(let i = 0; i < array.length; i++){
+    if(array[i] === maiorValor){
+      cont += 1;
+    }
+  }
+  return cont
 }
 
 // Desafio 7
