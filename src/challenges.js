@@ -68,18 +68,56 @@ function catAndMouse(mouse, cat1, cat2) {
 console.log(catAndMouse(10, 4, 22));
 
 // Desafio 8
-function fizzBuzz() {
+function fizzBuzz(array) {
   // seu código aqui
+  let resp = [];
+  for (let i of array) {
+    if (i%3===0 && i%5 === 0){
+      resp.push('fizzBuzz')
+    }else if(i%3 ===0){
+      resp.push('fizz') 
+    }else if(i%5 === 0){
+      resp.push('buzz')
+    }else{
+      resp.push('bug!')
+    }
+  }
+  return resp
 }
-
+console.log(fizzBuzz([9, 25]));
 // Desafio 9
-function encode() {
+function encode(string) {
   // seu código aqui
-}
-function decode() {
-  // seu código aqui
+  let letra = [/a/g, /e/g, /i/g, /o/g, /u/g]
+  let cod = ['1', '2', '3', '4', '5']
+  let novaString;
+  for(let i = 0; i < letra.length; i++){
+    let re = letra[i];
+    let sub = cod[i];
+    novaString = string.replace(re,sub);
+    string = novaString;
+  }
+
+  
+  return string
 }
 
+function decode(string) {
+  // seu código aqui
+  let letra = ['a','e', 'i', 'o', 'u']
+  let cod = [/1/g, /2/g, /3/g, /4/g, /5/g]
+  let novaString;
+  for(let i = 0; i < letra.length; i++){
+    let re = cod[i];
+    let sub = letra[i];
+    novaString = string.replace(re,sub);
+    string = novaString;
+  }
+
+  
+  return string
+}
+console.log(decode('h3 th2r2!'));
 module.exports = {
   calcArea,
   catAndMouse,
