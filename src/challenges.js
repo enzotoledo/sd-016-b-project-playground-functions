@@ -59,13 +59,13 @@ function catAndMouse(mouse, cat1, cat2) {
   let disCat2 = Math.abs(mouse - cat2);
   if(disCat1 === disCat2){
     return "os gatos trombam e o rato foge"
-  }else if(disCat1 > disCat2){
+  }else if(disCat1 < disCat2){
     return "cat1"
   }else{
     return "cat2"
   }
 }
-console.log(catAndMouse(1, 0, 2));
+console.log(catAndMouse(10, 4, 22));
 
 // Desafio 8
 function fizzBuzz() {
