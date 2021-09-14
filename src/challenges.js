@@ -1,10 +1,12 @@
 // Desafio 1
 function compareTrue(x, y) {
   // seu código aqui
-  if (x && y){
-    return true
-  }
+  let boolean = false;
+  if (x == true & y == true)
+    boolean = true;
+  return boolean
 }
+console.log(compareTrue(true, true));
 
 // Desafio 2
 function calcArea(base, height) {
@@ -21,7 +23,7 @@ function splitSentence(string) {
 // Desafio 4
 function concatName(array) {
   // seu código aqui
-  return array[0] + ", " + array[array.length - 1]
+  return array[array.length - 1] + ", " + array[0]
 }
 
 // Desafio 5
