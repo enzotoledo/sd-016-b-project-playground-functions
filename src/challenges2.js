@@ -35,7 +35,7 @@ function generatePhoneNumber(array) {
       return 'não é possível gerar um número de telefone com esses valores';
     }
   }
-  return `(${array.slice(0,2).join('')}) ${array.slice(2,7).join('')}-${array.slice(7,11).join('')}`;
+  return `(${array.slice(0, 2).join('')}) ${array.slice(2, 7).join('')}-${array.slice(7, 11).join('')}`;
 }
 // --------------------------------------------------------------------------------------------------
 // Desafio 12
