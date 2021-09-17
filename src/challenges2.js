@@ -52,7 +52,16 @@ function triangleCheck(lineA, lineB, lineC) {
 function hydrate(string) {
   // seu código aqui
   let pedido = string.match(/\d+/g);
+  let bebidas = 0;
+  for (let ind = 0; ind < pedido.length; ind += 1) {
+    bebidas += parseInt(pedido[ind]);
+  }
+  if (bebidas === 1) {
+    return `${bebidas} copo de água`;
+  }
+  return `${bebidas} copos de água`;
 }
+// --------------------------------------------------------------------------------------------------
 module.exports = {
   generatePhoneNumber,
   techList,
