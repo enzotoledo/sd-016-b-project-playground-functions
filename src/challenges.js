@@ -1,43 +1,24 @@
 // Lucas Camargo
 // Playground Functions
-
 // --------------------------------------------------------------------------------------------------
-
 // Desafio 1
 function compareTrue(par1, par2) {
   // seu código aqui
   return (par1 && par2);
 }
-// testando a função
-// console.log(compareTrue(true, false));
-// console.log(compareTrue(false, false));
-// console.log(compareTrue(false, true));
-// console.log(compareTrue(true, true));
 // --------------------------------------------------------------------------------------------------
 // Desafio 2
 function calcArea(base, height) {
   // seu código aqui
   return (base * height) / 2;
 }
-// testando a função
-// console.log(calcArea(10, 50));
-// console.log(calcArea(5, 2));
-// console.log(calcArea(51, 1));
-
 // --------------------------------------------------------------------------------------------------
-
 // Desafio 3
 function splitSentence(string) {
   // seu código aqui
   return string.split(' ');
 }
-// testando a função
-// console.log(splitSentence('go Trybe'));
-// console.log(splitSentence('vamo que vamo'));
-// console.log(splitSentence('foguete'));
-
 // --------------------------------------------------------------------------------------------------
-
 // Desafio 4
 function concatName(array) {
   // seu código aqui
@@ -46,42 +27,31 @@ function concatName(array) {
   let concatElements = lastElement.concat(', ', firstElement);
   return concatElements;
 }
-// testando a função
-// console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
-// console.log(concatName(['foguete', 'não', 'tem', 'ré']));
-// console.log(concatName(['captain', 'my', 'captain']));
-
 // --------------------------------------------------------------------------------------------------
-
 // Desafio 5
 function footballPoints(wins, ties) {
   // seu código aqui
   return (wins * 3) + ties;
 }
-// testando a função
-// console.log(footballPoints(14, 8));
-// console.log(footballPoints(1, 2));
-// console.log(footballPoints(0, 0));
 // --------------------------------------------------------------------------------------------------
 // Desafio 6
 function highestCount(array) {
   // seu código aqui
   let highestNumber = array[0];
-  let timesRepeated = 0;
-  for (let i = 0; i < array.length; i += 1) {
+  let highestRepeted = 0;
+  let counter = 1;
+  for (let i = 1; i < array.length; i += 1) {
+    if (array[i] === highestNumber) {
+      counter += 1;
+    }
     if (array[i] > highestNumber) {
       highestNumber = array[i];
+      counter = 1;
     }
-    if (array[i] === highestNumber) {
-        timesRepeated += 1;
-      }
   }
-  return timesRepeated;
+  highestRepeted = counter;
+  return highestRepeted;
 }
-// testando a função
-console.log(highestCount([9, 1, 2, 3, 9, 5, 7]));
-// console.log(highestCount([0, 4, 4, 4, 9, 2, 1]));
-// console.log(highestCount([0, 0, 0]));
 // --------------------------------------------------------------------------------------------------
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
@@ -96,10 +66,6 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
-// testando a função
-// console.log(catAndMouse(0, 3, 2));
-// console.log(catAndMouse(0, 6, 12));
-// console.log(catAndMouse(1, 0, 2));
 // --------------------------------------------------------------------------------------------------
 // Desafio 8
 function fizzBuzz(array) {
@@ -118,10 +84,6 @@ function fizzBuzz(array) {
   }
   return newArray;
 }
-// testando a função
-// console.log(fizzBuzz([2, 15, 7, 9, 45]));
-// console.log(fizzBuzz([7, 9]));
-// console.log(fizzBuzz([9, 25]));
 // --------------------------------------------------------------------------------------------------
 // Desafio 9
 function encode(string) {
@@ -149,12 +111,6 @@ function encode(string) {
   }
   return newString;
 }
-// testando a função
-// console.log(encode("hello"));
-// console.log(encode('go Trybe!'));
-// console.log(encode('How are you today?'));
-// console.log(encode('This is an encoding test.'));
-// console.log(encode('go Trybe!'));
 //--------------------------------------------------------------------------------------------------
 function decode(string) {
   // seu código aqui
@@ -181,11 +137,6 @@ function decode(string) {
   }
   return newString;
 }
-// testando a função
-// console.log(decode('h2ll4'));
-// console.log(decode('H4w 1r2 y45 t4d1y?'));
-// console.log(decode('Th3s 3s 1n 2nc4d3ng t2st.'));
-// console.log(decode('g4 Tryb2!'));
 // --------------------------------------------------------------------------------------------------
 module.exports = {
   calcArea,
