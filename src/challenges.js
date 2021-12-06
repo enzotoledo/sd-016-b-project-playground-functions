@@ -28,8 +28,14 @@ function splitSentence(parametro3) {
 }
 
 // Desafio 4
-function concatName() {
+function concatName(parametro4) {
   // seu código aqui
+  let primeiraPalavra=parametro4[parametro4.length-1]
+  let segundaPalavra=parametro4[0]  
+
+  let resultado=primeiraPalavra+", "+segundaPalavra
+
+  return resultado
 }
 
 // Desafio 5
