@@ -2,19 +2,23 @@
 function compareTrue(parametro1,parametro2) {
   // seu código aqui
 
-  if ( parametro1 && parametro2 ) {
-    return true
-  }else if ( parametro1 && parametro2) {
-    return false
-  }else {
-    return false
-  }
+  return parametro1 && parametro2 
+
+  // if ( parametro1 && parametro2 ) {
+  //   return true
+  // }else if ( parametro1 && parametro2) {
+  //   return false
+  // }else {
+  //   return false
+  // }
 
 }
 
 // Desafio 2
-function calcArea() {
+function calcArea(base,height) {
   // seu código aqui
+
+  return (base*height)/2
 }
 
 // Desafio 3
