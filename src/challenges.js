@@ -1,8 +1,8 @@
 // Desafio 1
-function compareTrue(parametro1,parametro2) {
+function compareTrue(parametro1, parametro2) {
   // seu código aqui
 
-  return parametro1 && parametro2 
+  return parametro1 && parametro2;
 
   // if ( parametro1 && parametro2 ) {
   //   return true
@@ -15,32 +15,36 @@ function compareTrue(parametro1,parametro2) {
 }
 
 // Desafio 2
-function calcArea(base,height) {
+function calcArea(base, height) {
   // seu código aqui
 
-  return (base*height)/2
+  return (base * height) / 2;
 }
 
 // Desafio 3
 function splitSentence(parametro3) {
   // seu código aqui
-  return parametro3.split(" ")
+  return parametro3.split(" ");
 }
 
 // Desafio 4
 function concatName(parametro4) {
   // seu código aqui
-  let primeiraPalavra=parametro4[parametro4.length-1]
-  let segundaPalavra=parametro4[0]  
+  let primeiraPalavra = parametro4[parametro4.length - 1];
+  let segundaPalavra = parametro4[0];
 
-  let resultado=primeiraPalavra+", "+segundaPalavra
+  let resultado = primeiraPalavra + ", " + segundaPalavra;
 
-  return resultado
+  return resultado;
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
+  let winValue = 3;
+  // let tiesValue = 1;
+
+  return (wins * winValue) + ties;
 }
 
 // Desafio 6
